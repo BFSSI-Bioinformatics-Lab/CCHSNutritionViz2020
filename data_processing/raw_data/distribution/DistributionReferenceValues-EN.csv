@@ -1,0 +1,449 @@
+Number,Nutrient/Item (unit),Sex,Age (years),Adequacy-Value,Adequacy-Type,Excess-Value,Excess-Type,Ref-code
+1,Calcium (mg/d),Both,1-3,500,EAR,2500,UL,0
+1,Calcium (mg/d),Both,4-8,800,EAR,2500,UL,1
+1,Calcium (mg/d),Male,9-13,1100,EAR,3000,UL,2
+1,Calcium (mg/d),Female,9-13,1100,EAR,3000,UL,3
+1,Calcium (mg/d),Male,14-18,1100,EAR,3000,UL,4
+1,Calcium (mg/d),Female,14-18,1100,EAR,3000,UL,5
+1,Calcium (mg/d),Male,19-30,800,EAR,2500,UL,6
+1,Calcium (mg/d),Female,19-30,800,EAR,2500,UL,7
+1,Calcium (mg/d),Male,31-50,800,EAR,2500,UL,8
+1,Calcium (mg/d),Female,31-50,800,EAR,2500,UL,9
+1,Calcium (mg/d),Male,51-70,800,EAR,2000,UL,10
+1,Calcium (mg/d),Female,51-70,1000,EAR,2000,UL,11
+1,Calcium (mg/d),Male,71 and over,1000,EAR,2000,UL,12
+1,Calcium (mg/d),Female,71 and over,1000,EAR,2000,UL,13
+1,Calcium (mg/d),Male,19 and over,,,,,14
+1,Calcium (mg/d),Female,19 and over,,,,,15
+2,Vitamin D (mcg/d),Both,1-3,10,EAR,63,UL,16
+2,Vitamin D (mcg/d),Both,4-8,10,EAR,75,UL,17
+2,Vitamin D (mcg/d),Male,9-13,10,EAR,100,UL,18
+2,Vitamin D (mcg/d),Female,9-13,10,EAR,100,UL,19
+2,Vitamin D (mcg/d),Male,14-18,10,EAR,100,UL,20
+2,Vitamin D (mcg/d),Female,14-18,10,EAR,100,UL,21
+2,Vitamin D (mcg/d),Male,19-30,10,EAR,100,UL,22
+2,Vitamin D (mcg/d),Female,19-30,10,EAR,100,UL,23
+2,Vitamin D (mcg/d),Male,31-50,10,EAR,100,UL,24
+2,Vitamin D (mcg/d),Female,31-50,10,EAR,100,UL,25
+2,Vitamin D (mcg/d),Male,51-70,10,EAR,100,UL,26
+2,Vitamin D (mcg/d),Female,51-70,10,EAR,100,UL,27
+2,Vitamin D (mcg/d),Male,71 and over,10,EAR,100,UL,28
+2,Vitamin D (mcg/d),Female,71 and over,10,EAR,100,UL,29
+2,Vitamin D (mcg/d),Male,19 and over,10,EAR,100,UL,30
+2,Vitamin D (mcg/d),Female,19 and over,10,EAR,100,UL,31
+3,Iron (mg/d),Both,1-3,,,40,UL,32
+3,Iron (mg/d),Both,4-8,,,40,UL,33
+3,Iron (mg/d),Male,9-13,,,40,UL,34
+3,Iron (mg/d),Female,9-13,,,40,UL,35
+3,Iron (mg/d),Male,14-18,,,45,UL,36
+3,Iron (mg/d),Female,14-18,,,45,UL,37
+3,Iron (mg/d),Male,19-30,,,45,UL,38
+3,Iron (mg/d),Female,19-30,,,45,UL,39
+3,Iron (mg/d),Male,31-50,,,45,UL,40
+3,Iron (mg/d),Female,31-50,,,45,UL,41
+3,Iron (mg/d),Male,51-70,,,45,UL,42
+3,Iron (mg/d),Female,51-70,,,45,UL,43
+3,Iron (mg/d),Male,71 and over,,,45,UL,44
+3,Iron (mg/d),Female,71 and over,,,45,UL,45
+3,Iron (mg/d),Male,19 and over,,,45,UL,46
+3,Iron (mg/d),Female,19 and over,,,45,UL,47
+4,Sodium (mg/d),Both,1-3,800,AI,1200,CDRR,48
+4,Sodium (mg/d),Both,4-8,1000,AI,1500,CDRR,49
+4,Sodium (mg/d),Male,9-13,1200,AI,1800,CDRR,50
+4,Sodium (mg/d),Female,9-13,1200,AI,1800,CDRR,51
+4,Sodium (mg/d),Male,14-18,1500,AI,2300,CDRR,52
+4,Sodium (mg/d),Female,14-18,1500,AI,2300,CDRR,53
+4,Sodium (mg/d),Male,19-30,1500,AI,2300,CDRR,54
+4,Sodium (mg/d),Female,19-30,1500,AI,2300,CDRR,55
+4,Sodium (mg/d),Male,31-50,1500,AI,2300,CDRR,56
+4,Sodium (mg/d),Female,31-50,1500,AI,2300,CDRR,57
+4,Sodium (mg/d),Male,51-70,1500,AI,2300,CDRR,58
+4,Sodium (mg/d),Female,51-70,1500,AI,2300,CDRR,59
+4,Sodium (mg/d),Male,71 and over,1500,AI,2300,CDRR,60
+4,Sodium (mg/d),Female,71 and over,1500,AI,2300,CDRR,61
+4,Sodium (mg/d),Male,19 and over,1500,AI,2300,CDRR,62
+4,Sodium (mg/d),Female,19 and over,1500,AI,2300,CDRR,63
+5,Potassium (mg/d),Both,1-3,2000,AI,,,64
+5,Potassium (mg/d),Both,4-8,2300,AI,,,65
+5,Potassium (mg/d),Male,9-13,2500,AI,,,66
+5,Potassium (mg/d),Female,9-13,2300,AI,,,67
+5,Potassium (mg/d),Male,14-18,3000,AI,,,68
+5,Potassium (mg/d),Female,14-18,2300,AI,,,69
+5,Potassium (mg/d),Male,19-30,3400,AI,,,70
+5,Potassium (mg/d),Female,19-30,2600,AI,,,71
+5,Potassium (mg/d),Male,31-50,3400,AI,,,72
+5,Potassium (mg/d),Female,31-50,2600,AI,,,73
+5,Potassium (mg/d),Male,51-70,3400,AI,,,74
+5,Potassium (mg/d),Female,51-70,2600,AI,,,75
+5,Potassium (mg/d),Male,71 and over,3400,AI,,,76
+5,Potassium (mg/d),Female,71 and over,2600,AI,,,77
+5,Potassium (mg/d),Male,19 and over,3400,AI,,,78
+5,Potassium (mg/d),Female,19 and over,2600,AI,,,79
+6,Percentage of total energy intake from saturated fats,Both,1-3,,,,,80
+6,Percentage of total energy intake from saturated fats,Both,4-8,,,,,81
+6,Percentage of total energy intake from saturated fats,Male,9-13,,,,,82
+6,Percentage of total energy intake from saturated fats,Female,9-13,,,,,83
+6,Percentage of total energy intake from saturated fats,Male,14-18,,,,,84
+6,Percentage of total energy intake from saturated fats,Female,14-18,,,,,85
+6,Percentage of total energy intake from saturated fats,Male,19-30,,,,,86
+6,Percentage of total energy intake from saturated fats,Female,19-30,,,,,87
+6,Percentage of total energy intake from saturated fats,Male,31-50,,,,,88
+6,Percentage of total energy intake from saturated fats,Female,31-50,,,,,89
+6,Percentage of total energy intake from saturated fats,Male,51-70,,,,,90
+6,Percentage of total energy intake from saturated fats,Female,51-70,,,,,91
+6,Percentage of total energy intake from saturated fats,Male,71 and over,,,,,92
+6,Percentage of total energy intake from saturated fats,Female,71 and over,,,,,93
+6,Percentage of total energy intake from saturated fats,Male,19 and over,,,,,94
+6,Percentage of total energy intake from saturated fats,Female,19 and over,,,,,95
+7,Percentage of total energy intake from sugars,Both,1-3,,,,,96
+7,Percentage of total energy intake from sugars,Both,4-8,,,,,97
+7,Percentage of total energy intake from sugars,Male,9-13,,,,,98
+7,Percentage of total energy intake from sugars,Female,9-13,,,,,99
+7,Percentage of total energy intake from sugars,Male,14-18,,,,,100
+7,Percentage of total energy intake from sugars,Female,14-18,,,,,101
+7,Percentage of total energy intake from sugars,Male,19-30,,,,,102
+7,Percentage of total energy intake from sugars,Female,19-30,,,,,103
+7,Percentage of total energy intake from sugars,Male,31-50,,,,,104
+7,Percentage of total energy intake from sugars,Female,31-50,,,,,105
+7,Percentage of total energy intake from sugars,Male,51-70,,,,,106
+7,Percentage of total energy intake from sugars,Female,51-70,,,,,107
+7,Percentage of total energy intake from sugars,Male,71 and over,,,,,108
+7,Percentage of total energy intake from sugars,Female,71 and over,,,,,109
+7,Percentage of total energy intake from sugars,Male,19 and over,,,,,110
+7,Percentage of total energy intake from sugars,Female,19 and over,,,,,111
+8,Total energy intake (kcal/d),Both,1-3,,,,,112
+8,Total energy intake (kcal/d),Both,4-8,,,,,113
+8,Total energy intake (kcal/d),Male,9-13,,,,,114
+8,Total energy intake (kcal/d),Female,9-13,,,,,115
+8,Total energy intake (kcal/d),Male,14-18,,,,,116
+8,Total energy intake (kcal/d),Female,14-18,,,,,117
+8,Total energy intake (kcal/d),Male,19-30,,,,,118
+8,Total energy intake (kcal/d),Female,19-30,,,,,119
+8,Total energy intake (kcal/d),Male,31-50,,,,,120
+8,Total energy intake (kcal/d),Female,31-50,,,,,121
+8,Total energy intake (kcal/d),Male,51-70,,,,,122
+8,Total energy intake (kcal/d),Female,51-70,,,,,123
+8,Total energy intake (kcal/d),Male,71 and over,,,,,124
+8,Total energy intake (kcal/d),Female,71 and over,,,,,125
+8,Total energy intake (kcal/d),Male,19 and over,,,,,126
+8,Total energy intake (kcal/d),Female,19 and over,,,,,127
+9,Total dietary fibre (g/d),Both,1-3,19,AI,,,128
+9,Total dietary fibre (g/d),Both,4-8,25,AI,,,129
+9,Total dietary fibre (g/d),Male,9-13,31,AI,,,130
+9,Total dietary fibre (g/d),Female,9-13,26,AI,,,131
+9,Total dietary fibre (g/d),Male,14-18,38,AI,,,132
+9,Total dietary fibre (g/d),Female,14-18,26,AI,,,133
+9,Total dietary fibre (g/d),Male,19-30,38,AI,,,134
+9,Total dietary fibre (g/d),Female,19-30,25,AI,,,135
+9,Total dietary fibre (g/d),Male,31-50,38,AI,,,136
+9,Total dietary fibre (g/d),Female,31-50,25,AI,,,137
+9,Total dietary fibre (g/d),Male,51-70,30,AI,,,138
+9,Total dietary fibre (g/d),Female,51-70,21,AI,,,139
+9,Total dietary fibre (g/d),Male,71 and over,30,AI,,,140
+9,Total dietary fibre (g/d),Female,71 and over,21,AI,,,141
+9,Total dietary fibre (g/d),Male,19 and over,,,,,142
+9,Total dietary fibre (g/d),Female,19 and over,,,,,143
+10,Folate (DFE/d),Both,1-3,120,EAR,,,144
+10,Folate (DFE/d),Both,4-8,160,EAR,,,145
+10,Folate (DFE/d),Male,9-13,250,EAR,,,146
+10,Folate (DFE/d),Female,9-13,250,EAR,,,147
+10,Folate (DFE/d),Male,14-18,330,EAR,,,148
+10,Folate (DFE/d),Female,14-18,330,EAR,,,149
+10,Folate (DFE/d),Male,19-30,320,EAR,,,150
+10,Folate (DFE/d),Female,19-30,320,EAR,,,151
+10,Folate (DFE/d),Male,31-50,320,EAR,,,152
+10,Folate (DFE/d),Female,31-50,320,EAR,,,153
+10,Folate (DFE/d),Male,51-70,320,EAR,,,154
+10,Folate (DFE/d),Female,51-70,320,EAR,,,155
+10,Folate (DFE/d),Male,71 and over,320,EAR,,,156
+10,Folate (DFE/d),Female,71 and over,320,EAR,,,157
+10,Folate (DFE/d),Male,19 and over,320,EAR,,,158
+10,Folate (DFE/d),Female,19 and over,320,EAR,,,159
+11,Vitamin B12 (mcg/d),Both,1-3,0.7,EAR,,,160
+11,Vitamin B12 (mcg/d),Both,4-8,1,EAR,,,161
+11,Vitamin B12 (mcg/d),Male,9-13,1.5,EAR,,,162
+11,Vitamin B12 (mcg/d),Female,9-13,1.5,EAR,,,163
+11,Vitamin B12 (mcg/d),Male,14-18,2,EAR,,,164
+11,Vitamin B12 (mcg/d),Female,14-18,2,EAR,,,165
+11,Vitamin B12 (mcg/d),Male,19-30,2,EAR,,,166
+11,Vitamin B12 (mcg/d),Female,19-30,2,EAR,,,167
+11,Vitamin B12 (mcg/d),Male,31-50,2,EAR,,,168
+11,Vitamin B12 (mcg/d),Female,31-50,2,EAR,,,169
+11,Vitamin B12 (mcg/d),Male,51-70,2,EAR,,,170
+11,Vitamin B12 (mcg/d),Female,51-70,2,EAR,,,171
+11,Vitamin B12 (mcg/d),Male,71 and over,2,EAR,,,172
+11,Vitamin B12 (mcg/d),Female,71 and over,2,EAR,,,173
+11,Vitamin B12 (mcg/d),Male,19 and over,2,EAR,,,174
+11,Vitamin B12 (mcg/d),Female,19 and over,2,EAR,,,175
+12,Total carbohydrates (g/d),Both,1-3,100,EAR,,,176
+12,Total carbohydrates (g/d),Both,4-8,100,EAR,,,177
+12,Total carbohydrates (g/d),Male,9-13,100,EAR,,,178
+12,Total carbohydrates (g/d),Female,9-13,100,EAR,,,179
+12,Total carbohydrates (g/d),Male,14-18,100,EAR,,,180
+12,Total carbohydrates (g/d),Female,14-18,100,EAR,,,181
+12,Total carbohydrates (g/d),Male,19-30,100,EAR,,,182
+12,Total carbohydrates (g/d),Female,19-30,100,EAR,,,183
+12,Total carbohydrates (g/d),Male,31-50,100,EAR,,,184
+12,Total carbohydrates (g/d),Female,31-50,100,EAR,,,185
+12,Total carbohydrates (g/d),Male,51-70,100,EAR,,,186
+12,Total carbohydrates (g/d),Female,51-70,100,EAR,,,187
+12,Total carbohydrates (g/d),Male,71 and over,100,EAR,,,188
+12,Total carbohydrates (g/d),Female,71 and over,100,EAR,,,189
+12,Total carbohydrates (g/d),Male,19 and over,100,EAR,,,190
+12,Total carbohydrates (g/d),Female,19 and over,100,EAR,,,191
+13,Total sugars (g/d),Both,1-3,,,,,192
+13,Total sugars (g/d),Both,4-8,,,,,193
+13,Total sugars (g/d),Male,9-13,,,,,194
+13,Total sugars (g/d),Female,9-13,,,,,195
+13,Total sugars (g/d),Male,14-18,,,,,196
+13,Total sugars (g/d),Female,14-18,,,,,197
+13,Total sugars (g/d),Male,19-30,,,,,198
+13,Total sugars (g/d),Female,19-30,,,,,199
+13,Total sugars (g/d),Male,31-50,,,,,200
+13,Total sugars (g/d),Female,31-50,,,,,201
+13,Total sugars (g/d),Male,51-70,,,,,202
+13,Total sugars (g/d),Female,51-70,,,,,203
+13,Total sugars (g/d),Male,71 and over,,,,,204
+13,Total sugars (g/d),Female,71 and over,,,,,205
+13,Total sugars (g/d),Male,19 and over,,,,,206
+13,Total sugars (g/d),Female,19 and over,,,,,207
+14,Vitamin C (mg/d),Both,1-3,13,EAR,400,UL,208
+14,Vitamin C (mg/d),Both,4-8,22,EAR,650,UL,209
+14,Vitamin C (mg/d),Male,9-13,39,EAR,1200,UL,210
+14,Vitamin C (mg/d),Female,9-13,39,EAR,1200,UL,211
+14,Vitamin C (mg/d),Male,14-18,63,EAR,1800,UL,212
+14,Vitamin C (mg/d),Female,14-18,56,EAR,1800,UL,213
+14,Vitamin C (mg/d),Male,19-30,75,EAR,2000,UL,214
+14,Vitamin C (mg/d),Female,19-30,60,EAR,2000,UL,215
+14,Vitamin C (mg/d),Male,31-50,75,EAR,2000,UL,216
+14,Vitamin C (mg/d),Female,31-50,60,EAR,2000,UL,217
+14,Vitamin C (mg/d),Male,51-70,75,EAR,2000,UL,218
+14,Vitamin C (mg/d),Female,51-70,60,EAR,2000,UL,219
+14,Vitamin C (mg/d),Male,71 and over,75,EAR,2000,UL,220
+14,Vitamin C (mg/d),Female,71 and over,60,EAR,2000,UL,221
+14,Vitamin C (mg/d),Male,19 and over,75,EAR,2000,UL,222
+14,Vitamin C (mg/d),Female,19 and over,60,EAR,2000,UL,223
+15,Zinc (mg/d),Both,1-3,2.5,EAR,7,UL,224
+15,Zinc (mg/d),Both,4-8,4,EAR,12,UL,225
+15,Zinc (mg/d),Male,9-13,7,EAR,23,UL,226
+15,Zinc (mg/d),Female,9-13,7,EAR,23,UL,227
+15,Zinc (mg/d),Male,14-18,8.5,EAR,34,UL,228
+15,Zinc (mg/d),Female,14-18,7.3,EAR,34,UL,229
+15,Zinc (mg/d),Male,19-30,9.4,EAR,40,UL,230
+15,Zinc (mg/d),Female,19-30,6.8,EAR,40,UL,231
+15,Zinc (mg/d),Male,31-50,9.4,EAR,40,UL,232
+15,Zinc (mg/d),Female,31-50,6.8,EAR,40,UL,233
+15,Zinc (mg/d),Male,51-70,9.4,EAR,40,UL,234
+15,Zinc (mg/d),Female,51-70,6.8,EAR,40,UL,235
+15,Zinc (mg/d),Male,71 and over,9.4,EAR,40,UL,236
+15,Zinc (mg/d),Female,71 and over,6.8,EAR,40,UL,237
+15,Zinc (mg/d),Male,19 and over,9.4,EAR,40,UL,238
+15,Zinc (mg/d),Female,19 and over,6.8,EAR,40,UL,239
+16,Magnesium (mg/d),Both,1-3,65,EAR,,,240
+16,Magnesium (mg/d),Both,4-8,110,EAR,,,241
+16,Magnesium (mg/d),Male,9-13,200,EAR,,,242
+16,Magnesium (mg/d),Female,9-13,200,EAR,,,243
+16,Magnesium (mg/d),Male,14-18,340,EAR,,,244
+16,Magnesium (mg/d),Female,14-18,300,EAR,,,245
+16,Magnesium (mg/d),Male,19-30,330,EAR,,,246
+16,Magnesium (mg/d),Female,19-30,255,EAR,,,247
+16,Magnesium (mg/d),Male,31-50,350,EAR,,,248
+16,Magnesium (mg/d),Female,31-50,265,EAR,,,249
+16,Magnesium (mg/d),Male,51-70,350,EAR,,,250
+16,Magnesium (mg/d),Female,51-70,265,EAR,,,251
+16,Magnesium (mg/d),Male,71 and over,350,EAR,,,252
+16,Magnesium (mg/d),Female,71 and over,265,EAR,,,253
+16,Magnesium (mg/d),Male,19 and over,,,,,254
+16,Magnesium (mg/d),Female,19 and over,,,,,255
+17,Vitamin A (RAE/d),Both,1-3,210,EAR,,,256
+17,Vitamin A (RAE/d),Both,4-8,275,EAR,,,257
+17,Vitamin A (RAE/d),Male,9-13,445,EAR,,,258
+17,Vitamin A (RAE/d),Female,9-13,420,EAR,,,259
+17,Vitamin A (RAE/d),Male,14-18,630,EAR,,,260
+17,Vitamin A (RAE/d),Female,14-18,485,EAR,,,261
+17,Vitamin A (RAE/d),Male,19-30,625,EAR,,,262
+17,Vitamin A (RAE/d),Female,19-30,500,EAR,,,263
+17,Vitamin A (RAE/d),Male,31-50,625,EAR,,,264
+17,Vitamin A (RAE/d),Female,31-50,500,EAR,,,265
+17,Vitamin A (RAE/d),Male,51-70,625,EAR,,,266
+17,Vitamin A (RAE/d),Female,51-70,500,EAR,,,267
+17,Vitamin A (RAE/d),Male,71 and over,625,EAR,,,268
+17,Vitamin A (RAE/d),Female,71 and over,500,EAR,,,269
+17,Vitamin A (RAE/d),Male,19 and over,625,EAR,,,270
+17,Vitamin A (RAE/d),Female,19 and over,500,EAR,,,271
+18,Percentage of total energy intake from carbohydrates,Both,1-3,45,AMDR - Lower bound,65,AMDR - Upper bound,272
+18,Percentage of total energy intake from carbohydrates,Both,4-8,45,AMDR - Lower bound,65,AMDR - Upper bound,273
+18,Percentage of total energy intake from carbohydrates,Male,9-13,45,AMDR - Lower bound,65,AMDR - Upper bound,274
+18,Percentage of total energy intake from carbohydrates,Female,9-13,45,AMDR - Lower bound,65,AMDR - Upper bound,275
+18,Percentage of total energy intake from carbohydrates,Male,14-18,45,AMDR - Lower bound,65,AMDR - Upper bound,276
+18,Percentage of total energy intake from carbohydrates,Female,14-18,45,AMDR - Lower bound,65,AMDR - Upper bound,277
+18,Percentage of total energy intake from carbohydrates,Male,19-30,45,AMDR - Lower bound,65,AMDR - Upper bound,278
+18,Percentage of total energy intake from carbohydrates,Female,19-30,45,AMDR - Lower bound,65,AMDR - Upper bound,279
+18,Percentage of total energy intake from carbohydrates,Male,31-50,45,AMDR - Lower bound,65,AMDR - Upper bound,280
+18,Percentage of total energy intake from carbohydrates,Female,31-50,45,AMDR - Lower bound,65,AMDR - Upper bound,281
+18,Percentage of total energy intake from carbohydrates,Male,51-70,45,AMDR - Lower bound,65,AMDR - Upper bound,282
+18,Percentage of total energy intake from carbohydrates,Female,51-70,45,AMDR - Lower bound,65,AMDR - Upper bound,283
+18,Percentage of total energy intake from carbohydrates,Male,71 and over,45,AMDR - Lower bound,65,AMDR - Upper bound,284
+18,Percentage of total energy intake from carbohydrates,Female,71 and over,45,AMDR - Lower bound,65,AMDR - Upper bound,285
+18,Percentage of total energy intake from carbohydrates,Male,19 and over,45,AMDR - Lower bound,65,AMDR - Upper bound,286
+18,Percentage of total energy intake from carbohydrates,Female,19 and over,45,AMDR - Lower bound,65,AMDR - Upper bound,287
+19,Percentage of total energy intake from fat,Both,1-3,30,AMDR - Lower bound,40,AMDR - Upper bound,288
+19,Percentage of total energy intake from fat,Both,4-8,25,AMDR - Lower bound,35,AMDR - Upper bound,289
+19,Percentage of total energy intake from fat,Male,9-13,25,AMDR - Lower bound,35,AMDR - Upper bound,290
+19,Percentage of total energy intake from fat,Female,9-13,25,AMDR - Lower bound,35,AMDR - Upper bound,291
+19,Percentage of total energy intake from fat,Male,14-18,25,AMDR - Lower bound,35,AMDR - Upper bound,292
+19,Percentage of total energy intake from fat,Female,14-18,25,AMDR - Lower bound,35,AMDR - Upper bound,293
+19,Percentage of total energy intake from fat,Male,19-30,20,AMDR - Lower bound,35,AMDR - Upper bound,294
+19,Percentage of total energy intake from fat,Female,19-30,20,AMDR - Lower bound,35,AMDR - Upper bound,295
+19,Percentage of total energy intake from fat,Male,31-50,20,AMDR - Lower bound,35,AMDR - Upper bound,296
+19,Percentage of total energy intake from fat,Female,31-50,20,AMDR - Lower bound,35,AMDR - Upper bound,297
+19,Percentage of total energy intake from fat,Male,51-70,20,AMDR - Lower bound,35,AMDR - Upper bound,298
+19,Percentage of total energy intake from fat,Female,51-70,20,AMDR - Lower bound,35,AMDR - Upper bound,299
+19,Percentage of total energy intake from fat,Male,71 and over,20,AMDR - Lower bound,35,AMDR - Upper bound,300
+19,Percentage of total energy intake from fat,Female,71 and over,20,AMDR - Lower bound,35,AMDR - Upper bound,301
+19,Percentage of total energy intake from fat,Male,19 and over,20,AMDR - Lower bound,35,AMDR - Upper bound,302
+19,Percentage of total energy intake from fat,Female,19 and over,20,AMDR - Lower bound,35,AMDR - Upper bound,303
+20,Percentage of total energy intake from protein,Both,1-3,5,AMDR - Lower bound,20,AMDR - Upper bound,304
+20,Percentage of total energy intake from protein,Both,4-8,10,AMDR - Lower bound,30,AMDR - Upper bound,305
+20,Percentage of total energy intake from protein,Male,9-13,10,AMDR - Lower bound,30,AMDR - Upper bound,306
+20,Percentage of total energy intake from protein,Female,9-13,10,AMDR - Lower bound,30,AMDR - Upper bound,307
+20,Percentage of total energy intake from protein,Male,14-18,10,AMDR - Lower bound,30,AMDR - Upper bound,308
+20,Percentage of total energy intake from protein,Female,14-18,10,AMDR - Lower bound,30,AMDR - Upper bound,309
+20,Percentage of total energy intake from protein,Male,19-30,10,AMDR - Lower bound,35,AMDR - Upper bound,310
+20,Percentage of total energy intake from protein,Female,19-30,10,AMDR - Lower bound,35,AMDR - Upper bound,311
+20,Percentage of total energy intake from protein,Male,31-50,10,AMDR - Lower bound,35,AMDR - Upper bound,312
+20,Percentage of total energy intake from protein,Female,31-50,10,AMDR - Lower bound,35,AMDR - Upper bound,313
+20,Percentage of total energy intake from protein,Male,51-70,10,AMDR - Lower bound,35,AMDR - Upper bound,314
+20,Percentage of total energy intake from protein,Female,51-70,10,AMDR - Lower bound,35,AMDR - Upper bound,315
+20,Percentage of total energy intake from protein,Male,71 and over,10,AMDR - Lower bound,35,AMDR - Upper bound,316
+20,Percentage of total energy intake from protein,Female,71 and over,10,AMDR - Lower bound,35,AMDR - Upper bound,317
+20,Percentage of total energy intake from protein,Male,19 and over,10,AMDR - Lower bound,35,AMDR - Upper bound,318
+20,Percentage of total energy intake from protein,Female,19 and over,10,AMDR - Lower bound,35,AMDR - Upper bound,319
+21,Cholesterol (mg/d),Both,1-3,,,,,320
+21,Cholesterol (mg/d),Both,4-8,,,,,321
+21,Cholesterol (mg/d),Male,9-13,,,,,322
+21,Cholesterol (mg/d),Female,9-13,,,,,323
+21,Cholesterol (mg/d),Male,14-18,,,,,324
+21,Cholesterol (mg/d),Female,14-18,,,,,325
+21,Cholesterol (mg/d),Male,19-30,,,,,326
+21,Cholesterol (mg/d),Female,19-30,,,,,327
+21,Cholesterol (mg/d),Male,31-50,,,,,328
+21,Cholesterol (mg/d),Female,31-50,,,,,329
+21,Cholesterol (mg/d),Male,51-70,,,,,330
+21,Cholesterol (mg/d),Female,51-70,,,,,331
+21,Cholesterol (mg/d),Male,71 and over,,,,,332
+21,Cholesterol (mg/d),Female,71 and over,,,,,333
+21,Cholesterol (mg/d),Male,19 and over,,,,,334
+21,Cholesterol (mg/d),Female,19 and over,,,,,335
+22,Phosphorus (mg/d),Both,1-3,380,EAR,3000,UL,336
+22,Phosphorus (mg/d),Both,4-8,405,EAR,3000,UL,337
+22,Phosphorus (mg/d),Male,9-13,1055,EAR,4000,UL,338
+22,Phosphorus (mg/d),Female,9-13,1055,EAR,4000,UL,339
+22,Phosphorus (mg/d),Male,14-18,1055,EAR,4000,UL,340
+22,Phosphorus (mg/d),Female,14-18,1055,EAR,4000,UL,341
+22,Phosphorus (mg/d),Male,19-30,580,EAR,4000,UL,342
+22,Phosphorus (mg/d),Female,19-30,580,EAR,4000,UL,343
+22,Phosphorus (mg/d),Male,31-50,580,EAR,4000,UL,344
+22,Phosphorus (mg/d),Female,31-50,580,EAR,4000,UL,345
+22,Phosphorus (mg/d),Male,51-70,580,EAR,4000,UL,346
+22,Phosphorus (mg/d),Female,51-70,580,EAR,4000,UL,347
+22,Phosphorus (mg/d),Male,71 and over,580,EAR,3000,UL,348
+22,Phosphorus (mg/d),Female,71 and over,580,EAR,3000,UL,349
+22,Phosphorus (mg/d),Male,19 and over,580,EAR,,,350
+22,Phosphorus (mg/d),Female,19 and over,580,EAR,,,351
+23,Vitamin B6 (mg/d),Both,1-3,0.4,EAR,30,UL,352
+23,Vitamin B6 (mg/d),Both,4-8,0.5,EAR,40,UL,353
+23,Vitamin B6 (mg/d),Male,9-13,0.8,EAR,60,UL,354
+23,Vitamin B6 (mg/d),Female,9-13,0.8,EAR,60,UL,355
+23,Vitamin B6 (mg/d),Male,14-18,1.1,EAR,80,UL,356
+23,Vitamin B6 (mg/d),Female,14-18,1,EAR,80,UL,357
+23,Vitamin B6 (mg/d),Male,19-30,1.1,EAR,100,UL,358
+23,Vitamin B6 (mg/d),Female,19-30,1.1,EAR,100,UL,359
+23,Vitamin B6 (mg/d),Male,31-50,1.1,EAR,100,UL,360
+23,Vitamin B6 (mg/d),Female,31-50,1.1,EAR,100,UL,361
+23,Vitamin B6 (mg/d),Male,51-70,1.4,EAR,100,UL,362
+23,Vitamin B6 (mg/d),Female,51-70,1.3,EAR,100,UL,363
+23,Vitamin B6 (mg/d),Male,71 and over,1.4,EAR,100,UL,364
+23,Vitamin B6 (mg/d),Female,71 and over,1.3,EAR,100,UL,365
+23,Vitamin B6 (mg/d),Male,19 and over,,,100,UL,366
+23,Vitamin B6 (mg/d),Female,19 and over,,,100,UL,367
+24,Niacin (NE/d),Both,1-3,5,EAR,,,368
+24,Niacin (NE/d),Both,4-8,6,EAR,,,369
+24,Niacin (NE/d),Male,9-13,9,EAR,,,370
+24,Niacin (NE/d),Female,9-13,9,EAR,,,371
+24,Niacin (NE/d),Male,14-18,12,EAR,,,372
+24,Niacin (NE/d),Female,14-18,11,EAR,,,373
+24,Niacin (NE/d),Male,19-30,12,EAR,,,374
+24,Niacin (NE/d),Female,19-30,11,EAR,,,375
+24,Niacin (NE/d),Male,31-50,12,EAR,,,376
+24,Niacin (NE/d),Female,31-50,11,EAR,,,377
+24,Niacin (NE/d),Male,51-70,12,EAR,,,378
+24,Niacin (NE/d),Female,51-70,11,EAR,,,379
+24,Niacin (NE/d),Male,71 and over,12,EAR,,,380
+24,Niacin (NE/d),Female,71 and over,11,EAR,,,381
+24,Niacin (NE/d),Male,19 and over,12,EAR,,,382
+24,Niacin (NE/d),Female,19 and over,11,EAR,,,383
+25,Riboflavin (mg/d),Both,1-3,0.4,EAR,,,384
+25,Riboflavin (mg/d),Both,4-8,0.5,EAR,,,385
+25,Riboflavin (mg/d),Male,9-13,0.8,EAR,,,386
+25,Riboflavin (mg/d),Female,9-13,0.8,EAR,,,387
+25,Riboflavin (mg/d),Male,14-18,1.1,EAR,,,388
+25,Riboflavin (mg/d),Female,14-18,0.9,EAR,,,389
+25,Riboflavin (mg/d),Male,19-30,1.1,EAR,,,390
+25,Riboflavin (mg/d),Female,19-30,0.9,EAR,,,391
+25,Riboflavin (mg/d),Male,31-50,1.1,EAR,,,392
+25,Riboflavin (mg/d),Female,31-50,0.9,EAR,,,393
+25,Riboflavin (mg/d),Male,51-70,1.1,EAR,,,394
+25,Riboflavin (mg/d),Female,51-70,0.9,EAR,,,395
+25,Riboflavin (mg/d),Male,71 and over,1.1,EAR,,,396
+25,Riboflavin (mg/d),Female,71 and over,0.9,EAR,,,397
+25,Riboflavin (mg/d),Male,19 and over,1.1,EAR,,,398
+25,Riboflavin (mg/d),Female,19 and over,0.9,EAR,,,399
+26,Thiamin (mg/d),Both,1-3,0.4,EAR,,,400
+26,Thiamin (mg/d),Both,4-8,0.5,EAR,,,401
+26,Thiamin (mg/d),Male,9-13,0.7,EAR,,,402
+26,Thiamin (mg/d),Female,9-13,0.7,EAR,,,403
+26,Thiamin (mg/d),Male,14-18,1,EAR,,,404
+26,Thiamin (mg/d),Female,14-18,0.9,EAR,,,405
+26,Thiamin (mg/d),Male,19-30,1,EAR,,,406
+26,Thiamin (mg/d),Female,19-30,0.9,EAR,,,407
+26,Thiamin (mg/d),Male,31-50,1,EAR,,,408
+26,Thiamin (mg/d),Female,31-50,0.9,EAR,,,409
+26,Thiamin (mg/d),Male,51-70,1,EAR,,,410
+26,Thiamin (mg/d),Female,51-70,0.9,EAR,,,411
+26,Thiamin (mg/d),Male,71 and over,1,EAR,,,412
+26,Thiamin (mg/d),Female,71 and over,0.9,EAR,,,413
+26,Thiamin (mg/d),Male,19 and over,1,EAR,,,414
+26,Thiamin (mg/d),Female,19 and over,0.9,EAR,,,415
+27,Percentage of total energy intake from linoleic acid,Both,1-3,5,AMDR - Lower bound,10,AMDR - Upper bound,416
+27,Percentage of total energy intake from linoleic acid,Both,4-8,5,AMDR - Lower bound,10,AMDR - Upper bound,417
+27,Percentage of total energy intake from linoleic acid,Male,9-13,5,AMDR - Lower bound,10,AMDR - Upper bound,418
+27,Percentage of total energy intake from linoleic acid,Female,9-13,5,AMDR - Lower bound,10,AMDR - Upper bound,419
+27,Percentage of total energy intake from linoleic acid,Male,14-18,5,AMDR - Lower bound,10,AMDR - Upper bound,420
+27,Percentage of total energy intake from linoleic acid,Female,14-18,5,AMDR - Lower bound,10,AMDR - Upper bound,421
+27,Percentage of total energy intake from linoleic acid,Male,19-30,5,AMDR - Lower bound,10,AMDR - Upper bound,422
+27,Percentage of total energy intake from linoleic acid,Female,19-30,5,AMDR - Lower bound,10,AMDR - Upper bound,423
+27,Percentage of total energy intake from linoleic acid,Male,31-50,5,AMDR - Lower bound,10,AMDR - Upper bound,424
+27,Percentage of total energy intake from linoleic acid,Female,31-50,5,AMDR - Lower bound,10,AMDR - Upper bound,425
+27,Percentage of total energy intake from linoleic acid,Male,51-70,5,AMDR - Lower bound,10,AMDR - Upper bound,426
+27,Percentage of total energy intake from linoleic acid,Female,51-70,5,AMDR - Lower bound,10,AMDR - Upper bound,427
+27,Percentage of total energy intake from linoleic acid,Male,71 and over,5,AMDR - Lower bound,10,AMDR - Upper bound,428
+27,Percentage of total energy intake from linoleic acid,Female,71 and over,5,AMDR - Lower bound,10,AMDR - Upper bound,429
+27,Percentage of total energy intake from linoleic acid,Male,19 and over,5,AMDR - Lower bound,10,AMDR - Upper bound,430
+27,Percentage of total energy intake from linoleic acid,Female,19 and over,5,AMDR - Lower bound,10,AMDR - Upper bound,431
+28,Percentage of total energy intake from linolenic acid,Both,1-3,0.6,AMDR - Lower bound,1.2,AMDR - Upper bound,432
+28,Percentage of total energy intake from linolenic acid,Both,4-8,0.6,AMDR - Lower bound,1.2,AMDR - Upper bound,433
+28,Percentage of total energy intake from linolenic acid,Male,9-13,0.6,AMDR - Lower bound,1.2,AMDR - Upper bound,434
+28,Percentage of total energy intake from linolenic acid,Female,9-13,0.6,AMDR - Lower bound,1.2,AMDR - Upper bound,435
+28,Percentage of total energy intake from linolenic acid,Male,14-18,0.6,AMDR - Lower bound,1.2,AMDR - Upper bound,436
+28,Percentage of total energy intake from linolenic acid,Female,14-18,0.6,AMDR - Lower bound,1.2,AMDR - Upper bound,437
+28,Percentage of total energy intake from linolenic acid,Male,19-30,0.6,AMDR - Lower bound,1.2,AMDR - Upper bound,438
+28,Percentage of total energy intake from linolenic acid,Female,19-30,0.6,AMDR - Lower bound,1.2,AMDR - Upper bound,439
+28,Percentage of total energy intake from linolenic acid,Male,31-50,0.6,AMDR - Lower bound,1.2,AMDR - Upper bound,440
+28,Percentage of total energy intake from linolenic acid,Female,31-50,0.6,AMDR - Lower bound,1.2,AMDR - Upper bound,441
+28,Percentage of total energy intake from linolenic acid,Male,51-70,0.6,AMDR - Lower bound,1.2,AMDR - Upper bound,442
+28,Percentage of total energy intake from linolenic acid,Female,51-70,0.6,AMDR - Lower bound,1.2,AMDR - Upper bound,443
+28,Percentage of total energy intake from linolenic acid,Male,71 and over,0.6,AMDR - Lower bound,1.2,AMDR - Upper bound,444
+28,Percentage of total energy intake from linolenic acid,Female,71 and over,0.6,AMDR - Lower bound,1.2,AMDR - Upper bound,445
+28,Percentage of total energy intake from linolenic acid,Male,19 and over,0.6,AMDR - Lower bound,1.2,AMDR - Upper bound,446
+28,Percentage of total energy intake from linolenic acid,Female,19 and over,0.6,AMDR - Lower bound,1.2,AMDR - Upper bound,447
