@@ -151,270 +151,326 @@
         <div class="row">
             {# Data filtering panel #}
             <div class="col-md-3">
-                <h4 class="wb-inv">Filtering Options</h4>
-                <details open>
-                    <summary><h4 class="h4">Filter Options</h4></summary>
-                    <p class="mrgn-tp-md">Use filters to below options to change the focus of your results in
-                        following data table</p>
-                    <form class="wb-tables-filter" data-bind-to="dataset-filter">
-                        <div class="form-group">
-                            {# Note that data-column refers to table column position; 0 indexed #}
-                            <label for="dt_nutrient">Nutrient/Item</label>
-                            <select class="form-control" id="dt_nutrient" name="dt_nutrient" data-column="0">
-                                <option value="">All nutrients</option>
-                                <option value="Caffeine (mg/d)">Caffeine (mg/d)</option>
-                                <option value="Calcium (mg/d)">Calcium (mg/d)</option>
-                                <option value="Cholesterol (mg/d)">Cholesterol (mg/d)</option>
-                                <option value="Folacin (mcg/d)">Folacin (mcg/d)</option>
-                                <option value="Folate (DFE/d)">Folate (DFE/d)</option>
-                                <option value="Iron (mg/d)">Iron (mg/d)</option>
-                                <option value="Linoleic acid (g/d)">Linoleic acid (g/d)</option>
-                                <option value="Linolenic acid (g/d)">Linolenic acid (g/d)</option>
-                                <option value="Magnesium (mg/d)">Magnesium (mg/d)</option>
-                                <option value="Moisture (g/d)">Moisture (g/d)</option>
-                                <option value="Naturally occurring folate (mcg/d)">Naturally occurring folate (mcg/d)
-                                </option>
-                                <option value="Niacin (NE/d)">Niacin (NE/d)</option>
-                                <option value="Percentage of total energy intake from carbohydrates">Percentage of total
-                                    energy intake from carbohydrates
-                                </option>
-                                <option value="Percentage of total energy intake from fat">Percentage of total energy
-                                    intake from fat
-                                </option>
-                                <option value="Percentage of total energy intake from linoleic acid">Percentage of total
-                                    energy intake from linoleic acid
-                                </option>
-                                <option value="Percentage of total energy intake from linolenic acid">Percentage of
-                                    total energy intake from linolenic acid
-                                </option>
-                                <option value="Percentage of total energy intake from monounsaturated fats">Percentage
-                                    of total energy intake from monounsaturated fats
-                                </option>
-                                <option value="Percentage of total energy intake from polyunsaturated fats">Percentage
-                                    of total energy intake from polyunsaturated fats
-                                </option>
-                                <option value="Percentage of total energy intake from protein">Percentage of total
-                                    energy intake from protein
-                                </option>
-                                <option value="Percentage of total energy intake from saturated fats">Percentage of
-                                    total energy intake from saturated fats
-                                </option>
-                                <option value="Percentage of total energy intake from sugars">Percentage of total energy
-                                    intake from sugars
-                                </option>
-                                <option value="Phosphorus (mg/d)">Phosphorus (mg/d)</option>
-                                <option value="Potassium (mg/d)">Potassium (mg/d)</option>
-                                <option value="Protein (g/d)">Protein (g/d)</option>
-                                <option value="Riboflavin (mg/d)">Riboflavin (mg/d)</option>
-                                <option value="Sodium (mg/d)">Sodium (mg/d)</option>
-                                <option value="Thiamin (mg/d)">Thiamin (mg/d)</option>
-                                <option value="Total carbohydrates (g/d)">Total carbohydrates (g/d)</option>
-                                <option value="Total dietary fibre (g/d)">Total dietary fibre (g/d)</option>
-                                <option value="Total energy intake (kcal/d)">Total energy intake (kcal/d)</option>
-                                <option value="Total fats (g/d)">Total fats (g/d)</option>
-                                <option value="Total monounsaturated fats (g/d)">Total monounsaturated fats (g/d)
-                                </option>
-                                <option value="Total polyunsaturated fatty acids (g/d)">Total polyunsaturated fatty
-                                    acids (g/d)
-                                </option>
-                                <option value="Total saturated fats (g/d)">Total saturated fats (g/d)</option>
-                                <option value="Total sugars (g/d)">Total sugars (g/d)</option>
-                                <option value="Vitamin A (RAE/d)">Vitamin A (RAE/d)</option>
-                                <option value="Vitamin B12 (mcg/d)">Vitamin B12 (mcg/d)</option>
-                                <option value="Vitamin B6 (mg/d)">Vitamin B6 (mg/d)</option>
-                                <option value="Vitamin C (mg/d)">Vitamin C (mg/d)</option>
-                                <option value="Vitamin D (mcg/d)">Vitamin D (mcg/d)</option>
-                                <option value="Zinc (mg/d)">Zinc (mg/d)</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <fieldset>
-                                <legend>
-                                    <span class="field-name">Region</span>
-                                </legend>
-                                <ul>
-                                    <li class="checkbox">
-                                        <label for="dt_region">
-                                            <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
-                                                   value="">All regions</label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_region">
-                                            <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
-                                                   value="Ontario">Ontario</label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_region">
-                                            <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
-                                                   value="Alberta">Alberta</label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_region">
-                                            <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
-                                                   value="Atlantic Region">Atlantic Region</label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_region">
-                                            <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
-                                                   value="British Columbia">British Columbia</label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_region">
-                                            <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
-                                                   value="Canada excluding territories">Canada excluding
-                                            territories</label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_region">
-                                            <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
-                                                   value="Manitoba">Manitoba</label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_region">
-                                            <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
-                                                   value="New Brunswick">New Brunswick</label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_region">
-                                            <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
-                                                   value="Newfoundland and Labrador">Newfoundland and
-                                            Labrador</label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_region">
-                                            <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
-                                                   value="Nova Scotia">Nova Scotia</label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_region">
-                                            <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
-                                                   value="Prairie Region">Prairie Region</label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_region">
-                                            <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
-                                                   value="Prince Edward Island">Prince Edward Island</label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_region">
-                                            <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
-                                                   value="Quebec">Quebec</label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_region">
-                                            <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
-                                                   value="Saskatchewan">Saskatchewan</label>
-                                    </li>
-                                </ul>
-                            </fieldset>
-                        </div>
-                        <div class="form-group">
-                            <fieldset>
-                                <legend>
-                                    <span class="field-name">Sex</span>
-                                </legend>
-                                <ul>
-                                    <li class="checkbox">
-                                        <label for="dt_sex">
-                                            <input id="dt_sex" type="checkbox" name="dt_sex" data-column="2"
-                                                   value="Both">Both
-                                        </label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_sex">
-                                            <input id="dt_sex" type="checkbox" name="dt_sex" data-column="2"
-                                                   value="Male">Male
-                                        </label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_sex">
-                                            <input id="dt_sex" type="checkbox" name="dt_sex" data-column="2"
-                                                   value="Female">Female
-                                        </label>
-                                    </li>
-                                </ul>
-                            </fieldset>
-                        </div>
+                <div class="row">
+                    <h4 class="wb-inv">Filtering Options</h4>
+                    <details open>
+                        <summary><h4 class="h4">Filter Options</h4></summary>
+                        <p class="mrgn-tp-md">Use the filter options below to change the focus of your results in
+                            following data table</p>
+                        <form class="wb-tables-filter" data-bind-to="dataset-filter">
+                            <div class="form-group">
+                                {# Note that data-column refers to table column position; 0 indexed #}
+                                <label for="dt_nutrient">Nutrient/Item</label>
+                                <select class="form-control" id="dt_nutrient" name="dt_nutrient" data-column="0">
+                                    <option value="">All nutrients</option>
+                                    <option value="Caffeine (mg/d)">Caffeine (mg/d)</option>
+                                    <option value="Calcium (mg/d)">Calcium (mg/d)</option>
+                                    <option value="Cholesterol (mg/d)">Cholesterol (mg/d)</option>
+                                    <option value="Folacin (mcg/d)">Folacin (mcg/d)</option>
+                                    <option value="Folate (DFE/d)">Folate (DFE/d)</option>
+                                    <option value="Iron (mg/d)">Iron (mg/d)</option>
+                                    <option value="Linoleic acid (g/d)">Linoleic acid (g/d)</option>
+                                    <option value="Linolenic acid (g/d)">Linolenic acid (g/d)</option>
+                                    <option value="Magnesium (mg/d)">Magnesium (mg/d)</option>
+                                    <option value="Moisture (g/d)">Moisture (g/d)</option>
+                                    <option value="Naturally occurring folate (mcg/d)">Naturally occurring folate
+                                        (mcg/d)
+                                    </option>
+                                    <option value="Niacin (NE/d)">Niacin (NE/d)</option>
+                                    <option value="Percentage of total energy intake from carbohydrates">Percentage of
+                                        total
+                                        energy intake from carbohydrates
+                                    </option>
+                                    <option value="Percentage of total energy intake from fat">Percentage of total
+                                        energy
+                                        intake from fat
+                                    </option>
+                                    <option value="Percentage of total energy intake from linoleic acid">Percentage of
+                                        total
+                                        energy intake from linoleic acid
+                                    </option>
+                                    <option value="Percentage of total energy intake from linolenic acid">Percentage of
+                                        total energy intake from linolenic acid
+                                    </option>
+                                    <option value="Percentage of total energy intake from monounsaturated fats">
+                                        Percentage
+                                        of total energy intake from monounsaturated fats
+                                    </option>
+                                    <option value="Percentage of total energy intake from polyunsaturated fats">
+                                        Percentage
+                                        of total energy intake from polyunsaturated fats
+                                    </option>
+                                    <option value="Percentage of total energy intake from protein">Percentage of total
+                                        energy intake from protein
+                                    </option>
+                                    <option value="Percentage of total energy intake from saturated fats">Percentage of
+                                        total energy intake from saturated fats
+                                    </option>
+                                    <option value="Percentage of total energy intake from sugars">Percentage of total
+                                        energy
+                                        intake from sugars
+                                    </option>
+                                    <option value="Phosphorus (mg/d)">Phosphorus (mg/d)</option>
+                                    <option value="Potassium (mg/d)">Potassium (mg/d)</option>
+                                    <option value="Protein (g/d)">Protein (g/d)</option>
+                                    <option value="Riboflavin (mg/d)">Riboflavin (mg/d)</option>
+                                    <option value="Sodium (mg/d)">Sodium (mg/d)</option>
+                                    <option value="Thiamin (mg/d)">Thiamin (mg/d)</option>
+                                    <option value="Total carbohydrates (g/d)">Total carbohydrates (g/d)</option>
+                                    <option value="Total dietary fibre (g/d)">Total dietary fibre (g/d)</option>
+                                    <option value="Total energy intake (kcal/d)">Total energy intake (kcal/d)</option>
+                                    <option value="Total fats (g/d)">Total fats (g/d)</option>
+                                    <option value="Total monounsaturated fats (g/d)">Total monounsaturated fats (g/d)
+                                    </option>
+                                    <option value="Total polyunsaturated fatty acids (g/d)">Total polyunsaturated fatty
+                                        acids (g/d)
+                                    </option>
+                                    <option value="Total saturated fats (g/d)">Total saturated fats (g/d)</option>
+                                    <option value="Total sugars (g/d)">Total sugars (g/d)</option>
+                                    <option value="Vitamin A (RAE/d)">Vitamin A (RAE/d)</option>
+                                    <option value="Vitamin B12 (mcg/d)">Vitamin B12 (mcg/d)</option>
+                                    <option value="Vitamin B6 (mg/d)">Vitamin B6 (mg/d)</option>
+                                    <option value="Vitamin C (mg/d)">Vitamin C (mg/d)</option>
+                                    <option value="Vitamin D (mcg/d)">Vitamin D (mcg/d)</option>
+                                    <option value="Zinc (mg/d)">Zinc (mg/d)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <fieldset>
+                                    <legend>
+                                        <span class="field-name">Region</span>
+                                    </legend>
+                                    <ul>
+                                        <li class="checkbox">
+                                            <label for="dt_region">
+                                                <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
+                                                       value="">All regions</label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_region">
+                                                <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
+                                                       value="Ontario">Ontario</label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_region">
+                                                <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
+                                                       value="Alberta">Alberta</label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_region">
+                                                <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
+                                                       value="Atlantic Region">Atlantic Region</label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_region">
+                                                <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
+                                                       value="British Columbia">British Columbia</label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_region">
+                                                <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
+                                                       value="Canada excluding territories">Canada excluding
+                                                territories</label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_region">
+                                                <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
+                                                       value="Manitoba">Manitoba</label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_region">
+                                                <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
+                                                       value="New Brunswick">New Brunswick</label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_region">
+                                                <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
+                                                       value="Newfoundland and Labrador">Newfoundland and
+                                                Labrador</label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_region">
+                                                <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
+                                                       value="Nova Scotia">Nova Scotia</label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_region">
+                                                <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
+                                                       value="Prairie Region">Prairie Region</label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_region">
+                                                <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
+                                                       value="Prince Edward Island">Prince Edward Island</label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_region">
+                                                <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
+                                                       value="Quebec">Quebec</label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_region">
+                                                <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
+                                                       value="Saskatchewan">Saskatchewan</label>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                            </div>
+                            <div class="form-group">
+                                <fieldset>
+                                    <legend>
+                                        <span class="field-name">Sex</span>
+                                    </legend>
+                                    <ul>
+                                        <li class="checkbox">
+                                            <label for="dt_sex">
+                                                <input id="dt_sex" type="checkbox" name="dt_sex" data-column="2"
+                                                       value="Both">Both
+                                            </label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_sex">
+                                                <input id="dt_sex" type="checkbox" name="dt_sex" data-column="2"
+                                                       value="Male">Male
+                                            </label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_sex">
+                                                <input id="dt_sex" type="checkbox" name="dt_sex" data-column="2"
+                                                       value="Female">Female
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                            </div>
+                            <div class="form-group">
+                                <fieldset>
+                                    <legend>
+                                        <span class="field-name">Age</span>
+                                    </legend>
+                                    <ul>
+                                        <li class="checkbox">
+                                            <label for="dt_age">
+                                                <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
+                                                       value="">All age groups
+                                            </label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_age">
+                                                <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
+                                                       value="1-3 years">1-3 years
+                                            </label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_age">
+                                                <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
+                                                       value="4-8 years">4-8 years
+                                            </label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_age">
+                                                <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
+                                                       value="9-13 years">9-13 years
+                                            </label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_age">
+                                                <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
+                                                       value="14-18 years">14-18 years
+                                            </label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_age">
+                                                <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
+                                                       value="19-30 years">19-30 years
+                                            </label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_age">
+                                                <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
+                                                       value="31-50 years">31-50 years
+                                            </label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_age">
+                                                <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
+                                                       value="51-70 years">51-70 years
+                                            </label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_age">
+                                                <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
+                                                       value="19 years and over">19 years and over
+                                            </label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_age">
+                                                <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
+                                                       value="71 years and over">71 years and over
+                                            </label>
+                                        </li>
 
-                        <div class="form-group">
-                            <fieldset>
-                                <legend>
-                                    <span class="field-name">Age</span>
-                                </legend>
-                                <ul>
-                                    <li class="checkbox">
-                                        <label for="dt_age">
-                                            <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
-                                                   value="">All age groups
-                                        </label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_age">
-                                            <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
-                                                   value="1-3 years">1-3 years
-                                        </label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_age">
-                                            <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
-                                                   value="4-8 years">4-8 years
-                                        </label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_age">
-                                            <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
-                                                   value="9-13 years">9-13 years
-                                        </label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_age">
-                                            <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
-                                                   value="14-18 years">14-18 years
-                                        </label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_age">
-                                            <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
-                                                   value="19-30 years">19-30 years
-                                        </label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_age">
-                                            <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
-                                                   value="31-50 years">31-50 years
-                                        </label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_age">
-                                            <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
-                                                   value="51-70 years">51-70 years
-                                        </label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_age">
-                                            <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
-                                                   value="19 years and over">19 years and over
-                                        </label>
-                                    </li>
-                                    <li class="checkbox">
-                                        <label for="dt_age">
-                                            <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
-                                                   value="71 years and over">71 years and over
-                                        </label>
-                                    </li>
+                                    </ul>
+                                </fieldset>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary" aria-controls="dataset-filter">Filter
+                                </button>
+                            </div>
+                            <div class="form-group">
+                                <button type="reset" class="btn btn-link btn-sm p-0">Reset to defaults</button>
+                            </div>
+                        </form>
+                    </details>
+                </div>
 
-                                </ul>
-                            </fieldset>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary" aria-controls="dataset-filter">Filter
-                            </button>
-                        </div>
-                        <div class="form-group">
-                            <button type="reset" class="btn btn-link btn-sm p-0">Reset to defaults</button>
-                        </div>
-                    </form>
-                </details>
+                {# Column display panel #}
+                <div class="row">
+                    <h4 class="wb-inv">Display Options</h4>
+                    <details open>
+                        <summary><h4 class="h4">Display Options</h4></summary>
+                        <p class="mrgn-tp-md">Use the options below to toggle which columns to display in the table</p>
+                        <form>
+
+                            <div class="form-group">
+                                <fieldset>
+                                    <legend>
+                                        <span class="field-name">Columns</span>
+                                    </legend>
+                                    <ul>
+                                        <li class="checkbox">
+                                            <label for="dp_mean">
+                                                <input class="toggle-vis" id="dp_mean" type="checkbox" name="dp_mean"
+                                                       value="Mean">Mean
+                                            </label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dp_standarderrror">
+                                                <input class="toggle-vis" id="dp_standarderrror" type="checkbox"
+                                                       name="dp_standarderrror" value="Standard Error">Standard Error
+                                            </label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dp_percentiles">
+                                                <input class="toggle-vis" id="dp_percentiles" type="checkbox"
+                                                       name="dp_percentiles" value="Percentiles">Percentiles
+                                            </label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dp_dri">
+                                                <input class="toggle-vis" id="dp_dri" type="checkbox" name="dp_dri"
+                                                       value="DRI Comparison">DRI Comparison
+                                            </label>
+                                        </li>
+
+                                    </ul>
+                                </fieldset>
+                            </div>
+
+                        </form>
+                    </details>
+                </div>
+
             </div>
             <div class="col-md-9">
                 <table class="wb-tables table table-striped table-hover table-condensed" aria-live="polite"
@@ -424,53 +480,9 @@
                                 "processing": "Loading data. Please wait..."
                             },
                         "processing": true,
-                        "serverSide": true,
                         "scrollX": true,
-                        "ajaxSource": "../static/data/data_table-en.json",
-                        "columns": [
-                            { "data": "Nutrient/Item (unit)", "className": "nws-tbl-nutrient"},
-                            { "data": "Reg_Prov", "className": "nws-tbl-region" },
-                            { "data": "Sex", "className": "nws-tbl-sex" },
-                            { "data": "Age (years)", "className": "nws-tbl-age" },
-                            { "data": "n", "className": "nws-tbl-n" },
-                            { "data": "Mean", "className": "nws-tbl-mean" },
-                            { "data": "SE_Mean", "className": "nws-tbl-meanse" },
-                            { "data": "P5", "className": "nws-tbl-p5" },
-                            { "data": "P5_SE", "className": "nws-tbl-p5se" },
-                            { "data": "P10", "className": "nws-tbl-p10" },
-                            { "data": "P10_SE", "className": "nws-tbl-p10se" },
-                            { "data": "P25", "className": "nws-tbl-p25" },
-                            { "data": "P25_SE", "className": "nws-tbl-p25se" },
-                            { "data": "P50", "className": "nws-tbl-p50" },
-                            { "data": "P50_SE", "className": "nws-tbl-p50se" },
-                            { "data": "P75", "className": "nws-tbl-p75" },
-                            { "data": "P75_SE", "className": "nws-tbl-p75se" },
-                            { "data": "P90", "className": "nws-tbl-p90" },
-                            { "data": "P90_SE", "className": "nws-tbl-p90se" },
-                            { "data": "P95", "className": "nws-tbl-p95" },
-                            { "data": "P95_SE", "className": "nws-tbl-p95se" },
-                            { "data": "EAR", "className": "nws-tbl-ear" },
-                            { "data": "% <EAR", "className": "nws-tbl-earpctbelow" },
-                            { "data": "%<EAR_SE", "className": "nws-tbl-earpctbelowse" },
-                            { "data": "AI", "className": "nws-tbl-ai" },
-                            { "data": "% >AI", "className": "nws-tbl-aipctabove" },
-                            { "data": "%>AI_SE", "className": "nws-tbl-aipctabovese" },
-                            { "data": "UL", "className": "nws-tbl-ul" },
-                            { "data": "% >UL", "className": "nws-tbl-ulpctabove" },
-                            { "data": "%>UL_SE", "className": "nws-tbl-ulpctabovese" },
-                            { "data": "AMDR", "className": "nws-tbl-amdr" },
-                            { "data": "% below AMDR", "className": "nws-tbl-amdrpctbelow" },
-                            { "data": "% below AMDR_SE", "className": "nws-tbl-amdrpctbelowse" },
-                            { "data": "% within AMDR", "className": "nws-tbl-amdrpctwithin" },
-                            { "data": "% within AMDR_SE", "className": "nws-tbl-amdrpctwithinse" },
-                            { "data": "% above AMDR", "className": "nws-tbl-amdrpctabove" },
-                            { "data": "% above AMDR_SE", "className": "nws-tbl-amdrpctabovese" },
-                            { "data": "CDRR", "className": "nws-tbl-cdrr" },
-                            { "data": "% >CDRR", "className": "nws-tbl-cdrrpctabove" },
-                            { "data": "%>CDRR_SE", "className": "nws-tbl-cdrrpctabovese" },
-                            { "data": "%Inadequacy", "className": "nws-tbl-inadequacy" },
-                            { "data": "%Inadequacy_SE", "className": "nws-tbl-inadequacyse" }
-                        ]}'>
+                        "ajaxSource": "../static/data/data_table_flattened-en.json"
+                         }'>
                     <thead>
                     <tr>
                         <th>Nutrient/Item (unit)</th>
@@ -675,9 +687,95 @@
 <script src="../static/GCWeb/js/theme.min.js"></script>
 
 {# D3 #}
-<script src="../static/js/d3.v5.min.js"></script>
-<script src="../static/js/table-en.js"></script>
+{#<script src="../static/js/d3.v5.min.js"></script>#}
+{#<script src="../static/js/table-en.js"></script>#}
 
+
+<script>
+    $(".wb-tables").trigger("wb-init.wb-tables");
+    $(document).on("wb-ready.wb", function (event) {
+        let hiddenColumns = [];
+        let table = $('.wb-tables').DataTable()
+
+        $('.toggle-vis').on('change', function (e) {
+            e.preventDefault();
+
+            // Hard coded indexes for columns to hide
+            const meanColumns = [
+                5, 6
+            ]
+
+            const standardErrorColumns = [
+                6, 8, 10, 12, 14, 16, 18, 20, 23, 26, 29, 32, 34, 36, 39, 41
+            ]
+
+            const percentilesColumns = [
+                7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+            ]
+
+            const driColumns = [
+                21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41
+            ]
+
+            // Hide if checked
+            if ($(this).is(":checked")) {
+                console.log(`Hiding columns for ${$(this)[0].value}`)
+
+                if ($(this)[0].value === "Mean") {
+                    hiddenColumns.push(...meanColumns)
+                }
+                if ($(this)[0].value === "Standard Error") {
+                    hiddenColumns.push(...standardErrorColumns)
+                }
+                if ($(this)[0].value === "Percentiles") {
+                    hiddenColumns.push(...percentilesColumns)
+                }
+                if ($(this)[0].value === "DRI Comparison") {
+                    hiddenColumns.push(...driColumns)
+                }
+
+                // Remove duplicates
+                hiddenColumns = [...new Set(hiddenColumns)];
+
+                hiddenColumns.forEach(function (c) {
+                    table.column(c).visible(false)
+                })
+
+                // Reveal if unchecked
+            } else {
+                console.log(`Revealing columns for ${$(this)[0].value}`)
+                if ($(this)[0].value === "Mean") {
+                    meanColumns.forEach(function (d) {
+                        hiddenColumns = hiddenColumns.filter(item => item !== d)
+                        table.column(d).visible(true)
+
+                    })
+                }
+                if ($(this)[0].value === "Standard Error") {
+                    standardErrorColumns.forEach(function (d) {
+                        hiddenColumns = hiddenColumns.filter(item => item !== d)
+                        table.column(d).visible(true)
+
+                    })
+                }
+                if ($(this)[0].value === "Percentiles") {
+                    percentilesColumns.forEach(function (d) {
+                        hiddenColumns = hiddenColumns.filter(item => item !== d)
+                        table.column(d).visible(true)
+                    })
+                }
+                if ($(this)[0].value === "DRI Comparison") {
+                    driColumns.forEach(function (d) {
+                        hiddenColumns = hiddenColumns.filter(item => item !== d)
+                        table.column(d).visible(true)
+
+                    })
+                }
+            }
+        });
+    });
+
+</script>
 
 </body>
 </html>
