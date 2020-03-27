@@ -429,13 +429,14 @@
                     <h4 class="wb-inv">Display Options</h4>
                     <details open>
                         <summary><h4 class="h4">Display Options</h4></summary>
-                        <p class="mrgn-tp-md">Use the options below to toggle which columns to display in the table</p>
+                        <p class="mrgn-tp-md">Use the options below to toggle which columns to display in the table.
+                        Clicking a checkbox will hide the selected group.</p>
                         <form>
 
                             <div class="form-group">
                                 <fieldset>
                                     <legend>
-                                        <span class="field-name">Columns</span>
+                                        <span class="field-name">Hide Columns</span>
                                     </legend>
                                     <ul>
                                         <li class="checkbox">
@@ -717,63 +718,61 @@
                 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41
             ]
 
+            // Text associated with clicked checkbox
+            let checkboxValue = $(this)[0].value
+
             // Hide if checked
             if ($(this).is(":checked")) {
-                console.log(`Hiding columns for ${$(this)[0].value}`)
+                {#console.log(`Hiding columns for ${$(this)[0].value}`)#}
 
-                if ($(this)[0].value === "Mean") {
+                if (checkboxValue === "Mean") {
                     hiddenColumns.push(...meanColumns)
                 }
-                if ($(this)[0].value === "Standard Error") {
+                if (checkboxValue === "Standard Error") {
                     hiddenColumns.push(...standardErrorColumns)
                 }
-                if ($(this)[0].value === "Percentiles") {
+                if (checkboxValue === "Percentiles") {
                     hiddenColumns.push(...percentilesColumns)
                 }
-                if ($(this)[0].value === "DRI Comparison") {
+                if (checkboxValue === "DRI Comparison") {
                     hiddenColumns.push(...driColumns)
                 }
 
                 // Remove duplicates
                 hiddenColumns = [...new Set(hiddenColumns)];
 
+                // Disable visibility for columns in hiddenColumns array
                 hiddenColumns.forEach(function (c) {
                     table.column(c).visible(false)
                 })
 
-                // Reveal if unchecked
+              // Reveal if unchecked
             } else {
-                console.log(`Revealing columns for ${$(this)[0].value}`)
-                if ($(this)[0].value === "Mean") {
-                    meanColumns.forEach(function (d) {
-                        hiddenColumns = hiddenColumns.filter(item => item !== d)
-                        table.column(d).visible(true)
-
-                    })
+                {#console.log(`Revealing columns for ${checkboxValue}`)#}
+                if (checkboxValue === "Mean") {
+                    setVisibleByIndexArray(meanColumns)
                 }
-                if ($(this)[0].value === "Standard Error") {
-                    standardErrorColumns.forEach(function (d) {
-                        hiddenColumns = hiddenColumns.filter(item => item !== d)
-                        table.column(d).visible(true)
-
-                    })
+                if (checkboxValue === "Standard Error") {
+                    setVisibleByIndexArray(standardErrorColumns)
                 }
-                if ($(this)[0].value === "Percentiles") {
-                    percentilesColumns.forEach(function (d) {
-                        hiddenColumns = hiddenColumns.filter(item => item !== d)
-                        table.column(d).visible(true)
-                    })
+                if (checkboxValue === "Percentiles") {
+                    setVisibleByIndexArray(percentilesColumns)
                 }
-                if ($(this)[0].value === "DRI Comparison") {
-                    driColumns.forEach(function (d) {
-                        hiddenColumns = hiddenColumns.filter(item => item !== d)
-                        table.column(d).visible(true)
-
-                    })
+                if (checkboxValue === "DRI Comparison") {
+                    setVisibleByIndexArray(driColumns)
                 }
             }
+
+            function setVisibleByIndexArray(colIndexes) {
+                colIndexes.forEach(function (d) {
+                    hiddenColumns = hiddenColumns.filter(item => item !== d)
+                    table.column(d).visible(true)
+                })
+            }
+
         });
     });
+
 
 </script>
 
