@@ -149,8 +149,27 @@
     {# Main content #}
     <section>
         <div class="row">
-            {# Data filtering panel #}
+            {# Data filtering panel and Download buttons #}
             <div class="col-md-3">
+                <div class="row">
+                    <h4 class="wb-inv">Download Options</h4>
+                    <details open>
+                        <summary><h4 class="h4">Download Options</h4></summary>
+                        <p class="mrgn-tp-md">Use the buttons below to download the data</p>
+                        <div class="form-group">
+                            <button href="#" role="button" data-export="export"
+                                    style="width:100%; margin-bottom: 5px"
+                                    class="btn btn-primary" id="filteredTableDownload"><span
+                                    class="glyphicon glyphicon-cloud-download"></span> Displayed data (.csv)
+                            </button>
+                            <a download href="../static/data/data_table-en.csv" role="button"
+                               style="width:100%" class="btn btn-primary"
+                               id="filteredTableDownload"><span
+                                    class="glyphicon glyphicon-cloud-download"></span> All data (.csv)
+                            </a>
+                        </div>
+                    </details>
+                </div>
                 <div class="row">
                     <h4 class="wb-inv">Filtering Options</h4>
                     <details open>
@@ -163,20 +182,20 @@
                                 <label for="dt_nutrient">Nutrient/Item</label>
                                 <select class="form-control" id="dt_nutrient" name="dt_nutrient" data-column="0">
                                     <option value="">All nutrients</option>
-                                    <option value="Caffeine (mg/d)">Caffeine (mg/d)</option>
-                                    <option value="Calcium (mg/d)">Calcium (mg/d)</option>
-                                    <option value="Cholesterol (mg/d)">Cholesterol (mg/d)</option>
-                                    <option value="Folacin (mcg/d)">Folacin (mcg/d)</option>
-                                    <option value="Folate (DFE/d)">Folate (DFE/d)</option>
-                                    <option value="Iron (mg/d)">Iron (mg/d)</option>
-                                    <option value="Linoleic acid (g/d)">Linoleic acid (g/d)</option>
-                                    <option value="Linolenic acid (g/d)">Linolenic acid (g/d)</option>
-                                    <option value="Magnesium (mg/d)">Magnesium (mg/d)</option>
-                                    <option value="Moisture (g/d)">Moisture (g/d)</option>
-                                    <option value="Naturally occurring folate (mcg/d)">Naturally occurring folate
+                                    <option value="Caffeine">Caffeine (mg/d)</option>
+                                    <option value="Calcium">Calcium (mg/d)</option>
+                                    <option value="Cholesterol">Cholesterol (mg/d)</option>
+                                    <option value="Folacin">Folacin (mcg/d)</option>
+                                    <option value="Folate">Folate (DFE/d)</option>
+                                    <option value="Iron">Iron (mg/d)</option>
+                                    <option value="Linoleic acid">Linoleic acid (g/d)</option>
+                                    <option value="Linolenic acid">Linolenic acid (g/d)</option>
+                                    <option value="Magnesium">Magnesium (mg/d)</option>
+                                    <option value="Moisture">Moisture (g/d)</option>
+                                    <option value="Naturally occurring folate">Naturally occurring folate
                                         (mcg/d)
                                     </option>
-                                    <option value="Niacin (NE/d)">Niacin (NE/d)</option>
+                                    <option value="Niacin">Niacin (NE/d)</option>
                                     <option value="Percentage of total energy intake from carbohydrates">Percentage of
                                         total
                                         energy intake from carbohydrates
@@ -210,29 +229,30 @@
                                         energy
                                         intake from sugars
                                     </option>
-                                    <option value="Phosphorus (mg/d)">Phosphorus (mg/d)</option>
-                                    <option value="Potassium (mg/d)">Potassium (mg/d)</option>
-                                    <option value="Protein (g/d)">Protein (g/d)</option>
-                                    <option value="Riboflavin (mg/d)">Riboflavin (mg/d)</option>
-                                    <option value="Sodium (mg/d)">Sodium (mg/d)</option>
-                                    <option value="Thiamin (mg/d)">Thiamin (mg/d)</option>
-                                    <option value="Total carbohydrates (g/d)">Total carbohydrates (g/d)</option>
-                                    <option value="Total dietary fibre (g/d)">Total dietary fibre (g/d)</option>
-                                    <option value="Total energy intake (kcal/d)">Total energy intake (kcal/d)</option>
-                                    <option value="Total fats (g/d)">Total fats (g/d)</option>
-                                    <option value="Total monounsaturated fats (g/d)">Total monounsaturated fats (g/d)
+                                    <option value="Phosphorus">Phosphorus (mg/d)</option>
+                                    <option value="Potassium">Potassium (mg/d)</option>
+                                    <option value="Protein">Protein (g/d)</option>
+                                    <option value="Riboflavin">Riboflavin (mg/d)</option>
+                                    <option value="Sodium">Sodium (mg/d)</option>
+                                    <option value="Thiamin">Thiamin (mg/d)</option>
+                                    <option value="Total carbohydrates">Total carbohydrates (g/d)</option>
+                                    <option value="Total dietary fibre">Total dietary fibre (g/d)</option>
+                                    {# TODO: Total energy intake is bugged because of all of the "Percentage of total energy intake" values #}
+                                    <option value="Total energy intake">Total energy intake (kcal/d)</option>
+                                    <option value="Total fats">Total fats (g/d)</option>
+                                    <option value="Total monounsaturated fats">Total monounsaturated fats (g/d)
                                     </option>
-                                    <option value="Total polyunsaturated fatty acids (g/d)">Total polyunsaturated fatty
+                                    <option value="Total polyunsaturated fatty acids">Total polyunsaturated fatty
                                         acids (g/d)
                                     </option>
-                                    <option value="Total saturated fats (g/d)">Total saturated fats (g/d)</option>
-                                    <option value="Total sugars (g/d)">Total sugars (g/d)</option>
-                                    <option value="Vitamin A (RAE/d)">Vitamin A (RAE/d)</option>
-                                    <option value="Vitamin B12 (mcg/d)">Vitamin B12 (mcg/d)</option>
-                                    <option value="Vitamin B6 (mg/d)">Vitamin B6 (mg/d)</option>
-                                    <option value="Vitamin C (mg/d)">Vitamin C (mg/d)</option>
-                                    <option value="Vitamin D (mcg/d)">Vitamin D (mcg/d)</option>
-                                    <option value="Zinc (mg/d)">Zinc (mg/d)</option>
+                                    <option value="Total saturated fats">Total saturated fats (g/d)</option>
+                                    <option value="Total sugars">Total sugars (g/d)</option>
+                                    <option value="Vitamin A">Vitamin A (RAE/d)</option>
+                                    <option value="Vitamin B12">Vitamin B12 (mcg/d)</option>
+                                    <option value="Vitamin B6">Vitamin B6 (mg/d)</option>
+                                    <option value="Vitamin C">Vitamin C (mg/d)</option>
+                                    <option value="Vitamin D">Vitamin D (mcg/d)</option>
+                                    <option value="Zinc">Zinc (mg/d)</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -430,7 +450,7 @@
                     <details open>
                         <summary><h4 class="h4">Display Options</h4></summary>
                         <p class="mrgn-tp-md">Use the options below to toggle which columns to display in the table.
-                        Clicking a checkbox will hide the selected group.</p>
+                            Clicking a checkbox will hide the selected group.</p>
                         <form>
 
                             <div class="form-group">
@@ -445,12 +465,12 @@
                                                        value="Mean">Mean
                                             </label>
                                         </li>
-                                        <li class="checkbox">
-                                            <label for="dp_standarderrror">
-                                                <input class="toggle-vis" id="dp_standarderrror" type="checkbox"
-                                                       name="dp_standarderrror" value="Standard Error">Standard Error
-                                            </label>
-                                        </li>
+                                        {#   <li class="checkbox">#}
+                                        {#       <label for="dp_standarderrror">#}
+                                        {#           <input class="toggle-vis" id="dp_standarderrror" type="checkbox"#}
+                                        {#                  name="dp_standarderrror" value="Standard Error">Standard Error#}
+                                        {#       </label>#}
+                                        {#   </li>#}
                                         <li class="checkbox">
                                             <label for="dp_percentiles">
                                                 <input class="toggle-vis" id="dp_percentiles" type="checkbox"
@@ -463,11 +483,9 @@
                                                        value="DRI Comparison">DRI Comparison
                                             </label>
                                         </li>
-
                                     </ul>
                                 </fieldset>
                             </div>
-
                         </form>
                     </details>
                 </div>
@@ -482,7 +500,9 @@
                             },
                         "processing": true,
                         "scrollX": true,
-                        "ajaxSource": "../static/data/data_table_flattened-en.json"
+                        "scrollY": "40em",
+                        "ajaxSource": "../static/data/data_table_flattened-en.min.json",
+                         "lengthMenu": [[10, 50, 100, 250, -1], [10, 50, 100, 250, "All"]]
                          }'>
                     <thead>
                     <tr>
@@ -706,9 +726,9 @@
                 5, 6
             ]
 
-            const standardErrorColumns = [
-                6, 8, 10, 12, 14, 16, 18, 20, 23, 26, 29, 32, 34, 36, 39, 41
-            ]
+            // const standardErrorColumns = [
+            //     8, 10, 12, 14, 16, 18, 20, 23, 26, 29, 32, 34, 36, 39, 41
+            // ]
 
             const percentilesColumns = [
                 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
@@ -728,9 +748,9 @@
                 if (checkboxValue === "Mean") {
                     hiddenColumns.push(...meanColumns)
                 }
-                if (checkboxValue === "Standard Error") {
-                    hiddenColumns.push(...standardErrorColumns)
-                }
+                // if (checkboxValue === "Standard Error") {
+                //     hiddenColumns.push(...standardErrorColumns)
+                // }
                 if (checkboxValue === "Percentiles") {
                     hiddenColumns.push(...percentilesColumns)
                 }
@@ -746,15 +766,15 @@
                     table.column(c).visible(false)
                 })
 
-              // Reveal if unchecked
+                // Reveal if unchecked
             } else {
                 {#console.log(`Revealing columns for ${checkboxValue}`)#}
                 if (checkboxValue === "Mean") {
                     setVisibleByIndexArray(meanColumns)
                 }
-                if (checkboxValue === "Standard Error") {
-                    setVisibleByIndexArray(standardErrorColumns)
-                }
+                // if (checkboxValue === "Standard Error") {
+                //     setVisibleByIndexArray(standardErrorColumns)
+                // }
                 if (checkboxValue === "Percentiles") {
                     setVisibleByIndexArray(percentilesColumns)
                 }
@@ -772,6 +792,61 @@
 
         });
     });
+
+    jQuery.fn.tableToCSV = function () {
+        let clean_text = function (text) {
+            text = text.replace(/"/g, '\\"').replace(/'/g, "\\'");
+            return '"' + text + '"';
+        };
+
+        $(this).each(function () {
+            let table = $(this);
+            let caption = $(this).find('caption').text();
+            let title = [];
+            let rows = [];
+
+            $(this).find('tr').each(function () {
+                let data = [];
+                $(this).find('th').each(function () {
+                    let text = clean_text($(this).text());
+                    title.push(text);
+                });
+                $(this).find('td').each(function () {
+                    let text = clean_text($(this).text());
+                    data.push(text);
+                });
+                data = data.join(",");
+                rows.push(data);
+            });
+            title = title.join(",");
+            rows = rows.join("\n");
+
+            let csv = title + rows;
+            let uri = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv);
+            let download_link = document.createElement('a');
+            download_link.href = uri;
+            let ts = new Date().getTime();
+            if (caption == "") {
+                download_link.download = ts + ".csv";
+            } else {
+                download_link.download = caption + "-" + ts + ".csv";
+            }
+            document.body.appendChild(download_link);
+            download_link.click();
+            document.body.removeChild(download_link);
+        });
+    };
+
+
+    $("#filteredTableDownload").click(function () {
+        $("#dataset-filter").tableToCSV()
+    })
+
+    /*
+    TODO: If % above or below DRIs is selected, the table should only display
+        the DRI columns relevant to the selected nutrient. For example: Sodium has an AI and a CDRR,
+        so the table should not include the columns for EAR, AMDR, UL
+    */
 
 
 </script>
