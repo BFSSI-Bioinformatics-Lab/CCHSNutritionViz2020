@@ -146,11 +146,12 @@
         </div>
     </section>
 
-    {# Main content #}
     <section>
+        {# Main content #}
         <div class="row">
             {# Data filtering panel and Download buttons #}
             <div class="col-md-3">
+                {# Download panel #}
                 <div class="row">
                     <h4 class="wb-inv">Download Options</h4>
                     <details open>
@@ -170,6 +171,8 @@
                         </div>
                     </details>
                 </div>
+
+                {# Data filtering panel #}
                 <div class="row">
                     <h4 class="wb-inv">Filtering Options</h4>
                     <details open>
@@ -434,7 +437,7 @@
                                 </fieldset>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary" aria-controls="dataset-filter">Filter
+                                <button type="submit" id="filterBtn" class="btn btn-primary" aria-controls="dataset-filter">Filter
                                 </button>
                             </div>
                             <div class="form-group">
@@ -491,6 +494,7 @@
                 </div>
 
             </div>
+            {# Data table #}
             <div class="col-md-9">
                 <table class="wb-tables table table-striped table-hover table-condensed" aria-live="polite"
                        id="dataset-filter" data-wb-tables='{
@@ -500,7 +504,7 @@
                             },
                         "processing": true,
                         "scrollX": true,
-                        "scrollY": "40em",
+                        "scrollY": "30em",
                         "ajaxSource": "../static/data/data_table_flattened-en.min.json",
                          "lengthMenu": [[10, 50, 100, 250, -1], [10, 50, 100, 250, "All"]]
                          }'>
@@ -551,8 +555,106 @@
                     </tr>
                     </thead>
                 </table>
+
+                {# Note: the caption HTML tag appears to break the WET DataTables implementation, so using this element as an alternative #}
+                <p class="text-center">Data Source: <i>Statistics Canada, 2015 Canadian Community Health Survey -
+                    Nutrition, 2015, Share File.</i></p>
+
             </div>
         </div>
+        <div class="row">
+            <section>
+                <h3>Notes & Legend</h3>
+                <p><i>Please refer to the “About the data” tab for detailed notes that apply to all of the tables and
+                    graphs in the Usual Intake Data Tool.</i></p>
+                <table class="table table-condensed table-responsive">
+                    <tbody>
+                    <tr>
+                        <td><strong>E</strong></td>
+                        <td>Data with a coefficient of variation (CV) from 16.6% to 33.3%; interpret with caution.
+                            This is shown on the graph through the use of striped bars.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;3</strong></td>
+                        <td>Data with a coefficient of variation (CV) greater than 33.3% with a 95% confidence interval
+                            entirely between 0 and 3%; interpret with caution.
+                    </tr>
+                    <tr>
+                        <td><strong>F</strong></td>
+                        <td> Data with a coefficient of variation (CV) greater than 33.3% with a 95% confidence interval
+                            not entirely between 0 and 3%; suppressed due to extreme sampling variability.
+                    </tr>
+                    <tr>
+                        <td><strong>AI</strong></td>
+                        <td>Adequate Intake</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AMDR</strong></td>
+                        <td>Acceptable Macronutrient Distribution Range</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CDRR</strong></td>
+                        <td>Chronic Disease Risk Reduction</td>
+                    </tr>
+                    <tr>
+                        <td><strong>d</strong></td>
+                        <td>Day</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DFE</strong></td>
+                        <td>Dietary folate equivalent</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DRI</strong></td>
+                        <td>Dietary Reference Intake</td>
+                    </tr>
+                    <tr>
+                        <td><strong>EAR</strong></td>
+                        <td>Estimated Average Requirement</td>
+                    </tr>
+                    <tr>
+                        <td><strong>g</strong></td>
+                        <td>Gram</td>
+                    </tr>
+                    <tr>
+                        <td><strong>kcal</strong></td>
+                        <td>Kilocalorie</td>
+                    </tr>
+                    <tr>
+                        <td><strong>mcg</strong></td>
+                        <td>Microgram</td>
+                    </tr>
+                    <tr>
+                        <td><strong>mg</strong></td>
+                        <td>Milligram</td>
+                    </tr>
+                    <tr>
+                        <td><strong>NE</strong></td>
+                        <td>Niacin equivalent</td>
+                    </tr>
+                    <tr>
+                        <td><strong>P</strong></td>
+                        <td>Percentile, e.g. 'P95' describes the 95th percentile.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>RAE</strong></td>
+                        <td>Retinol activity equivalent</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SE</strong></td>
+                        <td>Standard Error</td>
+                    </tr>
+                    <tr>
+                        <td><strong>UL</strong></td>
+                        <td>Tolerable Upper Intake Level</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
     </section>
 
 
@@ -718,6 +820,12 @@
         let hiddenColumns = [];
         let table = $('.wb-tables').DataTable()
 
+        // Hide empty columns whenever the user filters the data
+        $('#filterBtn').on('click', function(e){
+            console.log('clicked filter btn')
+            hideEmptyCols($("#dataset-filter"))
+        })
+
         $('.toggle-vis').on('change', function (e) {
             e.preventDefault();
 
@@ -838,6 +946,7 @@
     };
 
 
+    // Add download functionality for Filtered Data button
     $("#filteredTableDownload").click(function () {
         $("#dataset-filter").tableToCSV()
     })

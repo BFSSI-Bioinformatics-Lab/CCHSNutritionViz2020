@@ -83,7 +83,7 @@
             <h2 class="wb-inv">Menu</h2>
             <button type="button" aria-haspopup="true" aria-expanded="false"><span class="wb-inv">Main </span>Menu <span
                     class="expicon glyphicon glyphicon-chevron-down"></span></button>
-            <ul role="menu" aria-orientation="vertical" data-ajax-replace="./ajax/sitemenu-v5-en.html">
+            <ul role="menu" aria-orientation="vertical" data-ajax-replace="../static/ajax/sitemenu-v5-en.html">
                 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/jobs.html">Jobs and
                     the workplace</a></li>
                 <li role="presentation"><a role="menuitem"
@@ -132,20 +132,157 @@
     <p><strong>From <a href="#">Health Canada</a></strong></p>
 
 
-    {# Main content goes here #}
     <section>
-
         <div class="row">
-
             <div class="btn-group btn-group-lg btn-group-justified" style="padding:20px 0px;">
                 <a class="btn btn-default toolTab" role="button" href="about">About the data</a>
                 <a class="btn btn-default toolTab" role="button" href="data_table">Data table</a>
                 <a class="btn btn-default toolTab" role="button" href="distribution">Distribution curves</a>
-                <a class="active btn btn-default btn-primary toolTab" role="button" href="geographic">Geographic comparison</a>
+                <a class="active btn btn-default btn-primary toolTab" role="button" href="geographic">Geographic
+                    comparison</a>
+            </div>
+        </div>
+    </section>
+
+    {# Main content goes here #}
+    <section>
+        <div class="row">
+            {# Options and metadata for chart #}
+            <div class="col-lg-5 col-md-5 col-sm-12" style="overflow:visible;">
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <section class="alert alert-info">
+                            <p>
+                                For more information on CCHS - Nutrition, please consult the
+                                <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/reference-guide-understanding-using-data-2015.html">Reference
+                                    Guide to Understanding and Using the Data</a> and the <a href="#">Statistical
+                                Methodology Guide</a>.
+                            </p>
+                        </section>
+                    </div>
+
+                    {# Dropdown menus for filtering chart data #}
+                    <div>
+                        <fieldset>
+                            <h3 class="h6 mrgn-tp-0 mrgn-rght-0 mrgn-bttm-sm">
+                        <span id="ContentPlaceHolder_Body_LabelStep1" class="text-danger">
+                            Select item(s) from each list below:
+                        </span>
+                            </h3>
+                            <div class="form-group-sm">
+                                <label for="sexDropdown">Sex</label>
+                                <div id="sexDropdown" class="chart-selector"></div>
+                                <label for="nutrientDropdown">Nutrient</label>
+                                <div id="nutrientDropdown" class="chart-selector"></div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <br>
+
+                    {# Text for tooltip goes here #}
+                    {# TODO: Make this work properly on mobile displays #}
+                    <section class="lnkbx well" style="display: block; height: 20em">
+                        <div class="row" style="height: 20%">
+                            <div id="region-detail-text"><i>
+                                Hover your cursor over a region on the map for
+                                additional detail.</i></div>
+                        </div>
+                        <div class="row">
+
+                            {#                        <div class="col-lg-1 col-md-1 col-sm-6">#}
+                            {#                            <br><br>#}
+                            {#                            <button id="previousRegion" class="btn btn-primary pull-left"><small><span#}
+                            {#                                    aria-hidden="true">&lt;&lt;</span><span#}
+                            {#                                    class="wb-invisible">Previous Province</span></small></button>#}
+                            {#                        </div>#}
+
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div id="region-detail" align="center"></div>
+                            </div>
+                            {##}
+                            {#                        <div class="col-lg-1 col-md-1 col-sm-6">#}
+                            {#                            <br><br>#}
+                            {#                            <button id="nextRegion" class="btn btn-primary pull-right"><small><span#}
+                            {#                                    aria-hidden="true">&gt;&gt;</span><span#}
+                            {#                                    class="wb-invisible">Next Province</span></small></button>#}
+                            {#                        </div>#}
+
+                        </div>
+                    </section>
+
+                </div>
             </div>
 
+            <div class="col-lg-7 col-md-7 col-sm-12" style="overflow:visible">
+                <div id="geochart" align="center"></div>
+                <div id="geolegend" style="overflow:visible" align="center"></div>
+
+                <div class="text-center">
+                    <br>
+                    <button class="btn btn-sm btn-success" id="saveChart"><span
+                            class="glyphicon glyphicon-cloud-download"></span> Save graph (.png)
+                    </button>
+                </div>
+            </div>
         </div>
 
+        <div class="row">
+            <div id="nutrient-notes-header"></div>
+            <div id="nutrient-notes"></div>
+        </div>
+
+        <div class="row">
+            <div id="distribution-datatable">
+                <h4>Table</h4>
+
+                <table class="wb-tables table table-condensed table-hover cell-border" id="nutrientTable"
+                       data-wb-tables='{"scrollX" : true, "paging": false, "searching": false, "bInfo": false, "buttons": ["csv"]}'>
+                    <thead>
+                    <tr class="datatable-headers">
+                        <th>Nutrient</th>
+                        <th>Region</th>
+                        <th>Sex</th>
+                        <th>Age (years)</th>
+                        <th>n</th>
+                        <th>Percentage</th>
+                        <th>SE</th>
+                        <th>DRI type</th>
+                        <th>DRI reference value</th>
+                    </tr>
+                    </thead>
+                    <tbody class="datatable-body">
+                    {# Rows are autopopulated by JS #}
+                    </tbody>
+                </table>
+
+                <caption class="wb-inv">
+                    <br>
+                    <button class="btn btn-sm btn-success" id="nutrientTableDownload"><span
+                            class="glyphicon glyphicon-cloud-download"></span> Download table (.csv)
+                    </button>
+                </caption>
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <section class="alert alert-info">
+                <h3>Notes & Legend</h3>
+                <table class="table table-condensed table-responsive">
+                    <tbody>
+                    <tr>
+                        <td><strong>Data Source</strong></td>
+                        <td>Statistics Canada, Canadian Community Health Survey (CCHS) - Nutrition, 2015, Share
+                            Files.
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </section>
+        </div>
 
     </section>
 
@@ -298,5 +435,13 @@
 
 		<![endif]-->
 <script src="../static/GCWeb/js/theme.min.js"></script>
+
+{# d3 #}
+<script src="../static/js/d3.v5.min.js"></script>
+<script src="../static/js/topojson.min.js"></script>
+<script src="../static/js/textures.js"></script>
+
+<script src="../static/js/geochart-en.js"></script>
+
 </body>
 </html>
