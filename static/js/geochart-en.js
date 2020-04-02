@@ -106,17 +106,31 @@ const nutrientTitles = {
 const nutrientFacts = {
     'Calcium': `Click <a href="#">here</a> for more information on the Sodium intake of Canadians.`,
     'Folate': '',
-    'Total dietary fibre': '',
+    'Total dietary fibre': `The AI is based on total fibre intakes, which encompass both naturally occurring dietary and functional fibre. Since the Canadian Nutrient File does not contain data on functional fibre (i.e. isolated, extracted or synthetic fibre added to food), the estimated fibre intakes of Canadians only reflect naturally occurring dietary fibre intake. Therefore, total fibre intakes are likely underestimated.`,
     'Iron': '',
     'Magnesium': '',
     'Percentage of total energy intake from carbohydrates': '',
     'Percentage of total energy intake from fat': '',
     'Percentage of total energy intake from protein': '',
     'Potassium': '',
-    'Sodium': '',
+    'Sodium': `<a href="https://www.canada.ca/en/health-canada/services/publications/food-nutrition/sodium-intake-canadians-2017.html">Click here for more information on the Sodium Intake of Canadians.</a>`,
     'Vitamin A': '',
     'Vitamin C': '',
-    'Vitamin D': `Estimates of the prevalence of inadequate intakes of vitamin D from food must be interpreted with caution. Vitamin D is unique as it can also be synthesized by the body from sunlight (UV radiation). In addition, vitamin D intake from supplements has not been considered in this assessment. While there appears to be a high prevalence of inadequate intakes of vitamin D from dietary sources, available clinical measures do not suggest wide-spread vitamin D deficiency in the Canadian population (<a href="https://www150.statcan.gc.ca/n1/pub/82-003-x/2010001/article/11131-eng.pdf">Langlois et al., Health Reports, 2010</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/21593503-the-vitamin-d-status-of-canadians-relative-to-the-2011-dietary-reference-intakes-an-examination-in-children-and-adults-with-and-without-supplement-use/">Whiting et al., Am J Clin Nutr. 2011)</a>. Vitamin D status in some sub-populations, however, may warrant further consideration.`,
+    'Vitamin D': `
+<p><strong>Estimates of the prevalence of inadequate intakes of vitamin D from food must be interpreted with caution.</strong> </p>
+<p>Vitamin D is unique as it can also be synthesized by the body from sunlight (UV radiation). In addition, vitamin D intake 
+from supplements has not been considered in this assessment. While there appears to be a high prevalence of inadequate 
+intakes of vitamin D from dietary sources, available clinical measures do not suggest wide-spread vitamin D deficiency
+ in the Canadian population (<a href="https://www150.statcan.gc.ca/n1/pub/82-003-x/2010001/article/11131-eng.pdf">Langlois et al., Health Reports, 2010</a>;
+  <a href="https://pubmed.ncbi.nlm.nih.gov/21593503-the-vitamin-d-status-of-canadians-relative-to-the-2011-dietary-reference-intakes-an-examination-in-children-and-adults-with-and-without-supplement-use/">Whiting et al., Am J Clin Nutr. 2011)</a>.
+   Vitamin D status in some sub-populations, however, may warrant further consideration.
+   </p>
+   <p>References</p>
+   <ol>
+    <li>Langlois K, Greene-Finestone L, Little J, Hidiroglou N, Whiting S. Vitamin D status of Canadians as measured in the 2007 to 2009 Canadian Health Measures Survey. Health Rep. 2010;21(1):47–55.</li>
+    <li>Whiting SJ, Langlois KA, Vatanparast H, Greene-Finestone LS. The vitamin D status of Canadians relative to the 2011 Dietary Reference Intakes: an examination in children and adults with and without supplement use. Am J Clin Nutr. 2011;94(1):128–135. doi:10.3945/ajcn.111.013268</li>
+    <li>Statistics Canada. Canadian Health Measures Survey: Non-environmental laboratory and medication data, 2016 and 2017. The Daily. 2019. Available from: https://www150.statcan.gc.ca/n1/daily-quotidien/190206/dq190206c-eng.htm</li>
+</ol>`,
     'Zinc': ''
 };
 
@@ -285,8 +299,11 @@ d3.csv("../static/data/geographic-dec2015-en.csv", function (d) {
                 });
 
                 // Update nutrient facts disclaimer
+                d3.select('#nutrient-notes-header').html(
+                    `<h3>Additional notes for ${nutrient}</h3>`
+                )
+
                 d3.select('#nutrient-notes').html(`
-<!--                <p><strong>Notes</strong></p>-->
                 <p>${nutrientFacts[nutrient]}</p>
                 `);
 
