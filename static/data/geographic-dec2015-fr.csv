@@ -1,0 +1,341 @@
+Nutriment/Item,Rég_Prov,Sexe,Âge (en années),n,Type de ANREF,Prefix-FR,Percentage,SE,Ref value
+Calcium,Terre-Neuve-et-Labrador,Hommes,19 ans et plus,400,BME,Inférieur au,67.4,3.2,
+Calcium,Terre-Neuve-et-Labrador,Femmes,19 ans et plus,426,BME,Inférieur au,90.4,2.2,
+Calcium,Terre-Neuve-et-Labrador,Les deux sexes,19 ans et plus,826,BME,Inférieur au,79,1.9,
+Calcium,Île-du-Prince-Édouard,Hommes,19 ans et plus,313,BME,Inférieur au,48.7,3.5,
+Calcium,Île-du-Prince-Édouard,Femmes,19 ans et plus,371,BME,Inférieur au,76.3,2.9,
+Calcium,Île-du-Prince-Édouard,Les deux sexes,19 ans et plus,684,BME,Inférieur au,62.6,2.3,
+Calcium,Nouvelle-Écosse,Hommes,19 ans et plus,422,BME,Inférieur au,45.4,2.9,
+Calcium,Nouvelle-Écosse,Femmes,19 ans et plus,534,BME,Inférieur au,78.9,2.6,
+Calcium,Nouvelle-Écosse,Les deux sexes,19 ans et plus,956,BME,Inférieur au,62.5,2,
+Calcium,Nouveau-Brunswick,Hommes,19 ans et plus,371,BME,Inférieur au,51.5,3.1,
+Calcium,Nouveau-Brunswick,Femmes,19 ans et plus,463,BME,Inférieur au,78,2.3,
+Calcium,Nouveau-Brunswick,Les deux sexes,19 ans et plus,834,BME,Inférieur au,64.8,1.9,
+Calcium,Québec,Hommes,19 ans et plus,1009,BME,Inférieur au,44.1,2.3,
+Calcium,Québec,Femmes,19 ans et plus,1113,BME,Inférieur au,67.8,1.9,
+Calcium,Québec,Les deux sexes,19 ans et plus,2122,BME,Inférieur au,55.9,1.5,
+Calcium,Ontario,Hommes,19 ans et plus,1321,BME,Inférieur au,56.5,2.1,
+Calcium,Ontario,Femmes,19 ans et plus,1489,BME,Inférieur au,81.4,1.5,
+Calcium,Ontario,Les deux sexes,19 ans et plus,2810,BME,Inférieur au,69.1,1.4,
+Calcium,Manitoba,Hommes,19 ans et plus,396,BME,Inférieur au,55.1,3.1,
+Calcium,Manitoba,Femmes,19 ans et plus,464,BME,Inférieur au,76.3,2.5,
+Calcium,Manitoba,Les deux sexes,19 ans et plus,860,BME,Inférieur au,65.6,2,
+Calcium,Saskatchewan,Hommes,19 ans et plus,420,BME,Inférieur au,53.1,4.2,
+Calcium,Saskatchewan,Femmes,19 ans et plus,455,BME,Inférieur au,76.6,3.1,
+Calcium,Saskatchewan,Les deux sexes,19 ans et plus,875,BME,Inférieur au,64.6,2.7,
+Calcium,Alberta,Hommes,19 ans et plus,701,BME,Inférieur au,50.7,2.3,
+Calcium,Alberta,Femmes,19 ans et plus,696,BME,Inférieur au,75.5,2.3,
+Calcium,Alberta,Les deux sexes,19 ans et plus,1397,BME,Inférieur au,62.5,1.7,
+Calcium,Colombie-Britannique,Hommes,19 ans et plus,840,BME,Inférieur au,50.4,2.5,
+Calcium,Colombie-Britannique,Femmes,19 ans et plus,830,BME,Inférieur au,81.4,1.8,
+Calcium,Colombie-Britannique,Les deux sexes,19 ans et plus,1670,BME,Inférieur au,66,1.6,
+Fibres alimentaires totales,Terre-Neuve-et-Labrador,Les deux sexes,19 ans et plus,826,AS,Supérieur à,3.2,0.5,
+Fibres alimentaires totales,Île-du-Prince-Édouard,Les deux sexes,19 ans et plus,684,AS,Supérieur à,6.5,0.8,
+Fibres alimentaires totales,Nouvelle-Écosse,Les deux sexes,19 ans et plus,956,AS,Supérieur à,7.4,0.8,
+Fibres alimentaires totales,Nouveau-Brunswick,Les deux sexes,19 ans et plus,834,AS,Supérieur à,6.2,0.7,
+Fibres alimentaires totales,Québec,Les deux sexes,19 ans et plus,2122,AS,Supérieur à,9.5,0.9,
+Fibres alimentaires totales,Ontario,Les deux sexes,19 ans et plus,2810,AS,Supérieur à,7,0.6,
+Fibres alimentaires totales,Manitoba,Les deux sexes,19 ans et plus,860,AS,Supérieur à,5.8,0.7,
+Fibres alimentaires totales,Saskatchewan,Les deux sexes,19 ans et plus,875,AS,Supérieur à,5.9,0.8,
+Fibres alimentaires totales,Alberta,Les deux sexes,19 ans et plus,1397,AS,Supérieur à,5.9,0.7,
+Fibres alimentaires totales,Colombie-Britannique,Les deux sexes,19 ans et plus,1670,AS,Supérieur à,9.2,0.9,
+Folate,Terre-Neuve-et-Labrador,Les deux sexes,19 ans et plus,826,BME,Inférieur au,30.9,2.4,320
+Folate,Île-du-Prince-Édouard,Les deux sexes,19 ans et plus,684,BME,Inférieur au,24.4,2.2,320
+Folate,Nouvelle-Écosse,Les deux sexes,19 ans et plus,956,BME,Inférieur au,24.4,2.1,320
+Folate,Nouveau-Brunswick,Les deux sexes,19 ans et plus,834,BME,Inférieur au,23,2,320
+Folate,Québec,Les deux sexes,19 ans et plus,2122,BME,Inférieur au,13,1.3,320
+Folate,Ontario,Les deux sexes,19 ans et plus,2810,BME,Inférieur au,23.8,1.5,320
+Folate,Manitoba,Les deux sexes,19 ans et plus,860,BME,Inférieur au,21.6,1.8,320
+Folate,Saskatchewan,Les deux sexes,19 ans et plus,875,BME,Inférieur au,23.6,2.4,320
+Folate,Alberta,Les deux sexes,19 ans et plus,1397,BME,Inférieur au,24.1,1.9,320
+Folate,Colombie-Britannique,Les deux sexes,19 ans et plus,1670,BME,Inférieur au,22.4,1.7,320
+Fer,Terre-Neuve-et-Labrador,Les deux sexes,19 ans et plus,824,,Insuffisant,10,0.9,
+Fer,Île-du-Prince-Édouard,Les deux sexes,19 ans et plus,683,,Insuffisant,7.4,0.7,
+Fer,Nouvelle-Écosse,Les deux sexes,19 ans et plus,951,,Insuffisant,6.3,0.7,
+Fer,Nouveau-Brunswick,Les deux sexes,19 ans et plus,830,,Insuffisant,6.7,0.7,
+Fer,Québec,Les deux sexes,19 ans et plus,2120,,Insuffisant,5.4,0.5,
+Fer,Ontario,Les deux sexes,19 ans et plus,2794,,Insuffisant,8.2,0.6,
+Fer,Manitoba,Les deux sexes,19 ans et plus,852,,Insuffisant,8.3,0.9,
+Fer,Saskatchewan,Les deux sexes,19 ans et plus,871,,Insuffisant,7.4,0.8,
+Fer,Alberta,Les deux sexes,19 ans et plus,1387,,Insuffisant,9.2,0.8,
+Fer,Colombie-Britannique,Les deux sexes,19 ans et plus,1650,,Insuffisant,7.3,0.7,
+Magnésium,Terre-Neuve-et-Labrador,Hommes,19 ans et plus,400,BME,Inférieur au,77.5,2.8,
+Magnésium,Terre-Neuve-et-Labrador,Femmes,19 ans et plus,426,BME,Inférieur au,72.4,3.2,
+Magnésium,Terre-Neuve-et-Labrador,Les deux sexes,19 ans et plus,826,BME,Inférieur au,74.9,2.3,
+Magnésium,Île-du-Prince-Édouard,Hommes,19 ans et plus,313,BME,Inférieur au,63,3.2,
+Magnésium,Île-du-Prince-Édouard,Femmes,19 ans et plus,371,BME,Inférieur au,54.9,3.1,
+Magnésium,Île-du-Prince-Édouard,Les deux sexes,19 ans et plus,684,BME,Inférieur au,58.9,2.2,
+Magnésium,Nouvelle-Écosse,Hommes,19 ans et plus,422,BME,Inférieur au,54.5,3.3,
+Magnésium,Nouvelle-Écosse,Femmes,19 ans et plus,534,BME,Inférieur au,52,2.8,
+Magnésium,Nouvelle-Écosse,Les deux sexes,19 ans et plus,956,BME,Inférieur au,53.2,2.1,
+Magnésium,Nouveau-Brunswick,Hommes,19 ans et plus,371,BME,Inférieur au,61.4,3,
+Magnésium,Nouveau-Brunswick,Femmes,19 ans et plus,463,BME,Inférieur au,56.3,2.7,
+Magnésium,Nouveau-Brunswick,Les deux sexes,19 ans et plus,834,BME,Inférieur au,58.8,2,
+Magnésium,Québec,Hommes,19 ans et plus,1009,BME,Inférieur au,52.7,2.2,
+Magnésium,Québec,Femmes,19 ans et plus,1113,BME,Inférieur au,39.8,2.2,
+Magnésium,Québec,Les deux sexes,19 ans et plus,2122,BME,Inférieur au,46.3,1.6,
+Magnésium,Ontario,Hommes,19 ans et plus,1321,BME,Inférieur au,58.8,2,
+Magnésium,Ontario,Femmes,19 ans et plus,1489,BME,Inférieur au,52.9,1.8,
+Magnésium,Ontario,Les deux sexes,19 ans et plus,2810,BME,Inférieur au,55.8,1.5,
+Magnésium,Manitoba,Hommes,19 ans et plus,396,BME,Inférieur au,64.4,2.8,
+Magnésium,Manitoba,Femmes,19 ans et plus,464,BME,Inférieur au,53.6,2.8,
+Magnésium,Manitoba,Les deux sexes,19 ans et plus,860,BME,Inférieur au,59,1.9,
+Magnésium,Saskatchewan,Hommes,19 ans et plus,420,BME,Inférieur au,65.5,4.1,
+Magnésium,Saskatchewan,Femmes,19 ans et plus,455,BME,Inférieur au,49.6,3.5,
+Magnésium,Saskatchewan,Les deux sexes,19 ans et plus,875,BME,Inférieur au,57.7,2.8,
+Magnésium,Alberta,Hommes,19 ans et plus,701,BME,Inférieur au,54.8,2.6,
+Magnésium,Alberta,Femmes,19 ans et plus,696,BME,Inférieur au,54,3.2,
+Magnésium,Alberta,Les deux sexes,19 ans et plus,1397,BME,Inférieur au,54.4,2,
+Magnésium,Colombie-Britannique,Hommes,19 ans et plus,840,BME,Inférieur au,50.6,2.7,
+Magnésium,Colombie-Britannique,Femmes,19 ans et plus,830,BME,Inférieur au,45.5,2.5,
+Magnésium,Colombie-Britannique,Les deux sexes,19 ans et plus,1670,BME,Inférieur au,48,1.9,
+Pourcentage de l'apport énergétique total provenant des glucides,Terre-Neuve-et-Labrador,Hommes,19 ans et plus,400,ÉVAM,À l'intérieur de,60.8,3.6,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Terre-Neuve-et-Labrador,Femmes,19 ans et plus,426,ÉVAM,À l'intérieur de,69.4,3.4,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Terre-Neuve-et-Labrador,Les deux sexes,19 ans et plus,826,ÉVAM,À l'intérieur de,64.6,2.3,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Île-du-Prince-Édouard,Hommes,19 ans et plus,313,ÉVAM,À l'intérieur de,58.8,3.3,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Île-du-Prince-Édouard,Femmes,19 ans et plus,371,ÉVAM,À l'intérieur de,74.2,3.1,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Île-du-Prince-Édouard,Les deux sexes,19 ans et plus,684,ÉVAM,À l'intérieur de,66.1,2.1,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Nouvelle-Écosse,Hommes,19 ans et plus,422,ÉVAM,À l'intérieur de,60.1,3.3,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Nouvelle-Écosse,Femmes,19 ans et plus,534,ÉVAM,À l'intérieur de,68.7,3.2,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Nouvelle-Écosse,Les deux sexes,19 ans et plus,956,ÉVAM,À l'intérieur de,64.2,2.2,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Nouveau-Brunswick,Hommes,19 ans et plus,371,ÉVAM,À l'intérieur de,61.2,3.4,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Nouveau-Brunswick,Femmes,19 ans et plus,463,ÉVAM,À l'intérieur de,77.7,2.8,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Nouveau-Brunswick,Les deux sexes,19 ans et plus,834,ÉVAM,À l'intérieur de,69,2.1,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Québec,Hommes,19 ans et plus,1009,ÉVAM,À l'intérieur de,60.3,2.4,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Québec,Femmes,19 ans et plus,1113,ÉVAM,À l'intérieur de,71.8,2.6,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Québec,Les deux sexes,19 ans et plus,2122,ÉVAM,À l'intérieur de,65.6,1.7,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Ontario,Hommes,19 ans et plus,1321,ÉVAM,À l'intérieur de,62.8,2.3,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Ontario,Femmes,19 ans et plus,1489,ÉVAM,À l'intérieur de,71.7,2.5,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Ontario,Les deux sexes,19 ans et plus,2810,ÉVAM,À l'intérieur de,66.8,1.6,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Manitoba,Hommes,19 ans et plus,396,ÉVAM,À l'intérieur de,61.6,3.2,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Manitoba,Femmes,19 ans et plus,464,ÉVAM,À l'intérieur de,74.4,3.5,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Manitoba,Les deux sexes,19 ans et plus,860,ÉVAM,À l'intérieur de,67.5,2.5,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Saskatchewan,Hommes,19 ans et plus,420,ÉVAM,À l'intérieur de,53.9,3.5,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Saskatchewan,Femmes,19 ans et plus,455,ÉVAM,À l'intérieur de,66.2,3.6,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Saskatchewan,Les deux sexes,19 ans et plus,875,ÉVAM,À l'intérieur de,59.6,2.5,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Alberta,Hommes,19 ans et plus,701,ÉVAM,À l'intérieur de,57.1,3,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Alberta,Femmes,19 ans et plus,696,ÉVAM,À l'intérieur de,66.3,3,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Alberta,Les deux sexes,19 ans et plus,1397,ÉVAM,À l'intérieur de,61.2,2.1,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Colombie-Britannique,Hommes,19 ans et plus,840,ÉVAM,À l'intérieur de,56.5,2.6,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Colombie-Britannique,Femmes,19 ans et plus,830,ÉVAM,À l'intérieur de,65.9,2.9,45 - 65
+Pourcentage de l'apport énergétique total provenant des glucides,Colombie-Britannique,Les deux sexes,19 ans et plus,1670,ÉVAM,À l'intérieur de,61.2,1.9,45 - 65
+Pourcentage de l'apport énergétique total provenant des lipides,Terre-Neuve-et-Labrador,Hommes,19 ans et plus,400,ÉVAM,À l'intérieur de,72.1,3.2,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Terre-Neuve-et-Labrador,Femmes,19 ans et plus,426,ÉVAM,À l'intérieur de,70.3,3.6,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Terre-Neuve-et-Labrador,Les deux sexes,19 ans et plus,826,ÉVAM,À l'intérieur de,71.9,2.6,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Île-du-Prince-Édouard,Hommes,19 ans et plus,313,ÉVAM,À l'intérieur de,55.7,4,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Île-du-Prince-Édouard,Femmes,19 ans et plus,371,ÉVAM,À l'intérieur de,69.8,3.2,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Île-du-Prince-Édouard,Les deux sexes,19 ans et plus,684,ÉVAM,À l'intérieur de,63.3,2.8,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Nouvelle-Écosse,Hommes,19 ans et plus,422,ÉVAM,À l'intérieur de,62.7,3.5,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Nouvelle-Écosse,Femmes,19 ans et plus,534,ÉVAM,À l'intérieur de,64.7,3.5,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Nouvelle-Écosse,Les deux sexes,19 ans et plus,956,ÉVAM,À l'intérieur de,64.2,2.7,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Nouveau-Brunswick,Hommes,19 ans et plus,371,ÉVAM,À l'intérieur de,68.3,4.5,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Nouveau-Brunswick,Femmes,19 ans et plus,463,ÉVAM,À l'intérieur de,74.7,3.2,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Nouveau-Brunswick,Les deux sexes,19 ans et plus,834,ÉVAM,À l'intérieur de,72.3,2.8,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Québec,Hommes,19 ans et plus,1009,ÉVAM,À l'intérieur de,67.8,2.5,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Québec,Femmes,19 ans et plus,1113,ÉVAM,À l'intérieur de,72.8,2.8,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Québec,Les deux sexes,19 ans et plus,2122,ÉVAM,À l'intérieur de,71.1,2,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Ontario,Hommes,19 ans et plus,1321,ÉVAM,À l'intérieur de,70.4,2.4,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Ontario,Femmes,19 ans et plus,1489,ÉVAM,À l'intérieur de,73.9,2.8,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Ontario,Les deux sexes,19 ans et plus,2810,ÉVAM,À l'intérieur de,72.8,2.2,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Manitoba,Hommes,19 ans et plus,396,ÉVAM,À l'intérieur de,66.1,3.4,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Manitoba,Femmes,19 ans et plus,464,ÉVAM,À l'intérieur de,73.2,3.4,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Manitoba,Les deux sexes,19 ans et plus,860,ÉVAM,À l'intérieur de,70.2,2.7,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Saskatchewan,Hommes,19 ans et plus,420,ÉVAM,À l'intérieur de,60.6,3.6,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Saskatchewan,Femmes,19 ans et plus,455,ÉVAM,À l'intérieur de,65.8,3.9,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Saskatchewan,Les deux sexes,19 ans et plus,875,ÉVAM,À l'intérieur de,63.7,2.9,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Alberta,Hommes,19 ans et plus,701,ÉVAM,À l'intérieur de,73,3.3,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Alberta,Femmes,19 ans et plus,696,ÉVAM,À l'intérieur de,66.9,3.3,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Alberta,Les deux sexes,19 ans et plus,1397,ÉVAM,À l'intérieur de,70.4,2.5,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Colombie-Britannique,Hommes,19 ans et plus,840,ÉVAM,À l'intérieur de,70.2,2.5,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Colombie-Britannique,Femmes,19 ans et plus,830,ÉVAM,À l'intérieur de,72,2.9,20 - 35
+Pourcentage de l'apport énergétique total provenant des lipides,Colombie-Britannique,Les deux sexes,19 ans et plus,1670,ÉVAM,À l'intérieur de,71.1,2,20 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Terre-Neuve-et-Labrador,Hommes,19 ans et plus,400,ÉVAM,À l'intérieur de,99.9,0.1,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Terre-Neuve-et-Labrador,Femmes,19 ans et plus,426,ÉVAM,À l'intérieur de,99.8,0.1,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Terre-Neuve-et-Labrador,Les deux sexes,19 ans et plus,826,ÉVAM,À l'intérieur de,99.9,0.1,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Île-du-Prince-Édouard,Hommes,19 ans et plus,313,ÉVAM,À l'intérieur de,99.9,0.1,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Île-du-Prince-Édouard,Femmes,19 ans et plus,371,ÉVAM,À l'intérieur de,99.6,0.2,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Île-du-Prince-Édouard,Les deux sexes,19 ans et plus,684,ÉVAM,À l'intérieur de,99.8,0.1,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Nouvelle-Écosse,Hommes,19 ans et plus,422,ÉVAM,À l'intérieur de,99.8,0.2,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Nouvelle-Écosse,Femmes,19 ans et plus,534,ÉVAM,À l'intérieur de,99.6,0.2,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Nouvelle-Écosse,Les deux sexes,19 ans et plus,956,ÉVAM,À l'intérieur de,99.7,0.2,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Nouveau-Brunswick,Hommes,19 ans et plus,371,ÉVAM,À l'intérieur de,99.9,0.2,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Nouveau-Brunswick,Femmes,19 ans et plus,463,ÉVAM,À l'intérieur de,99.6,0.2,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Nouveau-Brunswick,Les deux sexes,19 ans et plus,834,ÉVAM,À l'intérieur de,99.7,0.2,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Québec,Hommes,19 ans et plus,1009,ÉVAM,À l'intérieur de,99.8,0.2,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Québec,Femmes,19 ans et plus,1113,ÉVAM,À l'intérieur de,99.6,0.2,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Québec,Les deux sexes,19 ans et plus,2122,ÉVAM,À l'intérieur de,99.7,0.1,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Ontario,Hommes,19 ans et plus,1321,ÉVAM,À l'intérieur de,99.9,0.1,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Ontario,Femmes,19 ans et plus,1489,ÉVAM,À l'intérieur de,99.8,0.1,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Ontario,Les deux sexes,19 ans et plus,2810,ÉVAM,À l'intérieur de,99.9,0.1,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Manitoba,Hommes,19 ans et plus,396,ÉVAM,À l'intérieur de,99.9,0.1,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Manitoba,Femmes,19 ans et plus,464,ÉVAM,À l'intérieur de,99.5,0.3,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Manitoba,Les deux sexes,19 ans et plus,860,ÉVAM,À l'intérieur de,99.7,0.2,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Saskatchewan,Hommes,19 ans et plus,420,ÉVAM,À l'intérieur de,100,0.1,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Saskatchewan,Femmes,19 ans et plus,455,ÉVAM,À l'intérieur de,99.9,0.1,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Saskatchewan,Les deux sexes,19 ans et plus,875,ÉVAM,À l'intérieur de,99.9,0.1,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Alberta,Hommes,19 ans et plus,701,ÉVAM,À l'intérieur de,100,0.1,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Alberta,Femmes,19 ans et plus,696,ÉVAM,À l'intérieur de,99.7,0.2,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Alberta,Les deux sexes,19 ans et plus,1397,ÉVAM,À l'intérieur de,99.8,0.1,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Colombie-Britannique,Hommes,19 ans et plus,840,ÉVAM,À l'intérieur de,100,0.1,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Colombie-Britannique,Femmes,19 ans et plus,830,ÉVAM,À l'intérieur de,99.8,0.2,10 - 35
+Pourcentage de l'apport énergétique total provenant des protéines,Colombie-Britannique,Les deux sexes,19 ans et plus,1670,ÉVAM,À l'intérieur de,99.9,0.1,10 - 35
+Potassium,Terre-Neuve-et-Labrador,Hommes,19 ans et plus,400,AS,Supérieur à,20.7,2.6,3400
+Potassium,Terre-Neuve-et-Labrador,Femmes,19 ans et plus,426,AS,Supérieur à,22.5,3.3,2600
+Potassium,Terre-Neuve-et-Labrador,Les deux sexes,19 ans et plus,826,AS,Supérieur à,21.6,2.3,
+Potassium,Île-du-Prince-Édouard,Hommes,19 ans et plus,313,AS,Supérieur à,27.5,2.7,3400
+Potassium,Île-du-Prince-Édouard,Femmes,19 ans et plus,371,AS,Supérieur à,33.2,3.3,2600
+Potassium,Île-du-Prince-Édouard,Les deux sexes,19 ans et plus,684,AS,Supérieur à,30.4,2.1,
+Potassium,Nouvelle-Écosse,Hommes,19 ans et plus,422,AS,Supérieur à,34.1,3,3400
+Potassium,Nouvelle-Écosse,Femmes,19 ans et plus,534,AS,Supérieur à,32.9,3.3,2600
+Potassium,Nouvelle-Écosse,Les deux sexes,19 ans et plus,956,AS,Supérieur à,33.5,2.3,
+Potassium,Nouveau-Brunswick,Hommes,19 ans et plus,371,AS,Supérieur à,30,3.1,3400
+Potassium,Nouveau-Brunswick,Femmes,19 ans et plus,463,AS,Supérieur à,30.3,3,2600
+Potassium,Nouveau-Brunswick,Les deux sexes,19 ans et plus,834,AS,Supérieur à,30.2,2.1,
+Potassium,Québec,Hommes,19 ans et plus,1009,AS,Supérieur à,33.8,2.1,3400
+Potassium,Québec,Femmes,19 ans et plus,1113,AS,Supérieur à,46.7,2.7,2600
+Potassium,Québec,Les deux sexes,19 ans et plus,2122,AS,Supérieur à,40.2,1.7,
+Potassium,Ontario,Hommes,19 ans et plus,1321,AS,Supérieur à,26.4,1.5,3400
+Potassium,Ontario,Femmes,19 ans et plus,1489,AS,Supérieur à,32,2.3,2600
+Potassium,Ontario,Les deux sexes,19 ans et plus,2810,AS,Supérieur à,29.2,1.4,
+Potassium,Manitoba,Hommes,19 ans et plus,396,AS,Supérieur à,25.2,2.5,3400
+Potassium,Manitoba,Femmes,19 ans et plus,464,AS,Supérieur à,32.7,3.1,2600
+Potassium,Manitoba,Les deux sexes,19 ans et plus,860,AS,Supérieur à,28.9,2,
+Potassium,Saskatchewan,Hommes,19 ans et plus,420,AS,Supérieur à,27.4,3,3400
+Potassium,Saskatchewan,Femmes,19 ans et plus,455,AS,Supérieur à,39.1,4.2,2600
+Potassium,Saskatchewan,Les deux sexes,19 ans et plus,875,AS,Supérieur à,33.2,2.5,
+Potassium,Alberta,Hommes,19 ans et plus,701,AS,Supérieur à,30.8,2.6,3400
+Potassium,Alberta,Femmes,19 ans et plus,696,AS,Supérieur à,29.5,3.6,2600
+Potassium,Alberta,Les deux sexes,19 ans et plus,1397,AS,Supérieur à,30.2,2.2,
+Potassium,Colombie-Britannique,Hommes,19 ans et plus,840,AS,Supérieur à,32.2,2.7,3400
+Potassium,Colombie-Britannique,Femmes,19 ans et plus,830,AS,Supérieur à,35.6,2.8,2600
+Potassium,Colombie-Britannique,Les deux sexes,19 ans et plus,1670,AS,Supérieur à,33.9,2,
+Sodium,Terre-Neuve-et-Labrador,Hommes,19 ans et plus,400,RMCC,Supérieur à,75.8,3.1,2300
+Sodium,Terre-Neuve-et-Labrador,Femmes,19 ans et plus,426,RMCC,Supérieur à,42.1,4.1,2300
+Sodium,Terre-Neuve-et-Labrador,Les deux sexes,19 ans et plus,826,RMCC,Supérieur à,58.8,2.8,2300
+Sodium,Île-du-Prince-Édouard,Hommes,19 ans et plus,313,RMCC,Supérieur à,84.4,2.7,2300
+Sodium,Île-du-Prince-Édouard,Femmes,19 ans et plus,371,RMCC,Supérieur à,45,3.6,2300
+Sodium,Île-du-Prince-Édouard,Les deux sexes,19 ans et plus,684,RMCC,Supérieur à,64.5,2.4,2300
+Sodium,Nouvelle-Écosse,Hommes,19 ans et plus,422,RMCC,Supérieur à,86,2.7,2300
+Sodium,Nouvelle-Écosse,Femmes,19 ans et plus,534,RMCC,Supérieur à,50.9,3.8,2300
+Sodium,Nouvelle-Écosse,Les deux sexes,19 ans et plus,956,RMCC,Supérieur à,68,2.4,2300
+Sodium,Nouveau-Brunswick,Hommes,19 ans et plus,371,RMCC,Supérieur à,81.3,3,2300
+Sodium,Nouveau-Brunswick,Femmes,19 ans et plus,463,RMCC,Supérieur à,47.4,3.5,2300
+Sodium,Nouveau-Brunswick,Les deux sexes,19 ans et plus,834,RMCC,Supérieur à,64.2,2.1,2300
+Sodium,Québec,Hommes,19 ans et plus,1009,RMCC,Supérieur à,87.6,1.7,2300
+Sodium,Québec,Femmes,19 ans et plus,1113,RMCC,Supérieur à,59.6,2.7,2300
+Sodium,Québec,Les deux sexes,19 ans et plus,2122,RMCC,Supérieur à,73.6,1.6,2300
+Sodium,Ontario,Hommes,19 ans et plus,1321,RMCC,Supérieur à,76,2.2,2300
+Sodium,Ontario,Femmes,19 ans et plus,1489,RMCC,Supérieur à,39.9,2.3,2300
+Sodium,Ontario,Les deux sexes,19 ans et plus,2810,RMCC,Supérieur à,57.7,1.6,2300
+Sodium,Manitoba,Hommes,19 ans et plus,396,RMCC,Supérieur à,84.5,2.5,2300
+Sodium,Manitoba,Femmes,19 ans et plus,464,RMCC,Supérieur à,49.8,3.7,2300
+Sodium,Manitoba,Les deux sexes,19 ans et plus,860,RMCC,Supérieur à,67.3,2.2,2300
+Sodium,Saskatchewan,Hommes,19 ans et plus,420,RMCC,Supérieur à,84.7,2.6,2300
+Sodium,Saskatchewan,Femmes,19 ans et plus,455,RMCC,Supérieur à,50.8,4.6,2300
+Sodium,Saskatchewan,Les deux sexes,19 ans et plus,875,RMCC,Supérieur à,68,2.8,2300
+Sodium,Alberta,Hommes,19 ans et plus,701,RMCC,Supérieur à,80,2.7,2300
+Sodium,Alberta,Femmes,19 ans et plus,696,RMCC,Supérieur à,40.2,3.7,2300
+Sodium,Alberta,Les deux sexes,19 ans et plus,1397,RMCC,Supérieur à,61,2.4,2300
+Sodium,Colombie-Britannique,Hommes,19 ans et plus,840,RMCC,Supérieur à,81.5,2.3,2300
+Sodium,Colombie-Britannique,Femmes,19 ans et plus,830,RMCC,Supérieur à,47.6,3.3,2300
+Sodium,Colombie-Britannique,Les deux sexes,19 ans et plus,1670,RMCC,Supérieur à,64.4,1.9,2300
+Vitamine A,Terre-Neuve-et-Labrador,Hommes,19 ans et plus,400,BME,Inférieur au,59.7,3.6,625
+Vitamine A,Terre-Neuve-et-Labrador,Femmes,19 ans et plus,426,BME,Inférieur au,59.2,3.8,500
+Vitamine A,Terre-Neuve-et-Labrador,Les deux sexes,19 ans et plus,826,BME,Inférieur au,59.5,2.8,
+Vitamine A,Île-du-Prince-Édouard,Hommes,19 ans et plus,313,BME,Inférieur au,42.8,4,625
+Vitamine A,Île-du-Prince-Édouard,Femmes,19 ans et plus,371,BME,Inférieur au,38.6,3.6,500
+Vitamine A,Île-du-Prince-Édouard,Les deux sexes,19 ans et plus,684,BME,Inférieur au,40.7,2.8,
+Vitamine A,Nouvelle-Écosse,Hommes,19 ans et plus,422,BME,Inférieur au,43.5,3.5,625
+Vitamine A,Nouvelle-Écosse,Femmes,19 ans et plus,534,BME,Inférieur au,34.5,4.5,500
+Vitamine A,Nouvelle-Écosse,Les deux sexes,19 ans et plus,956,BME,Inférieur au,38.9,3.1,
+Vitamine A,Nouveau-Brunswick,Hommes,19 ans et plus,371,BME,Inférieur au,40.5,4,625
+Vitamine A,Nouveau-Brunswick,Femmes,19 ans et plus,463,BME,Inférieur au,37.6,3.8,500
+Vitamine A,Nouveau-Brunswick,Les deux sexes,19 ans et plus,834,BME,Inférieur au,39.1,2.7,
+Vitamine A,Québec,Hommes,19 ans et plus,1009,BME,Inférieur au,32.5,3.3,625
+Vitamine A,Québec,Femmes,19 ans et plus,1113,BME,Inférieur au,25.9,3.1,500
+Vitamine A,Québec,Les deux sexes,19 ans et plus,2122,BME,Inférieur au,29.2,2.3,
+Vitamine A,Ontario,Hommes,19 ans et plus,1321,BME,Inférieur au,53.8,3,625
+Vitamine A,Ontario,Femmes,19 ans et plus,1489,BME,Inférieur au,42.8,2.6,500
+Vitamine A,Ontario,Les deux sexes,19 ans et plus,2810,BME,Inférieur au,48.3,2,
+Vitamine A,Manitoba,Hommes,19 ans et plus,396,BME,Inférieur au,47.2,4,625
+Vitamine A,Manitoba,Femmes,19 ans et plus,464,BME,Inférieur au,41.2,3.5,500
+Vitamine A,Manitoba,Les deux sexes,19 ans et plus,860,BME,Inférieur au,44.2,2.7,
+Vitamine A,Saskatchewan,Hommes,19 ans et plus,420,BME,Inférieur au,44.1,4.1,625
+Vitamine A,Saskatchewan,Femmes,19 ans et plus,455,BME,Inférieur au,34.2,3.9,500
+Vitamine A,Saskatchewan,Les deux sexes,19 ans et plus,875,BME,Inférieur au,39.2,3,
+Vitamine A,Alberta,Hommes,19 ans et plus,701,BME,Inférieur au,46.6,3.5,625
+Vitamine A,Alberta,Femmes,19 ans et plus,696,BME,Inférieur au,42.8,3.9,500
+Vitamine A,Alberta,Les deux sexes,19 ans et plus,1397,BME,Inférieur au,44.8,2.7,
+Vitamine A,Colombie-Britannique,Hommes,19 ans et plus,840,BME,Inférieur au,41.5,3.3,625
+Vitamine A,Colombie-Britannique,Femmes,19 ans et plus,830,BME,Inférieur au,37.8,3.4,500
+Vitamine A,Colombie-Britannique,Les deux sexes,19 ans et plus,1670,BME,Inférieur au,39.6,2.5,
+Vitamine C,Terre-Neuve-et-Labrador,Hommes,19 ans et plus,400,BME,Inférieur au,49.9,3.4,75
+Vitamine C,Terre-Neuve-et-Labrador,Femmes,19 ans et plus,426,BME,Inférieur au,37.8,3.5,60
+Vitamine C,Terre-Neuve-et-Labrador,Les deux sexes,19 ans et plus,826,BME,Inférieur au,43.8,2.4,
+Vitamine C,Île-du-Prince-Édouard,Hommes,19 ans et plus,313,BME,Inférieur au,54,3.2,75
+Vitamine C,Île-du-Prince-Édouard,Femmes,19 ans et plus,371,BME,Inférieur au,41,3.5,60
+Vitamine C,Île-du-Prince-Édouard,Les deux sexes,19 ans et plus,684,BME,Inférieur au,47.4,2.4,
+Vitamine C,Nouvelle-Écosse,Hommes,19 ans et plus,422,BME,Inférieur au,43.1,2.8,75
+Vitamine C,Nouvelle-Écosse,Femmes,19 ans et plus,534,BME,Inférieur au,40.9,3.3,60
+Vitamine C,Nouvelle-Écosse,Les deux sexes,19 ans et plus,956,BME,Inférieur au,42,2.2,
+Vitamine C,Nouveau-Brunswick,Hommes,19 ans et plus,371,BME,Inférieur au,51.6,3.7,75
+Vitamine C,Nouveau-Brunswick,Femmes,19 ans et plus,463,BME,Inférieur au,36.1,3.7,60
+Vitamine C,Nouveau-Brunswick,Les deux sexes,19 ans et plus,834,BME,Inférieur au,43.8,2.5,
+Vitamine C,Québec,Hommes,19 ans et plus,1009,BME,Inférieur au,31.8,2.6,75
+Vitamine C,Québec,Femmes,19 ans et plus,1113,BME,Inférieur au,19,2.4,60
+Vitamine C,Québec,Les deux sexes,19 ans et plus,2122,BME,Inférieur au,25.4,1.8,
+Vitamine C,Ontario,Hommes,19 ans et plus,1321,BME,Inférieur au,39.9,2.2,75
+Vitamine C,Ontario,Femmes,19 ans et plus,1489,BME,Inférieur au,30.1,2.4,60
+Vitamine C,Ontario,Les deux sexes,19 ans et plus,2810,BME,Inférieur au,34.9,1.6,
+Vitamine C,Manitoba,Hommes,19 ans et plus,396,BME,Inférieur au,48.3,3,75
+Vitamine C,Manitoba,Femmes,19 ans et plus,464,BME,Inférieur au,37.1,3.6,60
+Vitamine C,Manitoba,Les deux sexes,19 ans et plus,860,BME,Inférieur au,42.7,2.3,
+Vitamine C,Saskatchewan,Hommes,19 ans et plus,420,BME,Inférieur au,48.5,3.6,75
+Vitamine C,Saskatchewan,Femmes,19 ans et plus,455,BME,Inférieur au,33.8,3.5,60
+Vitamine C,Saskatchewan,Les deux sexes,19 ans et plus,875,BME,Inférieur au,41.3,2.5,
+Vitamine C,Alberta,Hommes,19 ans et plus,701,BME,Inférieur au,44.4,3.1,75
+Vitamine C,Alberta,Femmes,19 ans et plus,696,BME,Inférieur au,34.8,3,60
+Vitamine C,Alberta,Les deux sexes,19 ans et plus,1397,BME,Inférieur au,39.8,2.1,
+Vitamine C,Colombie-Britannique,Hommes,19 ans et plus,840,BME,Inférieur au,40,2.9,75
+Vitamine C,Colombie-Britannique,Femmes,19 ans et plus,830,BME,Inférieur au,27.5,2.7,60
+Vitamine C,Colombie-Britannique,Les deux sexes,19 ans et plus,1670,BME,Inférieur au,33.7,2,
+Vitamine D,Terre-Neuve-et-Labrador,Hommes,19 ans et plus,400,BME,Inférieur au,93.5,1.5,10
+Vitamine D,Terre-Neuve-et-Labrador,Femmes,19 ans et plus,426,BME,Inférieur au,98.8,0.6,10
+Vitamine D,Terre-Neuve-et-Labrador,Les deux sexes,19 ans et plus,826,BME,Inférieur au,96.1,0.8,10
+Vitamine D,Île-du-Prince-Édouard,Hommes,19 ans et plus,313,BME,Inférieur au,88.9,2,10
+Vitamine D,Île-du-Prince-Édouard,Femmes,19 ans et plus,371,BME,Inférieur au,97.5,0.7,10
+Vitamine D,Île-du-Prince-Édouard,Les deux sexes,19 ans et plus,684,BME,Inférieur au,93.3,1,10
+Vitamine D,Nouvelle-Écosse,Hommes,19 ans et plus,422,BME,Inférieur au,90.7,1.5,10
+Vitamine D,Nouvelle-Écosse,Femmes,19 ans et plus,534,BME,Inférieur au,97.6,0.8,10
+Vitamine D,Nouvelle-Écosse,Les deux sexes,19 ans et plus,956,BME,Inférieur au,94.3,0.9,10
+Vitamine D,Nouveau-Brunswick,Hommes,19 ans et plus,371,BME,Inférieur au,89.6,1.9,10
+Vitamine D,Nouveau-Brunswick,Femmes,19 ans et plus,463,BME,Inférieur au,97.1,0.8,10
+Vitamine D,Nouveau-Brunswick,Les deux sexes,19 ans et plus,834,BME,Inférieur au,93.4,1,10
+Vitamine D,Québec,Hommes,19 ans et plus,1009,BME,Inférieur au,92.1,1.4,10
+Vitamine D,Québec,Femmes,19 ans et plus,1113,BME,Inférieur au,97.6,0.7,10
+Vitamine D,Québec,Les deux sexes,19 ans et plus,2122,BME,Inférieur au,94.8,0.8,10
+Vitamine D,Ontario,Hommes,19 ans et plus,1321,BME,Inférieur au,95.6,0.9,10
+Vitamine D,Ontario,Femmes,19 ans et plus,1489,BME,Inférieur au,99,0.4,10
+Vitamine D,Ontario,Les deux sexes,19 ans et plus,2810,BME,Inférieur au,97.3,0.5,10
+Vitamine D,Manitoba,Hommes,19 ans et plus,396,BME,Inférieur au,94.7,1.3,10
+Vitamine D,Manitoba,Femmes,19 ans et plus,464,BME,Inférieur au,98,0.6,10
+Vitamine D,Manitoba,Les deux sexes,19 ans et plus,860,BME,Inférieur au,96.3,0.7,10
+Vitamine D,Saskatchewan,Hommes,19 ans et plus,420,BME,Inférieur au,93.3,2,10
+Vitamine D,Saskatchewan,Femmes,19 ans et plus,455,BME,Inférieur au,97.2,0.8,10
+Vitamine D,Saskatchewan,Les deux sexes,19 ans et plus,875,BME,Inférieur au,95.2,1.1,10
+Vitamine D,Alberta,Hommes,19 ans et plus,701,BME,Inférieur au,95.6,1.1,10
+Vitamine D,Alberta,Femmes,19 ans et plus,696,BME,Inférieur au,99,0.4,10
+Vitamine D,Alberta,Les deux sexes,19 ans et plus,1397,BME,Inférieur au,97.2,0.6,10
+Vitamine D,Colombie-Britannique,Hommes,19 ans et plus,840,BME,Inférieur au,94,1.3,10
+Vitamine D,Colombie-Britannique,Femmes,19 ans et plus,830,BME,Inférieur au,98.9,0.4,10
+Vitamine D,Colombie-Britannique,Les deux sexes,19 ans et plus,1670,BME,Inférieur au,96.4,0.7,10
+Zinc,Terre-Neuve-et-Labrador,Les deux sexes,19 ans et plus,826,BME,Inférieur au,31.5,3.4,
+Zinc,Île-du-Prince-Édouard,Les deux sexes,19 ans et plus,684,BME,Inférieur au,23.9,2.4,
+Zinc,Nouvelle-Écosse,Les deux sexes,19 ans et plus,956,BME,Inférieur au,20.2,2.5,
+Zinc,Nouveau-Brunswick,Les deux sexes,19 ans et plus,834,BME,Inférieur au,23.6,2.5,
+Zinc,Québec,Les deux sexes,19 ans et plus,2122,BME,Inférieur au,17.9,2,
+Zinc,Ontario,Les deux sexes,19 ans et plus,2810,BME,Inférieur au,24.2,2,
+Zinc,Manitoba,Les deux sexes,19 ans et plus,860,BME,Inférieur au,22.6,2.6,
+Zinc,Saskatchewan,Les deux sexes,19 ans et plus,875,BME,Inférieur au,18.4,2.6,
+Zinc,Alberta,Les deux sexes,19 ans et plus,1397,BME,Inférieur au,18.5,2.1,
+Zinc,Colombie-Britannique,Les deux sexes,19 ans et plus,1670,BME,Inférieur au,20.8,2.2,

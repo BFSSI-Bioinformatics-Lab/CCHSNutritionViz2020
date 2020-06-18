@@ -1,0 +1,341 @@
+Nutrient/Item,Reg_Prov,Sex,Age (years),n,DRI type,Prefix-EN,Percentage,SE,Ref value
+Calcium,Newfoundland and Labrador,Male,19 years and over,400,EAR,Below,67.4,3.2,
+Calcium,Newfoundland and Labrador,Female,19 years and over,426,EAR,Below,90.4,2.2,
+Calcium,Newfoundland and Labrador,Males and females combined,19 years and over,826,EAR,Below,79,1.9,
+Calcium,Prince Edward Island,Male,19 years and over,313,EAR,Below,48.7,3.5,
+Calcium,Prince Edward Island,Female,19 years and over,371,EAR,Below,76.3,2.9,
+Calcium,Prince Edward Island,Males and females combined,19 years and over,684,EAR,Below,62.6,2.3,
+Calcium,Nova Scotia,Male,19 years and over,422,EAR,Below,45.4,2.9,
+Calcium,Nova Scotia,Female,19 years and over,534,EAR,Below,78.9,2.6,
+Calcium,Nova Scotia,Males and females combined,19 years and over,956,EAR,Below,62.5,2,
+Calcium,New Brunswick,Male,19 years and over,371,EAR,Below,51.5,3.1,
+Calcium,New Brunswick,Female,19 years and over,463,EAR,Below,78,2.3,
+Calcium,New Brunswick,Males and females combined,19 years and over,834,EAR,Below,64.8,1.9,
+Calcium,Quebec,Male,19 years and over,1009,EAR,Below,44.1,2.3,
+Calcium,Quebec,Female,19 years and over,1113,EAR,Below,67.8,1.9,
+Calcium,Quebec,Males and females combined,19 years and over,2122,EAR,Below,55.9,1.5,
+Calcium,Ontario,Male,19 years and over,1321,EAR,Below,56.5,2.1,
+Calcium,Ontario,Female,19 years and over,1489,EAR,Below,81.4,1.5,
+Calcium,Ontario,Males and females combined,19 years and over,2810,EAR,Below,69.1,1.4,
+Calcium,Manitoba,Male,19 years and over,396,EAR,Below,55.1,3.1,
+Calcium,Manitoba,Female,19 years and over,464,EAR,Below,76.3,2.5,
+Calcium,Manitoba,Males and females combined,19 years and over,860,EAR,Below,65.6,2,
+Calcium,Saskatchewan,Male,19 years and over,420,EAR,Below,53.1,4.2,
+Calcium,Saskatchewan,Female,19 years and over,455,EAR,Below,76.6,3.1,
+Calcium,Saskatchewan,Males and females combined,19 years and over,875,EAR,Below,64.6,2.7,
+Calcium,Alberta,Male,19 years and over,701,EAR,Below,50.7,2.3,
+Calcium,Alberta,Female,19 years and over,696,EAR,Below,75.5,2.3,
+Calcium,Alberta,Males and females combined,19 years and over,1397,EAR,Below,62.5,1.7,
+Calcium,British Columbia,Male,19 years and over,840,EAR,Below,50.4,2.5,
+Calcium,British Columbia,Female,19 years and over,830,EAR,Below,81.4,1.8,
+Calcium,British Columbia,Males and females combined,19 years and over,1670,EAR,Below,66,1.6,
+Total dietary fibre,Newfoundland and Labrador,Males and females combined,19 years and over,826,AI,Above,3.2,0.5,
+Total dietary fibre,Prince Edward Island,Males and females combined,19 years and over,684,AI,Above,6.5,0.8,
+Total dietary fibre,Nova Scotia,Males and females combined,19 years and over,956,AI,Above,7.4,0.8,
+Total dietary fibre,New Brunswick,Males and females combined,19 years and over,834,AI,Above,6.2,0.7,
+Total dietary fibre,Quebec,Males and females combined,19 years and over,2122,AI,Above,9.5,0.9,
+Total dietary fibre,Ontario,Males and females combined,19 years and over,2810,AI,Above,7,0.6,
+Total dietary fibre,Manitoba,Males and females combined,19 years and over,860,AI,Above,5.8,0.7,
+Total dietary fibre,Saskatchewan,Males and females combined,19 years and over,875,AI,Above,5.9,0.8,
+Total dietary fibre,Alberta,Males and females combined,19 years and over,1397,AI,Above,5.9,0.7,
+Total dietary fibre,British Columbia,Males and females combined,19 years and over,1670,AI,Above,9.2,0.9,
+Folate,Newfoundland and Labrador,Males and females combined,19 years and over,826,EAR,Below,30.9,2.4,320
+Folate,Prince Edward Island,Males and females combined,19 years and over,684,EAR,Below,24.4,2.2,320
+Folate,Nova Scotia,Males and females combined,19 years and over,956,EAR,Below,24.4,2.1,320
+Folate,New Brunswick,Males and females combined,19 years and over,834,EAR,Below,23,2,320
+Folate,Quebec,Males and females combined,19 years and over,2122,EAR,Below,13,1.3,320
+Folate,Ontario,Males and females combined,19 years and over,2810,EAR,Below,23.8,1.5,320
+Folate,Manitoba,Males and females combined,19 years and over,860,EAR,Below,21.6,1.8,320
+Folate,Saskatchewan,Males and females combined,19 years and over,875,EAR,Below,23.6,2.4,320
+Folate,Alberta,Males and females combined,19 years and over,1397,EAR,Below,24.1,1.9,320
+Folate,British Columbia,Males and females combined,19 years and over,1670,EAR,Below,22.4,1.7,320
+Iron,Newfoundland and Labrador,Males and females combined,19 years and over,824,,Inadequate,10,0.9,
+Iron,Prince Edward Island,Males and females combined,19 years and over,683,,Inadequate,7.4,0.7,
+Iron,Nova Scotia,Males and females combined,19 years and over,951,,Inadequate,6.3,0.7,
+Iron,New Brunswick,Males and females combined,19 years and over,830,,Inadequate,6.7,0.7,
+Iron,Quebec,Males and females combined,19 years and over,2120,,Inadequate,5.4,0.5,
+Iron,Ontario,Males and females combined,19 years and over,2794,,Inadequate,8.2,0.6,
+Iron,Manitoba,Males and females combined,19 years and over,852,,Inadequate,8.3,0.9,
+Iron,Saskatchewan,Males and females combined,19 years and over,871,,Inadequate,7.4,0.8,
+Iron,Alberta,Males and females combined,19 years and over,1387,,Inadequate,9.2,0.8,
+Iron,British Columbia,Males and females combined,19 years and over,1650,,Inadequate,7.3,0.7,
+Magnesium,Newfoundland and Labrador,Male,19 years and over,400,EAR,Below,77.5,2.8,
+Magnesium,Newfoundland and Labrador,Female,19 years and over,426,EAR,Below,72.4,3.2,
+Magnesium,Newfoundland and Labrador,Males and females combined,19 years and over,826,EAR,Below,74.9,2.3,
+Magnesium,Prince Edward Island,Male,19 years and over,313,EAR,Below,63,3.2,
+Magnesium,Prince Edward Island,Female,19 years and over,371,EAR,Below,54.9,3.1,
+Magnesium,Prince Edward Island,Males and females combined,19 years and over,684,EAR,Below,58.9,2.2,
+Magnesium,Nova Scotia,Male,19 years and over,422,EAR,Below,54.5,3.3,
+Magnesium,Nova Scotia,Female,19 years and over,534,EAR,Below,52,2.8,
+Magnesium,Nova Scotia,Males and females combined,19 years and over,956,EAR,Below,53.2,2.1,
+Magnesium,New Brunswick,Male,19 years and over,371,EAR,Below,61.4,3,
+Magnesium,New Brunswick,Female,19 years and over,463,EAR,Below,56.3,2.7,
+Magnesium,New Brunswick,Males and females combined,19 years and over,834,EAR,Below,58.8,2,
+Magnesium,Quebec,Male,19 years and over,1009,EAR,Below,52.7,2.2,
+Magnesium,Quebec,Female,19 years and over,1113,EAR,Below,39.8,2.2,
+Magnesium,Quebec,Males and females combined,19 years and over,2122,EAR,Below,46.3,1.6,
+Magnesium,Ontario,Male,19 years and over,1321,EAR,Below,58.8,2,
+Magnesium,Ontario,Female,19 years and over,1489,EAR,Below,52.9,1.8,
+Magnesium,Ontario,Males and females combined,19 years and over,2810,EAR,Below,55.8,1.5,
+Magnesium,Manitoba,Male,19 years and over,396,EAR,Below,64.4,2.8,
+Magnesium,Manitoba,Female,19 years and over,464,EAR,Below,53.6,2.8,
+Magnesium,Manitoba,Males and females combined,19 years and over,860,EAR,Below,59,1.9,
+Magnesium,Saskatchewan,Male,19 years and over,420,EAR,Below,65.5,4.1,
+Magnesium,Saskatchewan,Female,19 years and over,455,EAR,Below,49.6,3.5,
+Magnesium,Saskatchewan,Males and females combined,19 years and over,875,EAR,Below,57.7,2.8,
+Magnesium,Alberta,Male,19 years and over,701,EAR,Below,54.8,2.6,
+Magnesium,Alberta,Female,19 years and over,696,EAR,Below,54,3.2,
+Magnesium,Alberta,Males and females combined,19 years and over,1397,EAR,Below,54.4,2,
+Magnesium,British Columbia,Male,19 years and over,840,EAR,Below,50.6,2.7,
+Magnesium,British Columbia,Female,19 years and over,830,EAR,Below,45.5,2.5,
+Magnesium,British Columbia,Males and females combined,19 years and over,1670,EAR,Below,48,1.9,
+Percentage of total energy intake from carbohydrates,Newfoundland and Labrador,Male,19 years and over,400,AMDR,Within,60.8,3.6,45 - 65
+Percentage of total energy intake from carbohydrates,Newfoundland and Labrador,Female,19 years and over,426,AMDR,Within,69.4,3.4,45 - 65
+Percentage of total energy intake from carbohydrates,Newfoundland and Labrador,Males and females combined,19 years and over,826,AMDR,Within,64.6,2.3,45 - 65
+Percentage of total energy intake from carbohydrates,Prince Edward Island,Male,19 years and over,313,AMDR,Within,58.8,3.3,45 - 65
+Percentage of total energy intake from carbohydrates,Prince Edward Island,Female,19 years and over,371,AMDR,Within,74.2,3.1,45 - 65
+Percentage of total energy intake from carbohydrates,Prince Edward Island,Males and females combined,19 years and over,684,AMDR,Within,66.1,2.1,45 - 65
+Percentage of total energy intake from carbohydrates,Nova Scotia,Male,19 years and over,422,AMDR,Within,60.1,3.3,45 - 65
+Percentage of total energy intake from carbohydrates,Nova Scotia,Female,19 years and over,534,AMDR,Within,68.7,3.2,45 - 65
+Percentage of total energy intake from carbohydrates,Nova Scotia,Males and females combined,19 years and over,956,AMDR,Within,64.2,2.2,45 - 65
+Percentage of total energy intake from carbohydrates,New Brunswick,Male,19 years and over,371,AMDR,Within,61.2,3.4,45 - 65
+Percentage of total energy intake from carbohydrates,New Brunswick,Female,19 years and over,463,AMDR,Within,77.7,2.8,45 - 65
+Percentage of total energy intake from carbohydrates,New Brunswick,Males and females combined,19 years and over,834,AMDR,Within,69,2.1,45 - 65
+Percentage of total energy intake from carbohydrates,Quebec,Male,19 years and over,1009,AMDR,Within,60.3,2.4,45 - 65
+Percentage of total energy intake from carbohydrates,Quebec,Female,19 years and over,1113,AMDR,Within,71.8,2.6,45 - 65
+Percentage of total energy intake from carbohydrates,Quebec,Males and females combined,19 years and over,2122,AMDR,Within,65.6,1.7,45 - 65
+Percentage of total energy intake from carbohydrates,Ontario,Male,19 years and over,1321,AMDR,Within,62.8,2.3,45 - 65
+Percentage of total energy intake from carbohydrates,Ontario,Female,19 years and over,1489,AMDR,Within,71.7,2.5,45 - 65
+Percentage of total energy intake from carbohydrates,Ontario,Males and females combined,19 years and over,2810,AMDR,Within,66.8,1.6,45 - 65
+Percentage of total energy intake from carbohydrates,Manitoba,Male,19 years and over,396,AMDR,Within,61.6,3.2,45 - 65
+Percentage of total energy intake from carbohydrates,Manitoba,Female,19 years and over,464,AMDR,Within,74.4,3.5,45 - 65
+Percentage of total energy intake from carbohydrates,Manitoba,Males and females combined,19 years and over,860,AMDR,Within,67.5,2.5,45 - 65
+Percentage of total energy intake from carbohydrates,Saskatchewan,Male,19 years and over,420,AMDR,Within,53.9,3.5,45 - 65
+Percentage of total energy intake from carbohydrates,Saskatchewan,Female,19 years and over,455,AMDR,Within,66.2,3.6,45 - 65
+Percentage of total energy intake from carbohydrates,Saskatchewan,Males and females combined,19 years and over,875,AMDR,Within,59.6,2.5,45 - 65
+Percentage of total energy intake from carbohydrates,Alberta,Male,19 years and over,701,AMDR,Within,57.1,3,45 - 65
+Percentage of total energy intake from carbohydrates,Alberta,Female,19 years and over,696,AMDR,Within,66.3,3,45 - 65
+Percentage of total energy intake from carbohydrates,Alberta,Males and females combined,19 years and over,1397,AMDR,Within,61.2,2.1,45 - 65
+Percentage of total energy intake from carbohydrates,British Columbia,Male,19 years and over,840,AMDR,Within,56.5,2.6,45 - 65
+Percentage of total energy intake from carbohydrates,British Columbia,Female,19 years and over,830,AMDR,Within,65.9,2.9,45 - 65
+Percentage of total energy intake from carbohydrates,British Columbia,Males and females combined,19 years and over,1670,AMDR,Within,61.2,1.9,45 - 65
+Percentage of total energy intake from fat,Newfoundland and Labrador,Male,19 years and over,400,AMDR,Within,72.1,3.2,20 - 35
+Percentage of total energy intake from fat,Newfoundland and Labrador,Female,19 years and over,426,AMDR,Within,70.3,3.6,20 - 35
+Percentage of total energy intake from fat,Newfoundland and Labrador,Males and females combined,19 years and over,826,AMDR,Within,71.9,2.6,20 - 35
+Percentage of total energy intake from fat,Prince Edward Island,Male,19 years and over,313,AMDR,Within,55.7,4,20 - 35
+Percentage of total energy intake from fat,Prince Edward Island,Female,19 years and over,371,AMDR,Within,69.8,3.2,20 - 35
+Percentage of total energy intake from fat,Prince Edward Island,Males and females combined,19 years and over,684,AMDR,Within,63.3,2.8,20 - 35
+Percentage of total energy intake from fat,Nova Scotia,Male,19 years and over,422,AMDR,Within,62.7,3.5,20 - 35
+Percentage of total energy intake from fat,Nova Scotia,Female,19 years and over,534,AMDR,Within,64.7,3.5,20 - 35
+Percentage of total energy intake from fat,Nova Scotia,Males and females combined,19 years and over,956,AMDR,Within,64.2,2.7,20 - 35
+Percentage of total energy intake from fat,New Brunswick,Male,19 years and over,371,AMDR,Within,68.3,4.5,20 - 35
+Percentage of total energy intake from fat,New Brunswick,Female,19 years and over,463,AMDR,Within,74.7,3.2,20 - 35
+Percentage of total energy intake from fat,New Brunswick,Males and females combined,19 years and over,834,AMDR,Within,72.3,2.8,20 - 35
+Percentage of total energy intake from fat,Quebec,Male,19 years and over,1009,AMDR,Within,67.8,2.5,20 - 35
+Percentage of total energy intake from fat,Quebec,Female,19 years and over,1113,AMDR,Within,72.8,2.8,20 - 35
+Percentage of total energy intake from fat,Quebec,Males and females combined,19 years and over,2122,AMDR,Within,71.1,2,20 - 35
+Percentage of total energy intake from fat,Ontario,Male,19 years and over,1321,AMDR,Within,70.4,2.4,20 - 35
+Percentage of total energy intake from fat,Ontario,Female,19 years and over,1489,AMDR,Within,73.9,2.8,20 - 35
+Percentage of total energy intake from fat,Ontario,Males and females combined,19 years and over,2810,AMDR,Within,72.8,2.2,20 - 35
+Percentage of total energy intake from fat,Manitoba,Male,19 years and over,396,AMDR,Within,66.1,3.4,20 - 35
+Percentage of total energy intake from fat,Manitoba,Female,19 years and over,464,AMDR,Within,73.2,3.4,20 - 35
+Percentage of total energy intake from fat,Manitoba,Males and females combined,19 years and over,860,AMDR,Within,70.2,2.7,20 - 35
+Percentage of total energy intake from fat,Saskatchewan,Male,19 years and over,420,AMDR,Within,60.6,3.6,20 - 35
+Percentage of total energy intake from fat,Saskatchewan,Female,19 years and over,455,AMDR,Within,65.8,3.9,20 - 35
+Percentage of total energy intake from fat,Saskatchewan,Males and females combined,19 years and over,875,AMDR,Within,63.7,2.9,20 - 35
+Percentage of total energy intake from fat,Alberta,Male,19 years and over,701,AMDR,Within,73,3.3,20 - 35
+Percentage of total energy intake from fat,Alberta,Female,19 years and over,696,AMDR,Within,66.9,3.3,20 - 35
+Percentage of total energy intake from fat,Alberta,Males and females combined,19 years and over,1397,AMDR,Within,70.4,2.5,20 - 35
+Percentage of total energy intake from fat,British Columbia,Male,19 years and over,840,AMDR,Within,70.2,2.5,20 - 35
+Percentage of total energy intake from fat,British Columbia,Female,19 years and over,830,AMDR,Within,72,2.9,20 - 35
+Percentage of total energy intake from fat,British Columbia,Males and females combined,19 years and over,1670,AMDR,Within,71.1,2,20 - 35
+Percentage of total energy intake from protein,Newfoundland and Labrador,Male,19 years and over,400,AMDR,Within,99.9,0.1,10 - 35
+Percentage of total energy intake from protein,Newfoundland and Labrador,Female,19 years and over,426,AMDR,Within,99.8,0.1,10 - 35
+Percentage of total energy intake from protein,Newfoundland and Labrador,Males and females combined,19 years and over,826,AMDR,Within,99.9,0.1,10 - 35
+Percentage of total energy intake from protein,Prince Edward Island,Male,19 years and over,313,AMDR,Within,99.9,0.1,10 - 35
+Percentage of total energy intake from protein,Prince Edward Island,Female,19 years and over,371,AMDR,Within,99.6,0.2,10 - 35
+Percentage of total energy intake from protein,Prince Edward Island,Males and females combined,19 years and over,684,AMDR,Within,99.8,0.1,10 - 35
+Percentage of total energy intake from protein,Nova Scotia,Male,19 years and over,422,AMDR,Within,99.8,0.2,10 - 35
+Percentage of total energy intake from protein,Nova Scotia,Female,19 years and over,534,AMDR,Within,99.6,0.2,10 - 35
+Percentage of total energy intake from protein,Nova Scotia,Males and females combined,19 years and over,956,AMDR,Within,99.7,0.2,10 - 35
+Percentage of total energy intake from protein,New Brunswick,Male,19 years and over,371,AMDR,Within,99.9,0.2,10 - 35
+Percentage of total energy intake from protein,New Brunswick,Female,19 years and over,463,AMDR,Within,99.6,0.2,10 - 35
+Percentage of total energy intake from protein,New Brunswick,Males and females combined,19 years and over,834,AMDR,Within,99.7,0.2,10 - 35
+Percentage of total energy intake from protein,Quebec,Male,19 years and over,1009,AMDR,Within,99.8,0.2,10 - 35
+Percentage of total energy intake from protein,Quebec,Female,19 years and over,1113,AMDR,Within,99.6,0.2,10 - 35
+Percentage of total energy intake from protein,Quebec,Males and females combined,19 years and over,2122,AMDR,Within,99.7,0.1,10 - 35
+Percentage of total energy intake from protein,Ontario,Male,19 years and over,1321,AMDR,Within,99.9,0.1,10 - 35
+Percentage of total energy intake from protein,Ontario,Female,19 years and over,1489,AMDR,Within,99.8,0.1,10 - 35
+Percentage of total energy intake from protein,Ontario,Males and females combined,19 years and over,2810,AMDR,Within,99.9,0.1,10 - 35
+Percentage of total energy intake from protein,Manitoba,Male,19 years and over,396,AMDR,Within,99.9,0.1,10 - 35
+Percentage of total energy intake from protein,Manitoba,Female,19 years and over,464,AMDR,Within,99.5,0.3,10 - 35
+Percentage of total energy intake from protein,Manitoba,Males and females combined,19 years and over,860,AMDR,Within,99.7,0.2,10 - 35
+Percentage of total energy intake from protein,Saskatchewan,Male,19 years and over,420,AMDR,Within,100,0.1,10 - 35
+Percentage of total energy intake from protein,Saskatchewan,Female,19 years and over,455,AMDR,Within,99.9,0.1,10 - 35
+Percentage of total energy intake from protein,Saskatchewan,Males and females combined,19 years and over,875,AMDR,Within,99.9,0.1,10 - 35
+Percentage of total energy intake from protein,Alberta,Male,19 years and over,701,AMDR,Within,100,0.1,10 - 35
+Percentage of total energy intake from protein,Alberta,Female,19 years and over,696,AMDR,Within,99.7,0.2,10 - 35
+Percentage of total energy intake from protein,Alberta,Males and females combined,19 years and over,1397,AMDR,Within,99.8,0.1,10 - 35
+Percentage of total energy intake from protein,British Columbia,Male,19 years and over,840,AMDR,Within,100,0.1,10 - 35
+Percentage of total energy intake from protein,British Columbia,Female,19 years and over,830,AMDR,Within,99.8,0.2,10 - 35
+Percentage of total energy intake from protein,British Columbia,Males and females combined,19 years and over,1670,AMDR,Within,99.9,0.1,10 - 35
+Potassium,Newfoundland and Labrador,Male,19 years and over,400,AI,Above,20.7,2.6,3400
+Potassium,Newfoundland and Labrador,Female,19 years and over,426,AI,Above,22.5,3.3,2600
+Potassium,Newfoundland and Labrador,Males and females combined,19 years and over,826,AI,Above,21.6,2.3,
+Potassium,Prince Edward Island,Male,19 years and over,313,AI,Above,27.5,2.7,3400
+Potassium,Prince Edward Island,Female,19 years and over,371,AI,Above,33.2,3.3,2600
+Potassium,Prince Edward Island,Males and females combined,19 years and over,684,AI,Above,30.4,2.1,
+Potassium,Nova Scotia,Male,19 years and over,422,AI,Above,34.1,3,3400
+Potassium,Nova Scotia,Female,19 years and over,534,AI,Above,32.9,3.3,2600
+Potassium,Nova Scotia,Males and females combined,19 years and over,956,AI,Above,33.5,2.3,
+Potassium,New Brunswick,Male,19 years and over,371,AI,Above,30,3.1,3400
+Potassium,New Brunswick,Female,19 years and over,463,AI,Above,30.3,3,2600
+Potassium,New Brunswick,Males and females combined,19 years and over,834,AI,Above,30.2,2.1,
+Potassium,Quebec,Male,19 years and over,1009,AI,Above,33.8,2.1,3400
+Potassium,Quebec,Female,19 years and over,1113,AI,Above,46.7,2.7,2600
+Potassium,Quebec,Males and females combined,19 years and over,2122,AI,Above,40.2,1.7,
+Potassium,Ontario,Male,19 years and over,1321,AI,Above,26.4,1.5,3400
+Potassium,Ontario,Female,19 years and over,1489,AI,Above,32,2.3,2600
+Potassium,Ontario,Males and females combined,19 years and over,2810,AI,Above,29.2,1.4,
+Potassium,Manitoba,Male,19 years and over,396,AI,Above,25.2,2.5,3400
+Potassium,Manitoba,Female,19 years and over,464,AI,Above,32.7,3.1,2600
+Potassium,Manitoba,Males and females combined,19 years and over,860,AI,Above,28.9,2,
+Potassium,Saskatchewan,Male,19 years and over,420,AI,Above,27.4,3,3400
+Potassium,Saskatchewan,Female,19 years and over,455,AI,Above,39.1,4.2,2600
+Potassium,Saskatchewan,Males and females combined,19 years and over,875,AI,Above,33.2,2.5,
+Potassium,Alberta,Male,19 years and over,701,AI,Above,30.8,2.6,3400
+Potassium,Alberta,Female,19 years and over,696,AI,Above,29.5,3.6,2600
+Potassium,Alberta,Males and females combined,19 years and over,1397,AI,Above,30.2,2.2,
+Potassium,British Columbia,Male,19 years and over,840,AI,Above,32.2,2.7,3400
+Potassium,British Columbia,Female,19 years and over,830,AI,Above,35.6,2.8,2600
+Potassium,British Columbia,Males and females combined,19 years and over,1670,AI,Above,33.9,2,
+Sodium,Newfoundland and Labrador,Male,19 years and over,400,CDRR,Above,75.8,3.1,2300
+Sodium,Newfoundland and Labrador,Female,19 years and over,426,CDRR,Above,42.1,4.1,2300
+Sodium,Newfoundland and Labrador,Males and females combined,19 years and over,826,CDRR,Above,58.8,2.8,2300
+Sodium,Prince Edward Island,Male,19 years and over,313,CDRR,Above,84.4,2.7,2300
+Sodium,Prince Edward Island,Female,19 years and over,371,CDRR,Above,45,3.6,2300
+Sodium,Prince Edward Island,Males and females combined,19 years and over,684,CDRR,Above,64.5,2.4,2300
+Sodium,Nova Scotia,Male,19 years and over,422,CDRR,Above,86,2.7,2300
+Sodium,Nova Scotia,Female,19 years and over,534,CDRR,Above,50.9,3.8,2300
+Sodium,Nova Scotia,Males and females combined,19 years and over,956,CDRR,Above,68,2.4,2300
+Sodium,New Brunswick,Male,19 years and over,371,CDRR,Above,81.3,3,2300
+Sodium,New Brunswick,Female,19 years and over,463,CDRR,Above,47.4,3.5,2300
+Sodium,New Brunswick,Males and females combined,19 years and over,834,CDRR,Above,64.2,2.1,2300
+Sodium,Quebec,Male,19 years and over,1009,CDRR,Above,87.6,1.7,2300
+Sodium,Quebec,Female,19 years and over,1113,CDRR,Above,59.6,2.7,2300
+Sodium,Quebec,Males and females combined,19 years and over,2122,CDRR,Above,73.6,1.6,2300
+Sodium,Ontario,Male,19 years and over,1321,CDRR,Above,76,2.2,2300
+Sodium,Ontario,Female,19 years and over,1489,CDRR,Above,39.9,2.3,2300
+Sodium,Ontario,Males and females combined,19 years and over,2810,CDRR,Above,57.7,1.6,2300
+Sodium,Manitoba,Male,19 years and over,396,CDRR,Above,84.5,2.5,2300
+Sodium,Manitoba,Female,19 years and over,464,CDRR,Above,49.8,3.7,2300
+Sodium,Manitoba,Males and females combined,19 years and over,860,CDRR,Above,67.3,2.2,2300
+Sodium,Saskatchewan,Male,19 years and over,420,CDRR,Above,84.7,2.6,2300
+Sodium,Saskatchewan,Female,19 years and over,455,CDRR,Above,50.8,4.6,2300
+Sodium,Saskatchewan,Males and females combined,19 years and over,875,CDRR,Above,68,2.8,2300
+Sodium,Alberta,Male,19 years and over,701,CDRR,Above,80,2.7,2300
+Sodium,Alberta,Female,19 years and over,696,CDRR,Above,40.2,3.7,2300
+Sodium,Alberta,Males and females combined,19 years and over,1397,CDRR,Above,61,2.4,2300
+Sodium,British Columbia,Male,19 years and over,840,CDRR,Above,81.5,2.3,2300
+Sodium,British Columbia,Female,19 years and over,830,CDRR,Above,47.6,3.3,2300
+Sodium,British Columbia,Males and females combined,19 years and over,1670,CDRR,Above,64.4,1.9,2300
+Vitamin A,Newfoundland and Labrador,Male,19 years and over,400,EAR,Below,59.7,3.6,625
+Vitamin A,Newfoundland and Labrador,Female,19 years and over,426,EAR,Below,59.2,3.8,500
+Vitamin A,Newfoundland and Labrador,Males and females combined,19 years and over,826,EAR,Below,59.5,2.8,
+Vitamin A,Prince Edward Island,Male,19 years and over,313,EAR,Below,42.8,4,625
+Vitamin A,Prince Edward Island,Female,19 years and over,371,EAR,Below,38.6,3.6,500
+Vitamin A,Prince Edward Island,Males and females combined,19 years and over,684,EAR,Below,40.7,2.8,
+Vitamin A,Nova Scotia,Male,19 years and over,422,EAR,Below,43.5,3.5,625
+Vitamin A,Nova Scotia,Female,19 years and over,534,EAR,Below,34.5,4.5,500
+Vitamin A,Nova Scotia,Males and females combined,19 years and over,956,EAR,Below,38.9,3.1,
+Vitamin A,New Brunswick,Male,19 years and over,371,EAR,Below,40.5,4,625
+Vitamin A,New Brunswick,Female,19 years and over,463,EAR,Below,37.6,3.8,500
+Vitamin A,New Brunswick,Males and females combined,19 years and over,834,EAR,Below,39.1,2.7,
+Vitamin A,Quebec,Male,19 years and over,1009,EAR,Below,32.5,3.3,625
+Vitamin A,Quebec,Female,19 years and over,1113,EAR,Below,25.9,3.1,500
+Vitamin A,Quebec,Males and females combined,19 years and over,2122,EAR,Below,29.2,2.3,
+Vitamin A,Ontario,Male,19 years and over,1321,EAR,Below,53.8,3,625
+Vitamin A,Ontario,Female,19 years and over,1489,EAR,Below,42.8,2.6,500
+Vitamin A,Ontario,Males and females combined,19 years and over,2810,EAR,Below,48.3,2,
+Vitamin A,Manitoba,Male,19 years and over,396,EAR,Below,47.2,4,625
+Vitamin A,Manitoba,Female,19 years and over,464,EAR,Below,41.2,3.5,500
+Vitamin A,Manitoba,Males and females combined,19 years and over,860,EAR,Below,44.2,2.7,
+Vitamin A,Saskatchewan,Male,19 years and over,420,EAR,Below,44.1,4.1,625
+Vitamin A,Saskatchewan,Female,19 years and over,455,EAR,Below,34.2,3.9,500
+Vitamin A,Saskatchewan,Males and females combined,19 years and over,875,EAR,Below,39.2,3,
+Vitamin A,Alberta,Male,19 years and over,701,EAR,Below,46.6,3.5,625
+Vitamin A,Alberta,Female,19 years and over,696,EAR,Below,42.8,3.9,500
+Vitamin A,Alberta,Males and females combined,19 years and over,1397,EAR,Below,44.8,2.7,
+Vitamin A,British Columbia,Male,19 years and over,840,EAR,Below,41.5,3.3,625
+Vitamin A,British Columbia,Female,19 years and over,830,EAR,Below,37.8,3.4,500
+Vitamin A,British Columbia,Males and females combined,19 years and over,1670,EAR,Below,39.6,2.5,
+Vitamin C,Newfoundland and Labrador,Male,19 years and over,400,EAR,Below,49.9,3.4,75
+Vitamin C,Newfoundland and Labrador,Female,19 years and over,426,EAR,Below,37.8,3.5,60
+Vitamin C,Newfoundland and Labrador,Males and females combined,19 years and over,826,EAR,Below,43.8,2.4,
+Vitamin C,Prince Edward Island,Male,19 years and over,313,EAR,Below,54,3.2,75
+Vitamin C,Prince Edward Island,Female,19 years and over,371,EAR,Below,41,3.5,60
+Vitamin C,Prince Edward Island,Males and females combined,19 years and over,684,EAR,Below,47.4,2.4,
+Vitamin C,Nova Scotia,Male,19 years and over,422,EAR,Below,43.1,2.8,75
+Vitamin C,Nova Scotia,Female,19 years and over,534,EAR,Below,40.9,3.3,60
+Vitamin C,Nova Scotia,Males and females combined,19 years and over,956,EAR,Below,42,2.2,
+Vitamin C,New Brunswick,Male,19 years and over,371,EAR,Below,51.6,3.7,75
+Vitamin C,New Brunswick,Female,19 years and over,463,EAR,Below,36.1,3.7,60
+Vitamin C,New Brunswick,Males and females combined,19 years and over,834,EAR,Below,43.8,2.5,
+Vitamin C,Quebec,Male,19 years and over,1009,EAR,Below,31.8,2.6,75
+Vitamin C,Quebec,Female,19 years and over,1113,EAR,Below,19,2.4,60
+Vitamin C,Quebec,Males and females combined,19 years and over,2122,EAR,Below,25.4,1.8,
+Vitamin C,Ontario,Male,19 years and over,1321,EAR,Below,39.9,2.2,75
+Vitamin C,Ontario,Female,19 years and over,1489,EAR,Below,30.1,2.4,60
+Vitamin C,Ontario,Males and females combined,19 years and over,2810,EAR,Below,34.9,1.6,
+Vitamin C,Manitoba,Male,19 years and over,396,EAR,Below,48.3,3,75
+Vitamin C,Manitoba,Female,19 years and over,464,EAR,Below,37.1,3.6,60
+Vitamin C,Manitoba,Males and females combined,19 years and over,860,EAR,Below,42.7,2.3,
+Vitamin C,Saskatchewan,Male,19 years and over,420,EAR,Below,48.5,3.6,75
+Vitamin C,Saskatchewan,Female,19 years and over,455,EAR,Below,33.8,3.5,60
+Vitamin C,Saskatchewan,Males and females combined,19 years and over,875,EAR,Below,41.3,2.5,
+Vitamin C,Alberta,Male,19 years and over,701,EAR,Below,44.4,3.1,75
+Vitamin C,Alberta,Female,19 years and over,696,EAR,Below,34.8,3,60
+Vitamin C,Alberta,Males and females combined,19 years and over,1397,EAR,Below,39.8,2.1,
+Vitamin C,British Columbia,Male,19 years and over,840,EAR,Below,40,2.9,75
+Vitamin C,British Columbia,Female,19 years and over,830,EAR,Below,27.5,2.7,60
+Vitamin C,British Columbia,Males and females combined,19 years and over,1670,EAR,Below,33.7,2,
+Vitamin D,Newfoundland and Labrador,Male,19 years and over,400,EAR,Below,93.5,1.5,10
+Vitamin D,Newfoundland and Labrador,Female,19 years and over,426,EAR,Below,98.8,0.6,10
+Vitamin D,Newfoundland and Labrador,Males and females combined,19 years and over,826,EAR,Below,96.1,0.8,10
+Vitamin D,Prince Edward Island,Male,19 years and over,313,EAR,Below,88.9,2,10
+Vitamin D,Prince Edward Island,Female,19 years and over,371,EAR,Below,97.5,0.7,10
+Vitamin D,Prince Edward Island,Males and females combined,19 years and over,684,EAR,Below,93.3,1,10
+Vitamin D,Nova Scotia,Male,19 years and over,422,EAR,Below,90.7,1.5,10
+Vitamin D,Nova Scotia,Female,19 years and over,534,EAR,Below,97.6,0.8,10
+Vitamin D,Nova Scotia,Males and females combined,19 years and over,956,EAR,Below,94.3,0.9,10
+Vitamin D,New Brunswick,Male,19 years and over,371,EAR,Below,89.6,1.9,10
+Vitamin D,New Brunswick,Female,19 years and over,463,EAR,Below,97.1,0.8,10
+Vitamin D,New Brunswick,Males and females combined,19 years and over,834,EAR,Below,93.4,1,10
+Vitamin D,Quebec,Male,19 years and over,1009,EAR,Below,92.1,1.4,10
+Vitamin D,Quebec,Female,19 years and over,1113,EAR,Below,97.6,0.7,10
+Vitamin D,Quebec,Males and females combined,19 years and over,2122,EAR,Below,94.8,0.8,10
+Vitamin D,Ontario,Male,19 years and over,1321,EAR,Below,95.6,0.9,10
+Vitamin D,Ontario,Female,19 years and over,1489,EAR,Below,99,0.4,10
+Vitamin D,Ontario,Males and females combined,19 years and over,2810,EAR,Below,97.3,0.5,10
+Vitamin D,Manitoba,Male,19 years and over,396,EAR,Below,94.7,1.3,10
+Vitamin D,Manitoba,Female,19 years and over,464,EAR,Below,98,0.6,10
+Vitamin D,Manitoba,Males and females combined,19 years and over,860,EAR,Below,96.3,0.7,10
+Vitamin D,Saskatchewan,Male,19 years and over,420,EAR,Below,93.3,2,10
+Vitamin D,Saskatchewan,Female,19 years and over,455,EAR,Below,97.2,0.8,10
+Vitamin D,Saskatchewan,Males and females combined,19 years and over,875,EAR,Below,95.2,1.1,10
+Vitamin D,Alberta,Male,19 years and over,701,EAR,Below,95.6,1.1,10
+Vitamin D,Alberta,Female,19 years and over,696,EAR,Below,99,0.4,10
+Vitamin D,Alberta,Males and females combined,19 years and over,1397,EAR,Below,97.2,0.6,10
+Vitamin D,British Columbia,Male,19 years and over,840,EAR,Below,94,1.3,10
+Vitamin D,British Columbia,Female,19 years and over,830,EAR,Below,98.9,0.4,10
+Vitamin D,British Columbia,Males and females combined,19 years and over,1670,EAR,Below,96.4,0.7,10
+Zinc,Newfoundland and Labrador,Males and females combined,19 years and over,826,EAR,Below,31.5,3.4,
+Zinc,Prince Edward Island,Males and females combined,19 years and over,684,EAR,Below,23.9,2.4,
+Zinc,Nova Scotia,Males and females combined,19 years and over,956,EAR,Below,20.2,2.5,
+Zinc,New Brunswick,Males and females combined,19 years and over,834,EAR,Below,23.6,2.5,
+Zinc,Quebec,Males and females combined,19 years and over,2122,EAR,Below,17.9,2,
+Zinc,Ontario,Males and females combined,19 years and over,2810,EAR,Below,24.2,2,
+Zinc,Manitoba,Males and females combined,19 years and over,860,EAR,Below,22.6,2.6,
+Zinc,Saskatchewan,Males and females combined,19 years and over,875,EAR,Below,18.4,2.6,
+Zinc,Alberta,Males and females combined,19 years and over,1397,EAR,Below,18.5,2.1,
+Zinc,British Columbia,Males and females combined,19 years and over,1670,EAR,Below,20.8,2.2,
