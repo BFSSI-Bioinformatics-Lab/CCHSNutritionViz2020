@@ -4,6 +4,11 @@ SHAPEFILE
 https://www12.statcan.gc.ca/census-recensement/2011/geo/bound-limit/bound-limit-2011-eng.cfm
 2. Dropped contents into www.mapshaper.com and exported to GeoJSON
 3. D3.js magiks
+
+TODO: Add new dropdown for for age-sex group selection - the new dataset has two new age groups
+    /home/forest/PycharmProjects/CCHSNutritionViz2020/data_processing/raw_data/geographic_new/MAP- Consolidated file-bilingual.xlsx two tabs
+    Should consider the E columm
+    Nutrients are not consistent across age groups, need to accommodate
 */
 
 //Width and height of main map

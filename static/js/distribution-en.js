@@ -129,9 +129,6 @@ d3.csv("../static/data/distributions-en-20th.csv").then(function (data) {
     let sex = $("#sexDropdownSelector option:selected").text();
     let nutrient = $("#nutrientDropdownSelector option:selected").text();
     let age = $("#ageDropdownSelector option:selected").text();
-    console.log(age)
-
-    console.log(master_data)
 
     // Filter data according to dropdown selection
     data = master_data[age][nutrient][sex];
