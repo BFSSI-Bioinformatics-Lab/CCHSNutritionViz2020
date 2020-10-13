@@ -1,4 +1,5 @@
-<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<!DOCTYPE html><!--[if lt IE 9]>
+<html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
 <html class="no-js" lang="en" dir="ltr">
 <!--<![endif]-->
 <head>
@@ -17,12 +18,12 @@
     <link rel="stylesheet" href="../static/GCWeb/css/theme.min.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
-		<link href="../static/GCWeb/assets/favicon.ico" rel="shortcut icon" />
+    <link href="../static/GCWeb/assets/favicon.ico" rel="shortcut icon"/>
 
-		<link rel="stylesheet" href="../static/GCWeb/css/ie8-theme.min.css" />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
-		<script src="../static/wet-boew/js/ie8-wet-boew.min.js"></script>
-		<![endif]-->
+    <link rel="stylesheet" href="../static/GCWeb/css/ie8-theme.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="../static/wet-boew/js/ie8-wet-boew.min.js"></script>
+    <![endif]-->
     <!--[if lte IE 9]>
 
 
@@ -198,32 +199,79 @@
         </div>
 
         <div class="row">
-            <div id="distribution-datatable">
-                <h4>Table</h4>
-                <table class="wb-tables table table-condensed table-hover cell-border" id="nutrientTable"
-                       data-wb-tables='{"scrollX" : true, "paging": false, "searching": false, "bInfo": false, "buttons": ["csv"]}'>
-                    <thead>
-                    <tr class="datatable-headers">
-                        <th>Nutrient</th>
-                        <th>Region</th>
-                    </tr>
-                    </thead>
-                    <tbody class="datatable-body">
-                    <tr>
-                        <td>n/a</td>
-                        <td>n/a</td>
-                    </tr>
-                    </tbody>
-                </table>
+            <h4>Table</h4>
+            <table class="wb-tables table table-striped table-hover table-condensed" aria-live="polite"
+                   id="distribution-datatable" data-wb-tables='{"scrollX": true, "searching": false, "processing": true,
+                   "columns":[
+                        {"data":"Nutrient/Item (unit)"},
+                        {"data":"Reg_Prov"},
+                        {"data":"Sex"},
+                        {"data":"Age (years)"},
+                        {"data":"n"},
+                        {"data":"Mean"},
+                        {"data":"SE_Mean"}
+                    ]
+                   }'>
+                <thead>
+                <tr>
+                    <th>Nutrient/Item (unit)</th>
+                    <th>Reg_Prov</th>
+                    <th>Sex</th>
+                    <th>Age (years)</th>
+                    <th>n</th>
+                    <th>Mean</th>
+                    <th>SE_Mean</th>
+                    {#                    <th>P5</th>#}
+                    {#                    <th>P5_SE</th>#}
+                    {#                    <th>P10</th>#}
+                    {#                    <th>P10_SE</th>#}
+                    {#                    <th>P25</th>#}
+                    {#                    <th>P25_SE</th>#}
+                    {#                    <th>P50</th>#}
+                    {#                    <th>P50_SE</th>#}
+                    {#                    <th>P75</th>#}
+                    {#                    <th>P75_SE</th>#}
+                    {#                    <th>P90</th>#}
+                    {#                    <th>P90_SE</th>#}
+                    {#                    <th>P95</th>#}
+                    {#                    <th>P95_SE</th>#}
+                    {#                    <th>EAR</th>#}
+                    {#                    <th>% &lt;EAR</th>#}
+                    {#                    <th>% &lt;EAR_SE</th>#}
+                    {#                    <th>AI</th>#}
+                    {#                    <th>% &gt;AI</th>#}
+                    {#                    <th>% &gt;AI_SE</th>#}
+                    {#                    <th>UL</th>#}
+                    {#                    <th>% &gt;UL</th>#}
+                    {#                    <th>% &gt;UL_SE</th>#}
+                    {#                    <th>AMDR</th>#}
+                    {#                    <th>% below AMDR</th>#}
+                    {#                    <th>% below AMDR_SE</th>#}
+                    {#                    <th>% within AMDR</th>#}
+                    {#                    <th>% within AMDR_SE</th>#}
+                    {#                    <th>% above AMDR</th>#}
+                    {#                    <th>% above AMDR_SE</th>#}
+                    {#                    <th>CDRR</th>#}
+                    {#                    <th>% &gt;CDRR</th>#}
+                    {#                    <th>% &gt;CDRR_SE</th>#}
+                    {#                    <th>% Inadequacy</th>#}
+                    {#                    <th>% Inadequacy_SE</th>#}
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
 
-                <caption class="wb-inv"><i>* Notes about data go here.</i>
-                    <br>
-                    <br>
-                    <button class="btn btn-sm btn-success" id="nutrientTableDownload"><span
-                            class="glyphicon glyphicon-cloud-download"></span> Download table (.csv)
-                    </button>
-                </caption>
-            </div>
+            {# Note: the caption HTML tag appears to break the WET DataTables implementation, so using this element as an alternative #}
+            <p class="text-center">Data Source: <i>Statistics Canada, 2015 Canadian Community Health Survey -
+                Nutrition, 2015, Share File.</i></p>
+
+            <caption class="wb-inv"><i>* Notes about data go here.</i>
+                <br>
+                <br>
+                <button class="btn btn-sm btn-success" id="nutrientTableDownload"><span
+                        class="glyphicon glyphicon-cloud-download"></span> Download table (.csv)
+                </button>
+            </caption>
         </div>
 
         <br>
@@ -399,11 +447,10 @@
 
 <!--<![endif]-->
 <!--[if lt IE 9]>
-		<script src="../static/wet-boew/js/ie8-wet-boew2.min.js"></script>
+<script src="../static/wet-boew/js/ie8-wet-boew2.min.js"></script>
 
-		<![endif]-->
+<![endif]-->
 <script src="../static/GCWeb/js/theme.min.js"></script>
 <script src="../static/js/distribution-en.js"></script>
-
 </body>
 </html>
