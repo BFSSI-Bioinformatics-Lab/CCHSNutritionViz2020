@@ -1,4 +1,5 @@
-<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<!DOCTYPE html><!--[if lt IE 9]>
+<html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
 <html class="no-js" lang="en" dir="ltr">
 <!--<![endif]-->
 <head>
@@ -17,12 +18,12 @@
     <link rel="stylesheet" href="../static/GCWeb/css/theme.min.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
-		<link href="../static/GCWeb/assets/favicon.ico" rel="shortcut icon" />
+    <link href="../static/GCWeb/assets/favicon.ico" rel="shortcut icon"/>
 
-		<link rel="stylesheet" href="../static/GCWeb/css/ie8-theme.min.css" />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
-		<script src="../static/wet-boew/js/ie8-wet-boew.min.js"></script>
-		<![endif]-->
+    <link rel="stylesheet" href="../static/GCWeb/css/ie8-theme.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="../static/wet-boew/js/ie8-wet-boew.min.js"></script>
+    <![endif]-->
     <!--[if lte IE 9]>
 
 
@@ -173,6 +174,8 @@
                             <div class="form-group-sm">
                                 <label for="sexDropdown">Sex</label>
                                 <div id="sexDropdown" class="chart-selector"></div>
+                                <label for="ageDropdown">Age (years)</label>
+                                <div id="ageDropdown" class="chart-selector"></div>
                                 <label for="nutrientDropdown">Nutrient</label>
                                 <div id="nutrientDropdown" class="chart-selector"></div>
                             </div>
@@ -238,7 +241,7 @@
                 <h4>Table</h4>
 
                 <table class="wb-tables table table-condensed table-hover cell-border" id="nutrientTable"
-                       data-wb-tables='{"scrollX" : true, "paging": false, "searching": false, "bInfo": false, "buttons": ["csv"]}'>
+                       data-wb-tables='{"scrollX" : true, "paging": true, "searching": false, "bInfo": false, "buttons": ["csv"]}'>
                     <thead>
                     <tr class="datatable-headers">
                         <th>Nutrient</th>
@@ -250,6 +253,7 @@
                         <th>SE</th>
                         <th>DRI type</th>
                         <th>DRI reference value</th>
+                        <th>DRI reference value unit</th>
                     </tr>
                     </thead>
                     <tbody class="datatable-body">
@@ -431,9 +435,9 @@
 <script src="../static/wet-boew/js/wet-boew.min.js"></script>
 <!--<![endif]-->
 <!--[if lt IE 9]>
-		<script src="../static/wet-boew/js/ie8-wet-boew2.min.js"></script>
+<script src="../static/wet-boew/js/ie8-wet-boew2.min.js"></script>
 
-		<![endif]-->
+<![endif]-->
 <script src="../static/GCWeb/js/theme.min.js"></script>
 
 {# d3 #}

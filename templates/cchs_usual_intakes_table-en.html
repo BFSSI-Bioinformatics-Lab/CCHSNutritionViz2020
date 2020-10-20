@@ -1,4 +1,5 @@
-<!DOCTYPE html><!--[if lt IE 9]><html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
+<!DOCTYPE html><!--[if lt IE 9]>
+<html class="no-js lt-ie9" lang="en" dir="ltr"><![endif]--><!--[if gt IE 8]><!-->
 <html class="no-js" lang="en" dir="ltr">
 <!--<![endif]-->
 <head>
@@ -21,12 +22,12 @@
 
     <!--<![endif]-->
     <!--[if lt IE 9]>
-		<link href="../static/GCWeb/assets/favicon.ico" rel="shortcut icon" />
+    <link href="../static/GCWeb/assets/favicon.ico" rel="shortcut icon"/>
 
-		<link rel="stylesheet" href="../static/GCWeb/css/ie8-theme.min.css" />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
-		<script src="../static/wet-boew/js/ie8-wet-boew.min.js"></script>
-		<![endif]-->
+    <link rel="stylesheet" href="../static/GCWeb/css/ie8-theme.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="../static/wet-boew/js/ie8-wet-boew.min.js"></script>
+    <![endif]-->
     <!--[if lte IE 9]>
 
 
@@ -272,11 +273,6 @@
                                         <li class="checkbox">
                                             <label for="dt_region">
                                                 <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
-                                                       value="Ontario">Ontario</label>
-                                        </li>
-                                        <li class="checkbox">
-                                            <label for="dt_region">
-                                                <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
                                                        value="Alberta">Alberta</label>
                                         </li>
                                         <li class="checkbox">
@@ -315,6 +311,11 @@
                                             <label for="dt_region">
                                                 <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
                                                        value="Nova Scotia">Nova Scotia</label>
+                                        </li>
+                                        <li class="checkbox">
+                                            <label for="dt_region">
+                                                <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
+                                                       value="Ontario">Ontario</label>
                                         </li>
                                         <li class="checkbox">
                                             <label for="dt_region">
@@ -437,7 +438,8 @@
                                 </fieldset>
                             </div>
                             <div class="form-group">
-                                <button type="submit" id="filterBtn" class="btn btn-primary" aria-controls="dataset-filter">Filter
+                                <button type="submit" id="filterBtn" class="btn btn-primary"
+                                        aria-controls="dataset-filter">Filter
                                 </button>
                             </div>
                             <div class="form-group">
@@ -804,9 +806,9 @@
 <!--<![endif]-->
 
 <!--[if lt IE 9]>
-		<script src="../static/wet-boew/js/ie8-wet-boew2.min.js"></script>
+<script src="../static/wet-boew/js/ie8-wet-boew2.min.js"></script>
 
-		<![endif]-->
+<![endif]-->
 <script src="../static/GCWeb/js/theme.min.js"></script>
 
 {# D3 #}
@@ -821,7 +823,7 @@
         let table = $('.wb-tables').DataTable()
 
         // Hide empty columns whenever the user filters the data
-        $('#filterBtn').on('click', function(e){
+        $('#filterBtn').on('click', function (e) {
             console.log('clicked filter btn')
             hideEmptyCols($("#dataset-filter"))
         })

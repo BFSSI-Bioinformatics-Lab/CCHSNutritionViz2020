@@ -12,7 +12,7 @@ TODO: Add new dropdown for for age-sex group selection - the new dataset has two
 */
 
 //Width and height of main map
-const margin = {top: 20, right: 40, bottom: 0, left: 40};
+const margin = {top: 30, right: 40, bottom: 0, left: 40};
 const w = 580 - margin.left - margin.right;
 const h = 580 - margin.top - margin.bottom;
 
@@ -65,19 +65,10 @@ const regionList = [
 // Tracks index within the regionList to allow for keyboard/button cycling of map
 let currentRegionIndex = null;
 
-// Temporarily disabled nutrients with both sexes combined
-// TODO: When 'Male' or 'Female' is selected, limit the nutrient list to remove the following
-//  -- Folate
-//  -- Total dietary fibre
-//  -- Iron
-//  -- Zinc
-//  ... and show a disclaimer that says certain nutrients have been excluded because they are only available for
-//  the "Males and females combined" category.
 const nutrientList = [
     'Calcium',
-    // 'Folate',
-    // 'Total dietary fibre',
-    // 'Iron',
+    'Folate',
+    'Iron',
     'Magnesium',
     'Percentage of total energy intake from carbohydrates',
     'Percentage of total energy intake from fat',
@@ -85,16 +76,24 @@ const nutrientList = [
     'Potassium',
     'Sodium',
     'Vitamin A',
+    'Vitamin B6',
     'Vitamin C',
     'Vitamin D',
-    // 'Zinc',
+    'Zinc',
+].sort();
+
+const ageList = [
+    '1 to 8 years',
+    '9 to 18 years',
+    '19 years and over',
 ].sort();
 
 // Stores appropriate chart title for each nutrient
+// TODO: Insert correct age group and sex into rendered title
 const nutrientTitles = {
     'Calcium': 'Percentage of adults age 19 and over with a usual intake of calcium below the Estimated Average Requirement, Canada, 2015',
     'Folate': 'Percentage of adults age 19 and over with a usual intake of folate below the Estimated Average Requirement, Canada, 2015\n',
-    'Total dietary fibre': 'Percentage of adults age 19 and over with a usual intake of dietary fibre above the Adequate Intake, Canada, 2015\n',
+    // 'Total dietary fibre': 'Percentage of adults age 19 and over with a usual intake of dietary fibre above the Adequate Intake, Canada, 2015\n',
     'Iron': 'Percentage of adults age 19 and over with a usual intake of inadequate iron intake, Canada, 2015',
     'Magnesium': 'Percentage of adults age 19 and over with a usual intake of magnesium below the Estimated Average Requirement, Canada, 2015',
     'Percentage of total energy intake from carbohydrates': 'Percentage of adults age 19 and over with a usual intake of carbohydrate within the Acceptable Macronutrient Distribution Range, Canada, 2015',
@@ -103,6 +102,7 @@ const nutrientTitles = {
     'Potassium': 'Percentage of adults age 19 and over with a usual intake of potassium above the Adequate Intake, Canada, 2015',
     'Sodium': 'Percentage of adults age 19 and over with a usual intake of sodium above the Chronic Disease Risk Reduction intake, Canada, 2015',
     'Vitamin A': 'Percentage of adults age 19 and over with a usual intake of vitamin A below the Estimated Average Requirement, Canada, 2015',
+    'Vitamin B6': 'Percentage of adults age 19 and over with a usual intake of vitamin B6 below the Estimated Average Requirement, Canada, 2015',
     'Vitamin C': 'Percentage of adults age 19 and over with a usual intake of vitamin C below the Estimated Average Requirement, Canada, 2015',
     'Vitamin D': 'Percentage of adults age 19 and over with a usual intake of vitamin D below the Estimated Average Requirement, Canada, 2015',
     'Zinc': 'Percentage of adults age 19 and over with a usual intake of zinc below the Estimated Average Requirement, Canada, 2015'
@@ -110,17 +110,54 @@ const nutrientTitles = {
 
 const nutrientFacts = {
     'Calcium': `Click <a href="#">here</a> for more information on the Sodium intake of Canadians.`,
-    'Folate': '',
-    'Total dietary fibre': `The AI is based on total fibre intakes, which encompass both naturally occurring dietary and functional fibre. Since the Canadian Nutrient File does not contain data on functional fibre (i.e. isolated, extracted or synthetic fibre added to food), the estimated fibre intakes of Canadians only reflect naturally occurring dietary fibre intake. Therefore, total fibre intakes are likely underestimated.`,
-    'Iron': '',
-    'Magnesium': '',
-    'Percentage of total energy intake from carbohydrates': '',
-    'Percentage of total energy intake from fat': '',
-    'Percentage of total energy intake from protein': '',
-    'Potassium': '',
+
+    'Folate': `
+    <p>Folate is a generic term that includes the naturally occurring form found in food and folic acid found in supplements and fortified foods. The requirements for folate are based on the amount of dietary folate equivalents (DFEs) needed to maintain red blood cell folate concentrations. DFEs adjust for differences in absorption between naturally-occurring food folate and synthetic folic acid. While there appears to be a relatively high prevalence of inadequate intakes of folate (5.7 to 44.2%), red blood cell folate measures, an indicator of folate status, suggest a very low prevalence of folate deficiency in the Canadian population.<super>1, 2</super></p>
+    <p>Women capable of becoming pregnant require special consideration when it comes to folate intake. To reduce the risk of neural tube defects, women who could become pregnant should consume 400 µg of folic acid per day in addition to the amount of folate in a healthy diet. Red blood cell folate measures suggest that some Canadian women of childbearing age have levels below that considered optimal for greatest reduction of risk of neural tube defects.<super>1,2</super></p>
+    <p><strong>References:</strong></p> 
+    <ol>
+        <li>
+        Statistics Canada. Table  13-10-0336-01   Nutritional status of the household population. DOI:   https://doi.org/10.25318/1310033601-eng
+        </li>
+        <li>Colapinto, Cynthia K., Deborah L. O’Connor and Mark S. Tremblay. 2011. "Folate status of the population in the Canadian Health Measures Survey." Canadian Medical Association Journal. Vol. 183, no. 2. February. pp. E100 to E106.
+        http://www.cmaj.ca/content/183/2/E100.full.pdf+html
+        </li>
+    </ol>`,
+
+    //'Total dietary fibre': `
+    //<p>Total dietary fibre: Although the Institute of Medicine has established an Adequate Intake (AI) for total dietary fibre, no comparison is presented in the table (IOM, 2005). In addition to the fact that the AI for any nutrient has limited uses in assessing groups (Health Canada, 2017), the AI for dietary fibre was determined in relation to coronary heart disease risk. Health Canada’s definition for dietary fibre recognizes the role that fibre plays in supplying fermentation products to colonocytes and on laxation. (Health Canada, 2010) No DRIs have been established for these effects. For more information on the methods used to analyze dietary fibre for this survey, please refer to the Canadian Nutrient File – Users Guide available at: <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/healthy-eating/nutrient-data/canadian-nutrient-file-compilation-canadian-food-composition-data-users-guide.html">https://www.canada.ca/en/health-canada/services/food-nutrition/healthy-eating/nutrient-data/canadian-nutrient-file-compilation-canadian-food-composition-data-users-guide.html</a></p>
+    //<p><strong>References:</strong></p>
+    //<ol>
+    //    <li>IOM (Institute of Medicine). Dietary Reference Intakes for energy, carbohydrate, fibre, fat, fatty acids, cholesterol, protein, and amino acids (Macronutrients). 2005. Food and Nutrition Board, Institute of Medicine. The National Academies Press, Washington, DC.</li>
+    //    <li>Health Canada. Reference Guide to Understanding and Using the Data - 2015 Canadian Community Health Survey- Nutrition. 2017. Available at: https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/reference-guide-understanding-using-data-2015.html</li>
+    //    <li>Health Canada. Proposed Policy: Definition and Energy Value for Dietary Fibre. Food Directorate, Health Products and Food Branch, Health Canada. 2010. Available at: https://www.canada.ca/en/health-canada/services/food-nutrition/public-involvement-partnerships/proposed-policy-definition-energy-value-dietary-fibre/consultation.html</li>
+    //</ol>`,
+
+    // TODO 2020-10-15 link provided in requirement documents for Iron methodology is broken; ask for working link
+    'Iron': `Iron inadequacy was estimated using the full probability method as described in section 2.3.4 of the <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html">Methodology Guide.</a>`,
+    'Magnesium': `N/A`,
+    'Percentage of total energy intake from fat': `
+        <a href="https://food-guide.canada.ca/en/guidelines/">Canada’s Dietary Guidelines</a> recommend that Canadians consume less than 10% of total energy intake from saturated fat. 
+    `,
+    'Percentage of total energy intake from carbohydrates': `
+    <p>The interpretation of self-reported energy intake should be done with caution as energy intake tends to be underestimated by survey respondents. The Institute of Medicine (IOM) suggests using indicators of relative body weight, such as the Body Mass Index (BMI), as markers of energy intake adequacy within groups. Statistics Canada has released 2015 CCHS – Nutrition results for measured BMI in adults<super>1</super> and children<super>2</super>. </p>
+    <p><strong>References:</strong></p>
+    <ol>
+        <li>Statistics Canada.  Table  13-10-0794-01   Measured adult body mass index (BMI) (World Health Organization classification), by age group and sex, Canada and provinces, Canadian Community Health Survey – Nutrition. DOI: <a href="https://doi.org/10.25318/1310079401-eng">https://doi.org/10.25318/1310079401-eng</a></li>
+        <li>Statistics Canada.  Table  13-10-0795-01   Measured children and youth body mass index (BMI) (World Health Organization classification), by age group and sex, Canada and provinces, Canadian Community Health Survey – Nutrition. DOI:   <a href="https://doi.org/10.25318/1310079501-eng">https://doi.org/10.25318/1310079501-eng</a></li>
+    </ol>`,
+    'Percentage of total energy intake from protein': `
+    <p>The interpretation of self-reported energy intake should be done with caution as energy intake tends to be underestimated by survey respondents. The Institute of Medicine (IOM) suggests using indicators of relative body weight, such as the Body Mass Index (BMI), as markers of energy intake adequacy within groups. Statistics Canada has released 2015 CCHS – Nutrition results for measured BMI in adults<super>1</super> and children<super>2</super>. </p>
+    <p><strong>References:</strong></p>
+    <ol>
+        <li>Statistics Canada.  Table  13-10-0794-01   Measured adult body mass index (BMI) (World Health Organization classification), by age group and sex, Canada and provinces, Canadian Community Health Survey – Nutrition. DOI: <a href="https://doi.org/10.25318/1310079401-eng">https://doi.org/10.25318/1310079401-eng</a></li>
+        <li>Statistics Canada.  Table  13-10-0795-01   Measured children and youth body mass index (BMI) (World Health Organization classification), by age group and sex, Canada and provinces, Canadian Community Health Survey – Nutrition. DOI:   <a href="https://doi.org/10.25318/1310079501-eng">https://doi.org/10.25318/1310079501-eng</a></li>
+    </ol>`,
+    'Potassium': `N/A`,
     'Sodium': `<a href="https://www.canada.ca/en/health-canada/services/publications/food-nutrition/sodium-intake-canadians-2017.html">Click here for more information on the Sodium Intake of Canadians.</a>`,
-    'Vitamin A': '',
-    'Vitamin C': '',
+    'Vitamin A': `N/A`,
+    'Vitamin B6': `N/A`,
+    'Vitamin C': `N/A`,
     'Vitamin D': `
 <p><strong>Estimates of the prevalence of inadequate intakes of vitamin D from food must be interpreted with caution.</strong> </p>
 <p>Vitamin D is unique as it can also be synthesized by the body from sunlight (UV radiation). In addition, vitamin D intake 
@@ -130,19 +167,19 @@ intakes of vitamin D from dietary sources, available clinical measures do not su
   <a href="https://pubmed.ncbi.nlm.nih.gov/21593503-the-vitamin-d-status-of-canadians-relative-to-the-2011-dietary-reference-intakes-an-examination-in-children-and-adults-with-and-without-supplement-use/">Whiting et al., Am J Clin Nutr. 2011)</a>.
    Vitamin D status in some sub-populations, however, may warrant further consideration.
    </p>
-   <p>References</p>
+   <p><strong>References:</strong></p>
    <ol>
-    <li>Langlois K, Greene-Finestone L, Little J, Hidiroglou N, Whiting S. Vitamin D status of Canadians as measured in the 2007 to 2009 Canadian Health Measures Survey. Health Rep. 2010;21(1):47–55.</li>
-    <li>Whiting SJ, Langlois KA, Vatanparast H, Greene-Finestone LS. The vitamin D status of Canadians relative to the 2011 Dietary Reference Intakes: an examination in children and adults with and without supplement use. Am J Clin Nutr. 2011;94(1):128–135. doi:10.3945/ajcn.111.013268</li>
-    <li>Statistics Canada. Canadian Health Measures Survey: Non-environmental laboratory and medication data, 2016 and 2017. The Daily. 2019. Available from: https://www150.statcan.gc.ca/n1/daily-quotidien/190206/dq190206c-eng.htm</li>
-</ol>`,
-    'Zinc': ''
+        <li>Langlois K, Greene-Finestone L, Little J, Hidiroglou N, Whiting S. Vitamin D status of Canadians as measured in the 2007 to 2009 Canadian Health Measures Survey. Health Rep. 2010;21(1):47–55.</li>
+        <li>Whiting SJ, Langlois KA, Vatanparast H, Greene-Finestone LS. The vitamin D status of Canadians relative to the 2011 Dietary Reference Intakes: an examination in children and adults with and without supplement use. Am J Clin Nutr. 2011;94(1):128–135. doi:10.3945/ajcn.111.013268</li>
+        <li>Statistics Canada. Canadian Health Measures Survey: Non-environmental laboratory and medication data, 2016 and 2017. The Daily. 2019. Available from: https://www150.statcan.gc.ca/n1/daily-quotidien/190206/dq190206c-eng.htm</li>
+   </ol>`,
+    'Zinc': `N/A`
 };
 
 // Grab values from the main data object to populate options from the select dropdown
 const sexList = ['Female', 'Male', 'Males and females combined'];
 
-d3.csv("../static/data/geographic-dec2015-en.csv", function (d) {
+d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
     return {
         nutrient: d['Nutrient/Item'],
         region: d['Reg_Prov'],
@@ -154,11 +191,15 @@ d3.csv("../static/data/geographic-dec2015-en.csv", function (d) {
         percentage: +d['Percentage'],
         percentage_se: +d['SE'],
         ref_value: d['Ref value'],
+        ref_value_unit: d['Ref value unit_EN'],
     };
 }).then(function (data) {
     let masterData = d3.nest()
         .key(function (d) {
             return d.sex
+        })
+        .key(function (d) {
+            return d.age
         })
         .key(function (d) {
             return d.nutrient
@@ -167,63 +208,27 @@ d3.csv("../static/data/geographic-dec2015-en.csv", function (d) {
 
     // Dropdown menus
     let sexDropdown = d3.select("#sexDropdown");
+    let ageDropdown = d3.select("#ageDropdown");
     let nutrientDropdown = d3.select("#nutrientDropdown");
 
     // Read in the map data
     d3.json("../static/data/gpr_000b11a_e.json").then(function (json) {
-            // Setup dropdown menus
-            sexDropdown.append("select")
-                .attr("class", "select form-control")
-                .attr("id", "sexDropdownSelector")
-                .style("width", "100%")
-                .on("change", update_data)
-                .selectAll("option")
-                .data(sexList)
-                .enter()
-                .append("option")
-                .text(function (d) {
-                    return d
-                });
-            $('select option:contains("combined")').prop('selected', true);
 
-
-            nutrientDropdown.append("select")
-                .attr("class", "select form-control")
-                .attr("id", "nutrientDropdownSelector")
-                .style("width", "100%")
-                .on("change", update_data)
-                .selectAll("option")
-                .data(nutrientList.sort())
-                .enter()
-                .append("option")
-                .text(function (d) {
-                    return d
-                });
-            $('select option:contains("Sodium")').prop('selected', true);
-
+            // TODO: These dropdowns need to respond dynamically to the selected options because not all data is
+            //      consistently available.
+            // Setup dropdown menus and defaults
+            initialize_dropdowns("Males and females combined", "19 years and over", "Sodium")
 
             // Filter the data according to dropdown menu selections
             let sex = $("#sexDropdownSelector option:selected").text();
+            let age = $("#ageDropdownSelector option:selected").text();
             let nutrient = $("#nutrientDropdownSelector option:selected").text();
 
-            data = masterData[sex][nutrient];
-            // const colorScale = d3.scaleLinear()
-            //     .range(["#f7f4f9", "#1371a7"]);
+            data = masterData[sex][age][nutrient];
+
             const colorScale = d3.scaleLinear()
                 .domain([0, 50, 100])
                 .range(colourRange);
-
-            // colorScale.domain([
-            //     d3.min(data, function (d) {
-            //         return d.percentage;
-            //     }),
-            //     d3.max(data, function (d) {
-            //         return d.percentage;
-            //     })
-            // ]);
-            //
-
-            // Makes more sense since we're dealing with percentages I think.
             colorScale.domain([0, 100]);
 
             for (let i = 0; i < data.length; i++) {
@@ -278,11 +283,155 @@ d3.csv("../static/data/geographic-dec2015-en.csv", function (d) {
 
             update_data();
 
+            function initialize_dropdowns(selectedSex, selectedAge, selectedNutrient) {
+                // TODO: This works pretty well right now but there needs to be a check to see if the selectedNutrient
+                //      is in the validNutrients list, otherwise maybe pick a random one or something.
+                //      Test to see if any nutrients are broken.
+                //      Males females combined -> 1-8 years
+
+                let validNutrientsForChildren = [
+                    'Calcium',
+                    'Percentage of total energy intake from carbohydrates',
+                    'Percentage of total energy intake from fat',
+                    'Percentage of total energy intake from protein',
+                    'Potassium',
+                    'Sodium',
+                    'Vitamin D'
+                ].sort()
+
+                let validNutrientsForAdolescents = [
+                    'Calcium',
+                    'Folate',
+                    'Magnesium',
+                    'Percentage of total energy intake from carbohydrates',
+                    'Percentage of total energy intake from fat',
+                    'Percentage of total energy intake from protein',
+                    'Potassium',
+                    'Sodium',
+                    'Vitamin A',
+                    'Vitamin C',
+                    'Vitamin D',
+                    'Zinc',
+                    'Iron',
+                ].sort()
+
+                let validNutrientsForAdults = [
+                    'Calcium',
+                    'Folate',
+                    'Iron',
+                    'Magnesium',
+                    'Percentage of total energy intake from carbohydrates',
+                    'Percentage of total energy intake from fat',
+                    'Percentage of total energy intake from protein',
+                    'Potassium',
+                    'Sodium',
+                    'Vitamin A',
+                    'Vitamin C',
+                    'Vitamin D',
+                    'Zinc',
+                    'Vitamin B6'
+                ].sort()
+
+                let validNutrientsForBothSexes = [
+                    'Calcium',
+                    'Folate',
+                    'Iron',
+                    'Magnesium',
+                    'Percentage of total energy intake from carbohydrates',
+                    'Percentage of total energy intake from fat',
+                    'Percentage of total energy intake from protein',
+                    'Potassium',
+                    'Sodium',
+                    'Vitamin A',
+                    'Vitamin C',
+                    'Vitamin D',
+                    'Zinc',
+                    'Vitamin B6'
+                ].sort()
+
+                let ageToDisplay = null
+                let nutrientsToDisplay = null
+                let sexToDisplay = null
+
+                if (selectedSex === 'Male' || selectedSex === 'Female') {
+                    ageToDisplay = ['19 years and over']
+                } else {
+                    ageToDisplay = ['19 years and over', '1 to 8 years', '9 to 18 years'].sort()
+                }
+
+                if (selectedAge === '1 to 8 years') {
+                    nutrientsToDisplay = validNutrientsForChildren
+                    sexToDisplay = ['Males and females combined']
+                } else if (selectedAge === '9 to 18 years') {
+                    nutrientsToDisplay = validNutrientsForAdolescents
+                    sexToDisplay = ['Males and females combined']
+                } else {
+                    nutrientsToDisplay = validNutrientsForAdults
+                    sexToDisplay = ['Male', 'Female', 'Males and females combined'].sort()
+                }
+
+                // Check if currently selected nutrient is valid for the displayed age groups
+                // If not, default to calcium
+                if (!nutrientsToDisplay.includes(selectedNutrient)) {
+                    selectedNutrient = 'Calcium'
+                }
+
+                sexDropdown.selectAll("*").remove()
+                sexDropdown.append("select")
+                    .attr("class", "select form-control")
+                    .attr("id", "sexDropdownSelector")
+                    .style("width", "100%")
+                    .on("change", update_data)
+                    .selectAll("option")
+                    .data(sexToDisplay)
+                    .enter()
+                    .append("option")
+                    .text(function (d) {
+                        return d
+                    });
+                $('#sexDropdownSelector').val(selectedSex)
+
+                ageDropdown.selectAll("*").remove()
+                ageDropdown.append("select")
+                    .attr("class", "select form-control")
+                    .attr("id", "ageDropdownSelector")
+                    .style("width", "100%")
+                    .on("change", update_data)
+                    .selectAll("option")
+                    .data(ageToDisplay)
+                    .enter()
+                    .append("option")
+                    .text(function (d) {
+                        return d
+                    });
+                $('#ageDropdownSelector').val(selectedAge)
+
+                nutrientDropdown.selectAll("*").remove()
+                nutrientDropdown.append("select")
+                    .attr("class", "select form-control")
+                    .attr("id", "nutrientDropdownSelector")
+                    .style("width", "100%")
+                    .on("change", update_data)
+                    .selectAll("option")
+                    .data(nutrientsToDisplay)
+                    .enter()
+                    .append("option")
+                    .text(function (d) {
+                        return d
+                    });
+                $('#nutrientDropdownSelector').val(selectedNutrient)
+            }
+
             function update_data() {
                 // Reset data with new dropdown selections
                 let sex = $("#sexDropdownSelector option:selected").text();
+                let age = $("#ageDropdownSelector option:selected").text();
                 let nutrient = $("#nutrientDropdownSelector option:selected").text();
-                data = masterData[sex][nutrient];
+
+                // update_dropdowns(sex, age, nutrient)
+                initialize_dropdowns(sex, age, nutrient)
+
+                data = masterData[sex][age][nutrient];
 
                 // Update title of chart
                 let chartTitleText = nutrientTitles[nutrient];
@@ -300,6 +449,7 @@ d3.csv("../static/data/geographic-dec2015-en.csv", function (d) {
                             <td>${d.percentage_se}</td>
                             <td>${d.dri_type}</td>
                             <td>${d.ref_value}</td>
+                            <td>${d.ref_value_unit}</td>
                          </tr>`)
                 });
 
@@ -307,11 +457,11 @@ d3.csv("../static/data/geographic-dec2015-en.csv", function (d) {
                 d3.select('#nutrient-notes-header').html(
                     `<h3>Additional notes for ${nutrient}</h3>`
                 )
-
                 d3.select('#nutrient-notes').html(`
-                <p>${nutrientFacts[nutrient]}</p>
+                    <p>${nutrientFacts[nutrient]}</p>
                 `);
 
+                // Update chart title
                 d3.select(".chart-title-text").remove();
                 chartTitle.append("text")
                     .attr("class", "chart-title-text")
@@ -329,17 +479,15 @@ d3.csv("../static/data/geographic-dec2015-en.csv", function (d) {
                 // prepare driObject which will be used to draw info on the DRI/reference value
                 let driObject = {
                     'dri_type': data[0]['dri_type'],
-                    'ref_value_raw': data[0]['ref_value'],
-                    'ref_value': null,
+                    'ref_value': data[0]['ref_value'],
+                    'ref_value_unit': data[0]['ref_value_unit'],
                     'ref_min': null,
                     'ref_max': null,
                     'prefix': data[0]['prefix'],
                     'range': false  // whether or not the ref value is a range
                 };
 
-                // Logic to parse the reference value which might be null, a number, or a number range
-                // TODO: Probably don't need this logic anymore, maybe remove
-                if (data[0]['ref_value'].includes("-")) {
+                if (data[0]['ref_value'].includes("-") && typeof (data[0]['ref_value']) == 'string') {
                     driObject['ref_min'] = Number(data[0]['ref_value'].split(' - ')[0]);
                     driObject['ref_max'] = Number(data[0]['ref_value'].split(' - ')[1]);
                     driObject['range'] = true;
@@ -349,6 +497,7 @@ d3.csv("../static/data/geographic-dec2015-en.csv", function (d) {
                     driObject['ref_value_raw'] = 'N/A';
                 }
 
+                // Set colour scale
                 colorScale
                     .domain([0, 50, 100])
                     .range(colourRange);
@@ -363,22 +512,21 @@ d3.csv("../static/data/geographic-dec2015-en.csv", function (d) {
                     let geoPercentage = data[i].percentage;
                     let geoPercentageSE = data[i].percentage_se;
                     let geoSex = data[i].sex;
+                    let geoAge = data[i].age;
                     let geoNutrient = data[i].nutrient;
                     let geoRegion = data[i].region;
 
                     // Find corresponding region in geoJSON
                     for (let j = 0; j < json.features.length; j++) {
                         let jsonRegion = json.features[j].properties.PRENAME;
-
                         if (dataRegion === jsonRegion) {
                             json.features[j].properties.percentage = geoPercentage;
                             json.features[j].properties.percentage_se = geoPercentageSE;
                             json.features[j].properties.sex = geoSex;
+                            json.features[j].properties.age = geoAge;
                             json.features[j].properties.nutrient = geoNutrient;
                             json.features[j].properties.region = geoRegion;
-
-                            // Found it, exit geoJSON loop
-                            break;
+                            break; // Found it, exit geoJSON loop
                         }
                     }
                 }
@@ -473,9 +621,9 @@ d3.csv("../static/data/geographic-dec2015-en.csv", function (d) {
 
                 // Set text
                 d3.select("#region-detail-text").html(`
-<div class="col-lg-4 col-md-4 col-sm-4"><strong>Region: </strong> ${activeRegion}</div>
-<div class="col-lg-8 col-md-8 col-sm-8"><strong>% ${driObject['prefix']} ${driObject['dri_type']}: </strong> ${d.properties.percentage} (±${d.properties.percentage_se})
-</div>
+                    <div class="col-lg-4 col-md-4 col-sm-4"><strong>Region: </strong> ${activeRegion}</div>
+                    <div class="col-lg-8 col-md-8 col-sm-8"><strong>% ${driObject['prefix']} ${driObject['dri_type']}: </strong> ${d.properties.percentage} (±${d.properties.percentage_se})
+                    </div>
                 `);
 
                 //Draw hovered region in detail tooltip
@@ -506,14 +654,6 @@ d3.csv("../static/data/geographic-dec2015-en.csv", function (d) {
                     })
                     .style("stroke-width", 0)
                     .call(zoom.transform, d3.zoomIdentity.translate(translate[0], translate[1]).scale(scale)); // updated for d3 v4
-            }
-
-            function previousRegion() {
-
-            }
-
-            function nextRegion() {
-
             }
 
             function wrap(text, width) {
@@ -555,10 +695,6 @@ d3.csv("../static/data/geographic-dec2015-en.csv", function (d) {
                 //Update legend (Derived from https://bl.ocks.org/duspviz-mit/9b6dce37101c30ab80d0bf378fe5e583)
                 key.selectAll("rect").remove();
                 key.select("#legend-label").remove();
-
-                // Adjust min and max values slightly so the legend looks nicer
-                // maxValueY = maxValueY * 1.03;
-                // minValueY = minValueY * 0.97;
 
                 legend.append("stop")
                     .attr("offset", "0%")
