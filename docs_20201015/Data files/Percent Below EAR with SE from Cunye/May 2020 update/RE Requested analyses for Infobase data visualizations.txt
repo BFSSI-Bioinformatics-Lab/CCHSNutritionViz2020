@@ -1,0 +1,113 @@
+From:	Qiao, Cunye (HC/SC)
+Sent:	2020-04-30 3:52 PM
+To:	Ennis, Julie (HC/SC)
+Subject:	RE: Requested analyses for Infobase data visualizations
+
+Follow Up Flag:	Follow up
+Flag Status:	Flagged
+
+Hi Julie;
+
+    For percentage of total energy intake from carbohydrate,  I updated the estimates for 
+Males & Females combined 19+ at provincial level. Please use the update estimates for 
+the visualizations and ignore the data I sent to you before. Sorry about this.
+
+Thanks a lot.
+
+Cunye
+
+
+From: Ennis, Julie (HC/SC) <julie.ennis@canada.ca>  
+Sent: 2020-04-30 12:45 PM 
+To: Alireza Sadeghpour <alireza.sadeghpour@yahoo.com>; Qiao, Cunye (HC/SC) 
+<cunye.qiao@canada.ca>; Ibañez, Dominique (HC/SC) <dominique.ibanez@canada.ca> 
+Subject: RE: Requested analyses for Infobase data visualizations
+
+Hi Ali,
+
+Thanks! I hope all is well with you too.
+
+There is no big rush on this. It will be used for the visualizations for the PHAC infobase and it doesn’t 
+look like we will be able to publish anything for that in the foreseeable future. We are trying to get 
+everything as far along as possible so that we are ready once we get the go ahead. For now, I can just 
+tell Forest that we will have some extra data to add in at a later date. It can wait until the premarket 
+submissions are complete.
+
+Julie
+
+
+
+From: Alireza Sadeghpour <alireza.sadeghpour@yahoo.com>  
+Sent: 2020-04-30 10:08 AM 
+To: Qiao, Cunye (HC/SC) <cunye.qiao@canada.ca>; Ibañez, Dominique (HC/SC) 
+<dominique.ibanez@canada.ca>; Ennis, Julie (HC/SC) <julie.ennis@canada.ca> 
+Subject: Re: Requested analyses for Infobase data visualizations
+
+
+Hi Julie and Cunye, 
+
+I hope everything is going well on your ends.
+
+I haven't forgotten about new analysis for compendium. I have been busy with some premarket 
+submissions with tight deadlines. I will get back to you soon. 
+
+Please let me know when the deadline for sending you new results is.
+
+Thanks,
+Ali 
+
+On Thursday, April 30, 2020, 09:03:43 AM EDT, Ennis, Julie (HC/SC) <julie.ennis@canada.ca> wrote: 
+
+
+Hi Cunye,
+ 
+Thank you very much for completing the analysis and the notes about the files. I will review and let you 
+know if I have any questions.
+ 
+I hope that you and your family are doing well! 
+ 
+Julie
+ 
+From: Qiao, Cunye (HC/SC) <cunye.qiao@canada.ca>  
+Sent: 2020-04-30 12:54 AM 
+To: Ennis, Julie (HC/SC) <julie.ennis@canada.ca>; Ibañez, Dominique (HC/SC) 
+<dominique.ibanez@canada.ca> 
+Cc: Alireza Sadeghpour <alireza.sadeghpour@yahoo.com> 
+Subject: Requested analyses for Infobase data visualizations
+ 
+Hi Julie;
+ 
+   Estimates for the required nutrients except Iron is attached. Ali will provide the 
+estimates for Iron. Each nutrient has three excel sheets. First sheet contains the 
+estimates for Males 19+, Females 19+ and Males & Females combined 19+. Second 
+sheet contains the estimates for Children 1 to 8 years (males & females combined). 
+Third sheet contains the estimates for Children 9 to 18 years (males & females 
+combined).
+ 
+Some notes:
+ 
+Percentage of total energy intake from carbohydrates: I did modification the 
+estimates for Males & Females combined 19+ at provincial level.
+ 
+Magnesium: I round off to three decimal digits for the estimates of the Children 1 to 8 
+years (males & females combined) because the estimates of % < EAR is too small. If 
+you want to round off to one or two decimal digits, feel   
+                        free to do . 
+ 
+Vitamin B6: I round off to three decimal digits for the estimates of the Children 1 to 8 
+years (males & females combined) because the estimates of % < EAR is too small. If 
+you want to round off to one or two decimal digits, feel   
+                        free to do . 
+ 
+Zinc: I round off to three decimal digits for the estimates of the Children 1 to 8 years 
+(males & females combined) because the estimates of % < EAR is too small. If you 
+want to round off to one or two decimal digits, feel   
+                        free to do . 
+ 
+ 
+If you have any question or need more information, please let me know.
+ 
+Thanks a lot.
+ 
+Cunye
+ 
