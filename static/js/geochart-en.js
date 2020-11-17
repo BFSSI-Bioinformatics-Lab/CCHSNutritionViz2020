@@ -14,7 +14,7 @@ TODO: Add new dropdown for for age-sex group selection - the new dataset has two
 //Width and height of main map
 const margin = {top: 30, right: 40, bottom: 0, left: 40};
 const w = 580 - margin.left - margin.right;
-const h = 580 - margin.top - margin.bottom;
+const h = 600 - margin.top - margin.bottom;
 
 // Width and height of region tooltip
 const marginRegion = {top: 20, right: 20, bottom: 20, left: 20};
@@ -88,26 +88,73 @@ const ageList = [
     '19 years and over',
 ].sort();
 
-// Stores appropriate chart title for each nutrient
-// TODO: Insert correct age group and sex into rendered title
-const nutrientTitles = {
-    'Calcium': 'Percentage of adults age 19 and over with a usual intake of calcium below the Estimated Average Requirement, Canada, 2015',
-    'Folate': 'Percentage of adults age 19 and over with a usual intake of folate below the Estimated Average Requirement, Canada, 2015\n',
-    // 'Total dietary fibre': 'Percentage of adults age 19 and over with a usual intake of dietary fibre above the Adequate Intake, Canada, 2015\n',
-    'Iron': 'Percentage of adults age 19 and over with a usual intake of inadequate iron intake, Canada, 2015',
-    'Magnesium': 'Percentage of adults age 19 and over with a usual intake of magnesium below the Estimated Average Requirement, Canada, 2015',
-    'Percentage of total energy intake from carbohydrates': 'Percentage of adults age 19 and over with a usual intake of carbohydrate within the Acceptable Macronutrient Distribution Range, Canada, 2015',
-    'Percentage of total energy intake from fat': 'Percentage of adults age 19 and over with a usual intake of fat within the Acceptable Macronutrient Distribution Range, Canada, 2015',
-    'Percentage of total energy intake from protein': 'Percentage of adults age 19 and over with a usual intake of protein within the Acceptable Macronutrient Distribution Range, Canada, 2015',
-    'Potassium': 'Percentage of adults age 19 and over with a usual intake of potassium above the Adequate Intake, Canada, 2015',
-    'Sodium': 'Percentage of adults age 19 and over with a usual intake of sodium above the Chronic Disease Risk Reduction intake, Canada, 2015',
-    'Vitamin A': 'Percentage of adults age 19 and over with a usual intake of vitamin A below the Estimated Average Requirement, Canada, 2015',
-    'Vitamin B6': 'Percentage of adults age 19 and over with a usual intake of vitamin B6 below the Estimated Average Requirement, Canada, 2015',
-    'Vitamin C': 'Percentage of adults age 19 and over with a usual intake of vitamin C below the Estimated Average Requirement, Canada, 2015',
-    'Vitamin D': 'Percentage of adults age 19 and over with a usual intake of vitamin D below the Estimated Average Requirement, Canada, 2015',
-    'Zinc': 'Percentage of adults age 19 and over with a usual intake of zinc below the Estimated Average Requirement, Canada, 2015'
-};
+const sexList = [
+    'Female',
+    'Male',
+    'Males and females combined'
+].sort();
 
+// Generates appropriate chart title for each nutrient
+const generateTitle = (sex, age, nutrient) => {
+    let cdrrNutrients = ['Sodium']
+    let amdrNutrients = ['Percentage of total energy intake from carbohydrates',
+        'Percentage of total energy intake from fat',
+        'Percentage of total energy intake from protein']
+    let earNutrients = ['Calcium', 'Folate', 'Vitamin A', 'Vitamin B6', 'Vitamin C', 'Vitamin D', 'Zinc', 'Magnesium']
+    let aiNutrients = ['Potassium']
+    let inadequateNutrients = ['Iron']
+
+    // Age statement
+    let ageString = ''
+    switch (age) {
+        case '1 to 8 years':
+            ageString += 'children age 1 to 8 years'
+            break
+        case '9 to 18 years':
+            ageString += 'adolescents age 9 to 18 years'
+            break
+        case '19 years and over':
+            ageString += 'adults age 19 and over'
+            break
+        default:
+            console.log(`Error parsing age string "${age}"`)
+    }
+
+    // Sex statement
+    let sexString = ''
+    switch (sex) {
+        case 'Male':
+            sexString += ', male,'
+            break
+        case 'Female':
+            sexString += ', female,'
+            break
+        case 'Males and females combined':
+            sexString += ''
+            break
+        default:
+            console.log(`Error parsing sex string "${sex}"`)
+    }
+
+    // Adequacy statement
+    let adequacyString = ''
+    if (cdrrNutrients.includes(nutrient)) {
+        adequacyString += 'above the Chronic Disease Risk Reduction intake'
+    } else if (amdrNutrients.includes(nutrient)) {
+        nutrient = nutrient.replace('Percentage of total energy intake from', '') // clean up text for improved readability
+        adequacyString += 'within the Acceptable Macronutrient Distribution Range'
+    } else if (earNutrients.includes(nutrient)) {
+        adequacyString += 'below the Estimated Average Requirement'
+    } else if (aiNutrients.includes(nutrient)) {
+        adequacyString += 'above the Adequate Intake'
+    } else if (inadequateNutrients.includes(nutrient)) {
+        adequacyString += 'inadequate iron intake'
+    }
+
+    return `Percentage of ${ageString}${sexString} with a usual intake of ${nutrient.toLowerCase()} ${adequacyString}, Canada, 2015`
+}
+
+// Grab values from the main data object to populate options from the select dropdown
 const nutrientFacts = {
     'Calcium': `Click <a href="#">here</a> for more information on the Sodium intake of Canadians.`,
 
@@ -176,9 +223,6 @@ intakes of vitamin D from dietary sources, available clinical measures do not su
     'Zinc': `N/A`
 };
 
-// Grab values from the main data object to populate options from the select dropdown
-const sexList = ['Female', 'Male', 'Males and females combined'];
-
 d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
     return {
         nutrient: d['Nutrient/Item'],
@@ -213,17 +257,13 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
 
     // Read in the map data
     d3.json("../static/data/gpr_000b11a_e.json").then(function (json) {
-
-            // TODO: These dropdowns need to respond dynamically to the selected options because not all data is
-            //      consistently available.
-            // Setup dropdown menus and defaults
+            // Setup dropdown menus and set default values
             initialize_dropdowns("Males and females combined", "19 years and over", "Sodium")
 
             // Filter the data according to dropdown menu selections
             let sex = $("#sexDropdownSelector option:selected").text();
             let age = $("#ageDropdownSelector option:selected").text();
             let nutrient = $("#nutrientDropdownSelector option:selected").text();
-
             data = masterData[sex][age][nutrient];
 
             const colorScale = d3.scaleLinear()
@@ -241,12 +281,9 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                 // Find corresponding region in geoJSON
                 for (let j = 0; j < json.features.length; j++) {
                     let jsonRegion = json.features[j].properties.PRENAME;
-
                     if (dataRegion === jsonRegion) {
                         json.features[j].properties.percentage = dataValue;
-
-                        // Found it, exit geoJSON loop
-                        break;
+                        break; // Found it, exit geoJSON loop
                     }
                 }
             }
@@ -284,10 +321,8 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
             update_data();
 
             function initialize_dropdowns(selectedSex, selectedAge, selectedNutrient) {
-                // TODO: This works pretty well right now but there needs to be a check to see if the selectedNutrient
-                //      is in the validNutrients list, otherwise maybe pick a random one or something.
-                //      Test to see if any nutrients are broken.
-                //      Males females combined -> 1-8 years
+                // Method to populate dropdown options for sure. Some options are not available for certain selections
+                // (e.g. Vitamin B6 is only available for 19 years and over) and this code accounts for that.
 
                 let validNutrientsForChildren = [
                     'Calcium',
@@ -332,33 +367,19 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                     'Vitamin B6'
                 ].sort()
 
-                let validNutrientsForBothSexes = [
-                    'Calcium',
-                    'Folate',
-                    'Iron',
-                    'Magnesium',
-                    'Percentage of total energy intake from carbohydrates',
-                    'Percentage of total energy intake from fat',
-                    'Percentage of total energy intake from protein',
-                    'Potassium',
-                    'Sodium',
-                    'Vitamin A',
-                    'Vitamin C',
-                    'Vitamin D',
-                    'Zinc',
-                    'Vitamin B6'
-                ].sort()
-
+                // Initialize
                 let ageToDisplay = null
                 let nutrientsToDisplay = null
                 let sexToDisplay = null
 
+                // Set ages to display
                 if (selectedSex === 'Male' || selectedSex === 'Female') {
                     ageToDisplay = ['19 years and over']
                 } else {
                     ageToDisplay = ['19 years and over', '1 to 8 years', '9 to 18 years'].sort()
                 }
 
+                // Set nutrients/sex to display
                 if (selectedAge === '1 to 8 years') {
                     nutrientsToDisplay = validNutrientsForChildren
                     sexToDisplay = ['Males and females combined']
@@ -376,6 +397,7 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                     selectedNutrient = 'Calcium'
                 }
 
+                // Populate dropdown menus
                 sexDropdown.selectAll("*").remove()
                 sexDropdown.append("select")
                     .attr("class", "select form-control")
@@ -423,18 +445,21 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
             }
 
             function update_data() {
-                // Reset data with new dropdown selections
+                // Main method to populate the map with data
+
+                // Grab new dropdown selections
                 let sex = $("#sexDropdownSelector option:selected").text();
                 let age = $("#ageDropdownSelector option:selected").text();
                 let nutrient = $("#nutrientDropdownSelector option:selected").text();
 
-                // update_dropdowns(sex, age, nutrient)
+                // Reset the drop down menus
                 initialize_dropdowns(sex, age, nutrient)
 
+                // Filter dataset
                 data = masterData[sex][age][nutrient];
 
                 // Update title of chart
-                let chartTitleText = nutrientTitles[nutrient];
+                let chartTitleText = generateTitle(sex, age, nutrient);
 
                 // Update table
                 $(".datatable-body").empty();
@@ -689,7 +714,6 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                     }
                 });
             }
-
 
             function draw_legend(minValueY, maxValueY, selectedNutrient, hoveredPercentage, driObject) {
                 //Update legend (Derived from https://bl.ocks.org/duspviz-mit/9b6dce37101c30ab80d0bf378fe5e583)
