@@ -138,6 +138,7 @@ const generateTitle = (sex, age, nutrient) => {
 
     // Adequacy statement
     let adequacyString = ''
+    let ironBool = false
     if (cdrrNutrients.includes(nutrient)) {
         adequacyString += 'above the Chronic Disease Risk Reduction intake'
     } else if (amdrNutrients.includes(nutrient)) {
@@ -149,9 +150,14 @@ const generateTitle = (sex, age, nutrient) => {
         adequacyString += 'above the Adequate Intake'
     } else if (inadequateNutrients.includes(nutrient)) {
         adequacyString += 'inadequate iron intake'
+        ironBool = true
     }
 
-    return `Percentage of ${ageString}${sexString} with a usual intake of ${nutrient.toLowerCase()} ${adequacyString}, Canada, 2015`
+    if (ironBool) {
+        return `Percentage of ${ageString}${sexString} with ${adequacyString}, Canada, 2015`
+    } else {
+        return `Percentage of ${ageString}${sexString} with a usual intake of ${nutrient.toLowerCase()} ${adequacyString}, Canada, 2015`
+    }
 }
 
 // Grab values from the main data object to populate options from the select dropdown
