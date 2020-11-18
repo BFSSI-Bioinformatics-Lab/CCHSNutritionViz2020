@@ -14,7 +14,7 @@ TODO: Add new dropdown for for age-sex group selection - the new dataset has two
 //Width and height of main map
 const margin = {top: 30, right: 40, bottom: 0, left: 40};
 const w = 580 - margin.left - margin.right;
-const h = 600 - margin.top - margin.bottom;
+const h = 610 - margin.top - margin.bottom;
 
 // Width and height of region tooltip
 const marginRegion = {top: 20, right: 20, bottom: 20, left: 20};
@@ -264,7 +264,7 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
     // Read in the map data
     d3.json("../static/data/gpr_000b11a_e.json").then(function (json) {
             // Setup dropdown menus and set default values
-            initialize_dropdowns("Males and females combined", "19 years and over", "Sodium")
+            initializeDropdowns("Males and females combined", "19 years and over", "Sodium")
 
             // Filter the data according to dropdown menu selections
             let sex = $("#sexDropdownSelector option:selected").text();
@@ -324,9 +324,9 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
 
             const chartTitle = svg.append("g").attr("class", "chart-title");
 
-            update_data();
+            updateData();
 
-            function initialize_dropdowns(selectedSex, selectedAge, selectedNutrient) {
+            function initializeDropdowns(selectedSex, selectedAge, selectedNutrient) {
                 // Method to populate dropdown options for sure. Some options are not available for certain selections
                 // (e.g. Vitamin B6 is only available for 19 years and over) and this code accounts for that.
 
@@ -374,9 +374,9 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                 ].sort()
 
                 // Initialize
-                let ageToDisplay = null
-                let nutrientsToDisplay = null
-                let sexToDisplay = null
+                let ageToDisplay
+                let nutrientsToDisplay
+                let sexToDisplay
 
                 // Set ages to display
                 if (selectedSex === 'Male' || selectedSex === 'Female') {
@@ -409,7 +409,7 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                     .attr("class", "select form-control")
                     .attr("id", "sexDropdownSelector")
                     .style("width", "100%")
-                    .on("change", update_data)
+                    .on("change", updateData)
                     .selectAll("option")
                     .data(sexToDisplay)
                     .enter()
@@ -424,7 +424,7 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                     .attr("class", "select form-control")
                     .attr("id", "ageDropdownSelector")
                     .style("width", "100%")
-                    .on("change", update_data)
+                    .on("change", updateData)
                     .selectAll("option")
                     .data(ageToDisplay)
                     .enter()
@@ -439,7 +439,7 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                     .attr("class", "select form-control")
                     .attr("id", "nutrientDropdownSelector")
                     .style("width", "100%")
-                    .on("change", update_data)
+                    .on("change", updateData)
                     .selectAll("option")
                     .data(nutrientsToDisplay)
                     .enter()
@@ -450,7 +450,7 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                 $('#nutrientDropdownSelector').val(selectedNutrient)
             }
 
-            function update_data() {
+            function updateData() {
                 // Main method to populate the map with data
 
                 // Grab new dropdown selections
@@ -459,7 +459,7 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                 let nutrient = $("#nutrientDropdownSelector option:selected").text();
 
                 // Reset the drop down menus
-                initialize_dropdowns(sex, age, nutrient)
+                initializeDropdowns(sex, age, nutrient)
 
                 // Filter dataset
                 data = masterData[sex][age][nutrient];
@@ -594,7 +594,7 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                             d3.select("#legend-tick").remove();  // Remove legend tick for territories
                             return  // Break out of mouse handling if there's no data for region
                         } else {
-                            draw_legend(minValueY, maxValueY, nutrient, d.properties.percentage, driObject);
+                            drawLegend(minValueY, maxValueY, nutrient, d.properties.percentage, driObject);
                         }
 
                         // Texture settings for hovering over regions with textures.js
@@ -612,12 +612,12 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                         }
 
                         // Update the tooltip with hovered map region/DRI info
-                        tooltip_hover(d, driObject);
+                        tooltipHover(d, driObject);
 
                     })
                     .on("mouseout", function (d) {
                         svgRegion.select(".region-tooltip").remove(); // remove hovered region tooltip
-                        d3.select("#region-detail-text").html('<i>Hover your cursor over a region on the map for additional detail.</i>'); // remove hovered region tooltip
+                        d3.select("#region-detail-text").html(`<div class="container-fluid"><i>Hover your cursor over a region on the map for additional detail.</div></i>`); // remove hovered region tooltip
                         d3.select("#legend-tick").remove();  // Remove legend tick
 
                         // Set territories by default to original grey
@@ -637,7 +637,7 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                     });
 
                 // Draw the legend - pass null into hovered percentage
-                draw_legend(minValueY, maxValueY, nutrient, null, driObject);
+                drawLegend(minValueY, maxValueY, nutrient, null, driObject);
             }
 
             function zoomed() {
@@ -645,15 +645,16 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                 d3.select('.region-tooltip').attr("transform", d3.event.transform); // updated for d3 v4
             }
 
-            function tooltip_hover(d, driObject) {
+            function tooltipHover(d, driObject) {
                 // Zoom
                 let zoom = d3.zoom().on("zoom", zoomed);
                 let activeRegion = d.properties.PRENAME;
 
                 // Set text
                 d3.select("#region-detail-text").html(`
-                    <div class="col-lg-4 col-md-4 col-sm-4"><strong>Region: </strong> ${activeRegion}</div>
-                    <div class="col-lg-8 col-md-8 col-sm-8"><strong>% ${driObject['prefix']} ${driObject['dri_type']}: </strong> ${d.properties.percentage} (±${d.properties.percentage_se})
+                    <div class="container-fluid">
+                        <div class="row"><strong>Region: </strong> ${activeRegion}</div>
+                        <div class="row"><strong>% ${driObject['prefix']} ${driObject['dri_type']}: </strong> ${d.properties.percentage} (±${d.properties.percentage_se})</div>
                     </div>
                 `);
 
@@ -690,7 +691,7 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
             function wrap(text, width) {
                 // https://stackoverflow.com/questions/24784302/wrapping-text-in-d3
                 text.each(function () {
-                    var text = d3.select(this),
+                    let text = d3.select(this),
                         words = text.text().split(/\s+/).reverse(),
                         word,
                         line = [],
@@ -721,7 +722,7 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                 });
             }
 
-            function draw_legend(minValueY, maxValueY, selectedNutrient, hoveredPercentage, driObject) {
+            function drawLegend(minValueY, maxValueY, selectedNutrient, hoveredPercentage, driObject) {
                 //Update legend (Derived from https://bl.ocks.org/duspviz-mit/9b6dce37101c30ab80d0bf378fe5e583)
                 key.selectAll("rect").remove();
                 key.select("#legend-label").remove();
