@@ -378,14 +378,14 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                 let nutrientsToDisplay
                 let sexToDisplay
 
-                // Set ages to display
+                // Set ages to display by selected sex
                 if (selectedSex === 'Male' || selectedSex === 'Female') {
                     ageToDisplay = ['19 years and over']
                 } else {
                     ageToDisplay = ['19 years and over', '1 to 8 years', '9 to 18 years'].sort()
                 }
 
-                // Set nutrients/sex to display
+                // Set nutrients/sex to display by selected age
                 if (selectedAge === '1 to 8 years') {
                     nutrientsToDisplay = validNutrientsForChildren
                     sexToDisplay = ['Males and females combined']
@@ -397,10 +397,17 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                     sexToDisplay = ['Male', 'Female', 'Males and females combined'].sort()
                 }
 
-                // Check if currently selected nutrient is valid for the displayed age groups
-                // If not, default to calcium
+                /*
+                    It's possible that the user can select an invalid age group for the currently selected nutrient.
+                    If they do select something invalid, we need to allow the user to continue with their selection as
+                    expected, though the currently selected nutrient must be forced to change to something valid.
+                    By default, this the nutrient is set to Calcium. While this might be jarring to the user,
+                     this is the only way to account for the inconsistently available data.
+                */
+
                 if (!nutrientsToDisplay.includes(selectedNutrient)) {
                     selectedNutrient = 'Calcium'
+                    $("#nutrientDropdownSelector option:selected").text(selectedNutrient);
                 }
 
                 // Populate dropdown menus
@@ -448,6 +455,7 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                         return d
                     });
                 $('#nutrientDropdownSelector').val(selectedNutrient)
+                return [selectedSex, selectedAge, selectedNutrient]
             }
 
             function updateData() {
@@ -459,30 +467,13 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                 let nutrient = $("#nutrientDropdownSelector option:selected").text();
 
                 // Reset the drop down menus
-                initializeDropdowns(sex, age, nutrient)
+                [sex, age, nutrient] = initializeDropdowns(sex, age, nutrient)
 
                 // Filter dataset
                 data = masterData[sex][age][nutrient];
 
                 // Update title of chart
                 let chartTitleText = generateTitle(sex, age, nutrient);
-
-                // Update table
-                $(".datatable-body").empty();
-                data.forEach(function (d) {
-                    $(".datatable-body").append(`<tr role="row">
-                            <td>${d.nutrient}</td>
-                            <td>${d.region}</td>
-                            <td>${d.sex}</td>
-                            <td>${d.age}</td>
-                            <td>${d.n}</td>
-                            <td>${d.percentage}</td>
-                            <td>${d.percentage_se}</td>
-                            <td>${d.dri_type}</td>
-                            <td>${d.ref_value}</td>
-                            <td>${d.ref_value_unit}</td>
-                         </tr>`)
-                });
 
                 // Update nutrient facts disclaimer
                 d3.select('#nutrient-notes-header').html(
@@ -638,6 +629,24 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
 
                 // Draw the legend - pass null into hovered percentage
                 drawLegend(minValueY, maxValueY, nutrient, null, driObject);
+
+                // Update table
+                $(".datatable-body").empty();
+                data.forEach(function (d) {
+                    $(".datatable-body").append(`<tr role="row">
+                            <td>${d.nutrient}</td>
+                            <td>${d.region}</td>
+                            <td>${d.sex}</td>
+                            <td>${d.age}</td>
+                            <td>${d.n}</td>
+                            <td>${d.percentage}</td>
+                            <td>${d.percentage_se}</td>
+                            <td>${d.dri_type}</td>
+                            <td>${d.ref_value}</td>
+                            <td>${d.ref_value_unit}</td>
+                         </tr>`)
+                });
+
             }
 
             function zoomed() {
