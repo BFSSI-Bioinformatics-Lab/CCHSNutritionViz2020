@@ -12,10 +12,10 @@ $(document).on("wb-ready.wb", function (event) {
         d3.json("../static/data/distribution_coding_object.json")
     ]).then(function (files) {
 
-        // Unpack csv files into distribution data, table data
+        // Unpack csv files into distribution data, reference table data, and reference coding object
         let data = files[0]
-        let table_data = files[1]
-        const coding_object = files[2]
+        let tableData = files[1]
+        const codingObject = files[2]
 
         // Iterate over every column and cast it to a float if it looks like a number
         data.forEach(function (obj) {
@@ -27,7 +27,7 @@ $(document).on("wb-ready.wb", function (event) {
             }
         );
 
-        table_data.forEach(function (obj) {
+        tableData.forEach(function (obj) {
                 Object.keys(obj).map(function (a) {
                     if (!isNaN(obj[a])) {
                         obj[a] = parseFloat(obj[a]);
@@ -49,8 +49,8 @@ $(document).on("wb-ready.wb", function (event) {
             })
             .object(data);
 
-        // Unaltered data goes here
-        const master_data = data;
+        // Unaltered copy of data goes here
+        const masterData = data;
 
         // Labels for charts
         const yearCategories = [2015];
@@ -106,7 +106,7 @@ $(document).on("wb-ready.wb", function (event) {
             .attr("class", "select form-control")
             .attr("id", "sexDropdownSelector")
             .style("width", "100%")
-            .on("change", draw_curves)
+            .on("change", drawCurves)
             .selectAll("option")
             .data(sexCategories)
             .enter()
@@ -116,12 +116,11 @@ $(document).on("wb-ready.wb", function (event) {
             });
         $('select option:contains("Male")').prop('selected', true);
 
-
         ageDropdown.append("select")
             .attr("class", "select form-control")
             .attr("id", "ageDropdownSelector")
             .style("width", "100%")
-            .on("change", draw_curves)
+            .on("change", drawCurves)
             .selectAll("option")
             .data(ageCategories)
             .enter()
@@ -131,12 +130,11 @@ $(document).on("wb-ready.wb", function (event) {
             });
         $('select option:contains("19 and over")').prop('selected', true);
 
-
         nutrientDropdown.append("select")
             .attr("class", "select form-control")
             .attr("id", "nutrientDropdownSelector")
             .style("width", "100%")
-            .on("change", draw_curves)
+            .on("change", drawCurves)
             .selectAll("option")
             .data(nutrientList)
             .enter()
@@ -152,7 +150,7 @@ $(document).on("wb-ready.wb", function (event) {
         let age = $("#ageDropdownSelector option:selected").text();
 
         // Filter data according to dropdown selection
-        data = master_data[age][nutrient][sex];
+        data = masterData[age][nutrient][sex];
 
         //Create SVG element
         let svgContainer = d3.select("#distribution-chart");
@@ -164,11 +162,12 @@ $(document).on("wb-ready.wb", function (event) {
             .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
         let renderAdequacyTracker = {
-            render_exceedance: false,
-            render_adequacy: false
+            renderExceedance: false,
+            renderAdequacy: false
         };
 
         // xAxis for mean nutrient values
+        // TODO: nice to have, normalize the x-axis scale across sex/age options to allow for easier comparisons
         let xExtent = d3.extent(data, d => d.x);
         let xAxis = d3.scaleLinear()
             .domain([xExtent[0], xExtent[1]]) // data range
@@ -223,10 +222,10 @@ $(document).on("wb-ready.wb", function (event) {
         let curves = svg.append("g").attr("class", "curves");
 
         // track whether or not to draw limit line
-        let drawLimit = true;
+        let drawLimitLine = true;
 
         // Checkbox functionality
-        d3.select("#checkboxLimit").attr("checked", "checked").on("change", limit_tickbox);
+        d3.select("#checkboxLimit").attr("checked", "checked").on("change", limitTickbox);
 
         // Plot UL/AI
         let referenceCode = 0;
@@ -247,9 +246,9 @@ $(document).on("wb-ready.wb", function (event) {
             .style("opacity", "1");
 
         // Enter the initial dataset
-        draw_curves();
+        drawCurves();
 
-        function draw_limit() {
+        function drawLimit() {
             // Prepare adequacy line data
             adequacyVal = activeReferenceObject['Adequacy-Value'];
             let adequacyPoints = [
@@ -267,7 +266,7 @@ $(document).on("wb-ready.wb", function (event) {
                     // .style("stroke-dasharray", "3, 3")
                     .style("opacity", 1)
                     .attr('d', function () {
-                        if (drawLimit && renderAdequacyTracker.render_adequacy) {
+                        if (drawLimitLine && renderAdequacyTracker.renderAdequacy) {
                             return adequacyPathData
                         } else {
                             return 0
@@ -275,7 +274,7 @@ $(document).on("wb-ready.wb", function (event) {
                     }),
                 update => update
                     .attr('d', function () {
-                            if (drawLimit && renderAdequacyTracker.render_adequacy) {
+                            if (drawLimitLine && renderAdequacyTracker.renderAdequacy) {
                                 return adequacyPathData
                             } else {
                                 return 0
@@ -311,7 +310,7 @@ $(document).on("wb-ready.wb", function (event) {
                     .attr("x", xAxis(adequacyVal))
                     .attr("y", yAxis(yExtent[1]) - textPadding_line1)
                     .text(function () {
-                        if (drawLimit && renderAdequacyTracker.render_adequacy) {
+                        if (drawLimitLine && renderAdequacyTracker.renderAdequacy) {
                             return adequacyTypeText
                         } else {
                             return null;
@@ -332,7 +331,7 @@ $(document).on("wb-ready.wb", function (event) {
                     .attr("x", xAxis(adequacyVal))
                     .attr("y", yAxis(yExtent[1]) - textPadding_line2)
                     .text(function () {
-                        if (drawLimit && renderAdequacyTracker.render_adequacy) {
+                        if (drawLimitLine && renderAdequacyTracker.renderAdequacy) {
                             if (units === "%") {
                                 return `${adequacyVal}${units}`
                             } else {
@@ -368,7 +367,7 @@ $(document).on("wb-ready.wb", function (event) {
                     // .style("stroke-dasharray", "3, 3")
                     .style("opacity", 1)
                     .attr('d', function () {
-                        if (drawLimit) {
+                        if (drawLimitLine) {
                             return exceedancePathData
                         } else {
                             return 0
@@ -376,7 +375,7 @@ $(document).on("wb-ready.wb", function (event) {
                     }),
                 update => update
                     .attr('d', function () {
-                            if (drawLimit && renderAdequacyTracker.render_exceedance) {
+                            if (drawLimitLine && renderAdequacyTracker.renderExceedance) {
                                 return exceedancePathData
                             } else {
                                 return 0
@@ -402,7 +401,7 @@ $(document).on("wb-ready.wb", function (event) {
                     .attr("x", xAxis(exceedanceVal))
                     .attr("y", yAxis(yExtent[1]) - textPadding_line1)
                     .text(function () {
-                        if (drawLimit && renderAdequacyTracker.render_exceedance) {
+                        if (drawLimitLine && renderAdequacyTracker.renderExceedance) {
                             return exceedanceTypeText
                         } else {
                             return null;
@@ -423,7 +422,7 @@ $(document).on("wb-ready.wb", function (event) {
                     .attr("x", xAxis(exceedanceVal))
                     .attr("y", yAxis(yExtent[1]) - textPadding_line2)
                     .text(function () {
-                        if (drawLimit && renderAdequacyTracker.render_exceedance) {
+                        if (drawLimitLine && renderAdequacyTracker.renderExceedance) {
                             if (units === "%") {
                                 return `${exceedanceVal}${units}`
                             } else {
@@ -436,7 +435,7 @@ $(document).on("wb-ready.wb", function (event) {
             )
         }
 
-        function update_data_table(table_data, sex, nutrient, age) {
+        function updateDataTable(tableData, sex, nutrient, age) {
             /*
                     <th>Nutrient/Item (unit)</th>
                     <th>Reg_Prov</th>
@@ -448,22 +447,22 @@ $(document).on("wb-ready.wb", function (event) {
              */
 
             // Only include columns we are interested in displaying
-            let keys_to_keep = ['Nutrient/Item (unit)', 'Reg_Prov', 'Sex', 'Age (years)', 'n', 'Mean', 'SE_Mean']
-            const table_data_reduced = table_data.map(e => {
+            let keysToKeep = ['Nutrient/Item (unit)', 'Reg_Prov', 'Sex', 'Age (years)', 'n', 'Mean', 'SE_Mean']
+            const tableDataReduced = tableData.map(e => {
                 const obj = {};
-                keys_to_keep.forEach(k => obj[k] = e[k])
+                keysToKeep.forEach(k => obj[k] = e[k])
                 return obj;
             });
 
             // Filter data to only values contained in user selection
-            let filtered_data = table_data_reduced.filter(function (d) {
+            let filteredData = tableDataReduced.filter(function (d) {
                 return d['Sex'] === sex && d['Nutrient/Item (unit)'] === nutrient && d['Age (years)'] === age
             })
 
             // Update table
             let datatable = $('.wb-tables').DataTable()
             datatable.clear()
-            datatable.rows.add(filtered_data).draw()
+            datatable.rows.add(filteredData).draw()
         }
 
         function wrap(text, width) {
@@ -500,7 +499,7 @@ $(document).on("wb-ready.wb", function (event) {
             });
         }
 
-        function draw_curves() {
+        function drawCurves() {
             // Main method for drawing the curves, limit lines, and updating the axes
 
             // Grab most recent user selected data
@@ -509,12 +508,12 @@ $(document).on("wb-ready.wb", function (event) {
             sex = $("#sexDropdownSelector option:selected").text();
 
             // Store new dataset
-            data = master_data[age][nutrient][sex];
+            data = masterData[age][nutrient][sex];
 
-            // Grab reference code --> gets used in draw_limit() and retrieves pertinent adequacy/exceedance reference code
+            // Grab reference code --> gets used in drawLimit() and retrieves pertinent adequacy/exceedance reference code
             referenceCode = data[0]['ref_code'];
-            activeReferenceObject = retrieve_reference_values(referenceCode);
-            update_render_tracker_adequacy(activeReferenceObject);
+            activeReferenceObject = retrieveReferenceValues(referenceCode);
+            updateRenderTrackerAdequacy(activeReferenceObject);
 
             // Update title of chart
             let chartTitleText = `${nutrient} usual intake distribution, ${sex}, ${age}, Canada, 2015`;
@@ -541,18 +540,18 @@ $(document).on("wb-ready.wb", function (event) {
 
             if (drawLimit) {
                 // Determine if maxX needs to be adjusted
-                if (renderAdequacyTracker.render_adequacy && (activeReferenceObject['Adequacy-Value'] > maxX)) {
+                if (renderAdequacyTracker.renderAdequacy && (activeReferenceObject['Adequacy-Value'] > maxX)) {
                     maxX = activeReferenceObject['Adequacy-Value']
                 }
-                if (renderAdequacyTracker.render_exceedance && (activeReferenceObject['Excess-Value'] > maxX)) {
+                if (renderAdequacyTracker.renderExceedance && (activeReferenceObject['Excess-Value'] > maxX)) {
                     maxX = activeReferenceObject['Excess-Value']
                 }
 
                 // Determine if minX needs to be adjusted
-                if (renderAdequacyTracker.render_adequacy && (activeReferenceObject['Adequacy-Value'] < minX)) {
+                if (renderAdequacyTracker.renderAdequacy && (activeReferenceObject['Adequacy-Value'] < minX)) {
                     minX = activeReferenceObject['Adequacy-Value']
                 }
-                if (renderAdequacyTracker.render_exceedance && (activeReferenceObject['Excess-Value'] < minX)) {
+                if (renderAdequacyTracker.renderExceedance && (activeReferenceObject['Excess-Value'] < minX)) {
                     minX = activeReferenceObject['Excess-Value']
                 }
             }
@@ -626,28 +625,28 @@ $(document).on("wb-ready.wb", function (event) {
                             )
                     );
             }
-            draw_limit();
-            update_data_table(table_data, sex, nutrient, age);
+            drawLimit();
+            updateDataTable(tableData, sex, nutrient, age);
         }
 
-        function update_render_tracker_adequacy(reference_object) {
+        function updateRenderTrackerAdequacy(referenceObject) {
             // There are cases where one value is available, both values are available, and neither value is available.
             // The graphic must respond accordingly.
 
             // True if there's a string value available
-            let adequacy_type_available = typeof (reference_object['Adequacy-Type']) == "string";
-            let exceedance_type_available = typeof (reference_object['Excess-Type']) == "string";
+            let adequacyTypeAvailable = typeof (referenceObject['Adequacy-Type']) == "string";
+            let exceedanceTypeAvailable = typeof (referenceObject['Excess-Type']) == "string";
 
             // Update the render object
-            renderAdequacyTracker.render_adequacy = adequacy_type_available;
-            renderAdequacyTracker.render_exceedance = exceedance_type_available;
+            renderAdequacyTracker.renderAdequacy = adequacyTypeAvailable;
+            renderAdequacyTracker.renderExceedance = exceedanceTypeAvailable;
         }
 
-        function retrieve_reference_values(refCode) {
+        function retrieveReferenceValues(refCode) {
             // Grabs the Adequacy-Value, Adequacy-Type, Excess-Value, and Excess-Type for a particular reference code
             let ids = [refCode];
-            let reference_object = coding_object.filter(i => ids.includes(i['Ref-code']));
-            return reference_object[0]['metadata']
+            let referenceObject = codingObject.filter(i => ids.includes(i['Ref-code']));
+            return referenceObject[0]['metadata']
         }
 
         function extractUnitsFromNutrient(nutrient) {
@@ -661,10 +660,10 @@ $(document).on("wb-ready.wb", function (event) {
             }
         }
 
-        function limit_tickbox() {
+        function limitTickbox() {
             // Updates the drawLimit bool depending on user selection for the Limit Value(s) tickbox
-            drawLimit = !!d3.select("#checkboxLimit").property("checked");
-            draw_curves();
+            drawLimitLine = !!d3.select("#checkboxLimit").property("checked");
+            drawCurves();
         }
     });
 })
