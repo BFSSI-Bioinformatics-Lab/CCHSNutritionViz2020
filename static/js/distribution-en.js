@@ -54,12 +54,6 @@ $(document).on("wb-ready.wb", function (event) {
 
         // Labels for charts
         const yearCategories = [2015];
-        const ageCategories = [
-            // '1-3', '4-8',
-            '9 to 13', '14 to 18', '19 to 30', '31 to 50', '51 to 70',
-            '19 and over', '71 and over'
-        ];
-
         const nutrientList = [
             'Calcium (mg/d)',
             'Vitamin D (mcg/d)',
@@ -93,7 +87,7 @@ $(document).on("wb-ready.wb", function (event) {
         const sexCategories = [
             'Male',
             'Female',
-            // 'Both'
+            'Both'  // Only supports age categories ['1 to 3', '4 to 8']
         ];
 
         // Filter the data according to dropdown menu selections
@@ -101,49 +95,52 @@ $(document).on("wb-ready.wb", function (event) {
         const nutrientDropdown = d3.select("#nutrientDropdown");
         const ageDropdown = d3.select("#ageDropdown");
 
-        // Setup dropdown menus
-        sexDropdown.append("select")
-            .attr("class", "select form-control")
-            .attr("id", "sexDropdownSelector")
-            .style("width", "100%")
-            .on("change", drawCurves)
-            .selectAll("option")
-            .data(sexCategories)
-            .enter()
-            .append("option")
-            .text(function (d) {
-                return d;
-            });
-        $('select option:contains("Male")').prop('selected', true);
+        initializeDropdowns('Male', '19 and over', 'Total energy intake (kcal/d)',)
 
-        ageDropdown.append("select")
-            .attr("class", "select form-control")
-            .attr("id", "ageDropdownSelector")
-            .style("width", "100%")
-            .on("change", drawCurves)
-            .selectAll("option")
-            .data(ageCategories)
-            .enter()
-            .append("option")
-            .text(function (d) {
-                return d;
-            });
-        $('select option:contains("19 and over")').prop('selected', true);
-
-        nutrientDropdown.append("select")
-            .attr("class", "select form-control")
-            .attr("id", "nutrientDropdownSelector")
-            .style("width", "100%")
-            .on("change", drawCurves)
-            .selectAll("option")
-            .data(nutrientList)
-            .enter()
-            .append("option")
-            .text(function (d) {
-                return d;
-            });
-        // Set default nutrient
-        $('select option:contains("Total energy intake")').prop('selected', true);
+        //
+        // // Setup dropdown menus
+        // sexDropdown.append("select")
+        //     .attr("class", "select form-control")
+        //     .attr("id", "sexDropdownSelector")
+        //     .style("width", "100%")
+        //     .on("change", drawCurves)
+        //     .selectAll("option")
+        //     .data(sexCategories)
+        //     .enter()
+        //     .append("option")
+        //     .text(function (d) {
+        //         return d;
+        //     });
+        // $('select option:contains("Male")').prop('selected', true);
+        //
+        // ageDropdown.append("select")
+        //     .attr("class", "select form-control")
+        //     .attr("id", "ageDropdownSelector")
+        //     .style("width", "100%")
+        //     .on("change", drawCurves)
+        //     .selectAll("option")
+        //     .data(ageCategories)
+        //     .enter()
+        //     .append("option")
+        //     .text(function (d) {
+        //         return d;
+        //     });
+        // $('select option:contains("19 and over")').prop('selected', true);
+        //
+        // // Nutrients available are consistent across all ages and sexes
+        // nutrientDropdown.append("select")
+        //     .attr("class", "select form-control")
+        //     .attr("id", "nutrientDropdownSelector")
+        //     .style("width", "100%")
+        //     .on("change", drawCurves)
+        //     .selectAll("option")
+        //     .data(nutrientList)
+        //     .enter()
+        //     .append("option")
+        //     .text(function (d) {
+        //         return d;
+        //     });
+        // $('select option:contains("Total energy intake")').prop('selected', true);
 
         let sex = $("#sexDropdownSelector option:selected").text();
         let nutrient = $("#nutrientDropdownSelector option:selected").text();
@@ -499,13 +496,102 @@ $(document).on("wb-ready.wb", function (event) {
             });
         }
 
+        function initializeDropdowns(selectedSex, selectedAge, selectedNutrient) {
+            /*
+            Method to populate dropdown options
+
+            Sex is the main controller for what is available; if Both is selected, only 1-3 and 4-8 will be available.
+            If the user wants to select other data, they need to switch sex to Male or Female.
+
+            TODO: Include disclaimer on webpage about this functionality. While inconvenient, it is necessary
+             */
+
+            let agesToDisplay
+
+            // CASE: User selected 'Both' sex but age is not 1-3 or 4-8
+            if (selectedSex === 'Both' && (selectedAge !== '1 to 3' && selectedAge !== '4 to 8')) {
+                selectedAge = '1 to 3'
+                agesToDisplay = ['1 to 3', '4 to 8']
+            }
+                // CASE: Currently selected sex is Both and user flips to Male or Female
+            // this means the currently selected age is not valid and needs to be defaulted to a new value
+            else if (selectedSex !== 'Both' && (selectedAge === '1 to 3' || selectedAge === '4 to 8')) {
+                selectedAge = '19 and over'  // default to 19 and over
+                agesToDisplay = [
+                    '9 to 13', '14 to 18', '19 to 30', '31 to 50', '51 to 70',
+                    '19 and over', '71 and over'
+                ]
+            } else if (selectedSex === 'Both' && (selectedAge === '1 to 3' || selectedAge === '4 to 8')) {
+                agesToDisplay = ['1 to 3', '4 to 8']
+            } else {
+                agesToDisplay = [
+                    '9 to 13', '14 to 18', '19 to 30', '31 to 50', '51 to 70',
+                    '19 and over', '71 and over'
+                ]
+            }
+
+            $('#ageDropdownSelector').val(selectedAge)
+            $("#ageDropdownSelector option:selected").text(selectedAge);
+
+            // Setup dropdown menus
+            sexDropdown.selectAll("*").remove()
+            sexDropdown.append("select")
+                .attr("class", "select form-control")
+                .attr("id", "sexDropdownSelector")
+                .style("width", "100%")
+                .on("change", drawCurves)
+                .selectAll("option")
+                .data(sexCategories)
+                .enter()
+                .append("option")
+                .text(function (d) {
+                    return d;
+                });
+            $('#sexDropdownSelector').val(selectedSex)
+
+            ageDropdown.selectAll("*").remove()
+            ageDropdown.append("select")
+                .attr("class", "select form-control")
+                .attr("id", "ageDropdownSelector")
+                .style("width", "100%")
+                .on("change", drawCurves)
+                .selectAll("option")
+                .data(agesToDisplay)
+                .enter()
+                .append("option")
+                .text(function (d) {
+                    return d;
+                });
+            $('#ageDropdownSelector').val(selectedAge)
+
+            // Nutrients available are consistent across all ages and sexes
+            nutrientDropdown.selectAll("*").remove()
+            nutrientDropdown.append("select")
+                .attr("class", "select form-control")
+                .attr("id", "nutrientDropdownSelector")
+                .style("width", "100%")
+                .on("change", drawCurves)
+                .selectAll("option")
+                .data(nutrientList)
+                .enter()
+                .append("option")
+                .text(function (d) {
+                    return d;
+                });
+            $('#nutrientDropdownSelector').val(selectedNutrient)
+
+            return [selectedSex, selectedAge, selectedNutrient]
+        }
+
         function drawCurves() {
             // Main method for drawing the curves, limit lines, and updating the axes
 
             // Grab most recent user selected data
+            sex = $("#sexDropdownSelector option:selected").text();
             age = $("#ageDropdownSelector option:selected").text();
             nutrient = $("#nutrientDropdownSelector option:selected").text();
-            sex = $("#sexDropdownSelector option:selected").text();
+
+            [sex, age, nutrient] = initializeDropdowns(sex, age, nutrient)
 
             // Store new dataset
             data = masterData[age][nutrient][sex];
