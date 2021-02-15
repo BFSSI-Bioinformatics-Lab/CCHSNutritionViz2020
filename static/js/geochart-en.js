@@ -1,16 +1,3 @@
-/*
-SHAPEFILE
-1. Retrieved Cartographic Boundary File from here:
-https://www12.statcan.gc.ca/census-recensement/2011/geo/bound-limit/bound-limit-2011-eng.cfm
-2. Dropped contents into www.mapshaper.com and exported to GeoJSON
-3. D3.js magiks
-
-TODO: Add new dropdown for for age-sex group selection - the new dataset has two new age groups
-    /home/forest/PycharmProjects/CCHSNutritionViz2020/data_processing/raw_data/geographic_new/MAP- Consolidated file-bilingual.xlsx two tabs
-    Should consider the E columm
-    Nutrients are not consistent across age groups, need to accommodate
-*/
-
 //Width and height of main map
 const margin = {top: 30, right: 40, bottom: 0, left: 40};
 const w = 580 - margin.left - margin.right;
@@ -97,12 +84,14 @@ const sexList = [
 // Generates appropriate chart title for each nutrient
 const generateTitle = (sex, age, nutrient) => {
     let cdrrNutrients = ['Sodium']
-    let amdrNutrients = ['Percentage of total energy intake from carbohydrates',
-        'Percentage of total energy intake from fat',
-        'Percentage of total energy intake from protein']
     let earNutrients = ['Calcium', 'Folate', 'Vitamin A', 'Vitamin B6', 'Vitamin C', 'Vitamin D', 'Zinc', 'Magnesium']
     let aiNutrients = ['Potassium']
     let inadequateNutrients = ['Iron']
+    let amdrNutrients = [
+        'Percentage of total energy intake from carbohydrates',
+        'Percentage of total energy intake from fat',
+        'Percentage of total energy intake from protein'
+    ]
 
     // Age statement
     let ageString = ''
@@ -142,7 +131,8 @@ const generateTitle = (sex, age, nutrient) => {
     if (cdrrNutrients.includes(nutrient)) {
         adequacyString += 'above the Chronic Disease Risk Reduction intake'
     } else if (amdrNutrients.includes(nutrient)) {
-        nutrient = nutrient.replace('Percentage of total energy intake from', '') // clean up text for improved readability
+        // clean up text for improved readability
+        nutrient = nutrient.replace('Percentage of total energy intake from', '')
         adequacyString += 'within the Acceptable Macronutrient Distribution Range'
     } else if (earNutrients.includes(nutrient)) {
         adequacyString += 'below the Estimated Average Requirement'
@@ -261,7 +251,12 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
     let ageDropdown = d3.select("#ageDropdown");
     let nutrientDropdown = d3.select("#nutrientDropdown");
 
-    // Read in the map data
+    /*
+    SHAPEFILE:
+        1. Retrieved Cartographic Boundary File from here:
+        https://www12.statcan.gc.ca/census-recensement/2011/geo/bound-limit/bound-limit-2011-eng.cfm
+        2. Dropped contents into www.mapshaper.com and exported to GeoJSON
+    */
     d3.json("../static/data/gpr_000b11a_e.json").then(function (json) {
             // Setup dropdown menus and set default values
             initializeDropdowns("Males and females combined", "19 years and over", "Sodium")
