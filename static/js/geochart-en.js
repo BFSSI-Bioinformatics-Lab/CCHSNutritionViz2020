@@ -322,7 +322,7 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
             updateData();
 
             function initializeDropdowns(selectedSex, selectedAge, selectedNutrient) {
-                // Method to populate dropdown options for sure. Some options are not available for certain selections
+                // Method to populate dropdown options. Some options are not available for certain selections
                 // (e.g. Vitamin B6 is only available for 19 years and over) and this code accounts for that.
 
                 let validNutrientsForChildren = [
