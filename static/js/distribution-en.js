@@ -602,7 +602,13 @@ $(document).on("wb-ready.wb", function (event) {
             updateRenderTrackerAdequacy(activeReferenceObject);
 
             // Update title of chart
-            let chartTitleText = `${nutrient} usual intake distribution, ${sex}, ${age}, Canada, 2015`;
+            let chartTitleText
+            if (sex === 'Both') {
+                chartTitleText = `${nutrient} usual intake distribution, ${sex} sexes, age ${age}, Canada, 2015`;
+            } else {
+                chartTitleText = `${nutrient} usual intake distribution, ${sex}, age ${age}, Canada, 2015`;
+            }
+
 
             // Chart title
             d3.select(".chart-title-text").remove();
