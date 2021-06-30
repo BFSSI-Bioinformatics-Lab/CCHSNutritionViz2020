@@ -278,12 +278,16 @@
                                     <ul>
                                         <li class="checkbox">
                                             <label for="dt_region">
-                                                <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
+                                                <input id="dt_region_all"
+
+                                                       type="checkbox"
+                                                       name="dt_region_all" data-column="1"
                                                        value="">All regions</label>
                                         </li>
                                         <li class="checkbox">
                                             <label for="dt_region">
-                                                <input id="dt_region" type="checkbox" name="dt_region" data-column="1"
+                                                <input id="dt_region" type="checkbox"
+                                                       name="dt_region" data-column="1"
                                                        value="Canada excluding territories">Canada excluding
                                                 territories</label>
                                         </li>
@@ -386,61 +390,73 @@
                                     <ul>
                                         <li class="checkbox">
                                             <label for="dt_age">
-                                                <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
+                                                <input id="dt_age" class="dt_age dt_age_both"
+                                                       type="checkbox" name="dt_age" data-column="3"
                                                        value="">All age groups
                                             </label>
                                         </li>
                                         <li class="checkbox">
                                             <label for="dt_age">
-                                                <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
+                                                <input id="dt_age" class="dt_age_both"
+                                                       type="checkbox"
+                                                       name="dt_age_both" data-column="3"
                                                        value="1-3 years">1-3 years
                                             </label>
                                         </li>
                                         <li class="checkbox">
                                             <label for="dt_age">
-                                                <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
+                                                <input id="dt_age" class="dt_age_both"
+                                                       type="checkbox"
+                                                       name="dt_age_both" data-column="3"
                                                        value="4-8 years">4-8 years
                                             </label>
                                         </li>
                                         <li class="checkbox">
                                             <label for="dt_age">
-                                                <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
+                                                <input id="dt_age" class="dt_age"
+                                                       type="checkbox" name="dt_age" data-column="3"
                                                        value="9-13 years">9-13 years
                                             </label>
                                         </li>
                                         <li class="checkbox">
-                                            <label for="dt_age">
-                                                <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
+                                            <label for="dt_age" class="dt_age">
+                                                <input id="dt_age" class="dt_age"
+                                                       type="checkbox" name="dt_age" data-column="3"
                                                        value="14-18 years">14-18 years
                                             </label>
                                         </li>
                                         <li class="checkbox">
                                             <label for="dt_age">
-                                                <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
+                                                <input id="dt_age" class="dt_age"
+                                                       type="checkbox" name="dt_age" data-column="3"
                                                        value="19-30 years">19-30 years
                                             </label>
                                         </li>
                                         <li class="checkbox">
                                             <label for="dt_age">
-                                                <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
+                                                <input id="dt_age" class="dt_age"
+                                                       type="checkbox" name="dt_age" data-column="3"
                                                        value="31-50 years">31-50 years
                                             </label>
                                         </li>
                                         <li class="checkbox">
                                             <label for="dt_age">
-                                                <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
+                                                <input id="dt_age" class="dt_age"
+                                                       type="checkbox" name="dt_age" data-column="3"
                                                        value="51-70 years">51-70 years
                                             </label>
                                         </li>
                                         <li class="checkbox">
                                             <label for="dt_age">
-                                                <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
+                                                <input id="dt_age" class="dt_age"
+                                                       type="checkbox" name="dt_age" data-column="3"
                                                        value="19 years and over">19 years and over
                                             </label>
                                         </li>
                                         <li class="checkbox">
                                             <label for="dt_age">
-                                                <input id="dt_age" type="checkbox" name="dt_age" data-column="3"
+                                                <input id="dt_age" class="dt_age" type="checkbox"
+                                                       name="dt_age" data-column="3"
                                                        value="71 years and over">71 years and over
                                             </label>
                                         </li>
@@ -454,7 +470,8 @@
                                 </button>
                             </div>
                             <div class="form-group">
-                                <button type="reset" class="btn btn-link btn-sm p-0">Reset to defaults</button>
+                                <button type="reset" class="btn btn-link btn-sm p-0 reset">Reset to
+                                    defaults</button>
                             </div>
                         </form>
                     </details>
@@ -519,7 +536,8 @@
                         "scrollX": true,
                         "scrollY": "30em",
                         "ajaxSource": "../static/data/data_table_flattened-en.min.json",
-                         "lengthMenu": [[10, 50, 100, 250, -1], [10, 50, 100, 250, "All"]]
+                         {# Modify number of items in table - now starts at 50 #}
+                         "lengthMenu": [[ 50, 100, 250, -1], [50, 100, 250, "All"]]
                          }'>
                     <thead>
                     <tr>
@@ -831,6 +849,35 @@
 
 
 <script>
+
+    // jquery to check and uncheck regions
+    // if "all regions" check them all boxes will be checked and viceversa
+    $("#dt_region_all").change(function () {
+        $("input[name=dt_region]").prop('checked', $(this).prop("checked"));
+    });
+    // If one of the :other regions" is uncheck then "all regions" is unchecked
+    $("input[name=dt_region]").change(function () {
+      if($("input[name=dt_region]").length===$("input[name=dt_region]:checked").length)
+        $("#dt_region_all").prop('checked', true);
+      else
+        $("#dt_region_all").prop('checked', false);
+    });
+
+    // jquery to disable age based on gender chosen
+
+    $("input[value='Both']").click(function() {
+        $(".dt_age").prop('disabled', $(this).is(":checked"));
+    });
+
+    $('input[value="Female"], input[value="Male"]').click(function() {
+        $('.dt_age_both').prop('disabled', $(this).prop("checked"));
+    });
+    // reset "disabled" checkboxes when reset button is clicked
+    $(".reset").click(function() {
+        $(".dt_age, .dt_age_both").prop('disabled', false);
+    });
+
+    // Filtering options to hide/show columns
     $(".wb-tables").trigger("wb-init.wb-tables");
     $(document).on("wb-ready.wb", function (event) {
         let hiddenColumns = [];
