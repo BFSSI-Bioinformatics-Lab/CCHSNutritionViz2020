@@ -163,26 +163,7 @@
                 </section>
             </div>
             <div class="col-md-3">
-                {# Download panel #}
-                <div class="row">
-                    <h4 class="wb-inv">Download Options</h4>
-                    <details open>
-                        <summary><h4 class="h4">Download Options</h4></summary>
-                        <p class="mrgn-tp-md">Use the buttons below to download the data</p>
-                        <div class="form-group">
-                            <button href="#" role="button" data-export="export"
-                                    style="width:100%; margin-bottom: 5px"
-                                    class="btn btn-primary" id="filteredTableDownload"><span
-                                    class="glyphicon glyphicon-cloud-download"></span> Displayed data (.csv)
-                            </button>
-                            <a download href="../static/data/data_table-en.csv" role="button"
-                               style="width:100%" class="btn btn-primary"
-                               id="filteredTableDownload"><span
-                                    class="glyphicon glyphicon-cloud-download"></span> All data (.csv)
-                            </a>
-                        </div>
-                    </details>
-                </div>
+
 
                 {# Data filtering panel #}
                 <div class="row">
@@ -483,20 +464,20 @@
                     <details open>
                         <summary><h4 class="h4">Display Options</h4></summary>
                         <p class="mrgn-tp-md">Use the options below to toggle which columns to display in the table.
-                            Clicking a checkbox will hide the selected group.</p>
+                            Clicking a checkbox will show the selected group.</p>
                         <form>
 
                             <div class="form-group">
                                 <fieldset>
                                     <legend>
-                                        <span class="field-name">Hide Columns</span>
+                                        <span class="field-name">Show Columns</span>
                                     </legend>
                                     <ul>
-                                        <li class="checkbox">
-                                            <label for="dp_mean">
-                                                <input class="toggle-vis" id="dp_mean" type="checkbox" name="dp_mean"
-                                                       value="Mean">Mean
-                                            </label>
+{#                                        <li class="checkbox">#}
+{#                                            <label for="dp_mean">#}
+{#                                                <input class="toggle-vis" id="dp_mean" type="checkbox" name="dp_mean"#}
+{#                                                       value="Mean">Mean#}
+{#                                            </label>#}
                                         </li>
                                         {#   <li class="checkbox">#}
                                         {#       <label for="dp_standarderrror">#}
@@ -534,7 +515,8 @@
                             },
                         "processing": true,
                         "scrollX": true,
-                        "scrollY": "30em",
+                        {# Modify how long table is (was 30) #}
+                        "scrollY": "50em",
                         "ajaxSource": "../static/data/data_table_flattened-en.min.json",
                          {# Modify number of items in table - now starts at 50 #}
                          "lengthMenu": [[ 50, 100, 250, -1], [50, 100, 250, "All"]]
@@ -593,6 +575,27 @@
                    class="text-center">Data Source: <i>Statistics Canada, 2015 Canadian
                     Community Health Survey -
                     Nutrition, 2015, Share File.</i></a>
+
+                {# Download panel #}
+                <div class="row" style="margin-left: 2px; margin-top: 15px">
+                    <h4 class="wb-inv">Download Options</h4>
+                    <details open>
+                        <summary><h4 class="h4">Download Options</h4></summary>
+                        <p class="mrgn-tp-md">Use the buttons below to download the data</p>
+                        <div class="form-group">
+                            <button href="#" role="button" data-export="export"
+                                    style="width:300px"
+                                    class="btn btn-primary" id="filteredTableDownload"><span
+                                    class="glyphicon glyphicon-cloud-download"></span> Displayed data (.csv)
+                            </button>
+                            <a download href="../static/data/data_table-en.csv" role="button"
+                               style="width:300px; margin-left: 10px" class="btn btn-primary"
+                               id="filteredTableDownload"><span
+                                    class="glyphicon glyphicon-cloud-download"></span> All data (.csv)
+                            </a>
+                        </div>
+                    </details>
+                </div>
 
             </div>
         </div>
@@ -880,34 +883,43 @@
     // Filtering options to hide/show columns
     $(".wb-tables").trigger("wb-init.wb-tables");
     $(document).on("wb-ready.wb", function (event) {
+        // Columns that will be toggle to hide/show
         let hiddenColumns = [];
         let table = $('.wb-tables').DataTable()
+
+        let defaultShowColumns =[]
 
         // Hide empty columns whenever the user filters the data
         $('#filterBtn').on('click', function (e) {
             console.log('clicked filter btn')
             hideEmptyCols($("#dataset-filter"))
         })
+        // Hard coded indexes for columns to hide
+        const meanColumns = [
+            5, 6
+        ]
 
+        // const standardErrorColumns = [
+        //     8, 10, 12, 14, 16, 18, 20, 23, 26, 29, 32, 34, 36, 39, 41
+        // ]
+        const percentilesColumns = [
+            7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+        ]
+
+        const driColumns = [
+            21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41
+        ]
+
+        // Show only mean as Default for table
+        defaultShowColumns.push(...percentilesColumns)
+        defaultShowColumns.push(...driColumns)
+
+        defaultShowColumns.forEach(function (c) {
+                table.column(c).visible(false)
+            })
         $('.toggle-vis').on('change', function (e) {
             e.preventDefault();
 
-            // Hard coded indexes for columns to hide
-            const meanColumns = [
-                5, 6
-            ]
-
-            // const standardErrorColumns = [
-            //     8, 10, 12, 14, 16, 18, 20, 23, 26, 29, 32, 34, 36, 39, 41
-            // ]
-
-            const percentilesColumns = [
-                7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
-            ]
-
-            const driColumns = [
-                21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41
-            ]
 
             // Text associated with clicked checkbox
             let checkboxValue = $(this)[0].value
@@ -916,9 +928,9 @@
             if ($(this).is(":checked")) {
                 {#console.log(`Hiding columns for ${$(this)[0].value}`)#}
 
-                if (checkboxValue === "Mean") {
-                    hiddenColumns.push(...meanColumns)
-                }
+                //if (checkboxValue === "Mean") {
+                //    hiddenColumns.push(...meanColumns)
+                //}
                 // if (checkboxValue === "Standard Error") {
                 //     hiddenColumns.push(...standardErrorColumns)
                 // }
@@ -934,15 +946,16 @@
 
                 // Disable visibility for columns in hiddenColumns array
                 hiddenColumns.forEach(function (c) {
-                    table.column(c).visible(false)
+                    table.column(c).visible(true)
+                    console.log(hiddenColumns)
                 })
 
                 // Reveal if unchecked
-            } else {
+            } else if ($(this).prop('checked')===false){
                 {#console.log(`Revealing columns for ${checkboxValue}`)#}
-                if (checkboxValue === "Mean") {
-                    setVisibleByIndexArray(meanColumns)
-                }
+                //if (checkboxValue === "Mean") {
+                //    setVisibleByIndexArray(meanColumns)
+                //}
                 // if (checkboxValue === "Standard Error") {
                 //     setVisibleByIndexArray(standardErrorColumns)
                 // }
@@ -956,9 +969,17 @@
 
             function setVisibleByIndexArray(colIndexes) {
                 colIndexes.forEach(function (d) {
-                    hiddenColumns = hiddenColumns.filter(item => item !== d)
-                    table.column(d).visible(true)
+                    hiddenColumns = hiddenColumns.filter(item => item !==  d)
+                    table.column(d).visible(false)})
+
+                // Remove duplicates and show those not unchecked
+                hiddenColumns = [...new Set(hiddenColumns)];
+                hiddenColumns.forEach(function (c) {
+                    table.column(c).visible(true)
+                    console.log(hiddenColumns)
                 })
+
+
             }
 
         });
