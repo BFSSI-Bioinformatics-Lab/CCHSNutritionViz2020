@@ -917,6 +917,8 @@
         defaultShowColumns.forEach(function (c) {
                 table.column(c).visible(false)
             })
+
+        // Manage showing/hiding of columns
         $('.toggle-vis').on('change', function (e) {
             e.preventDefault();
 
@@ -947,7 +949,7 @@
                 // Disable visibility for columns in hiddenColumns array
                 hiddenColumns.forEach(function (c) {
                     table.column(c).visible(true)
-                    console.log(hiddenColumns)
+                    //console.log(hiddenColumns)
                 })
 
                 // Reveal if unchecked
@@ -976,10 +978,8 @@
                 hiddenColumns = [...new Set(hiddenColumns)];
                 hiddenColumns.forEach(function (c) {
                     table.column(c).visible(true)
-                    console.log(hiddenColumns)
+                    //console.log(hiddenColumns)
                 })
-
-
             }
 
         });
