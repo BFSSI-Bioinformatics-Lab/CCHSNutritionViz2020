@@ -444,13 +444,15 @@ $(document).on("wb-ready.wb", function (event) {
              */
 
             // Only include columns we are interested in displaying
-            let keysToKeep = ['Nutrient/Item (unit)', 'Reg_Prov', 'Sex', 'Age (years)', 'n', 'Mean', 'SE_Mean']
+            let keysToKeep = ['Nutrient/Item (unit)', 'Reg_Prov', 'Sex', 'Age (years)', 'n',
+                'Mean', 'SE_Mean','P5', 'P10','P25', 'P50', 'P75', 'P90', 'P95']
+                //'P5', 'P10', 'P25', 'P50', 'P75', 'P90', 'P95']
             const tableDataReduced = tableData.map(e => {
                 const obj = {};
                 keysToKeep.forEach(k => obj[k] = e[k])
                 return obj;
             });
-
+            console.log(tableDataReduced)
             // Filter data to only values contained in user selection
             let filteredData = tableDataReduced.filter(function (d) {
                 return d['Sex'] === sex && d['Nutrient/Item (unit)'] === nutrient && d['Age (years)'] === age

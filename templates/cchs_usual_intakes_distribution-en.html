@@ -195,7 +195,11 @@
 
             <div class="col-lg-8">
                 <!--{# Main chart is populated here #}-->
-                <div id="distribution-chart" style="overflow:visible"></div>
+                <figure>
+                    <div id="distribution-chart" style="overflow:visible"></div>
+
+                    <figcaption style="font-size: 16px"> This graph shows the ...</figcaption>
+                </figure>
             </div>
 
         </div>
@@ -211,7 +215,14 @@
                         {"data":"Age (years)"},
                         {"data":"n"},
                         {"data":"Mean"},
-                        {"data":"SE_Mean"}
+                        {"data":"SE_Mean"},
+                        {"data": "P5"},
+                        {"data": "P10"},
+                        {"data": "P25"},
+                        {"data": "P50"},
+                        {"data": "P75"},
+                        {"data": "P90"},
+                        {"data": "P95"}
 {#                        {"data":"P5"},#}
 {#                        {"data":"P5_SE"},#}
 {#                        {"data":"P10"},#}
@@ -237,19 +248,19 @@
                     <th>n</th>
                     <th>Mean</th>
                     <th>SE_Mean</th>
-{#                    <th>P5</th>#}
+                    <th>P5</th>
 {#                    <th>P5_SE</th>#}
-{#                    <th>P10</th>#}
+                    <th>P10</th>
 {#                    <th>P10_SE</th>#}
-{#                    <th>P25</th>#}
+                    <th>P25</th>
 {#                    <th>P25_SE</th>#}
-{#                    <th>P50</th>#}
+                    <th>P50</th>
 {#                    <th>P50_SE</th>#}
-{#                    <th>P75</th>#}
+                    <th>P75</th>
 {#                    <th>P75_SE</th>#}
-{#                    <th>P90</th>#}
+                    <th>P90</th>
 {#                    <th>P90_SE</th>#}
-{#                    <th>P95</th>#}
+                    <th>P95</th>
 {#                    <th>P95_SE</th>#}
                     {#                    <th>EAR</th>#}
                     {#                    <th>% &lt;EAR</th>#}
