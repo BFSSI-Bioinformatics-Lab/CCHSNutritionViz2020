@@ -1,0 +1,19 @@
+table.dataTable {
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0 auto;
+  width: 100% !important; }
+  table.dataTable thead .sorting-cnt {
+    white-space: nowrap; }
+    table.dataTable thead .sorting-cnt:before {
+      content: " "; }
+  table.dataTable thead .sorting-icons {
+    margin-top: 2px; }
+    table.dataTable thead .sorting-icons:before {
+      content: "\e093";
+      padding: 0 .1em 0 0;
+      font-size: 0.5em}
+    table.dataTable thead .sorting-icons:after {
+      content: "\e094";
+      padding: 0 .04em 0 .06em;
+      font-size: 0.5em}

@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/GCWeb/css/theme.min.css">
+
+    <link rel="stylesheet" href="../static/css/cchs_usual_intakes.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
     <link href="../static/GCWeb/assets/favicon.ico" rel="shortcut icon"/>
@@ -155,7 +157,7 @@
                         <p>
                             For more information on CCHS - Nutrition, please consult the
                             <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/reference-guide-understanding-using-data-2015.html">Reference
-                                Guide to Understanding and Using the Data</a> and the <a href="#">Statistical
+                                Guide to Understanding and Using the Data</a> and the <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html">Statistical
                             Methodology Guide</a>.
                         </p>
                     </section>
@@ -169,10 +171,10 @@
                         </span>
                     </h3>
                     <div class="form-group-sm">
-                        <label for="sexDropdown">Sex</label>
-                        <div id="sexDropdown" class="chart-selector"></div>
                         <label for="nutrientDropdown">Nutrient</label>
                         <div id="nutrientDropdown" class="chart-selector"></div>
+                        <label for="sexDropdown">Sex</label>
+                        <div id="sexDropdown" class="chart-selector"></div>
                         <label for="ageDropdown">Age Group</label>
                         <div id="ageDropdown" class="chart-selector"></div>
                     </div>
@@ -193,13 +195,19 @@
 
             <div class="col-lg-8">
                 <!--{# Main chart is populated here #}-->
-                <div id="distribution-chart" style="overflow:visible"></div>
+                <figure>
+                    <div id="distribution-chart" style="overflow:visible"></div>
+
+                    <figcaption style="font-size: 16px"> This graph shows the ...</figcaption>
+                </figure>
             </div>
 
         </div>
 
         <div class="row">
-            <h4>Table</h4>
+            <h4 id="table-title"
+                class="text-center"
+                style="margin-top: 50px; margin-bottom: 30px"></h4>
             <table class="wb-tables table table-striped table-hover table-condensed" aria-live="polite"
                    id="distribution-datatable" data-wb-tables='{"scrollX": true, "searching": false, "processing": true,
                    "columns":[
@@ -209,7 +217,28 @@
                         {"data":"Age (years)"},
                         {"data":"n"},
                         {"data":"Mean"},
-                        {"data":"SE_Mean"}
+                        {"data":"SE_Mean"},
+                        {"data": "P5"},
+                        {"data": "P10"},
+                        {"data": "P25"},
+                        {"data": "P50"},
+                        {"data": "P75"},
+                        {"data": "P90"},
+                        {"data": "P95"}
+{#                        {"data":"P5"},#}
+{#                        {"data":"P5_SE"},#}
+{#                        {"data":"P10"},#}
+{#                        {"data":"P10_SE"},#}
+{#                        {"data":"P25"},#}
+{#                        {"data":"P25_SE"},#}
+{#                        {"data":"P50"},#}
+{#                        {"data":"P50_SE"},#}
+{#                        {"data":"P75"},#}
+{#                        {"data":"P75_SE"},#}
+{#                        {"data":"P90"},#}
+{#                        {"data":"P90_SE"},#}
+{#                        {"data":"P95"},#}
+{#                        {"data":"P95_SE"}#}
                     ]
                    }'>
                 <thead>
@@ -221,20 +250,20 @@
                     <th>n</th>
                     <th>Mean</th>
                     <th>SE_Mean</th>
-                    {#                    <th>P5</th>#}
-                    {#                    <th>P5_SE</th>#}
-                    {#                    <th>P10</th>#}
-                    {#                    <th>P10_SE</th>#}
-                    {#                    <th>P25</th>#}
-                    {#                    <th>P25_SE</th>#}
-                    {#                    <th>P50</th>#}
-                    {#                    <th>P50_SE</th>#}
-                    {#                    <th>P75</th>#}
-                    {#                    <th>P75_SE</th>#}
-                    {#                    <th>P90</th>#}
-                    {#                    <th>P90_SE</th>#}
-                    {#                    <th>P95</th>#}
-                    {#                    <th>P95_SE</th>#}
+                    <th>P5</th>
+{#                    <th>P5_SE</th>#}
+                    <th>P10</th>
+{#                    <th>P10_SE</th>#}
+                    <th>P25</th>
+{#                    <th>P25_SE</th>#}
+                    <th>P50</th>
+{#                    <th>P50_SE</th>#}
+                    <th>P75</th>
+{#                    <th>P75_SE</th>#}
+                    <th>P90</th>
+{#                    <th>P90_SE</th>#}
+                    <th>P95</th>
+{#                    <th>P95_SE</th>#}
                     {#                    <th>EAR</th>#}
                     {#                    <th>% &lt;EAR</th>#}
                     {#                    <th>% &lt;EAR_SE</th>#}
@@ -262,7 +291,9 @@
             </table>
 
             {# Note: the caption HTML tag appears to break the WET DataTables implementation, so using this element as an alternative #}
-            <a href="https://open.canada.ca/data/en/dataset/31599960-2c1e-4d90-a9d9-979ad0e1abb4" class="text-center">Data Source: <i>Statistics Canada, 2015 Canadian Community Health Survey -
+            <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/2015-canadian-community-health-survey-nutrition-food-nutrition-surveillance.html"
+                   target="_blank"
+               class="text-center">Data Source: <i>Statistics Canada, 2015 Canadian Community Health Survey -
                 Nutrition, 2015, Share File.</i></a>
 
             <caption class="wb-inv"><i>* Notes about data go here.</i>
