@@ -176,11 +176,11 @@ const nutrientFacts = {
     //    <li>Health Canada. Proposed Policy: Definition and Energy Value for Dietary Fibre. Food Directorate, Health Products and Food Branch, Health Canada. 2010. Available at: https://www.canada.ca/en/health-canada/services/food-nutrition/public-involvement-partnerships/proposed-policy-definition-energy-value-dietary-fibre/consultation.html</li>
     //</ol>`,
 
-    // TODO 2020-10-15 link provided in requirement documents for Iron methodology is broken; ask for working link
+
     'Iron': `Iron inadequacy was estimated using the full probability method as described in section 2.3.4 of the <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html">Methodology Guide.</a>`,
     'Magnesium': `N/A`,
     'Percentage of total energy intake from fat': `
-        <a href="https://food-guide.canada.ca/en/guidelines/">Canada’s Dietary Guidelines</a> recommend that Canadians consume less than 10% of total energy intake from saturated fat. 
+        <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html">Canada’s Dietary Guidelines</a> recommend that Canadians consume less than 10% of total energy intake from saturated fat. 
     `,
     'Percentage of total energy intake from carbohydrates': `
     <p>The interpretation of self-reported energy intake should be done with caution as energy intake tends to be underestimated by survey respondents. The Institute of Medicine (IOM) suggests using indicators of relative body weight, such as the Body Mass Index (BMI), as markers of energy intake adequacy within groups. Statistics Canada has released 2015 CCHS – Nutrition results for measured BMI in adults<super>1</super> and children<super>2</super>. </p>

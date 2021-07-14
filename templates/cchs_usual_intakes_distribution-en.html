@@ -171,12 +171,12 @@
                         </span>
                     </h3>
                     <div class="form-group-sm">
+                        <label for="nutrientDropdown">Nutrient</label>
+                        <div id="nutrientDropdown" class="chart-selector"></div>
                         <label for="sexDropdown">Sex</label>
                         <div id="sexDropdown" class="chart-selector"></div>
                         <label for="ageDropdown">Age Group</label>
                         <div id="ageDropdown" class="chart-selector"></div>
-                        <label for="nutrientDropdown">Nutrient</label>
-                        <div id="nutrientDropdown" class="chart-selector"></div>
                     </div>
                 </fieldset>
                 <div>
@@ -205,7 +205,9 @@
         </div>
 
         <div class="row">
-            <h4>Table</h4>
+            <h4 id="table-title"
+                class="text-center"
+                style="margin-top: 50px; margin-bottom: 30px"></h4>
             <table class="wb-tables table table-striped table-hover table-condensed" aria-live="polite"
                    id="distribution-datatable" data-wb-tables='{"scrollX": true, "searching": false, "processing": true,
                    "columns":[
@@ -289,7 +291,9 @@
             </table>
 
             {# Note: the caption HTML tag appears to break the WET DataTables implementation, so using this element as an alternative #}
-            <a href="https://open.canada.ca/data/en/dataset/31599960-2c1e-4d90-a9d9-979ad0e1abb4" class="text-center">Data Source: <i>Statistics Canada, 2015 Canadian Community Health Survey -
+            <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/2015-canadian-community-health-survey-nutrition-food-nutrition-surveillance.html"
+                   target="_blank"
+               class="text-center">Data Source: <i>Statistics Canada, 2015 Canadian Community Health Survey -
                 Nutrition, 2015, Share File.</i></a>
 
             <caption class="wb-inv"><i>* Notes about data go here.</i>

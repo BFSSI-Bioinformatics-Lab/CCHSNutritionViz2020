@@ -452,7 +452,7 @@ $(document).on("wb-ready.wb", function (event) {
                 keysToKeep.forEach(k => obj[k] = e[k])
                 return obj;
             });
-            console.log(tableDataReduced)
+            //console.log(tableDataReduced)
             // Filter data to only values contained in user selection
             let filteredData = tableDataReduced.filter(function (d) {
                 return d['Sex'] === sex && d['Nutrient/Item (unit)'] === nutrient && d['Age (years)'] === age
@@ -721,6 +721,14 @@ $(document).on("wb-ready.wb", function (event) {
             }
             drawLimit();
             updateDataTable(tableData, sex, nutrient, age);
+
+            //Update table title
+            //let tableTitle = document.getElementById('table-title').innerHTML
+            if (sex === 'Both') {
+                document.getElementById('table-title').innerHTML = `Percentiles of ${nutrient} usual intake, ${sex} sexes, age ${age}, Canada, 2015`;
+            } else {
+                document.getElementById('table-title').innerHTML = `Percentiles of ${nutrient} usual intake, ${sex}, age ${age}, Canada, 2015`;
+            }
         }
 
         function updateRenderTrackerAdequacy(referenceObject) {
