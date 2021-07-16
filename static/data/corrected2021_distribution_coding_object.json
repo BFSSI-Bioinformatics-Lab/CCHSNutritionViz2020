@@ -1,0 +1,4034 @@
+[
+  {
+    "Ref-code": 0,
+    "metadata": {
+      "Adequacy-Value": 500,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 2500,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 1,
+    "metadata": {
+      "Adequacy-Value": 800,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 2500,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 2,
+    "metadata": {
+      "Adequacy-Value": 1100,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 3000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 3,
+    "metadata": {
+      "Adequacy-Value": 1100,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 3000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 4,
+    "metadata": {
+      "Adequacy-Value": 1100,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 3000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 5,
+    "metadata": {
+      "Adequacy-Value": 1100,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 3000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 6,
+    "metadata": {
+      "Adequacy-Value": 800,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 2500,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 7,
+    "metadata": {
+      "Adequacy-Value": 800,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 2500,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 8,
+    "metadata": {
+      "Adequacy-Value": 800,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 2500,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 9,
+    "metadata": {
+      "Adequacy-Value": 800,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 2500,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 10,
+    "metadata": {
+      "Adequacy-Value": 800,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 2000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 11,
+    "metadata": {
+      "Adequacy-Value": 1000,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 2000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 12,
+    "metadata": {
+      "Adequacy-Value": 1000,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 2000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 13,
+    "metadata": {
+      "Adequacy-Value": 1000,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 2000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 14,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 15,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 16,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 63,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 17,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 75,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 18,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 19,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 20,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 21,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 22,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 23,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 24,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 25,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 26,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 27,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 28,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 29,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 30,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 31,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 32,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": 40,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 33,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": 40,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 34,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": 40,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 35,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": 40,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 36,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": 45,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 37,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": 45,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 38,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": 45,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 39,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": 45,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 40,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": 45,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 41,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": 45,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 42,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": 45,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 43,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": 45,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 44,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": 45,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 45,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": 45,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 46,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": 45,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 47,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": 45,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 48,
+    "metadata": {
+      "Adequacy-Value": 800,
+      "Adequacy-Type": "AI",
+      "Excess-Value": 1200,
+      "Excess-Type": "CDRR"
+    }
+  },
+  {
+    "Ref-code": 49,
+    "metadata": {
+      "Adequacy-Value": 1000,
+      "Adequacy-Type": "AI",
+      "Excess-Value": 1500,
+      "Excess-Type": "CDRR"
+    }
+  },
+  {
+    "Ref-code": 50,
+    "metadata": {
+      "Adequacy-Value": 1200,
+      "Adequacy-Type": "AI",
+      "Excess-Value": 1800,
+      "Excess-Type": "CDRR"
+    }
+  },
+  {
+    "Ref-code": 51,
+    "metadata": {
+      "Adequacy-Value": 1200,
+      "Adequacy-Type": "AI",
+      "Excess-Value": 1800,
+      "Excess-Type": "CDRR"
+    }
+  },
+  {
+    "Ref-code": 52,
+    "metadata": {
+      "Adequacy-Value": 1500,
+      "Adequacy-Type": "AI",
+      "Excess-Value": 2300,
+      "Excess-Type": "CDRR"
+    }
+  },
+  {
+    "Ref-code": 53,
+    "metadata": {
+      "Adequacy-Value": 1500,
+      "Adequacy-Type": "AI",
+      "Excess-Value": 2300,
+      "Excess-Type": "CDRR"
+    }
+  },
+  {
+    "Ref-code": 54,
+    "metadata": {
+      "Adequacy-Value": 1500,
+      "Adequacy-Type": "AI",
+      "Excess-Value": 2300,
+      "Excess-Type": "CDRR"
+    }
+  },
+  {
+    "Ref-code": 55,
+    "metadata": {
+      "Adequacy-Value": 1500,
+      "Adequacy-Type": "AI",
+      "Excess-Value": 2300,
+      "Excess-Type": "CDRR"
+    }
+  },
+  {
+    "Ref-code": 56,
+    "metadata": {
+      "Adequacy-Value": 1500,
+      "Adequacy-Type": "AI",
+      "Excess-Value": 2300,
+      "Excess-Type": "CDRR"
+    }
+  },
+  {
+    "Ref-code": 57,
+    "metadata": {
+      "Adequacy-Value": 1500,
+      "Adequacy-Type": "AI",
+      "Excess-Value": 2300,
+      "Excess-Type": "CDRR"
+    }
+  },
+  {
+    "Ref-code": 58,
+    "metadata": {
+      "Adequacy-Value": 1500,
+      "Adequacy-Type": "AI",
+      "Excess-Value": 2300,
+      "Excess-Type": "CDRR"
+    }
+  },
+  {
+    "Ref-code": 59,
+    "metadata": {
+      "Adequacy-Value": 1500,
+      "Adequacy-Type": "AI",
+      "Excess-Value": 2300,
+      "Excess-Type": "CDRR"
+    }
+  },
+  {
+    "Ref-code": 60,
+    "metadata": {
+      "Adequacy-Value": 1500,
+      "Adequacy-Type": "AI",
+      "Excess-Value": 2300,
+      "Excess-Type": "CDRR"
+    }
+  },
+  {
+    "Ref-code": 61,
+    "metadata": {
+      "Adequacy-Value": 1500,
+      "Adequacy-Type": "AI",
+      "Excess-Value": 2300,
+      "Excess-Type": "CDRR"
+    }
+  },
+  {
+    "Ref-code": 62,
+    "metadata": {
+      "Adequacy-Value": 1500,
+      "Adequacy-Type": "AI",
+      "Excess-Value": 2300,
+      "Excess-Type": "CDRR"
+    }
+  },
+  {
+    "Ref-code": 63,
+    "metadata": {
+      "Adequacy-Value": 1500,
+      "Adequacy-Type": "AI",
+      "Excess-Value": 2300,
+      "Excess-Type": "CDRR"
+    }
+  },
+  {
+    "Ref-code": 64,
+    "metadata": {
+      "Adequacy-Value": 2000,
+      "Adequacy-Type": "AI",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 65,
+    "metadata": {
+      "Adequacy-Value": 2300,
+      "Adequacy-Type": "AI",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 66,
+    "metadata": {
+      "Adequacy-Value": 2500,
+      "Adequacy-Type": "AI",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 67,
+    "metadata": {
+      "Adequacy-Value": 2300,
+      "Adequacy-Type": "AI",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 68,
+    "metadata": {
+      "Adequacy-Value": 3000,
+      "Adequacy-Type": "AI",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 69,
+    "metadata": {
+      "Adequacy-Value": 2300,
+      "Adequacy-Type": "AI",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 70,
+    "metadata": {
+      "Adequacy-Value": 3400,
+      "Adequacy-Type": "AI",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 71,
+    "metadata": {
+      "Adequacy-Value": 2600,
+      "Adequacy-Type": "AI",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 72,
+    "metadata": {
+      "Adequacy-Value": 3400,
+      "Adequacy-Type": "AI",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 73,
+    "metadata": {
+      "Adequacy-Value": 2600,
+      "Adequacy-Type": "AI",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 74,
+    "metadata": {
+      "Adequacy-Value": 3400,
+      "Adequacy-Type": "AI",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 75,
+    "metadata": {
+      "Adequacy-Value": 2600,
+      "Adequacy-Type": "AI",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 76,
+    "metadata": {
+      "Adequacy-Value": 3400,
+      "Adequacy-Type": "AI",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 77,
+    "metadata": {
+      "Adequacy-Value": 2600,
+      "Adequacy-Type": "AI",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 78,
+    "metadata": {
+      "Adequacy-Value": 3400,
+      "Adequacy-Type": "AI",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 79,
+    "metadata": {
+      "Adequacy-Value": 2600,
+      "Adequacy-Type": "AI",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 80,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 81,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 82,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 83,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 84,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 85,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 86,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 87,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 88,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 89,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 90,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 91,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 92,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 93,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 94,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 95,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 96,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 97,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 98,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 99,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 100,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 101,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 102,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 103,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 104,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 105,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 106,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 107,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 108,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 109,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 110,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 111,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 112,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 113,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 114,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 115,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 116,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 117,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 118,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 119,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 120,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 121,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 122,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 123,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 124,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 125,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 126,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 127,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 128,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 129,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 130,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 131,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 132,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 133,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 134,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 135,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 136,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 137,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 138,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 139,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 140,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 141,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 142,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 143,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 144,
+    "metadata": {
+      "Adequacy-Value": 120,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 145,
+    "metadata": {
+      "Adequacy-Value": 160,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 146,
+    "metadata": {
+      "Adequacy-Value": 250,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 147,
+    "metadata": {
+      "Adequacy-Value": 250,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 148,
+    "metadata": {
+      "Adequacy-Value": 330,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 149,
+    "metadata": {
+      "Adequacy-Value": 330,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 150,
+    "metadata": {
+      "Adequacy-Value": 320,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 151,
+    "metadata": {
+      "Adequacy-Value": 320,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 152,
+    "metadata": {
+      "Adequacy-Value": 320,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 153,
+    "metadata": {
+      "Adequacy-Value": 320,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 154,
+    "metadata": {
+      "Adequacy-Value": 320,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 155,
+    "metadata": {
+      "Adequacy-Value": 320,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 156,
+    "metadata": {
+      "Adequacy-Value": 320,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 157,
+    "metadata": {
+      "Adequacy-Value": 320,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 158,
+    "metadata": {
+      "Adequacy-Value": 320,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 159,
+    "metadata": {
+      "Adequacy-Value": 320,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 160,
+    "metadata": {
+      "Adequacy-Value": 0.7,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 161,
+    "metadata": {
+      "Adequacy-Value": 1,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 162,
+    "metadata": {
+      "Adequacy-Value": 1.5,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 163,
+    "metadata": {
+      "Adequacy-Value": 1.5,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 164,
+    "metadata": {
+      "Adequacy-Value": 2,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 165,
+    "metadata": {
+      "Adequacy-Value": 2,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 166,
+    "metadata": {
+      "Adequacy-Value": 2,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 167,
+    "metadata": {
+      "Adequacy-Value": 2,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 168,
+    "metadata": {
+      "Adequacy-Value": 2,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 169,
+    "metadata": {
+      "Adequacy-Value": 2,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 170,
+    "metadata": {
+      "Adequacy-Value": 2,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 171,
+    "metadata": {
+      "Adequacy-Value": 2,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 172,
+    "metadata": {
+      "Adequacy-Value": 2,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 173,
+    "metadata": {
+      "Adequacy-Value": 2,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 174,
+    "metadata": {
+      "Adequacy-Value": 2,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 175,
+    "metadata": {
+      "Adequacy-Value": 2,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 176,
+    "metadata": {
+      "Adequacy-Value": 100,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 177,
+    "metadata": {
+      "Adequacy-Value": 100,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 178,
+    "metadata": {
+      "Adequacy-Value": 100,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 179,
+    "metadata": {
+      "Adequacy-Value": 100,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 180,
+    "metadata": {
+      "Adequacy-Value": 100,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 181,
+    "metadata": {
+      "Adequacy-Value": 100,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 182,
+    "metadata": {
+      "Adequacy-Value": 100,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 183,
+    "metadata": {
+      "Adequacy-Value": 100,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 184,
+    "metadata": {
+      "Adequacy-Value": 100,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 185,
+    "metadata": {
+      "Adequacy-Value": 100,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 186,
+    "metadata": {
+      "Adequacy-Value": 100,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 187,
+    "metadata": {
+      "Adequacy-Value": 100,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 188,
+    "metadata": {
+      "Adequacy-Value": 100,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 189,
+    "metadata": {
+      "Adequacy-Value": 100,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 190,
+    "metadata": {
+      "Adequacy-Value": 100,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 191,
+    "metadata": {
+      "Adequacy-Value": 100,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 192,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 193,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 194,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 195,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 196,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 197,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 198,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 199,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 200,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 201,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 202,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 203,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 204,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 205,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 206,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 207,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 208,
+    "metadata": {
+      "Adequacy-Value": 13,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 400,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 209,
+    "metadata": {
+      "Adequacy-Value": 22,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 650,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 210,
+    "metadata": {
+      "Adequacy-Value": 39,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 1200,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 211,
+    "metadata": {
+      "Adequacy-Value": 39,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 1200,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 212,
+    "metadata": {
+      "Adequacy-Value": 63,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 1800,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 213,
+    "metadata": {
+      "Adequacy-Value": 56,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 1800,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 214,
+    "metadata": {
+      "Adequacy-Value": 75,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 2000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 215,
+    "metadata": {
+      "Adequacy-Value": 60,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 2000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 216,
+    "metadata": {
+      "Adequacy-Value": 75,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 2000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 217,
+    "metadata": {
+      "Adequacy-Value": 60,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 2000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 218,
+    "metadata": {
+      "Adequacy-Value": 75,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 2000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 219,
+    "metadata": {
+      "Adequacy-Value": 60,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 2000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 220,
+    "metadata": {
+      "Adequacy-Value": 75,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 2000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 221,
+    "metadata": {
+      "Adequacy-Value": 60,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 2000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 222,
+    "metadata": {
+      "Adequacy-Value": 75,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 2000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 223,
+    "metadata": {
+      "Adequacy-Value": 60,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 2000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 224,
+    "metadata": {
+      "Adequacy-Value": 2.5,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 7,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 225,
+    "metadata": {
+      "Adequacy-Value": 4,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 12,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 226,
+    "metadata": {
+      "Adequacy-Value": 7,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 23,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 227,
+    "metadata": {
+      "Adequacy-Value": 7,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 23,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 228,
+    "metadata": {
+      "Adequacy-Value": 8.5,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 34,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 229,
+    "metadata": {
+      "Adequacy-Value": 7.3,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 34,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 230,
+    "metadata": {
+      "Adequacy-Value": 9.4,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 40,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 231,
+    "metadata": {
+      "Adequacy-Value": 6.8,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 40,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 232,
+    "metadata": {
+      "Adequacy-Value": 9.4,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 40,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 233,
+    "metadata": {
+      "Adequacy-Value": 6.8,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 40,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 234,
+    "metadata": {
+      "Adequacy-Value": 9.4,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 40,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 235,
+    "metadata": {
+      "Adequacy-Value": 6.8,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 40,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 236,
+    "metadata": {
+      "Adequacy-Value": 9.4,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 40,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 237,
+    "metadata": {
+      "Adequacy-Value": 6.8,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 40,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 238,
+    "metadata": {
+      "Adequacy-Value": 9.4,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 40,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 239,
+    "metadata": {
+      "Adequacy-Value": 6.8,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 40,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 240,
+    "metadata": {
+      "Adequacy-Value": 65,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 241,
+    "metadata": {
+      "Adequacy-Value": 110,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 242,
+    "metadata": {
+      "Adequacy-Value": 200,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 243,
+    "metadata": {
+      "Adequacy-Value": 200,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 244,
+    "metadata": {
+      "Adequacy-Value": 340,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 245,
+    "metadata": {
+      "Adequacy-Value": 300,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 246,
+    "metadata": {
+      "Adequacy-Value": 330,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 247,
+    "metadata": {
+      "Adequacy-Value": 255,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 248,
+    "metadata": {
+      "Adequacy-Value": 350,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 249,
+    "metadata": {
+      "Adequacy-Value": 265,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 250,
+    "metadata": {
+      "Adequacy-Value": 350,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 251,
+    "metadata": {
+      "Adequacy-Value": 265,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 252,
+    "metadata": {
+      "Adequacy-Value": 350,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 253,
+    "metadata": {
+      "Adequacy-Value": 265,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 254,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 255,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 256,
+    "metadata": {
+      "Adequacy-Value": 210,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 257,
+    "metadata": {
+      "Adequacy-Value": 275,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 258,
+    "metadata": {
+      "Adequacy-Value": 445,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 259,
+    "metadata": {
+      "Adequacy-Value": 420,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 260,
+    "metadata": {
+      "Adequacy-Value": 630,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 261,
+    "metadata": {
+      "Adequacy-Value": 485,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 262,
+    "metadata": {
+      "Adequacy-Value": 625,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 263,
+    "metadata": {
+      "Adequacy-Value": 500,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 264,
+    "metadata": {
+      "Adequacy-Value": 625,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 265,
+    "metadata": {
+      "Adequacy-Value": 500,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 266,
+    "metadata": {
+      "Adequacy-Value": 625,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 267,
+    "metadata": {
+      "Adequacy-Value": 500,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 268,
+    "metadata": {
+      "Adequacy-Value": 625,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 269,
+    "metadata": {
+      "Adequacy-Value": 500,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 270,
+    "metadata": {
+      "Adequacy-Value": 625,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 271,
+    "metadata": {
+      "Adequacy-Value": 500,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 272,
+    "metadata": {
+      "Adequacy-Value": 45,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 65,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 273,
+    "metadata": {
+      "Adequacy-Value": 45,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 65,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 274,
+    "metadata": {
+      "Adequacy-Value": 45,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 65,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 275,
+    "metadata": {
+      "Adequacy-Value": 45,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 65,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 276,
+    "metadata": {
+      "Adequacy-Value": 45,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 65,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 277,
+    "metadata": {
+      "Adequacy-Value": 45,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 65,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 278,
+    "metadata": {
+      "Adequacy-Value": 45,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 65,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 279,
+    "metadata": {
+      "Adequacy-Value": 45,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 65,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 280,
+    "metadata": {
+      "Adequacy-Value": 45,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 65,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 281,
+    "metadata": {
+      "Adequacy-Value": 45,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 65,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 282,
+    "metadata": {
+      "Adequacy-Value": 45,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 65,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 283,
+    "metadata": {
+      "Adequacy-Value": 45,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 65,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 284,
+    "metadata": {
+      "Adequacy-Value": 45,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 65,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 285,
+    "metadata": {
+      "Adequacy-Value": 45,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 65,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 286,
+    "metadata": {
+      "Adequacy-Value": 45,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 65,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 287,
+    "metadata": {
+      "Adequacy-Value": 45,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 65,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 288,
+    "metadata": {
+      "Adequacy-Value": 30,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 40,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 289,
+    "metadata": {
+      "Adequacy-Value": 25,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 290,
+    "metadata": {
+      "Adequacy-Value": 25,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 291,
+    "metadata": {
+      "Adequacy-Value": 25,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 292,
+    "metadata": {
+      "Adequacy-Value": 25,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 293,
+    "metadata": {
+      "Adequacy-Value": 25,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 294,
+    "metadata": {
+      "Adequacy-Value": 20,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 295,
+    "metadata": {
+      "Adequacy-Value": 20,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 296,
+    "metadata": {
+      "Adequacy-Value": 20,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 297,
+    "metadata": {
+      "Adequacy-Value": 20,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 298,
+    "metadata": {
+      "Adequacy-Value": 20,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 299,
+    "metadata": {
+      "Adequacy-Value": 20,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 300,
+    "metadata": {
+      "Adequacy-Value": 20,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 301,
+    "metadata": {
+      "Adequacy-Value": 20,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 302,
+    "metadata": {
+      "Adequacy-Value": 20,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 303,
+    "metadata": {
+      "Adequacy-Value": 20,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 304,
+    "metadata": {
+      "Adequacy-Value": 5,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 20,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 305,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 30,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 306,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 30,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 307,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 30,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 308,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 30,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 309,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 30,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 310,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 311,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 312,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 313,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 314,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 315,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 316,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 317,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 318,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 319,
+    "metadata": {
+      "Adequacy-Value": 10,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 35,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 320,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 321,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 322,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 323,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 324,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 325,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 326,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 327,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 328,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 329,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 330,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 331,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 332,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 333,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 334,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 335,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 336,
+    "metadata": {
+      "Adequacy-Value": 380,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 3000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 337,
+    "metadata": {
+      "Adequacy-Value": 405,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 3000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 338,
+    "metadata": {
+      "Adequacy-Value": 1055,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 4000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 339,
+    "metadata": {
+      "Adequacy-Value": 1055,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 4000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 340,
+    "metadata": {
+      "Adequacy-Value": 1055,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 4000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 341,
+    "metadata": {
+      "Adequacy-Value": 1055,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 4000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 342,
+    "metadata": {
+      "Adequacy-Value": 580,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 4000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 343,
+    "metadata": {
+      "Adequacy-Value": 580,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 4000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 344,
+    "metadata": {
+      "Adequacy-Value": 580,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 4000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 345,
+    "metadata": {
+      "Adequacy-Value": 580,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 4000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 346,
+    "metadata": {
+      "Adequacy-Value": 580,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 4000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 347,
+    "metadata": {
+      "Adequacy-Value": 580,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 4000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 348,
+    "metadata": {
+      "Adequacy-Value": 580,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 3000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 349,
+    "metadata": {
+      "Adequacy-Value": 580,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 3000,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 350,
+    "metadata": {
+      "Adequacy-Value": 580,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 351,
+    "metadata": {
+      "Adequacy-Value": 580,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 352,
+    "metadata": {
+      "Adequacy-Value": 0.4,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 30,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 353,
+    "metadata": {
+      "Adequacy-Value": 0.5,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 40,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 354,
+    "metadata": {
+      "Adequacy-Value": 0.8,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 60,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 355,
+    "metadata": {
+      "Adequacy-Value": 0.8,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 60,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 356,
+    "metadata": {
+      "Adequacy-Value": 1.1,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 80,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 357,
+    "metadata": {
+      "Adequacy-Value": 1,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 80,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 358,
+    "metadata": {
+      "Adequacy-Value": 1.1,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 359,
+    "metadata": {
+      "Adequacy-Value": 1.1,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 360,
+    "metadata": {
+      "Adequacy-Value": 1.1,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 361,
+    "metadata": {
+      "Adequacy-Value": 1.1,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 362,
+    "metadata": {
+      "Adequacy-Value": 1.4,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 363,
+    "metadata": {
+      "Adequacy-Value": 1.3,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 364,
+    "metadata": {
+      "Adequacy-Value": 1.4,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 365,
+    "metadata": {
+      "Adequacy-Value": 1.3,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 366,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 367,
+    "metadata": {
+      "Adequacy-Value": null,
+      "Adequacy-Type": null,
+      "Excess-Value": 100,
+      "Excess-Type": "UL"
+    }
+  },
+  {
+    "Ref-code": 368,
+    "metadata": {
+      "Adequacy-Value": 5,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 369,
+    "metadata": {
+      "Adequacy-Value": 6,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 370,
+    "metadata": {
+      "Adequacy-Value": 9,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 371,
+    "metadata": {
+      "Adequacy-Value": 9,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 372,
+    "metadata": {
+      "Adequacy-Value": 12,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 373,
+    "metadata": {
+      "Adequacy-Value": 11,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 374,
+    "metadata": {
+      "Adequacy-Value": 12,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 375,
+    "metadata": {
+      "Adequacy-Value": 11,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 376,
+    "metadata": {
+      "Adequacy-Value": 12,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 377,
+    "metadata": {
+      "Adequacy-Value": 11,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 378,
+    "metadata": {
+      "Adequacy-Value": 12,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 379,
+    "metadata": {
+      "Adequacy-Value": 11,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 380,
+    "metadata": {
+      "Adequacy-Value": 12,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 381,
+    "metadata": {
+      "Adequacy-Value": 11,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 382,
+    "metadata": {
+      "Adequacy-Value": 12,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 383,
+    "metadata": {
+      "Adequacy-Value": 11,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 384,
+    "metadata": {
+      "Adequacy-Value": 0.4,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 385,
+    "metadata": {
+      "Adequacy-Value": 0.5,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 386,
+    "metadata": {
+      "Adequacy-Value": 0.8,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 387,
+    "metadata": {
+      "Adequacy-Value": 0.8,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 388,
+    "metadata": {
+      "Adequacy-Value": 1.1,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 389,
+    "metadata": {
+      "Adequacy-Value": 0.9,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 390,
+    "metadata": {
+      "Adequacy-Value": 1.1,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 391,
+    "metadata": {
+      "Adequacy-Value": 0.9,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 392,
+    "metadata": {
+      "Adequacy-Value": 1.1,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 393,
+    "metadata": {
+      "Adequacy-Value": 0.9,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 394,
+    "metadata": {
+      "Adequacy-Value": 1.1,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 395,
+    "metadata": {
+      "Adequacy-Value": 0.9,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 396,
+    "metadata": {
+      "Adequacy-Value": 1.1,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 397,
+    "metadata": {
+      "Adequacy-Value": 0.9,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 398,
+    "metadata": {
+      "Adequacy-Value": 1.1,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 399,
+    "metadata": {
+      "Adequacy-Value": 0.9,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 400,
+    "metadata": {
+      "Adequacy-Value": 0.4,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 401,
+    "metadata": {
+      "Adequacy-Value": 0.5,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 402,
+    "metadata": {
+      "Adequacy-Value": 0.7,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 403,
+    "metadata": {
+      "Adequacy-Value": 0.7,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 404,
+    "metadata": {
+      "Adequacy-Value": 1,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 405,
+    "metadata": {
+      "Adequacy-Value": 0.9,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 406,
+    "metadata": {
+      "Adequacy-Value": 1,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 407,
+    "metadata": {
+      "Adequacy-Value": 0.9,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 408,
+    "metadata": {
+      "Adequacy-Value": 1,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 409,
+    "metadata": {
+      "Adequacy-Value": 0.9,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 410,
+    "metadata": {
+      "Adequacy-Value": 1,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 411,
+    "metadata": {
+      "Adequacy-Value": 0.9,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 412,
+    "metadata": {
+      "Adequacy-Value": 1,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 413,
+    "metadata": {
+      "Adequacy-Value": 0.9,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 414,
+    "metadata": {
+      "Adequacy-Value": 1,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 415,
+    "metadata": {
+      "Adequacy-Value": 0.9,
+      "Adequacy-Type": "EAR",
+      "Excess-Value": null,
+      "Excess-Type": null
+    }
+  },
+  {
+    "Ref-code": 416,
+    "metadata": {
+      "Adequacy-Value": 5,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 10,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 417,
+    "metadata": {
+      "Adequacy-Value": 5,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 10,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 418,
+    "metadata": {
+      "Adequacy-Value": 5,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 10,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 419,
+    "metadata": {
+      "Adequacy-Value": 5,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 10,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 420,
+    "metadata": {
+      "Adequacy-Value": 5,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 10,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 421,
+    "metadata": {
+      "Adequacy-Value": 5,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 10,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 422,
+    "metadata": {
+      "Adequacy-Value": 5,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 10,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 423,
+    "metadata": {
+      "Adequacy-Value": 5,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 10,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 424,
+    "metadata": {
+      "Adequacy-Value": 5,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 10,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 425,
+    "metadata": {
+      "Adequacy-Value": 5,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 10,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 426,
+    "metadata": {
+      "Adequacy-Value": 5,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 10,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 427,
+    "metadata": {
+      "Adequacy-Value": 5,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 10,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 428,
+    "metadata": {
+      "Adequacy-Value": 5,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 10,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 429,
+    "metadata": {
+      "Adequacy-Value": 5,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 10,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 430,
+    "metadata": {
+      "Adequacy-Value": 5,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 10,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 431,
+    "metadata": {
+      "Adequacy-Value": 5,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 10,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 432,
+    "metadata": {
+      "Adequacy-Value": 0.6,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 1.2,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 433,
+    "metadata": {
+      "Adequacy-Value": 0.6,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 1.2,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 434,
+    "metadata": {
+      "Adequacy-Value": 0.6,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 1.2,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 435,
+    "metadata": {
+      "Adequacy-Value": 0.6,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 1.2,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 436,
+    "metadata": {
+      "Adequacy-Value": 0.6,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 1.2,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 437,
+    "metadata": {
+      "Adequacy-Value": 0.6,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 1.2,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 438,
+    "metadata": {
+      "Adequacy-Value": 0.6,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 1.2,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 439,
+    "metadata": {
+      "Adequacy-Value": 0.6,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 1.2,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 440,
+    "metadata": {
+      "Adequacy-Value": 0.6,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 1.2,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 441,
+    "metadata": {
+      "Adequacy-Value": 0.6,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 1.2,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 442,
+    "metadata": {
+      "Adequacy-Value": 0.6,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 1.2,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 443,
+    "metadata": {
+      "Adequacy-Value": 0.6,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 1.2,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 444,
+    "metadata": {
+      "Adequacy-Value": 0.6,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 1.2,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 445,
+    "metadata": {
+      "Adequacy-Value": 0.6,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 1.2,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 446,
+    "metadata": {
+      "Adequacy-Value": 0.6,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 1.2,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  },
+  {
+    "Ref-code": 447,
+    "metadata": {
+      "Adequacy-Value": 0.6,
+      "Adequacy-Type": "AMDR - Lower bound",
+      "Excess-Value": 1.2,
+      "Excess-Type": "AMDR - Upper bound"
+    }
+  }
+]

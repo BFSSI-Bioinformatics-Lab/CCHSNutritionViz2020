@@ -452,6 +452,12 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                 $('#nutrientDropdownSelector').val(selectedNutrient)
                 return [selectedSex, selectedAge, selectedNutrient]
             }
+            // Update table title
+            if (sex === 'Both') {
+                document.getElementById('table-title').innerHTML = `Percentiles of ${nutrient} usual intake, ${sex} sexes, age ${age}, Canada, 2015`;
+            } else {
+                document.getElementById('table-title').innerHTML = `Percentiles of ${nutrient} usual intake, ${sex}, age ${age}, Canada, 2015`;
+            }
 
             function updateData() {
                 // Main method to populate the map with data
