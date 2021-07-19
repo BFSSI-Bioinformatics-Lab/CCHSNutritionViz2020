@@ -577,25 +577,26 @@
                     Nutrition, 2015, Share File.</i></a>
 
                 {# Download panel #}
-                <div class="row" style="margin-left: 2px; margin-top: 15px">
-                    <h4 class="wb-inv">Download Options</h4>
-                    <details open>
-                        <summary><h4 class="h4">Download Options</h4></summary>
-                        <p class="mrgn-tp-md">Use the buttons below to download the data</p>
-                        <div class="form-group">
+{#                <div class="row" style="margin-left: 50px; margin-top: 15px">#}
+{#                    <h4 class="wb-inv">Download Options</h4>#}
+{#                    <details open>#}
+{#                        <summary><h4 class="h4">Download Options</h4></summary>#}
+{#                        <p class="mrgn-tp-md">Use the buttons below to download the data</p>#}
+                        <div class="form-group text-center" style="margin-top: 25px">
                             <button href="#" role="button" data-export="export"
-                                    style="width:300px"
-                                    class="btn btn-primary" id="filteredTableDownload"><span
+                                    style="width:300px; border-color: transparent"
+                                    class="btn btn-success" id="filteredTableDownload"><span
                                     class="glyphicon glyphicon-cloud-download"></span> Displayed data (.csv)
                             </button>
                             <a download href="../static/data/data_table-en.csv" role="button"
-                               style="width:300px; margin-left: 10px" class="btn btn-primary"
+                               style="width:300px; margin-left: 10px; border-color: transparent"
+                               class="btn btn-success"
                                id="filteredTableDownload"><span
                                     class="glyphicon glyphicon-cloud-download"></span> All data (.csv)
                             </a>
                         </div>
-                    </details>
-                </div>
+{#                    </details>#}
+{#                </div>#}
 
             </div>
         </div>

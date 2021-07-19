@@ -152,7 +152,7 @@ const generateTitle = (sex, age, nutrient) => {
 
 // Grab values from the main data object to populate options from the select dropdown
 const nutrientFacts = {
-    'Calcium': `Click <a href="#">here</a> for more information on the Sodium intake of Canadians.`,
+    'Calcium': `N/A`,
 
     'Folate': `
     <p>Folate is a generic term that includes the naturally occurring form found in food and folic acid found in supplements and fortified foods. The requirements for folate are based on the amount of dietary folate equivalents (DFEs) needed to maintain red blood cell folate concentrations. DFEs adjust for differences in absorption between naturally-occurring food folate and synthetic folic acid. While there appears to be a relatively high prevalence of inadequate intakes of folate (5.7 to 44.2%), red blood cell folate measures, an indicator of folate status, suggest a very low prevalence of folate deficiency in the Canadian population.<super>1, 2</super></p>
@@ -177,10 +177,10 @@ const nutrientFacts = {
     //</ol>`,
 
 
-    'Iron': `Iron inadequacy was estimated using the full probability method as described in section 2.3.4 of the <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html">Methodology Guide.</a>`,
+    'Iron': `Iron inadequacy was estimated using the full probability method as described in section 2.3.4 of the <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html" target="_blank">Methodology Guide.</a>`,
     'Magnesium': `N/A`,
     'Percentage of total energy intake from fat': `
-        <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html">Canada’s Dietary Guidelines</a> recommend that Canadians consume less than 10% of total energy intake from saturated fat. 
+        <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html" target="_blank">Canada’s Dietary Guidelines</a> recommend that Canadians consume less than 10% of total energy intake from saturated fat. 
     `,
     'Percentage of total energy intake from carbohydrates': `
     <p>The interpretation of self-reported energy intake should be done with caution as energy intake tends to be underestimated by survey respondents. The Institute of Medicine (IOM) suggests using indicators of relative body weight, such as the Body Mass Index (BMI), as markers of energy intake adequacy within groups. Statistics Canada has released 2015 CCHS – Nutrition results for measured BMI in adults<super>1</super> and children<super>2</super>. </p>
@@ -197,7 +197,7 @@ const nutrientFacts = {
         <li>Statistics Canada.  Table  13-10-0795-01   Measured children and youth body mass index (BMI) (World Health Organization classification), by age group and sex, Canada and provinces, Canadian Community Health Survey – Nutrition. DOI:   <a href="https://doi.org/10.25318/1310079501-eng">https://doi.org/10.25318/1310079501-eng</a></li>
     </ol>`,
     'Potassium': `N/A`,
-    'Sodium': `<a href="https://www.canada.ca/en/health-canada/services/publications/food-nutrition/sodium-intake-canadians-2017.html">Click here for more information on the Sodium Intake of Canadians.</a>`,
+    'Sodium': `<a href="https://www.canada.ca/en/health-canada/services/publications/food-nutrition/sodium-intake-canadians-2017.html" target="_blank">Click here for more information on the Sodium Intake of Canadians.</a>`,
     'Vitamin A': `N/A`,
     'Vitamin B6': `N/A`,
     'Vitamin C': `N/A`,
@@ -206,8 +206,8 @@ const nutrientFacts = {
 <p>Vitamin D is unique as it can also be synthesized by the body from sunlight (UV radiation). In addition, vitamin D intake 
 from supplements has not been considered in this assessment. While there appears to be a high prevalence of inadequate 
 intakes of vitamin D from dietary sources, available clinical measures do not suggest wide-spread vitamin D deficiency
- in the Canadian population (<a href="https://www150.statcan.gc.ca/n1/pub/82-003-x/2010001/article/11131-eng.pdf">Langlois et al., Health Reports, 2010</a>;
-  <a href="https://pubmed.ncbi.nlm.nih.gov/21593503-the-vitamin-d-status-of-canadians-relative-to-the-2011-dietary-reference-intakes-an-examination-in-children-and-adults-with-and-without-supplement-use/">Whiting et al., Am J Clin Nutr. 2011)</a>.
+ in the Canadian population (<a href="https://www150.statcan.gc.ca/n1/pub/82-003-x/2010001/article/11131-eng.pdf" target="_blank">Langlois et al., Health Reports, 2010</a>;
+  <a href="https://pubmed.ncbi.nlm.nih.gov/21593503-the-vitamin-d-status-of-canadians-relative-to-the-2011-dietary-reference-intakes-an-examination-in-children-and-adults-with-and-without-supplement-use/" target="_blank">Whiting et al., Am J Clin Nutr. 2011)</a>.
    Vitamin D status in some sub-populations, however, may warrant further consideration.
    </p>
    <p><strong>References:</strong></p>

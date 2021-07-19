@@ -154,16 +154,6 @@
             <div class="col-lg-5 col-md-5 col-sm-12" style="overflow:visible;">
 
                 <div class="container-fluid">
-                    <div class="row">
-                        <section class="alert alert-info">
-                            <p>
-                                For more information on CCHS - Nutrition, please consult the
-                                <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/reference-guide-understanding-using-data-2015.html">Reference
-                                    Guide to Understanding and Using the Data</a> and the <a href="#">Statistical
-                                Methodology Guide</a>.
-                            </p>
-                        </section>
-                    </div>
 
                     {# Dropdown menus for filtering chart data #}
                     <div>
@@ -182,6 +172,10 @@
                                 <div id="nutrientDropdown" class="chart-selector"></div>
                             </div>
                         </fieldset>
+                        <br>
+                        <button class="btn btn-sm btn-success" id="saveChart"><span
+                            class="glyphicon glyphicon-cloud-download"></span> Save graph (.png)
+                        </button>
                     </div>
 
                     <br>
@@ -224,12 +218,7 @@
                 <div id="geochart" align="center"></div>
                 <div id="geolegend" style="overflow:visible" align="center"></div>
 
-                <div class="text-center">
-                    <br>
-                    <button class="btn btn-sm btn-success" id="saveChart"><span
-                            class="glyphicon glyphicon-cloud-download"></span> Save graph (.png)
-                    </button>
-                </div>
+
                 <div id="geo-caption" style="font-size: 16px; margin-top: 20px"></div>
             </div>
         </div>
@@ -283,13 +272,23 @@
                     <tbody>
                     <tr>
                         <td><strong>Data Source</strong></td>
-                        <td><a href="https://open.canada.ca/data/en/dataset/31599960-2c1e-4d90-a9d9-979ad0e1abb4">Statistics Canada, Canadian Community Health Survey (CCHS) - Nutrition, 2015, Share
+                        <td><a href="https://open.canada.ca/data/en/dataset/31599960-2c1e-4d90-a9d9-979ad0e1abb4" target="_blank">Statistics Canada, Canadian Community Health Survey (CCHS) - Nutrition, 2015, Share
                             Files.</a>
                         </td>
                     </tr>
                     </tbody>
                 </table>
 
+            </section>
+            <section class="alert alert-info">
+                <p>
+                    For more information on CCHS - Nutrition, please consult the
+                    <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/reference-guide-understanding-using-data-2015.html" target="_blank">Reference
+                        Guide to Understanding and Using the Data</a> and the <a
+                        href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html"
+                        target="_blank">Statistical
+                    Methodology Guide</a>.
+                </p>
             </section>
         </div>
 
