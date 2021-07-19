@@ -452,12 +452,7 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                 $('#nutrientDropdownSelector').val(selectedNutrient)
                 return [selectedSex, selectedAge, selectedNutrient]
             }
-            // Update table title
-            if (sex === 'Both') {
-                document.getElementById('table-title').innerHTML = `Percentiles of ${nutrient} usual intake, ${sex} sexes, age ${age}, Canada, 2015`;
-            } else {
-                document.getElementById('table-title').innerHTML = `Percentiles of ${nutrient} usual intake, ${sex}, age ${age}, Canada, 2015`;
-            }
+
 
             function updateData() {
                 // Main method to populate the map with data
@@ -647,6 +642,21 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                             <td>${d.ref_value_unit}</td>
                          </tr>`)
                 });
+
+                // Update table title
+                if (sex === 'Males and females combined') {
+                    document.getElementById('table-title').innerHTML = `Percentiles of ${nutrient.toLowerCase()} usual intake, ${sex.toLowerCase()} sexes, age ${age}, Canada, 2015`;
+                } else {
+                    document.getElementById('table-title').innerHTML = `Percentiles of ${nutrient.toLowerCase()} usual intake, ${sex.toLowerCase()}, age ${age}, Canada, 2015`;
+                }
+
+                // Update description of chart
+                if (sex === 'Males and females combined') {
+                    document.getElementById('geo-caption').innerHTML = `An interactive map of Canada that uses colour to represent the percentage of ${sex.toLowerCase()}, age ${age}, with a usual intake of ${nutrient.toLowerCase()} ${driObject.prefix.toLowerCase()} ${driObject.dri_type} in each province. Users can hover over a specific province to see that province’s value and standard error.`;
+                } else {
+                    document.getElementById('geo-caption').innerHTML = `An interactive map of Canada that uses colour to represent the percentage of ${sex.toLowerCase()}s, age ${age}, with a usual intake of ${nutrient.toLowerCase()} ${driObject.prefix.toLowerCase()} ${driObject.dri_type} in each province. Users can hover over a specific province to see that province’s value and standard error.`;
+                }
+                //Percentage ${driObject.prefix.toLowerCase()} ${driObject.dri_type}
 
             }
 

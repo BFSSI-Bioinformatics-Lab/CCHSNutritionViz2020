@@ -725,9 +725,16 @@ $(document).on("wb-ready.wb", function (event) {
             //Update table title
             //let tableTitle = document.getElementById('table-title').innerHTML
             if (sex === 'Both') {
-                document.getElementById('table-title').innerHTML = `Percentiles of ${nutrient} usual intake, ${sex} sexes, age ${age}, Canada, 2015`;
+                document.getElementById('table-title').innerHTML = `Percentiles of ${nutrient} usual intake, ${sex.toLowerCase()} sexes, age ${age}, Canada, 2015`;
             } else {
-                document.getElementById('table-title').innerHTML = `Percentiles of ${nutrient} usual intake, ${sex}, age ${age}, Canada, 2015`;
+                document.getElementById('table-title').innerHTML = `Percentiles of ${nutrient} usual intake, ${sex.toLowerCase()}, age ${age}, Canada, 2015`;
+            }
+
+            // Update description of chart
+            if (sex === 'Both') {
+                document.getElementById('distribution-caption').innerHTML = `A graph displaying the usual intake distribution curve for ${nutrient} in ${sex.toLowerCase()}, age ${age}, with the limit value(s) if applicable.`;
+            } else {
+                document.getElementById('distribution-caption').innerHTML = `A graph displaying the usual intake distribution curve for ${nutrient} in ${sex.toLowerCase()}s, age ${age}, with the limit value(s) if applicable.`;
             }
         }
 
