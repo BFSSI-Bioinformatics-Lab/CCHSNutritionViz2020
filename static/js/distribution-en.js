@@ -7,9 +7,9 @@ $(document).on("wb-ready.wb", function (event) {
 
     Promise.all([
         d3.csv("../static/data/distributions-en-20th.csv"),
-        d3.csv("../static/data/data_table_age-corrected-en.csv"),
+        d3.csv("../static/data/corrected2021_data_table_age-corrected-en.csv"),
         // Values were generated with ./data_processing/reformat_distribution_data.ipynb script
-        d3.json("../static/data/distribution_coding_object.json")
+        d3.json("../static/data/corrected2021_distribution_coding_object.json")
     ]).then(function (files) {
 
         // Unpack csv files into distribution data, reference table data, and reference coding object
@@ -446,7 +446,7 @@ $(document).on("wb-ready.wb", function (event) {
             // Only include columns we are interested in displaying
             let keysToKeep = ['Nutrient/Item (unit)', 'Reg_Prov', 'Sex', 'Age (years)', 'n',
                 'Mean', 'SE_Mean','P5', 'P10','P25', 'P50', 'P75', 'P90', 'P95']
-                //'P5', 'P10', 'P25', 'P50', 'P75', 'P90', 'P95']
+
             const tableDataReduced = tableData.map(e => {
                 const obj = {};
                 keysToKeep.forEach(k => obj[k] = e[k])
@@ -725,9 +725,16 @@ $(document).on("wb-ready.wb", function (event) {
             //Update table title
             //let tableTitle = document.getElementById('table-title').innerHTML
             if (sex === 'Both') {
-                document.getElementById('table-title').innerHTML = `Percentiles of ${nutrient} usual intake, ${sex} sexes, age ${age}, Canada, 2015`;
+                document.getElementById('table-title').innerHTML = `Percentiles of ${nutrient} usual intake, ${sex.toLowerCase()} sexes, age ${age}, Canada, 2015`;
             } else {
-                document.getElementById('table-title').innerHTML = `Percentiles of ${nutrient} usual intake, ${sex}, age ${age}, Canada, 2015`;
+                document.getElementById('table-title').innerHTML = `Percentiles of ${nutrient} usual intake, ${sex.toLowerCase()}, age ${age}, Canada, 2015`;
+            }
+
+            // Update description of chart
+            if (sex === 'Both') {
+                document.getElementById('distribution-caption').innerHTML = `A graph displaying the usual intake distribution curve for ${nutrient} in ${sex.toLowerCase()}, age ${age}, with the limit value(s) if applicable.`;
+            } else {
+                document.getElementById('distribution-caption').innerHTML = `A graph displaying the usual intake distribution curve for ${nutrient} in ${sex.toLowerCase()}s, age ${age}, with the limit value(s) if applicable.`;
             }
         }
 

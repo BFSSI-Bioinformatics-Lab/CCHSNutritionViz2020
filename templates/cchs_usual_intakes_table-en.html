@@ -137,9 +137,10 @@
     <h1 property="name" id="wb-cont">Usual intakes from food, 2015</h1>
     <p><strong>From <a href="#">Health Canada</a></strong></p>
 
-    <section>
+    <section >
         <div class="row">
-            <div class="btn-group btn-group-lg btn-group-justified" style="padding:20px 0px;">
+            <div class="btn-group btn-group-lg btn-group-justified"
+                 style="padding:20px 0 50px 0;">
                 <a class="btn btn-default toolTab" role="button" href="/">About the data</a>
                 <a class="active btn btn-default btn-primary toolTab" role="button" href="data_table">Data table</a>
                 <a class="btn btn-default toolTab" role="button" href="distribution">Distribution curves</a>
@@ -150,18 +151,7 @@
 
     <section>
         {# Main content #}
-        <div class="row">
-            {# Data filtering panel and Download buttons #}
-            <div class="row">
-                <section class="alert alert-info">
-                    <p>
-                        For more information on CCHS - Nutrition, please consult the
-                        <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/reference-guide-understanding-using-data-2015.html">Reference
-                            Guide to Understanding and Using the Data</a> and the <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html">Statistical
-                        Methodology Guide</a>.
-                    </p>
-                </section>
-            </div>
+
             <div class="col-md-3">
 
 
@@ -577,25 +567,26 @@
                     Nutrition, 2015, Share File.</i></a>
 
                 {# Download panel #}
-                <div class="row" style="margin-left: 2px; margin-top: 15px">
-                    <h4 class="wb-inv">Download Options</h4>
-                    <details open>
-                        <summary><h4 class="h4">Download Options</h4></summary>
-                        <p class="mrgn-tp-md">Use the buttons below to download the data</p>
-                        <div class="form-group">
+{#                <div class="row" style="margin-left: 50px; margin-top: 15px">#}
+{#                    <h4 class="wb-inv">Download Options</h4>#}
+{#                    <details open>#}
+{#                        <summary><h4 class="h4">Download Options</h4></summary>#}
+{#                        <p class="mrgn-tp-md">Use the buttons below to download the data</p>#}
+                        <div class="form-group text-center" style="margin-top: 25px">
                             <button href="#" role="button" data-export="export"
-                                    style="width:300px"
-                                    class="btn btn-primary" id="filteredTableDownload"><span
+                                    style="width:300px; border-color: transparent"
+                                    class="btn btn-success" id="filteredTableDownload"><span
                                     class="glyphicon glyphicon-cloud-download"></span> Displayed data (.csv)
                             </button>
                             <a download href="../static/data/data_table-en.csv" role="button"
-                               style="width:300px; margin-left: 10px" class="btn btn-primary"
+                               style="width:300px; margin-left: 10px; border-color: transparent"
+                               class="btn btn-success"
                                id="filteredTableDownload"><span
                                     class="glyphicon glyphicon-cloud-download"></span> All data (.csv)
                             </a>
                         </div>
-                    </details>
-                </div>
+{#                    </details>#}
+{#                </div>#}
 
             </div>
         </div>
@@ -694,6 +685,17 @@
 
     </section>
 
+
+    <div class="row">
+        <section class="alert alert-info">
+            <p>
+                For more information on CCHS - Nutrition, please consult the
+                <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/reference-guide-understanding-using-data-2015.html">Reference
+                    Guide to Understanding and Using the Data</a> and the <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html">Statistical
+                Methodology Guide</a>.
+            </p>
+        </section>
+    </div>
 
     <div class="pagedetails">
         <div class="row">
