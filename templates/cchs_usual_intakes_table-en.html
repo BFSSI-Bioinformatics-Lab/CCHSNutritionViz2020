@@ -361,8 +361,9 @@
                                     <ul>
                                         <li class="checkbox">
                                             <label for="dt_age">
-                                                <input id="dt_age" class="dt_age dt_age_both"
-                                                       type="checkbox" name="dt_age" data-column="3"
+                                                <input id="dt_age_all" class="dt_age dt_age_both"
+                                                       type="checkbox"
+                                                       name="dt_age_all" data-column="3"
                                                        value="">All age groups
                                             </label>
                                         </li>
@@ -872,11 +873,37 @@
 
     $("input[value='Both']").click(function() {
         $(".dt_age").prop('disabled', $(this).is(":checked"));
+        if($(this).is(":checked") && $('input[value="Female"], input[value="Male"]').is(":checked")){
+            $(".dt_age, .dt_age_both").prop('disabled',false);
+        }
     });
 
     $('input[value="Female"], input[value="Male"]').click(function() {
-        $('.dt_age_both').prop('disabled', $(this).prop("checked"));
+        $('.dt_age_both').prop('disabled', $(this).is(":checked"));
+        if($(this).is(":checked") && $('input[value="Both"]').is(":checked")){
+            $(".dt_age, .dt_age_both").prop('disabled',false);
+        }
     });
+    // jquery to check and uncheck ages
+    // if "all age groups" check them all boxes will be checked and viceversa
+    $("#dt_age_all").change(function () {
+        $("input[name=dt_age]").prop('checked', $(this).prop("checked"));
+        $("input[name=dt_age_both]").prop('checked', $(this).prop("checked"));
+    });
+    // If one of the :other ages" is uncheck then "all age groups" is unchecked
+    $("input[name=dt_age]").change(function () {
+      if($("input[name=dt_age]").length===$("input[name=dt_age]:checked").length)
+        $("#dt_age_all").prop('checked', true);
+      else
+        $("#dt_age_all").prop('checked', false);
+    });
+    $("input[name=dt_age_both]").change(function () {
+      if($("input[name=dt_age_both]").length===$("input[name=dt_age_both]:checked").length)
+        $("#dt_age_all").prop('checked', true);
+      else
+        $("#dt_age_all").prop('checked', false);
+    });
+
     // reset "disabled" checkboxes when reset button is clicked
     $(".reset").click(function() {
         $(".dt_age, .dt_age_both").prop('disabled', false);
