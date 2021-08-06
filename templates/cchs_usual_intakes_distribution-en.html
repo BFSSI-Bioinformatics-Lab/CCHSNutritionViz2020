@@ -199,7 +199,12 @@
                 class="text-center"
                 style="margin-top: 50px; margin-bottom: 30px"></h4>
             <table class="wb-tables table table-striped table-hover table-condensed" aria-live="polite"
-                   id="distribution-datatable" data-wb-tables='{"scrollX": true, "searching": false, "processing": true,
+                   id="distribution-datatable"
+                   data-wb-tables='{
+                   "scrollX": true,
+                   "searching": false,
+                   "processing": true,
+                   "lengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All"]],
                    "columns":[
                         {"data":"Nutrient/Item (unit)"},
                         {"data":"Reg_Prov"},
