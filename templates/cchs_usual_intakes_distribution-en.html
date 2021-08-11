@@ -177,7 +177,7 @@
 
                 <br>
 
-                <button class="btn btn-sm btn-success" id="saveChart"><span
+                <button class="btn btn-sm btn-success" id="saveChart" onclick="downloadSVG()"><span
                         class="glyphicon glyphicon-cloud-download"></span> Save graph (.png)
                 </button>
 
@@ -490,6 +490,7 @@
 <![endif]-->
 <script src="../static/GCWeb/js/theme.min.js"></script>
 <script src="../static/js/distribution-en.js"></script>
+<script src="../static/js/saveSvgAsPng.js"></script>
 
 <script>
     jQuery.fn.tableToCSV = function () {
@@ -540,6 +541,12 @@
     $("#nutrientTableDownload").click(function () {
         $("#distribution-datatable").tableToCSV()
     })
+
+    //download chart
+    function downloadSVG() {
+        saveSvgAsPng(d3.select('#svg-container').node(), 'curve.png',{ scale:1,
+            backgroundColor:'#fff'});
+    }
 </script>
 </body>
 </html>

@@ -16,10 +16,12 @@ const colourRange = ['#FDE725', '#238A8F', '#440154'];
 
 const svg = svgContainer
     .append("svg")
+    .attr("id", "svg-container")
     .style("display", "block")
     .attr("width", w + margin.left + margin.right)
     .attr("height", h + margin.top + margin.bottom)
     .append("g")
+    .attr("id", "svg-map")
     .attr("transform",
         "translate(" + margin.left + "," + margin.top + ")");
 
@@ -300,7 +302,7 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
             // Legend setup
             let svgContainer = d3.select("#geolegend");
             let key = svgContainer
-                .append("svg")
+                .append("svg") //.append("g") // if the key is the svg-map to have legend inside
                 .style("display", "block")
                 .attr("width", (w / 1.5) + 40)
                 .attr("height", (h / 12) + 40)

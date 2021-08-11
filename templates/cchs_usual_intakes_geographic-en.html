@@ -173,7 +173,8 @@
                             </div>
                         </fieldset>
                         <br>
-                        <button class="btn btn-sm btn-success" id="saveChart"><span
+                        <button class="btn btn-sm btn-success" id="saveChart"
+                        onclick="downloadSVG()"><span
                             class="glyphicon glyphicon-cloud-download"></span> Save graph (.png)
                         </button>
                     </div>
@@ -214,7 +215,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-7 col-md-7 col-sm-12" style="overflow:visible">
+            <div id="geo-figure" class="col-lg-7 col-md-7 col-sm-12" style="overflow:visible">
                 <div id="geochart" align="center"></div>
                 <div id="geolegend" style="overflow:visible" align="center"></div>
 
@@ -451,6 +452,7 @@
 <script src="../static/js/textures.js"></script>
 
 <script src="../static/js/geochart-en.js"></script>
+<script src="../static/js/saveSvgAsPng.js"></script>
 
 <script>
     jQuery.fn.tableToCSV = function () {
@@ -501,6 +503,14 @@
     $("#nutrientTableDownload").click(function () {
         $("#nutrientTable").tableToCSV()
     })
+
+    //download chart
+    function downloadSVG() {
+        saveSvgAsPng(d3.select('#svg-container').node(), 'geo.png',{ scale:1,
+            backgroundColor:'#fff'});
+    }
+
+
 </script>
 
 </body>
