@@ -173,7 +173,8 @@
                             </div>
                         </fieldset>
                         <br>
-                        <button class="btn btn-sm btn-success" id="saveChart"><span
+                        <button class="btn btn-sm btn-success" id="saveChart"
+                        onclick="downloadSVG()"><span
                             class="glyphicon glyphicon-cloud-download"></span> Save graph (.png)
                         </button>
                     </div>
@@ -214,7 +215,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-7 col-md-7 col-sm-12" style="overflow:visible">
+            <div id="geo-figure" class="col-lg-7 col-md-7 col-sm-12" style="overflow:visible">
                 <div id="geochart" align="center"></div>
                 <div id="geolegend" style="overflow:visible" align="center"></div>
 
@@ -257,7 +258,8 @@
 
                 <caption class="wb-inv">
                     <br>
-                    <button class="btn btn-sm btn-success" id="nutrientTableDownload"><span
+                    <button href="#" role="button" data-export="export"
+                            class="btn btn-sm btn-success" id="nutrientTableDownload"><span
                             class="glyphicon glyphicon-cloud-download"></span> Download table (.csv)
                     </button>
                 </caption>
@@ -450,6 +452,66 @@
 <script src="../static/js/textures.js"></script>
 
 <script src="../static/js/geochart-en.js"></script>
+<script src="../static/js/saveSvgAsPng.js"></script>
+
+<script>
+    jQuery.fn.tableToCSV = function () {
+        let clean_text = function (text) {
+            text = text.replace(/"/g, '\\"').replace(/'/g, "\\'");
+            return '"' + text + '"';
+        };
+
+        $(this).each(function () {
+            let table = $(this);
+            let caption = $(this).find('caption').text();
+            let title = [];
+            let rows = [];
+
+            $(this).find('tr').each(function () {
+                let data = [];
+                $(this).find('th').each(function () {
+                    let text = clean_text($(this).text());
+                    title.push(text);
+                });
+                $(this).find('td').each(function () {
+                    let text = clean_text($(this).text());
+                    data.push(text);
+                });
+                data = data.join(",");
+                rows.push(data);
+            });
+            title = title.join(",");
+            rows = rows.join("\n");
+
+            let csv = title + rows;
+            let uri = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv);
+            let download_link = document.createElement('a');
+            download_link.href = uri;
+            let ts = new Date().getTime();
+            if (caption == "") {
+                download_link.download = ts + ".csv";
+            } else {
+                download_link.download = caption + "-" + ts + ".csv";
+            }
+            document.body.appendChild(download_link);
+            download_link.click();
+            document.body.removeChild(download_link);
+        });
+    };
+
+    // Add download functionality for Filtered Data button
+    $("#nutrientTableDownload").click(function () {
+        $("#nutrientTable").tableToCSV()
+    })
+
+    //download chart
+    function downloadSVG() {
+        saveSvgAsPng(d3.select('#svg-container').node(), 'geo.png',{ scale:1,
+            backgroundColor:'#fff'});
+    }
+
+
+</script>
 
 </body>
 </html>

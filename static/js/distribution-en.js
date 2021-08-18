@@ -153,6 +153,7 @@ $(document).on("wb-ready.wb", function (event) {
         let svgContainer = d3.select("#distribution-chart");
         let svg = svgContainer
             .append("svg")
+            .attr("id", "svg-container")
             .attr("width", w + margin.left + margin.right)
             .attr("height", h + margin.top + margin.bottom)
             .append("g")
