@@ -448,7 +448,11 @@ $(document).on("wb-ready.wb", function (event) {
             let keysToKeep = ['Nutrient/Item (unit)', 'Reg_Prov', 'Sex', 'Age (years)', 'n',
                 'Mean', 'SE_Mean','P5', 'P10','P25', 'P50', 'P75', 'P90', 'P95']
 
-            const tableDataReduced = tableData.map(e => {
+            let tableDataCanada = tableData.filter( function (e) {
+                return e.Reg_Prov === "Canada excluding territories"
+            }); console.log(tableDataCanada)
+
+            const tableDataReduced = tableDataCanada.map(e => {
                 const obj = {};
                 keysToKeep.forEach(k => obj[k] = e[k])
                 return obj;
