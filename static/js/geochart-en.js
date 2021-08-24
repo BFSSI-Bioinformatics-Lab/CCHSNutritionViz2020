@@ -75,7 +75,7 @@ const ageList = [
     '1 to 8 years',
     '9 to 18 years',
     '19 years and over',
-].sort();
+];
 
 const sexList = [
     'Female',
@@ -379,7 +379,7 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                 if (selectedSex === 'Male' || selectedSex === 'Female') {
                     ageToDisplay = ['19 years and over']
                 } else {
-                    ageToDisplay = ['19 years and over', '1 to 8 years', '9 to 18 years'].sort()
+                    ageToDisplay = ['1 to 8 years', '9 to 18 years', '19 years and over']
                 }
 
                 // Set nutrients/sex to display by selected age
