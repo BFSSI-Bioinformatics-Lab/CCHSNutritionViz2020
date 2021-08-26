@@ -450,7 +450,7 @@ $(document).on("wb-ready.wb", function (event) {
 
             let tableDataCanada = tableData.filter( function (e) {
                 return e.Reg_Prov === "Canada excluding territories"
-            }); console.log(tableDataCanada)
+            }); //console.log(tableDataCanada)
 
             const tableDataReduced = tableDataCanada.map(e => {
                 const obj = {};

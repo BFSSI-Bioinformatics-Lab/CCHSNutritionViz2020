@@ -646,11 +646,12 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                 });
 
                 // Update table title
-                if (sex === 'Males and females combined') {
-                    document.getElementById('table-title').innerHTML = `Percentiles of ${nutrient.toLowerCase()} usual intake, ${sex.toLowerCase()} sexes, age ${age}, Canada, 2015`;
-                } else {
-                    document.getElementById('table-title').innerHTML = `Percentiles of ${nutrient.toLowerCase()} usual intake, ${sex.toLowerCase()}, age ${age}, Canada, 2015`;
-                }
+                //if (sex === 'Males and females combined') {
+                document.getElementById('table-title').innerHTML = chartTitleText
+                //} else {
+                    //document.getElementById('table-title').innerHTML = `Percentiles of
+                // ${nutrient.toLowerCase()} usual intake, ${sex.toLowerCase()}, age ${age}, Canada, 2015`;
+                //}
 
                 // Update description of chart
                 if (sex === 'Males and females combined') {
