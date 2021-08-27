@@ -1,3 +1,92 @@
+const nutrientFacts = {
+    'Calcium': `N/A`,
+
+    'Folate': `
+    <p>Folate is a generic term that includes the naturally occurring form found in food and folic acid found in supplements and fortified foods. The requirements for folate are based on the amount of dietary folate equivalents (DFEs) needed to maintain red blood cell folate concentrations. DFEs adjust for differences in absorption between naturally-occurring food folate and synthetic folic acid. While there appears to be a relatively high prevalence of inadequate intakes of folate (5.7 to 44.2%), red blood cell folate measures, an indicator of folate status, suggest a very low prevalence of folate deficiency in the Canadian population.<super>1, 2</super></p>
+    <p>Women capable of becoming pregnant require special consideration when it comes to folate intake. To reduce the risk of neural tube defects, women who could become pregnant should consume 400 µg of folic acid per day in addition to the amount of folate in a healthy diet. Red blood cell folate measures suggest that some Canadian women of childbearing age have levels below that considered optimal for greatest reduction of risk of neural tube defects.<super>1,2</super></p>
+    <p><strong>References:</strong></p> 
+    <ol>
+        <li>
+        Statistics Canada. Table  13-10-0336-01   Nutritional status of the household population. DOI:   https://doi.org/10.25318/1310033601-eng
+        </li>
+        <li>Colapinto, Cynthia K., Deborah L. O’Connor and Mark S. Tremblay. 2011. "Folate status of the population in the Canadian Health Measures Survey." Canadian Medical Association Journal. Vol. 183, no. 2. February. pp. E100 to E106.
+        http://www.cmaj.ca/content/183/2/E100.full.pdf+html
+        </li>
+    </ol>`,
+
+    'Total dietary fibre': `
+    <p>Total dietary fibre: Although the Institute of Medicine has established an Adequate Intake 
+    (AI) for total dietary fibre, no comparison is presented in the table (IOM, 2005). In addition 
+    to the fact that the AI for any nutrient has limited uses in assessing groups 
+    (Health Canada, 2017), the AI for dietary fibre was determined in relation to coronary heart 
+    disease risk. Health Canada’s definition for dietary fibre recognizes the role that fibre 
+    plays in supplying fermentation products to colonocytes and on laxation (Health Canada, 2010). 
+    No DRIs have been established for these effects. For more information on the methods used 
+    to analyze dietary fibre for this survey, please refer to the 
+     <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/healthy-eating/nutrient-data/canadian-nutrient-file-compilation-canadian-food-composition-data-users-guide.html" target="_blank">Canadian Nutrient File – Users Guide</a></p>
+    <p><strong>References:</strong></p>
+    <ol>
+       <li>IOM (Institute of Medicine). Dietary Reference Intakes for energy, carbohydrate, fibre, fat, fatty acids, cholesterol, protein, and amino acids (Macronutrients). 2005. Food and Nutrition Board, Institute of Medicine. The National Academies Press, Washington, DC.</li>
+       <li>Health Canada. Reference Guide to Understanding and Using the Data - 2015 Canadian Community Health Survey- Nutrition. 2017. Available at: https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/reference-guide-understanding-using-data-2015.html</li>
+       <li>Health Canada. Proposed Policy: Definition and Energy Value for Dietary Fibre. Food Directorate, Health Products and Food Branch, Health Canada. 2010. Available at: https://www.canada.ca/en/health-canada/services/food-nutrition/public-involvement-partnerships/proposed-policy-definition-energy-value-dietary-fibre/consultation.html</li>
+    </ol>`,
+
+    'Iron': `Iron inadequacy was estimated using the full probability method as described in section 2.3.4 of the <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html" target="_blank">Methodology Guide.</a>`,
+    'Magnesium': `N/A`,
+    'Percentage of total energy intake from fat': `
+        <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html" target="_blank">Canada’s Dietary Guidelines</a> recommend that Canadians consume less than 10% of total energy intake from saturated fat. 
+    `,
+    'Percentage of total energy intake from carbohydrates': `
+    <p>The interpretation of self-reported energy intake should be done with caution as energy intake tends to be underestimated by survey respondents. The Institute of Medicine (IOM) suggests using indicators of relative body weight, such as the Body Mass Index (BMI), as markers of energy intake adequacy within groups. Statistics Canada has released 2015 CCHS – Nutrition results for measured BMI in adults<super>1</super> and children<super>2</super>. </p>
+    <p><strong>References:</strong></p>
+    <ol>
+        <li>Statistics Canada.  Table  13-10-0794-01   Measured adult body mass index (BMI) (World Health Organization classification), by age group and sex, Canada and provinces, Canadian Community Health Survey – Nutrition. DOI: <a href="https://doi.org/10.25318/1310079401-eng">https://doi.org/10.25318/1310079401-eng</a></li>
+        <li>Statistics Canada.  Table  13-10-0795-01   Measured children and youth body mass index (BMI) (World Health Organization classification), by age group and sex, Canada and provinces, Canadian Community Health Survey – Nutrition. DOI:   <a href="https://doi.org/10.25318/1310079501-eng">https://doi.org/10.25318/1310079501-eng</a></li>
+    </ol>`,
+    'Percentage of total energy intake from protein': `
+    <p>The interpretation of self-reported energy intake should be done with caution as energy intake tends to be underestimated by survey respondents. The Institute of Medicine (IOM) suggests using indicators of relative body weight, such as the Body Mass Index (BMI), as markers of energy intake adequacy within groups. Statistics Canada has released 2015 CCHS – Nutrition results for measured BMI in adults<super>1</super> and children<super>2</super>. </p>
+    <p><strong>References:</strong></p>
+    <ol>
+        <li>Statistics Canada.  Table  13-10-0794-01   Measured adult body mass index (BMI) (World Health Organization classification), by age group and sex, Canada and provinces, Canadian Community Health Survey – Nutrition. DOI: <a href="https://doi.org/10.25318/1310079401-eng">https://doi.org/10.25318/1310079401-eng</a></li>
+        <li>Statistics Canada.  Table  13-10-0795-01   Measured children and youth body mass index (BMI) (World Health Organization classification), by age group and sex, Canada and provinces, Canadian Community Health Survey – Nutrition. DOI:   <a href="https://doi.org/10.25318/1310079501-eng">https://doi.org/10.25318/1310079501-eng</a></li>
+    </ol>`,
+    'Potassium': `N/A`,
+    'Total energy intake': `
+    <p>The interpretation of self-reported energy intake
+        should be done with caution as energy intake tends to be underestimated by survey
+        respondents. The Institute of Medicine (IOM) suggests using indicators of relative
+        body weight, such as the Body Mass Index (BMI), as markers of energy intake adequacy
+        within groups. Statistics Canada has released 2015 CCHS – Nutrition results for
+        measured BMI in <a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310079401" target="_blank">adults</a><sup>1</sup> 
+        and <a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310079501" target="_blank">children<sup>2</sup>.</a>
+    </p>
+    <p><strong>References:</strong></p>
+    <ol>
+        <li>Statistics Canada.  Table  13-10-0794-01   Measured adult body mass index (BMI) (World Health Organization classification), by age group and sex, Canada and provinces, Canadian Community Health Survey – Nutrition. DOI: <a href="https://doi.org/10.25318/1310079401-eng">https://doi.org/10.25318/1310079401-eng</a></li>
+        <li>Statistics Canada.  Table  13-10-0795-01   Measured children and youth body mass index (BMI) (World Health Organization classification), by age group and sex, Canada and provinces, Canadian Community Health Survey – Nutrition. DOI:   <a href="https://doi.org/10.25318/1310079501-eng">https://doi.org/10.25318/1310079501-eng</a></li>
+    </ol>`,
+    'Sodium': `<a href="https://www.canada.ca/en/health-canada/services/publications/food-nutrition/sodium-intake-canadians-2017.html" target="_blank">Click here for more information on the Sodium Intake of Canadians.</a>`,
+    'Vitamin A': `No prevalence of intakes above the UL are shown for vitamin A. The UL for vitamin A applies to preformed vitamin A only, and those estimates had not yet been conducted at the time these tables were produced.`,
+    'Vitamin B6': `N/A`,
+    'Vitamin C': `N/A`,
+    'Vitamin D': `
+<p><strong>Estimates of the prevalence of inadequate intakes of vitamin D from food must be interpreted with caution.</strong> </p>
+<p>Vitamin D is unique as it can also be synthesized by the body from sunlight (UV radiation). In addition, vitamin D intake 
+from supplements has not been considered in this assessment. While there appears to be a high prevalence of inadequate 
+intakes of vitamin D from dietary sources, available clinical measures do not suggest wide-spread vitamin D deficiency
+ in the Canadian population (<a href="https://www150.statcan.gc.ca/n1/pub/82-003-x/2010001/article/11131-eng.pdf" target="_blank">Langlois et al., Health Reports, 2010</a>;
+  <a href="https://pubmed.ncbi.nlm.nih.gov/21593503-the-vitamin-d-status-of-canadians-relative-to-the-2011-dietary-reference-intakes-an-examination-in-children-and-adults-with-and-without-supplement-use/" target="_blank">Whiting et al., Am J Clin Nutr. 2011)</a>.
+   Vitamin D status in some sub-populations, however, may warrant further consideration.
+   </p>
+   <p><strong>References:</strong></p>
+   <ol>
+        <li>Langlois K, Greene-Finestone L, Little J, Hidiroglou N, Whiting S. Vitamin D status of Canadians as measured in the 2007 to 2009 Canadian Health Measures Survey. Health Rep. 2010;21(1):47–55.</li>
+        <li>Whiting SJ, Langlois KA, Vatanparast H, Greene-Finestone LS. The vitamin D status of Canadians relative to the 2011 Dietary Reference Intakes: an examination in children and adults with and without supplement use. Am J Clin Nutr. 2011;94(1):128–135. doi:10.3945/ajcn.111.013268</li>
+        <li>Statistics Canada. Canadian Health Measures Survey: Non-environmental laboratory and medication data, 2016 and 2017. The Daily. 2019. Available from: https://www150.statcan.gc.ca/n1/daily-quotidien/190206/dq190206c-eng.htm</li>
+   </ol>`,
+    'Zinc': `N/A`
+};
+
 $(document).on("wb-ready.wb", function (event) {
     //Width and height
     const margin = {top: 120, right: 80, bottom: 60, left: 80};
@@ -726,6 +815,15 @@ $(document).on("wb-ready.wb", function (event) {
             }
             drawLimit();
             updateDataTable(tableData, sex, nutrient, age);
+
+            // Update nutrient facts disclaimer
+            let stripNutrient = nutrient.replace(/ *\([^)]*\) */g, "");
+            d3.select('#nutrient-notes-header').html(
+                `<h3>Additional notes for ${stripNutrient}</h3>`
+            )
+            d3.select('#nutrient-notes').html(`
+                <p>${nutrientFacts[stripNutrient]}</p>
+            `);
 
             //Update table title
             //let tableTitle = document.getElementById('table-title').innerHTML
