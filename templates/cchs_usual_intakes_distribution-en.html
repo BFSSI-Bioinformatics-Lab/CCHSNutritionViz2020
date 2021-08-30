@@ -151,6 +151,14 @@
     <section>
         <div class="row">
             <div class="col-lg-4">
+                <section class="alert alert-info">
+                    <h3>About the graph:</h3>
+                    <p>
+                        The usual intake data are presented in a probability distribution curves.
+                        This type of graph shows the range of intakes in the population and
+                        proportion of the population with different levels of intake in Canada.
+                    </p>
+                </section>
 
 
                 <!--{# Dropdown menus for filtering chart data #}-->
@@ -195,10 +203,16 @@
         </div>
 
         <div class="row">
+            <div id="nutrient-notes-header"></div>
+            <div id="nutrient-notes"></div>
+        </div>
+
+        <div class="row">
             <h4 id="table-title"
                 class="text-center"
                 style="margin-top: 50px; margin-bottom: 30px"></h4>
-            <table class="wb-tables table table-striped table-hover table-condensed" aria-live="polite"
+            <table class="wb-tables table table-striped table-hover table-condensed text-center"
+                   aria-live="polite"
                    id="distribution-datatable"
                    data-wb-tables='{
                    "scrollX": true,
@@ -309,10 +323,73 @@
                 <h3>Notes & Legend</h3>
                 <table class="table table-condensed table-responsive">
                     <tbody>
-                    <tr>
-                        <td><strong>Data Source</strong></td>
-                        <td>Statistics Canada, Canadian Community Health Survey (CCHS) - Nutrition, 2015, Share
+                    <tr >
+                        <td style=" padding-top: 15px; padding-bottom:10px "><strong>Data
+                            Source</strong></td>
+                        <td style=" padding-top: 15px; padding-bottom:10px ">Statistics Canada, Canadian Community Health Survey (CCHS) -
+                            Nutrition, 2015, Share
                             Files.
+                        </td>
+                    </tr>
+                    <tr >
+                        <td style="min-width: 150px; padding-top: 15px; padding-bottom:10px">
+                            <strong>About the graph</strong></td>
+                        <td style=" padding-top: 15px; padding-bottom:10px ">
+                            <p>
+                            Along the x-axis, we see the usual intake level for the selected
+                            nutrient. If a vertical line is drawn from a certain level of intake,
+                            the area under the curve to the left of this line represents the
+                            proportion of the population with usual intakes less than or equal to
+                            that amount. The area under the curve to the right of the line
+                            represents the proportion of the population with usual intakes above
+                            that amount.
+                            </p>
+                            <p>
+                               For several nutrients, Dietary Reference Intake (DRI) values have
+                                been established and can be used to assess healthy populations for
+                                inadequate or excessive intakes. When available, DRIs are
+                                displayed on the graph. Hover over the limit label to display
+                                information on the proportion of the population with intakes above
+                                and below that limit.
+                            </p>
+                            <p>
+                                Please refer to the “About the data” tab for detailed notes that
+                                apply to all of the tables and graphs in the Usual Intake Data Tool.
+                            </p>
+                            <p>
+                                Relative probability density estimates were generated from the
+                                percentiles of usual intake data set using a Gaussian Kernel
+                                density estimation method.
+                            </p>
+                            <p>
+                                <strong>E:</strong> Data with a coefficient of variation (CV) from 16.6% to 33
+                                .3%;
+                                interpret with caution.
+                            </p>
+                            <p><b><3:</b> Data with a coefficient of variation (CV) greater than 33.3%
+                                with a 95% confidence interval entirely between 0 and 3%;
+                                interpret with caution.
+                            </p>
+                            <p><b>F:</b> Data with a coefficient of variation (CV) greater than 33.3%
+                                with a 95% confidence interval not entirely between 0 and 3%;
+                                suppressed due to extreme sampling variability.
+                            </p>
+                            <p><b>AI:</b> Adequate Intake</p>
+                            <p><b>AMDR:</b> Acceptable Macronutrient Distribution Range</p>
+                            <p><b>CDRR :</b> Chronic Disease Risk Reduction Intake Level</p>
+                            <p><b>d:</b> Day</p>
+                            <p><b>DFE:</b> Dietary folate equivalent</p>
+                            <p><b>DRI:</b> Dietary Reference Intake</p>
+                            <p><b>EAR:</b> Estimated Average Requirement</p>
+                            <p><b>g:</b> Gram</p>
+                            <p><b>kcal:</b> Kilocalorie</p>
+                            <p><b>mcg:</b> Microgram</p>
+                            <p><b>mg:</b> Milligram</p>
+                            <p><b>NE:</b> Niacin equivalent</p>
+                            <p><b>P:</b> Percentile, e.g. 'P95' describes the 95th percentile.</p>
+                            <p><b>RAE:</b> Retinol activity equivalent</p>
+                            <p><b>SE:</b> Standard Error</p>
+                            <p><b>UL:</b> Tolerable Upper Intake Level</p>
                         </td>
                     </tr>
                     </tbody>
