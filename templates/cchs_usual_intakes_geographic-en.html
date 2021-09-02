@@ -189,7 +189,7 @@
                                 Hover your cursor over a region on the map for
                                 additional detail.</i></div>
                         </div>
-                        <div class="row">
+                        <div class="row" style="margin-top: 30px">
 
                             {#                        <div class="col-lg-1 col-md-1 col-sm-6">#}
                             {#                            <br><br>#}
@@ -507,7 +507,8 @@
     //download chart
     function downloadSVG() {
         saveSvgAsPng(d3.select('#svg-container').node(), 'geo.png',{ scale:1,
-            backgroundColor:'#fff'});
+            backgroundColor:'#fff', height: 800});
+
     }
 
 

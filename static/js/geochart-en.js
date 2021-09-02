@@ -1,7 +1,7 @@
 //Width and height of main map
 const margin = {top: 30, right: 40, bottom: 0, left: 40};
 const w = 580 - margin.left - margin.right;
-const h = 610 - margin.top - margin.bottom;
+const h = 720 - margin.top - margin.bottom;
 
 // Width and height of region tooltip
 const marginRegion = {top: 20, right: 20, bottom: 20, left: 20};
@@ -300,15 +300,16 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
             let path = d3.geoPath().projection(projection);
 
             // Legend setup
-            let svgContainer = d3.select("#geolegend");
+            let svgContainer = d3.select("#svg-container");
             let key = svgContainer
-                .append("svg") //.append("g") // if the key is the svg-map to have legend inside
+                .append("g") //.append("g") // if the key is the svg-map to have legend inside
                 .style("display", "block")
                 .attr("width", (w / 1.5) + 40)
                 .attr("height", (h / 12) + 40)
                 .append("g")
                 .attr("transform",
-                    "translate(" + 10 + "," + 10 + ")");
+                    "translate(" + (w / 4) + "," + (h-60) + ")"); // "translate(" + 10 + "," +
+        // 10 + ")");
 
             let legend = key.append("defs")
                 .append("svg:linearGradient")
@@ -320,6 +321,20 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                 .attr("spreadMethod", "pad");
 
             const chartTitle = svg.append("g").attr("class", "chart-title");
+
+            // Add data source under map
+            const mapSource = d3.select("#svg-container")
+                .append('g').append('text')
+                .style("text-anchor", "middle")
+                .attr("x", function (d) {
+                        return w / 2 + margin.left;
+                    })
+                    .attr("y", function (d) {
+                        return h+65;
+                    })
+                .text('Data Source: Statistics Canada, 2015 Canadian Community Health Survey ' +
+                    '- Nutrition, 2015.')
+                .call(wrap, w);
 
             updateData();
 
@@ -491,7 +506,7 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                         return w / 2;
                     })
                     .attr("y", function (d) {
-                        return 0;
+                        return 10;
                     })
                     .text(chartTitleText)
                     .call(wrap, w); // wrap the text in <= 30 pixels
@@ -676,8 +691,10 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                 // Set text
                 d3.select("#region-detail-text").html(`
                     <div class="container-fluid">
+<!--                        <div class="row"><strong>Canada excluding territories: </strong> ${activeRegion}</div>-->
                         <div class="row"><strong>Region: </strong> ${activeRegion}</div>
-                        <div class="row"><strong>% ${driObject['prefix']} ${driObject['dri_type']}: </strong> ${d.properties.percentage} (±${d.properties.percentage_se})</div>
+                        <div class="row"><strong>% ${driObject['prefix']} ${driObject['dri_type']}:
+                         </strong> ${d.properties.percentage} (±${d.properties.percentage_se})</div>
                     </div>
                 `);
 
@@ -779,7 +796,7 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
 
                 key.append("g")
                     .attr("class", "x axis")
-                    .attr("transform", "translate(0,30)")
+                    .attr("transform", "translate(0,40)")
                     .call(xAxis);
 
                 key.append("text")
