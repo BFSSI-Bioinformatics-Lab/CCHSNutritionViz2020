@@ -831,6 +831,20 @@ $(document).on("wb-ready.wb", function (event) {
                 `);
             }
 
+            // Add data source under map
+            const mapSource = d3.select("#svg-container")
+                .append('g').append('text')
+                .style("text-anchor", "middle")
+                .attr("x", function (d) {
+                        return w / 2 + margin.left;
+                    })
+                    .attr("y", function (d) {
+                        return h + margin.top + margin.bottom + 30;
+                    })
+                .text('Data Source: Statistics Canada, 2015 Canadian Community Health Survey ' +
+                    '- Nutrition, 2015.')
+                .call(wrap, w);
+
 
             //Update table title
             //let tableTitle = document.getElementById('table-title').innerHTML
