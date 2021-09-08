@@ -226,8 +226,9 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
         n: +d['n'],
         dri_type: d['DRI type'],
         prefix: d['Prefix-EN'],
-        percentage: +d['Percentage'],
+        percentage: d['Percentage'],
         percentage_se: +d['SE'],
+        flag: d['E flag'],
         ref_value: d['Ref value'],
         ref_value_unit: d['Ref value unit_EN'],
     };
@@ -660,6 +661,7 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                             <td>${d.n}</td>
                             <td>${d.percentage}</td>
                             <td>${d.percentage_se}</td>
+                            <td>${d.flag}</td>
                             <td>${d.dri_type}</td>
                             <td>${d.ref_value}</td>
                             <td>${d.ref_value_unit}</td>
