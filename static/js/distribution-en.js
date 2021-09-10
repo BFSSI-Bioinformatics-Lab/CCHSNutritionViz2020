@@ -537,6 +537,7 @@ $(document).on("wb-ready.wb", function (event) {
                 return e.Reg_Prov === "Canada excluding territories"
             }); //console.log(tableDataCanada)
 
+            // If all provinces wanted then "tableData.map(e => { "
             const tableDataReduced = tableDataCanada.map(e => {
                 const obj = {};
                 keysToKeep.forEach(k => obj[k] = e[k])
