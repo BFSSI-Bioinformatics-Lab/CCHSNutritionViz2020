@@ -1,7 +1,7 @@
 //Width and height of main map
 const margin = {top: 30, right: 40, bottom: 0, left: 40};
 const w = 580 - margin.left - margin.right;
-const h = 610 - margin.top - margin.bottom;
+const h = 720 - margin.top - margin.bottom;
 
 // Width and height of region tooltip
 const marginRegion = {top: 20, right: 20, bottom: 20, left: 20};
@@ -154,7 +154,6 @@ const generateTitle = (sex, age, nutrient) => {
 
 // Grab values from the main data object to populate options from the select dropdown
 const nutrientFacts = {
-    'Calcium': `N/A`,
 
     'Folate': `
     <p>Folate is a generic term that includes the naturally occurring form found in food and folic acid found in supplements and fortified foods. The requirements for folate are based on the amount of dietary folate equivalents (DFEs) needed to maintain red blood cell folate concentrations. DFEs adjust for differences in absorption between naturally-occurring food folate and synthetic folic acid. While there appears to be a relatively high prevalence of inadequate intakes of folate (5.7 to 44.2%), red blood cell folate measures, an indicator of folate status, suggest a very low prevalence of folate deficiency in the Canadian population.<super>1, 2</super></p>
@@ -180,7 +179,7 @@ const nutrientFacts = {
 
 
     'Iron': `Iron inadequacy was estimated using the full probability method as described in section 2.3.4 of the <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html" target="_blank">Methodology Guide.</a>`,
-    'Magnesium': `N/A`,
+
     'Percentage of total energy intake from fat': `
         <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html" target="_blank">Canada’s Dietary Guidelines</a> recommend that Canadians consume less than 10% of total energy intake from saturated fat. 
     `,
@@ -198,11 +197,9 @@ const nutrientFacts = {
         <li>Statistics Canada.  Table  13-10-0794-01   Measured adult body mass index (BMI) (World Health Organization classification), by age group and sex, Canada and provinces, Canadian Community Health Survey – Nutrition. DOI: <a href="https://doi.org/10.25318/1310079401-eng">https://doi.org/10.25318/1310079401-eng</a></li>
         <li>Statistics Canada.  Table  13-10-0795-01   Measured children and youth body mass index (BMI) (World Health Organization classification), by age group and sex, Canada and provinces, Canadian Community Health Survey – Nutrition. DOI:   <a href="https://doi.org/10.25318/1310079501-eng">https://doi.org/10.25318/1310079501-eng</a></li>
     </ol>`,
-    'Potassium': `N/A`,
+
     'Sodium': `<a href="https://www.canada.ca/en/health-canada/services/publications/food-nutrition/sodium-intake-canadians-2017.html" target="_blank">Click here for more information on the Sodium Intake of Canadians.</a>`,
-    'Vitamin A': `N/A`,
-    'Vitamin B6': `N/A`,
-    'Vitamin C': `N/A`,
+
     'Vitamin D': `
 <p><strong>Estimates of the prevalence of inadequate intakes of vitamin D from food must be interpreted with caution.</strong> </p>
 <p>Vitamin D is unique as it can also be synthesized by the body from sunlight (UV radiation). In addition, vitamin D intake 
@@ -217,8 +214,7 @@ intakes of vitamin D from dietary sources, available clinical measures do not su
         <li>Langlois K, Greene-Finestone L, Little J, Hidiroglou N, Whiting S. Vitamin D status of Canadians as measured in the 2007 to 2009 Canadian Health Measures Survey. Health Rep. 2010;21(1):47–55.</li>
         <li>Whiting SJ, Langlois KA, Vatanparast H, Greene-Finestone LS. The vitamin D status of Canadians relative to the 2011 Dietary Reference Intakes: an examination in children and adults with and without supplement use. Am J Clin Nutr. 2011;94(1):128–135. doi:10.3945/ajcn.111.013268</li>
         <li>Statistics Canada. Canadian Health Measures Survey: Non-environmental laboratory and medication data, 2016 and 2017. The Daily. 2019. Available from: https://www150.statcan.gc.ca/n1/daily-quotidien/190206/dq190206c-eng.htm</li>
-   </ol>`,
-    'Zinc': `N/A`
+   </ol>`
 };
 
 d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
@@ -230,8 +226,9 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
         n: +d['n'],
         dri_type: d['DRI type'],
         prefix: d['Prefix-EN'],
-        percentage: +d['Percentage'],
+        percentage: d['Percentage'],
         percentage_se: +d['SE'],
+        flag: d['E flag'],
         ref_value: d['Ref value'],
         ref_value_unit: d['Ref value unit_EN'],
     };
@@ -300,15 +297,16 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
             let path = d3.geoPath().projection(projection);
 
             // Legend setup
-            let svgContainer = d3.select("#geolegend");
+            let svgContainer = d3.select("#svg-container");
             let key = svgContainer
-                .append("svg") //.append("g") // if the key is the svg-map to have legend inside
+                .append("g") //.append("g") // if the key is the svg-map to have legend inside
                 .style("display", "block")
                 .attr("width", (w / 1.5) + 40)
                 .attr("height", (h / 12) + 40)
                 .append("g")
                 .attr("transform",
-                    "translate(" + 10 + "," + 10 + ")");
+                    "translate(" + (w / 4) + "," + (h-60) + ")"); // "translate(" + 10 + "," +
+        // 10 + ")");
 
             let legend = key.append("defs")
                 .append("svg:linearGradient")
@@ -320,6 +318,20 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                 .attr("spreadMethod", "pad");
 
             const chartTitle = svg.append("g").attr("class", "chart-title");
+
+            // Add data source under map
+            const mapSource = d3.select("#svg-container")
+                .append('g').append('text')
+                .style("text-anchor", "middle")
+                .attr("x", function (d) {
+                        return w / 2 + margin.left;
+                    })
+                    .attr("y", function (d) {
+                        return h+65;
+                    })
+                .text('Data Source: Statistics Canada, 2015 Canadian Community Health Survey ' +
+                    '- Nutrition, 2015.')
+                .call(wrap, w);
 
             updateData();
 
@@ -474,12 +486,22 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                 let chartTitleText = generateTitle(sex, age, nutrient);
 
                 // Update nutrient facts disclaimer
-                d3.select('#nutrient-notes-header').html(
-                    `<h3>Additional notes for ${nutrient}</h3>`
-                )
-                d3.select('#nutrient-notes').html(`
-                    <p>${nutrientFacts[nutrient]}</p>
-                `);
+                if (nutrient in nutrientFacts) {
+                    d3.select('#nutrient-notes-header').html(
+                        `<h3>Additional notes for ${nutrient}</h3>`
+                    )
+                    d3.select('#nutrient-notes').html(`
+                        <p>${nutrientFacts[nutrient]}</p>
+                    `);
+                } else {
+                    d3.select('#nutrient-notes-header').html(
+                        ``
+                    )
+                    d3.select('#nutrient-notes').html(`
+                        
+                    `);
+                }
+
 
                 // Update chart title
                 d3.select(".chart-title-text").remove();
@@ -491,7 +513,7 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                         return w / 2;
                     })
                     .attr("y", function (d) {
-                        return 0;
+                        return 10;
                     })
                     .text(chartTitleText)
                     .call(wrap, w); // wrap the text in <= 30 pixels
@@ -639,6 +661,7 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                             <td>${d.n}</td>
                             <td>${d.percentage}</td>
                             <td>${d.percentage_se}</td>
+                            <td>${d.flag}</td>
                             <td>${d.dri_type}</td>
                             <td>${d.ref_value}</td>
                             <td>${d.ref_value_unit}</td>
@@ -676,8 +699,10 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
                 // Set text
                 d3.select("#region-detail-text").html(`
                     <div class="container-fluid">
+<!--                        <div class="row"><strong>Canada excluding territories: </strong> ${activeRegion}</div>-->
                         <div class="row"><strong>Region: </strong> ${activeRegion}</div>
-                        <div class="row"><strong>% ${driObject['prefix']} ${driObject['dri_type']}: </strong> ${d.properties.percentage} (±${d.properties.percentage_se})</div>
+                        <div class="row"><strong>% ${driObject['prefix']} ${driObject['dri_type']}:
+                         </strong> ${d.properties.percentage} (±${d.properties.percentage_se})</div>
                     </div>
                 `);
 
@@ -779,7 +804,7 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
 
                 key.append("g")
                     .attr("class", "x axis")
-                    .attr("transform", "translate(0,30)")
+                    .attr("transform", "translate(0,40)")
                     .call(xAxis);
 
                 key.append("text")
