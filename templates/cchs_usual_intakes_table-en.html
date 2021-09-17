@@ -161,8 +161,10 @@
                     <h4 class="wb-inv">Filtering Options</h4>
                     <details open>
                         <summary><h4 class="h4">Filter Options</h4></summary>
-                        <p class="mrgn-tp-md">Use the filter options below to change the focus of your results in
-                            following data table</p>
+                        <p class="mrgn-tp-md"
+                        style="font-size: 18px">Select the region and/or age group of interest. <br>
+                        <b>Tip: use the search bar on top of the table to look for a specific
+                            nutrient.</b></p>
                         <form class="wb-tables-filter" data-bind-to="dataset-filter">
 {#                            <div class="form-group">#}
                                 {# Note that data-column refers to table column position; 0 indexed #}
@@ -455,8 +457,9 @@
                     <h4 class="wb-inv">Display Options</h4>
                     <details open>
                         <summary><h4 class="h4">Display Options</h4></summary>
-                        <p class="mrgn-tp-md">Use the options below to toggle which columns to display in the table.
-                            Clicking a checkbox will show the selected group.</p>
+                        <p class="mrgn-tp-md"
+                        style="font-size: 18px">Select which data types you would like to display
+                            in the table.</p>
                         <form>
 
                             <div class="form-group">
@@ -495,10 +498,9 @@
                         </form>
                     </details>
                 </div>
-
             </div>
             {# Data table #}
-            <div class="col-md-9">
+            <div class="col-md-9" style="margin-bottom: 10px">
                 <table class="wb-tables table table-striped table-hover table-condensed" aria-live="polite"
                        id="dataset-filter" data-wb-tables='{
                         "bDeferRender": true,
@@ -508,7 +510,7 @@
                         "processing": true,
                         "scrollX": true,
                         {# Modify how long table is (was 30) #}
-                        "scrollY": "50em",
+                        "scrollY": "60em",
                         "ajaxSource": "../static/data/corrected2021_data_table_flattened-en.min.json",
                          {# Modify number of items in table - now starts at 50 #}
                          "lengthMenu": [[ 50, 100, 250, -1], [50, 100, 250, "All"]]
@@ -516,14 +518,14 @@
                     <thead>
                     <tr>
                         <th>Nutrient/Item (unit)</th>
-                        <th>Reg_Prov</th>
+                        <th>Region/ Province</th>
                         <th>Sex</th>
                         <th>Age (years)</th>
                         <th>n</th>
                         <th>Mean</th>
-                        <th>SE_Mean</th>
+                        <th>SE Mean</th>
                         <th>P5</th>
-                        <th>P5_SE</th>
+                        <th>P5 SE</th>
                         <th>P10</th>
                         <th>P10_SE</th>
                         <th>P25</th>
@@ -560,13 +562,14 @@
                     </tr>
                     </thead>
                 </table>
-
+                <br>
                 {# Note: the caption HTML tag appears to break the WET DataTables implementation, so using this element as an alternative #}
                 <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/2015-canadian-community-health-survey-nutrition-food-nutrition-surveillance.html"
                    target="_blank"
                    class="text-center">Data Source: <i>Statistics Canada, 2015 Canadian
                     Community Health Survey -
                     Nutrition, 2015, Share File.</i></a>
+                <br>
 
                 {# Download panel #}
 {#                <div class="row" style="margin-left: 50px; margin-top: 15px">#}
@@ -586,18 +589,33 @@
                                id="filteredTableDownload"><span
                                     class="glyphicon glyphicon-cloud-download"></span> All data (.csv)
                             </a>
+{#                            <a href="https://health.canada.ca/apps/open-data/cchs-escc-nutrition/usual-intakes-en.xlsx"#}
+{#                               style="width:200px; margin-left: 10px; border-color: transparent"#}
+{#                               class="btn btn-success resource-url-analytics"#}
+{#                               target="_blank"><span#}
+{#                                    class="glyphicon glyphicon-cloud-download"></span> All data (#}
+{#                                .xls)#}
+{#                            </a>#}
                         </div>
+                <br>
+                <p>
+                    The full dataset is also available in a formatted excel file on the
+                    <a href="https://open.canada.ca/data/en/dataset/31599960-2c1e-4d90-a9d9-979ad0e1abb4"
+                   target="_blank"
+                   class="text-center"><i>Government of Canada’s Open Data portal.</i></a>
+                </p>
 {#                    </details>#}
 {#                </div>#}
 
             </div>
-        </div>
+    </section>
+    <section>
         <div class="row">
-            <section>
+            <section style="margin-left: 10px">
                 <h3>Notes & Legend</h3>
                 <p><i>Please refer to the “About the data” tab for detailed notes that apply to all of the tables and
                     graphs in the Usual Intake Data Tool.</i></p>
-                <table class="table table-condensed table-responsive">
+                <table class="table table-condensed table-responsive" style="margin-top: 20px">
                     <tbody>
                     <tr>
                         <td><strong>E</strong></td>
@@ -658,6 +676,10 @@
                     <tr>
                         <td><strong>mg</strong></td>
                         <td>Milligram</td>
+                    </tr>
+                    <tr>
+                        <td><strong>n</strong></td>
+                        <td>Sample size</td>
                     </tr>
                     <tr>
                         <td><strong>NE</strong></td>
