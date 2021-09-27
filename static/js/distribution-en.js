@@ -64,7 +64,7 @@ const nutrientFacts = {
         <li>Statistics Canada.  Table  13-10-0794-01   Measured adult body mass index (BMI) (World Health Organization classification), by age group and sex, Canada and provinces, Canadian Community Health Survey – Nutrition. DOI: <a href="https://doi.org/10.25318/1310079401-eng">https://doi.org/10.25318/1310079401-eng</a></li>
         <li>Statistics Canada.  Table  13-10-0795-01   Measured children and youth body mass index (BMI) (World Health Organization classification), by age group and sex, Canada and provinces, Canadian Community Health Survey – Nutrition. DOI:   <a href="https://doi.org/10.25318/1310079501-eng">https://doi.org/10.25318/1310079501-eng</a></li>
     </ol>`,
-    'Sodium': `<a href="https://www.canada.ca/en/health-canada/services/publications/food-nutrition/sodium-intake-canadians-2017.html" target="_blank">Click here for more information on the Sodium Intake of Canadians.</a>`,
+    'Sodium': `Additional information on the <a href="https://www.canada.ca/en/health-canada/services/publications/food-nutrition/sodium-intake-canadians-2017.html" target="_blank">sodium intake of Canadians.</a>`,
     'Vitamin A': `No prevalence of intakes above the UL are shown for vitamin A. The UL for vitamin A applies to preformed vitamin A only, and those estimates had not yet been conducted at the time these tables were produced.`,
     'Vitamin D': `
 <p><strong>Estimates of the prevalence of inadequate intakes of vitamin D from food must be interpreted with caution.</strong> </p>
