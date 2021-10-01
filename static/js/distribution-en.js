@@ -861,9 +861,22 @@ $(document).on("wb-ready.wb", function (event) {
 
             // Update description of chart
             if (sex === 'Both') {
-                document.getElementById('distribution-caption').innerHTML = `A graph displaying the usual intake distribution curve for ${nutrient} in ${sex.toLowerCase()}, age ${age}, with the limit value(s) if applicable.`;
+                document.getElementById('distribution-caption').innerHTML = `A graph 
+                displaying the usual intake distribution curve for ${nutrient} 
+                in ${sex.toLowerCase()}, age ${age}, with the limit value(s) if applicable. 
+                Percentiles of usual intake were statistically transformed so that the data 
+                could be presented as a probability distribution curve. The non-transformed, 
+                percentiles of usual intakes and limit values, if applicable, are displayed in 
+                the table below the graph.” and make it so that it is not displayed on the page 
+                but available to screen readers.`;
             } else {
-                document.getElementById('distribution-caption').innerHTML = `A graph displaying the usual intake distribution curve for ${nutrient} in ${sex.toLowerCase()}s, age ${age}, with the limit value(s) if applicable.`;
+                document.getElementById('distribution-caption').innerHTML = `A graph 
+                displaying the usual intake distribution curve for ${nutrient} 
+                in ${sex.toLowerCase()}s, age ${age}, with the limit value(s) if applicable. Percentiles of usual intake were statistically transformed so that the data 
+                could be presented as a probability distribution curve. The non-transformed, 
+                percentiles of usual intakes and limit values, if applicable, are displayed in 
+                the table below the graph.” and make it so that it is not displayed on the page 
+                but available to screen readers.`;
             }
         }
 
