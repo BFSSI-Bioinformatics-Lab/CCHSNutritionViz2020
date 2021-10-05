@@ -231,27 +231,39 @@
                         {"data":"n"},
                         {"data":"Mean"},
                         {"data":"SE_Mean"},
-                        {"data": "P5"},
-                        {"data": "P10"},
-                        {"data": "P25"},
-                        {"data": "P50"},
-                        {"data": "P75"},
-                        {"data": "P90"},
-                        {"data": "P95"}
-{#                        {"data":"P5"},#}
-{#                        {"data":"P5_SE"},#}
-{#                        {"data":"P10"},#}
-{#                        {"data":"P10_SE"},#}
-{#                        {"data":"P25"},#}
-{#                        {"data":"P25_SE"},#}
-{#                        {"data":"P50"},#}
-{#                        {"data":"P50_SE"},#}
-{#                        {"data":"P75"},#}
-{#                        {"data":"P75_SE"},#}
-{#                        {"data":"P90"},#}
-{#                        {"data":"P90_SE"},#}
-{#                        {"data":"P95"},#}
-{#                        {"data":"P95_SE"}#}
+{#                        {"data": "P5"},#}
+{#                        {"data": "P10"},#}
+{#                        {"data": "P25"},#}
+{#                        {"data": "P50"},#}
+{#                        {"data": "P75"},#}
+{#                        {"data": "P90"},#}
+{#                        {"data": "P95"}#}
+                        {"data":"P5"},
+                        {"data":"P5_SE"},
+                        {"data":"P10"},
+                        {"data":"P10_SE"},
+                        {"data":"P25"},
+                        {"data":"P25_SE"},
+                        {"data":"P50"},
+                        {"data":"P50_SE"},
+                        {"data":"P75"},
+                        {"data":"P75_SE"},
+                        {"data":"P90"},
+                        {"data":"P90_SE"},
+                        {"data":"P95"},
+                        {"data":"P95_SE"},
+                        {"data":"EAR"},
+                        {"data":"% <EAR"},
+                        {"data":"%<EAR_SE"},
+                        {"data":"AI"},
+                        {"data":"% >AI"},
+                        {"data":"%>AI_SE"},
+                        {"data":"UL"},
+                        {"data":"% >UL"},
+                        {"data":"%>UL_SE"},
+                        {"data":"CDRR"},
+                        {"data":"% >CDRR"},
+                        {"data":"%>CDRR_SE"}
                     ]
                    }'>
                 <thead>
@@ -264,28 +276,28 @@
                     <th>Mean</th>
                     <th>SE Mean</th>
                     <th>P5</th>
-{#                    <th>P5_SE</th>#}
+                    <th>P5_SE</th>
                     <th>P10</th>
-{#                    <th>P10_SE</th>#}
+                    <th>P10_SE</th>
                     <th>P25</th>
-{#                    <th>P25_SE</th>#}
+                    <th>P25_SE</th>
                     <th>P50</th>
-{#                    <th>P50_SE</th>#}
+                    <th>P50_SE</th>
                     <th>P75</th>
-{#                    <th>P75_SE</th>#}
+                    <th>P75_SE</th>
                     <th>P90</th>
-{#                    <th>P90_SE</th>#}
+                    <th>P90_SE</th>
                     <th>P95</th>
-{#                    <th>P95_SE</th>#}
-                    {#                    <th>EAR</th>#}
-                    {#                    <th>% &lt;EAR</th>#}
-                    {#                    <th>% &lt;EAR_SE</th>#}
-                    {#                    <th>AI</th>#}
-                    {#                    <th>% &gt;AI</th>#}
-                    {#                    <th>% &gt;AI_SE</th>#}
-                    {#                    <th>UL</th>#}
-                    {#                    <th>% &gt;UL</th>#}
-                    {#                    <th>% &gt;UL_SE</th>#}
+                    <th>P95_SE</th>
+                    <th>EAR</th>
+                    <th>% &lt;EAR</th>
+                    <th>% &lt;EAR_SE</th>
+                    <th>AI</th>
+                    <th>% &gt;AI</th>
+                    <th>% &gt;AI_SE</th>
+                    <th>UL</th>
+                    <th>% &gt;UL</th>
+                    <th>% &gt;UL_SE</th>
                     {#                    <th>AMDR</th>#}
                     {#                    <th>% below AMDR</th>#}
                     {#                    <th>% below AMDR_SE</th>#}
@@ -293,9 +305,9 @@
                     {#                    <th>% within AMDR_SE</th>#}
                     {#                    <th>% above AMDR</th>#}
                     {#                    <th>% above AMDR_SE</th>#}
-                    {#                    <th>CDRR</th>#}
-                    {#                    <th>% &gt;CDRR</th>#}
-                    {#                    <th>% &gt;CDRR_SE</th>#}
+                    <th>CDRR</th>
+                    <th>% &gt;CDRR</th>
+                    <th>% &gt;CDRR_SE</th>
                     {#                    <th>% Inadequacy</th>#}
                     {#                    <th>% Inadequacy_SE</th>#}
                 </tr>
@@ -401,7 +413,7 @@
                                 <li style="margin-bottom: 10px"><strong>n:</strong> Sample size</li>
                                 <li style="margin-bottom: 10px"><strong>NE:</strong> Niacin equivalent</li>
                                 <li style="margin-bottom: 10px"><strong>P:</strong> Percentile, e.g. 'P95' describes the 95th
-                                    percentile.</>
+                                    percentile.</li>
                                 <li style="margin-bottom: 10px"><strong>RAE:</strong> Retinol activity equivalent</li>
                                 <li style="margin-bottom: 10px"><strong>SE:</strong> Standard Error</li>
                                 <li><strong>UL:</strong> Tolerable

@@ -534,8 +534,14 @@ $(document).on("wb-ready.wb", function (event) {
              */
 
             // Only include columns we are interested in displaying
+            // let keysToKeep = ['Nutrient/Item (unit)', 'Reg_Prov', 'Sex', 'Age (years)', 'n',
+            //     'Mean', 'SE_Mean','P5', 'P10','P25', 'P50', 'P75', 'P90', 'P95']
+
             let keysToKeep = ['Nutrient/Item (unit)', 'Reg_Prov', 'Sex', 'Age (years)', 'n',
-                'Mean', 'SE_Mean','P5', 'P10','P25', 'P50', 'P75', 'P90', 'P95']
+                'Mean', 'SE_Mean','P5', "P5_SE", 'P10', "P10_SE",'P25', "P25_SE", 'P50', "P50_SE",
+                'P75', "P75_SE", 'P90', "P90_SE", 'P95', "P95_SE", "EAR", "% <EAR", "%<EAR_SE",
+                "AI", "% >AI", "%>AI_SE", "UL", "% >UL", "%>UL_SE", "CDRR", "% >CDRR", "%>CDRR_SE"]
+
 
             let tableDataCanada = tableData.filter( function (e) {
                 return e.Reg_Prov === "Canada excluding territories"
@@ -544,12 +550,25 @@ $(document).on("wb-ready.wb", function (event) {
             // If all provinces wanted then "tableData.map(e => { "
             const tableDataReduced = tableDataCanada.map(e => {
                 const obj = {};
-                keysToKeep.forEach(k => obj[k] = e[k])
+                keysToKeep.forEach(k => {
+                    obj[k] = e[k].toString()// to string to be able to
+                    // get it
+                })
                 return obj;
+            });//console.log(tableDataReduced.map(e=> Object.values(e)))
+
+            // Get rid of NaN values from % and EAR...
+            const reduced = tableDataReduced.map(e => {
+                keysToKeep.map(k => {
+                    if (e[k]=== 'NaN') {
+                        e[k]= ""
+                    }
+                })
+                return e
             });
-            //console.log(tableDataReduced)
+            //console.log(reduced)
             // Filter data to only values contained in user selection
-            let filteredData = tableDataReduced.filter(function (d) {
+            let filteredData = reduced.filter(function (d) {
                 return d['Sex'] === sex && d['Nutrient/Item (unit)'] === nutrient && d['Age (years)'] === age
             })
 
