@@ -149,7 +149,7 @@ const generateTitle = (sex, age, nutrient) => {
     if (ironBool) {
         return `Percentage of ${ageString}${sexString} with ${adequacyString}, Canada, 2015`
     } else {
-        return `Percentage of ${ageString}${sexString} with a usual intake of ${nutrient.toLowerCase()} ${adequacyString}, Canada, 2015`
+        return `Percentage of ${ageString}${sexString} with a usual intake of ${nutrient} ${adequacyString}, Canada, 2015`
     }
 }
 
