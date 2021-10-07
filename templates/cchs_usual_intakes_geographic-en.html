@@ -236,21 +236,32 @@
                     class="text-center"
                     style="margin-top: 50px; margin-bottom: 30px"></h4>
 
-                <table class="wb-tables table table-condensed table-hover cell-border" id="nutrientTable"
-                       data-wb-tables='{"scrollX" : true, "paging": false, "searching": false, "bInfo": false, "buttons": ["csv"]}'>
+                <table class="wb-tables table table-condensed table-hover cell-border text-center"
+                       id="nutrientTable"
+                       data-wb-tables='{
+                       "scrollX" : true,
+                       "ordering" : false,
+                       "paging": false,
+                       "searching": false,
+                       "bInfo": false,
+                       "buttons": ["csv"]}'>
                     <thead>
                     <tr class="datatable-headers">
-                        <th>Nutrient</th>
-                        <th>Region</th>
-                        <th>Sex</th>
-                        <th>Age (years)</th>
-                        <th>n</th>
-                        <th>Percentage</th>
-                        <th>SE</th>
-                        <th>Flag</th>
-                        <th>DRI type</th>
-                        <th>DRI reference value</th>
-                        <th>DRI reference value unit</th>
+                        <th class="text-center">Nutrient</th>
+                        <th class="text-center">Region</th>
+                        <th class="text-center">Sex</th>
+                        <th class="text-center">Age (years)</th>
+                        <th abbr="Sample size" style="min-width: 60px" class="text-center">n</th>
+                        <th class="text-center order-column">Percentage</th>
+                        <th abbr="Standard Error"
+                        style="min-width: 60px" class="text-center">SE</th>
+                        <th style="min-width: 50px">Flag</th>
+                        <th abbr="Dietary Reference Intake type"
+                        style="min-width: 62px" class="text-center">DRI type</th>
+                        <th abbr="Dietary Reference Intake reference value"
+                        style="min-width: 122px" class="text-center">DRI reference value</th>
+                        <th abbr="Dietary Reference Intake reference value unit"
+                        style="min-width: 134px" class="text-center">DRI reference value unit</th>
                     </tr>
                     </thead>
                     <tbody class="datatable-body">
