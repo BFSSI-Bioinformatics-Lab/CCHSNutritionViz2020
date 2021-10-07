@@ -180,7 +180,10 @@
                 </fieldset>
                 <div style="margin-top: 10px;">
                     <form>
-                        <input type="checkbox" id="checkboxLimit"> Display Dietary Reference Intakes
+                        <label for="limit">
+                            <input type="checkbox" id="checkboxLimit"> Display Dietary Reference Intakes
+                        </label>
+
                     </form>
                 </div>
 
@@ -217,6 +220,8 @@
                    id="distribution-datatable"
                    data-wb-tables='{
                    "scrollX": true,
+                   "paging": false,
+                   "ordering" : false,
                    "searching": false,
                    "processing": true,
                    "lengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All"]],
@@ -228,27 +233,39 @@
                         {"data":"n"},
                         {"data":"Mean"},
                         {"data":"SE_Mean"},
-                        {"data": "P5"},
-                        {"data": "P10"},
-                        {"data": "P25"},
-                        {"data": "P50"},
-                        {"data": "P75"},
-                        {"data": "P90"},
-                        {"data": "P95"}
-{#                        {"data":"P5"},#}
-{#                        {"data":"P5_SE"},#}
-{#                        {"data":"P10"},#}
-{#                        {"data":"P10_SE"},#}
-{#                        {"data":"P25"},#}
-{#                        {"data":"P25_SE"},#}
-{#                        {"data":"P50"},#}
-{#                        {"data":"P50_SE"},#}
-{#                        {"data":"P75"},#}
-{#                        {"data":"P75_SE"},#}
-{#                        {"data":"P90"},#}
-{#                        {"data":"P90_SE"},#}
-{#                        {"data":"P95"},#}
-{#                        {"data":"P95_SE"}#}
+{#                        {"data": "P5"},#}
+{#                        {"data": "P10"},#}
+{#                        {"data": "P25"},#}
+{#                        {"data": "P50"},#}
+{#                        {"data": "P75"},#}
+{#                        {"data": "P90"},#}
+{#                        {"data": "P95"}#}
+                        {"data":"P5"},
+                        {"data":"P5_SE"},
+                        {"data":"P10"},
+                        {"data":"P10_SE"},
+                        {"data":"P25"},
+                        {"data":"P25_SE"},
+                        {"data":"P50"},
+                        {"data":"P50_SE"},
+                        {"data":"P75"},
+                        {"data":"P75_SE"},
+                        {"data":"P90"},
+                        {"data":"P90_SE"},
+                        {"data":"P95"},
+                        {"data":"P95_SE"},
+                        {"data":"EAR"},
+                        {"data":"% <EAR"},
+                        {"data":"%<EAR_SE"},
+                        {"data":"AI"},
+                        {"data":"% >AI"},
+                        {"data":"%>AI_SE"},
+                        {"data":"UL"},
+                        {"data":"% >UL"},
+                        {"data":"%>UL_SE"},
+                        {"data":"CDRR"},
+                        {"data":"% >CDRR"},
+                        {"data":"%>CDRR_SE"}
                     ]
                    }'>
                 <thead>
@@ -257,32 +274,56 @@
                     <th>Region/ Province</th>
                     <th>Sex</th>
                     <th>Age (years)</th>
-                    <th>n</th>
-                    <th>Mean</th>
-                    <th>SE Mean</th>
-                    <th>P5</th>
-{#                    <th>P5_SE</th>#}
-                    <th>P10</th>
-{#                    <th>P10_SE</th>#}
-                    <th>P25</th>
-{#                    <th>P25_SE</th>#}
-                    <th>P50</th>
-{#                    <th>P50_SE</th>#}
-                    <th>P75</th>
-{#                    <th>P75_SE</th>#}
-                    <th>P90</th>
-{#                    <th>P90_SE</th>#}
-                    <th>P95</th>
-{#                    <th>P95_SE</th>#}
-                    {#                    <th>EAR</th>#}
-                    {#                    <th>% &lt;EAR</th>#}
-                    {#                    <th>% &lt;EAR_SE</th>#}
-                    {#                    <th>AI</th>#}
-                    {#                    <th>% &gt;AI</th>#}
-                    {#                    <th>% &gt;AI_SE</th>#}
-                    {#                    <th>UL</th>#}
-                    {#                    <th>% &gt;UL</th>#}
-                    {#                    <th>% &gt;UL_SE</th>#}
+                    <th abbr="Sample size" style="min-width: 60px" class="text-center">n</th>
+                    <th style="min-width: 60px" class="text-center">Mean</th>
+                    <th abbr="Standard Error mean"
+                        style="min-width: 60px" class="text-center">SE Mean</th>
+                    <th abbr="5th percentile"
+                        style="min-width: 60px" class="text-center">P5</th>
+                    <th abbr="5th percentile standard error"
+                        style="min-width: 60px" class="text-center">P5 SE</th>
+                    <th abbr="10th percentile"
+                        style="min-width: 60px" class="text-center">P10</th>
+                    <th abbr="10th percentile"
+                        style="min-width: 70px" class="text-center">P10 SE</th>
+                    <th abbr="25th percentile"
+                        style="min-width: 60px" class="text-center">P25</th>
+                    <th abbr="25th percentile standard error"
+                        style="min-width: 70px" class="text-center">P25 SE</th>
+                    <th abbr="50th percentile"
+                        style="min-width: 60px" class="text-center">P50</th>
+                    <th abbr="50th percentile standard error"
+                        style="min-width: 70px" class="text-center">P50 SE</th>
+                    <th abbr="75th percentile"
+                        style="min-width: 60px" class="text-center">P75</th>
+                    <th abbr="75th percentile standard error"
+                        style="min-width: 70px" class="text-center">P75 SE</th>
+                    <th abbr="90th percentile"
+                        style="min-width: 60px" class="text-center">P90</th>
+                    <th abbr="90th percentile standard error"
+                        style="min-width: 70px" class="text-center">P90 SE</th>
+                    <th abbr="95th percentile"
+                        style="min-width: 60px" class="text-center">P95</th>
+                    <th abbr="95th percentile standard error"
+                        style="min-width: 70px" class="text-center">P95 SE</th>
+                    <th abbr="Estimated Average Requirement"
+                        style="min-width: 60px" class="text-center">EAR</th>
+                    <th abbr="Percent Estimated Average Requirement"
+                        style="min-width: 60px" class="text-center">% &lt;EAR</th>
+                    <th abbr="Percent Estimated Average Requirement standard error"
+                        style="min-width: 70px" class="text-center">% &lt;EAR SE</th>
+                    <th abbr="Adequate Intake"
+                        style="min-width: 60px" class="text-center">AI</th>
+                    <th abbr="Percent Adequate Intake"
+                        style="min-width: 70px" class="text-center">% &gt;AI</th>
+                    <th abbr="Percent Adequate Intake standard error"
+                        style="min-width: 70px" class="text-center">% &gt;AI SE</th>
+                    <th abbr="Tolerable Upper Intake Level"
+                        style="min-width: 60px" class="text-center">UL</th>
+                    <th abbr="Percent Tolerable Upper Intake Level"
+                        style="min-width: 70px" class="text-center">% &gt;UL</th>
+                    <th abbr="Percent Tolerable Upper Intake Level standard error"
+                        style="min-width: 70px" class="text-center">% &gt;UL SE</th>
                     {#                    <th>AMDR</th>#}
                     {#                    <th>% below AMDR</th>#}
                     {#                    <th>% below AMDR_SE</th>#}
@@ -290,9 +331,12 @@
                     {#                    <th>% within AMDR_SE</th>#}
                     {#                    <th>% above AMDR</th>#}
                     {#                    <th>% above AMDR_SE</th>#}
-                    {#                    <th>CDRR</th>#}
-                    {#                    <th>% &gt;CDRR</th>#}
-                    {#                    <th>% &gt;CDRR_SE</th>#}
+                    <th abbr="Chronic Disease Risk Reduction Intake Level"
+                        style="min-width: 70px" class="text-center">CDRR</th>
+                    <th abbr="Percent Chronic Disease Risk Reduction Intake Level"
+                        style="min-width: 70px" class="text-center">% &gt;CDRR</th>
+                    <th abbr="Percent Chronic Disease Risk Reduction Intake Level standard error"
+                        style="min-width: 70px" class="text-center">% &gt;CDRR_SE</th>
                     {#                    <th>% Inadequacy</th>#}
                     {#                    <th>% Inadequacy_SE</th>#}
                 </tr>
@@ -306,7 +350,7 @@
                class="text-center">Data Source: <i>Statistics Canada, 2015 Canadian Community Health Survey -
                 Nutrition, 2015, Share File.</i></a>
 
-            <caption class="wb-inv"><i>* Notes about data go here.</i>
+            <caption class="wb-inv">
                 <br>
                 <br>
                 <button href="#" role="button" data-export="export"
@@ -362,36 +406,49 @@
                                 percentiles of usual intake data set using a Gaussian Kernel
                                 density estimation method.
                             </p>
-                            <p>
-                                <strong>E:</strong> Data with a coefficient of variation (CV) from 16.6% to 33
-                                .3%;
-                                interpret with caution.
-                            </p>
-                            <p><b><3:</b> Data with a coefficient of variation (CV) greater than 33.3%
-                                with a 95% confidence interval entirely between 0 and 3%;
-                                interpret with caution.
-                            </p>
-                            <p><b>F:</b> Data with a coefficient of variation (CV) greater than 33.3%
-                                with a 95% confidence interval not entirely between 0 and 3%;
-                                suppressed due to extreme sampling variability.
-                            </p>
-                            <p><b>AI:</b> Adequate Intake</p>
-                            <p><b>AMDR:</b> Acceptable Macronutrient Distribution Range</p>
-                            <p><b>CDRR :</b> Chronic Disease Risk Reduction Intake Level</p>
-                            <p><b>d:</b> Day</p>
-                            <p><b>DFE:</b> Dietary folate equivalent</p>
-                            <p><b>DRI:</b> Dietary Reference Intake</p>
-                            <p><b>EAR:</b> Estimated Average Requirement</p>
-                            <p><b>g:</b> Gram</p>
-                            <p><b>kcal:</b> Kilocalorie</p>
-                            <p><b>mcg:</b> Microgram</p>
-                            <p><b>mg:</b> Milligram</p>
-                            <p><b>n:</b> Sample size</p>
-                            <p><b>NE:</b> Niacin equivalent</p>
-                            <p><b>P:</b> Percentile, e.g. 'P95' describes the 95th percentile.</p>
-                            <p><b>RAE:</b> Retinol activity equivalent</p>
-                            <p><b>SE:</b> Standard Error</p>
-                            <p><b>UL:</b> Tolerable Upper Intake Level</p>
+                            <ul style="list-style-type: none">
+                                <li style="margin-bottom: 10px">
+                                    <strong>E:</strong> Data with a coefficient of variation (CV)
+                                    from 16.6% to 33.3%; interpret with caution.
+                                </li>
+                                <li style="margin-bottom: 10px">
+                                    <strong><3:</strong> Data with a coefficient of variation (CV)
+                                    greater
+                                    than 33.3%
+                                    with a 95% confidence interval entirely between 0 and 3%;
+                                    interpret with caution.
+                                </li>
+                                <li style="margin-bottom: 10px">
+                                    <strong>F:</strong> Data with a coefficient of variation (CV)
+                                    greater
+                                    than 33.3%
+                                    with a 95% confidence interval not entirely between 0 and 3%;
+                                    suppressed due to extreme sampling variability.
+                                </li>
+                                <li style="margin-bottom: 10px"><strong>AI:</strong> Adequate Intake</li>
+                                <li style="margin-bottom: 10px"><strong>AMDR:</strong> Acceptable Macronutrient Distribution
+                                    Range</li>
+                                <li style="margin-bottom: 10px"><strong>CDRR :</strong> Chronic
+                                    Disease
+                                    Risk Reduction Intake Level</li>
+                                <li style="margin-bottom: 10px"><strong>d:</strong> Day</li>
+                                <li style="margin-bottom: 10px"><strong>DFE:</strong> Dietary folate equivalent</li>
+                                <li style="margin-bottom: 10px"><strong>DRI:</strong> Dietary Reference Intake</li>
+                                <li style="margin-bottom: 10px"><strong>EAR:</strong> Estimated Average Requirement</li>
+                                <li style="margin-bottom: 10px"><strong>g:</strong> Gram</li>
+                                <li style="margin-bottom: 10px"><strong>kcal:</strong> Kilocalorie</li>
+                                <li style="margin-bottom: 10px"><strong>mcg:</strong> Microgram</li>
+                                <li style="margin-bottom: 10px"><strong>mg:</strong> Milligram</li>
+                                <li style="margin-bottom: 10px"><strong>n:</strong> Sample size</li>
+                                <li style="margin-bottom: 10px"><strong>NE:</strong> Niacin equivalent</li>
+                                <li style="margin-bottom: 10px"><strong>P:</strong> Percentile, e.g. 'P95' describes the 95th
+                                    percentile.</li>
+                                <li style="margin-bottom: 10px"><strong>RAE:</strong> Retinol activity equivalent</li>
+                                <li style="margin-bottom: 10px"><strong>SE:</strong> Standard Error</li>
+                                <li><strong>UL:</strong> Tolerable
+                                    Upper Intake Level</li>
+                            </ul>
+
                         </td>
                     </tr>
                     </tbody>
