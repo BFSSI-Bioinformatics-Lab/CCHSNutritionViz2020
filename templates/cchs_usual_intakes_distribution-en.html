@@ -155,7 +155,7 @@
                 <section class="alert alert-info">
                     <h3>About the graph:</h3>
                     <p>
-                        The usual intake data are presented in a probability distribution curves.
+                        The usual intake data are presented in probability distribution curves.
                         This type of graph shows the range of intakes in the population and
                         proportion of the population with different levels of intake in Canada.
                     </p>
@@ -200,8 +200,14 @@
                 <figure>
                     <div id="distribution-chart" style="overflow:visible"></div>
 
-                    <figcaption id ="distribution-caption" style="font-size: 16px" align="center"></figcaption>
+                    <figcaption id ="distribution-caption" style="font-size: 16px" align="center">
+                        See the <a href="#notes-section">Notes & Legend</a> section below for
+                        definitions of acronyms.
+                        See the <a href="#table-section">table</a> below for the data used to make this graph.
+                    </figcaption>
+
                 </figure>
+                <p id="curve-description-readers" aria-label=""></p>
             </div>
 
         </div>
@@ -211,7 +217,7 @@
             <div id="nutrient-notes"></div>
         </div>
 
-        <div class="row">
+        <div id="table-section" class="row">
             <h4 id="table-title"
                 class="text-center"
                 style="margin-top: 50px; margin-bottom: 30px"></h4>
@@ -345,10 +351,12 @@
             </table>
 
             {# Note: the caption HTML tag appears to break the WET DataTables implementation, so using this element as an alternative #}
-            <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/2015-canadian-community-health-survey-nutrition-food-nutrition-surveillance.html"
+            <p style="margin-top: 15px">
+                Data Source: <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/2015-canadian-community-health-survey-nutrition-food-nutrition-surveillance.html"
                    target="_blank"
-               class="text-center">Data Source: <i>Statistics Canada, 2015 Canadian Community Health Survey -
+               class="text-center"><i>Statistics Canada, 2015 Canadian Community Health Survey -
                 Nutrition, 2015, Share File.</i></a>
+            </p>
 
             <caption class="wb-inv">
                 <br>
@@ -363,7 +371,7 @@
 
         <br>
 
-        <div class="row">
+        <div class="row" id="notes-section">
             <section class="alert alert-info barchart-legend">
                 <h3>Notes & Legend</h3>
                 <table class="table table-condensed table-responsive">
@@ -412,16 +420,12 @@
                                     from 16.6% to 33.3%; interpret with caution.
                                 </li>
                                 <li style="margin-bottom: 10px">
-                                    <strong><3:</strong> Data with a coefficient of variation (CV)
-                                    greater
-                                    than 33.3%
+                                    <strong><3:</strong> Data with a CV greater than 33.3%
                                     with a 95% confidence interval entirely between 0 and 3%;
                                     interpret with caution.
                                 </li>
                                 <li style="margin-bottom: 10px">
-                                    <strong>F:</strong> Data with a coefficient of variation (CV)
-                                    greater
-                                    than 33.3%
+                                    <strong>F:</strong> Data with a CV greater than 33.3%
                                     with a 95% confidence interval not entirely between 0 and 3%;
                                     suppressed due to extreme sampling variability.
                                 </li>
@@ -462,7 +466,7 @@
                         Guide to Understanding and Using the Data</a> and the <a
                         href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html"
                         target="_blank">Statistical
-                    Methodology Guide</a>.
+                    Methodology Document</a>.
                 </p>
             </section>
         </div>
