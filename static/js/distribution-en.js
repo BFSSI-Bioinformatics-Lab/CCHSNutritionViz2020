@@ -412,7 +412,7 @@ $(document).on("wb-ready.wb", function (event) {
                     .attr("x", xAxis(adequacyVal))
                     .attr("y", yAxis(yExtent[1]) - textPadding_line2)
                     .style("text-anchor", "middle")
-                    .style("font-size", chartFontSize)
+                    .style("font-size", 12)
                     .text(adequacyTypeText),
                 update => update
                     .attr("x", xAxis(adequacyVal))
@@ -503,7 +503,7 @@ $(document).on("wb-ready.wb", function (event) {
                     .attr("x", xAxis(exceedanceVal))
                     .attr("y", yAxis(yExtent[1]) - textPadding_line2)
                     .style("text-anchor", "middle")
-                    .style("font-size", chartFontSize)
+                    .style("font-size", 12)
                     .text(exceedanceTypeText),
                 update => update
                     .attr("x", xAxis(exceedanceVal))
