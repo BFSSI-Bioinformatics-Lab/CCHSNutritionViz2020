@@ -38,6 +38,10 @@ def geographic():
     return render_template('cchs_usual_intakes_geographic-en.html',
                            title='Geographic Comparison - CCHS Usual Intakes From Food, 2015')
 
+@app.route('/technical_notes')
+def technical_notes():
+    return render_template('cchs_usual_intakes_technical_notes-en.html',
+                           title='Technical Notes - CCHS Usual Intakes From Food, 2015')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
