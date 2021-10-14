@@ -2,7 +2,7 @@ const nutrientFacts = {
 
     'Folate': `
     <p>Folate is a generic term that includes the naturally occurring form found in food and folic acid found in supplements and fortified foods. The requirements for folate are based on the amount of dietary folate equivalents (DFEs) needed to maintain red blood cell folate concentrations. DFEs adjust for differences in absorption between naturally-occurring food folate and synthetic folic acid. While there appears to be a relatively high prevalence of inadequate intakes of folate (5.7 to 44.2%), red blood cell folate measures, an indicator of folate status, suggest a very low prevalence of folate deficiency in the Canadian population.<super>1, 2</super></p>
-    <p>Women capable of becoming pregnant require special consideration when it comes to folate intake. To reduce the risk of neural tube defects, women who could become pregnant should consume 400 µg of folic acid per day in addition to the amount of folate in a healthy diet. Red blood cell folate measures suggest that some Canadian women of childbearing age have levels below that considered optimal for greatest reduction of risk of neural tube defects.<super>1,2</super></p>
+    <p>Women capable of becoming pregnant require special consideration when it comes to folate intake. To reduce the risk of neural tube defects, women who could become pregnant should take a multivitamin containing 400 µg of folic acid per day in addition to the amount of folate in a healthy diet. Red blood cell folate measures suggest that some Canadian women of childbearing age have levels below that considered optimal for greatest reduction of risk of neural tube defects.<super>1,2</super></p>
     <p><strong>References:</strong></p> 
     <ol>
         <li>
@@ -27,12 +27,12 @@ const nutrientFacts = {
     <ol>
        <li>IOM (Institute of Medicine). Dietary Reference Intakes for energy, carbohydrate, fibre, fat, fatty acids, cholesterol, protein, and amino acids (Macronutrients). 2005. Food and Nutrition Board, Institute of Medicine. The National Academies Press, Washington, DC.</li>
        <li>Health Canada. <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/reference-guide-understanding-using-data-2015.html" 
-       target="_blank">Reference Guide to Understanding and Using the Data - 2015 Canadian Community Health Survey- Nutrition. 2017</a>.</li>
+       target="_blank">Reference Guide to Understanding and Using the Data - 2015 Canadian Community Health Survey- Nutrition.</a> 2017.</li>
        <li>Health Canada. <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/public-involvement-partnerships/proposed-policy-definition-energy-value-dietary-fibre/consultation.html" 
        target="_blank">Proposed Policy: Definition and Energy Value for Dietary Fibre</a>. Food Directorate, Health Products and Food Branch, Health Canada. 2010.</li>
     </ol>`,
 
-    'Iron': `Iron inadequacy was estimated using the full probability method as described in section 2.3.4 of the <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html" target="_blank">Methodology Guide.</a>`,
+    'Iron': `Iron inadequacy was estimated using the full probability method as described in section 2.3.4 of the <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html" target="_blank">Methodology Document.</a>`,
 
     'Percentage of total energy intake from saturated fats': `
         <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html" target="_blank">Canada’s Dietary Guidelines</a> recommend that Canadians consume less than 10% of total energy intake from saturated fat. 
@@ -66,8 +66,9 @@ const nutrientFacts = {
         <li>Statistics Canada.  Table  13-10-0794-01   Measured adult body mass index (BMI) (World Health Organization classification), by age group and sex, Canada and provinces, Canadian Community Health Survey – Nutrition. DOI: <a href="https://doi.org/10.25318/1310079401-eng">https://doi.org/10.25318/1310079401-eng</a></li>
         <li>Statistics Canada.  Table  13-10-0795-01   Measured children and youth body mass index (BMI) (World Health Organization classification), by age group and sex, Canada and provinces, Canadian Community Health Survey – Nutrition. DOI:   <a href="https://doi.org/10.25318/1310079501-eng">https://doi.org/10.25318/1310079501-eng</a></li>
     </ol>`,
-    'Sodium': `For more information sodium intakes, please consult Health Canada's 
-<a href="https://www.canada.ca/en/health-canada/services/publications/food-nutrition/sodium-intake-canadians-2017.html" target="_blank">Sodium Intake of Canadians in 2017</a> report.`,
+    'Sodium': `For more information on sodium intakes, please consult<a
+                    href="https://www.canada.ca/en/health-canada/services/publications/food-nutrition/sodium-intake-canadians-2017.html"
+                    target="_blank">Health Canada's Sodium intake of Canadians in 2017</a> report.`,
     'Vitamin A': `No prevalence of intakes above the UL are shown for vitamin A. The UL for vitamin A applies to preformed vitamin A only, and those estimates had not yet been conducted at the time these tables were produced.`,
     'Vitamin D': `
 <p><strong>Estimates of the prevalence of inadequate intakes of vitamin D from food must be interpreted with caution.</strong> </p>
@@ -82,8 +83,8 @@ intakes of vitamin D from dietary sources, available clinical measures do not su
    <ol>
         <li>Langlois K, Greene-Finestone L, Little J, Hidiroglou N, Whiting S. Vitamin D status of Canadians as measured in the 2007 to 2009 Canadian Health Measures Survey. Health Rep. 2010;21(1):47–55.</li>
         <li>Whiting SJ, Langlois KA, Vatanparast H, Greene-Finestone LS. The vitamin D status of Canadians relative to the 2011 Dietary Reference Intakes: an examination in children and adults with and without supplement use. Am J Clin Nutr. 2011;94(1):128–135. doi:10.3945/ajcn.111.013268</li>
-        <li><a href="https://www150.statcan.gc.ca/n1/daily-quotidien/190206/dq190206c-eng.htm" 
-        target="_blank">Statistics Canada. Canadian Health Measures Survey: Non-environmental laboratory and medication data, 2016 and 2017</a>. The Daily. 2019.</li>
+        <li>Statistics Canada. <a href="https://www150.statcan.gc.ca/n1/daily-quotidien/190206/dq190206c-eng.htm" 
+        target="_blank">Canadian Health Measures Survey: Non-environmental laboratory and medication data, 2016 and 2017</a>. The Daily. 2019.</li>
    </ol>`
 };
 
