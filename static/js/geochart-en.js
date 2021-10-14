@@ -684,9 +684,9 @@ d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
 
                 // Update description of chart
                 if (sex === 'Males and females combined') {
-                    document.getElementById('geo-caption').innerHTML = `An interactive map of Canada that uses colour to represent the percentage of ${sex.toLowerCase()}, age ${age}, with a usual intake of ${nutrient.toLowerCase()} ${driObject.prefix.toLowerCase()} ${driObject.dri_type} in each province. Users can hover over a specific province to see that province’s value and standard error.`;
+                    document.getElementById('geo-caption').ariaLabel = `An interactive map of Canada that uses colour to represent the percentage of ${sex.toLowerCase()}, age ${age}, with a usual intake of ${nutrient.toLowerCase()} ${driObject.prefix.toLowerCase()} ${driObject.dri_type} in each province. Users can hover over a specific province to see that province’s value and standard error.`;
                 } else {
-                    document.getElementById('geo-caption').innerHTML = `An interactive map of Canada that uses colour to represent the percentage of ${sex.toLowerCase()}s, age ${age}, with a usual intake of ${nutrient.toLowerCase()} ${driObject.prefix.toLowerCase()} ${driObject.dri_type} in each province. Users can hover over a specific province to see that province’s value and standard error.`;
+                    document.getElementById('geo-caption').ariaLabel = `An interactive map of Canada that uses colour to represent the percentage of ${sex.toLowerCase()}s, age ${age}, with a usual intake of ${nutrient.toLowerCase()} ${driObject.prefix.toLowerCase()} ${driObject.dri_type} in each province. Users can hover over a specific province to see that province’s value and standard error.`;
                 }
                 //Percentage ${driObject.prefix.toLowerCase()} ${driObject.dri_type}
 
