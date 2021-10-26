@@ -43,5 +43,10 @@ def technical_notes():
     return render_template('cchs_usual_intakes_technical_notes-en.html',
                            title='Technical Notes - CCHS Usual Intakes From Food, 2015')
 
+# French
+@app.route('/a_propos')
+def a_propos():
+    return render_template('escc_a_propos-fr.html', title='ESCC – Nutrition 2015')
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
