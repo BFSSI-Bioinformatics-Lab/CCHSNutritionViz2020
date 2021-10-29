@@ -48,5 +48,26 @@ def technical_notes():
 def a_propos():
     return render_template('escc_a_propos-fr.html', title='ESCC – Nutrition 2015')
 
+@app.route('/distribution_fr')
+def distribution_fr():
+    return render_template('escc_distribution-fr.html',
+                           title='Courbes de distribution - ESCC – Nutrition 2015')
+
+
+@app.route('/geographique')
+def geographique():
+    return render_template('escc_géographique-fr.html',
+                           title='Comparaison géographique - ESCC – Nutrition 2015')
+
+@app.route('/tableau')
+def tableau():
+    return render_template('escc_tableau-fr.html',
+                           title='Tableau de données - ESCC – Nutrition 2015')
+
+@app.route('/notes_techniques')
+def notes_techniques():
+    return render_template('escc_notes_techniques-fr.html',
+                           title='Notes techniques - ESCC – Nutrition 2015')
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
