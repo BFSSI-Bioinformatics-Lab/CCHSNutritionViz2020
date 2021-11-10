@@ -526,7 +526,7 @@
                        id="dataset-filter" data-wb-tables='{
                         "bDeferRender": true,
                          "language": {
-                                "processing": "Loading data. Please wait..."
+                                "processing": "Chargement des données. Veuillez patienter… "
                             },
                         "processing": true,
                         "scrollX": true,
@@ -1120,10 +1120,10 @@
     };
 
 
-    {#// Add download functionality for Filtered Data button#}
-    {#$("#filteredTableDownload").click(function () {#}
-    {#    $("#dataset-filter").tableToCSV()#}
-    {#})#}
+    // Add download functionality for Filtered Data button
+    $("#filteredTableDownload").click(function () {
+        $("#dataset-filter").tableToCSV()
+    })
 
     /*
     TODO: If % above or below DRIs is selected, the table should only display
