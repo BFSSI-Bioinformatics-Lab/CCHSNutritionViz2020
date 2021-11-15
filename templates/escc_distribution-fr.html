@@ -176,11 +176,12 @@
         <div class="row">
             <div class="col-lg-4">
                 <section class="alert alert-info">
-                    <h3>About the graph:</h3>
+                    <h3>À propos du graphique :</h3>
                     <p>
-                        The usual intake data are presented in probability distribution curves.
-                        This type of graph shows the range of intakes in the population and
-                        proportion of the population with different levels of intake in Canada.
+                        Les données sur les apports usuels sont présentées sous forme de courbes
+                        de distribution des probabilités. Ce type de graphique montre l’étendue
+                        des apports dans la population et la proportion de la population ayant
+                        différents niveaux d’apport.
                     </p>
                 </section>
 
@@ -189,22 +190,23 @@
                 <fieldset>
                     <h3 class="h6 mrgn-tp-0 mrgn-rght-0 mrgn-bttm-sm">
                                 <span id="ContentPlaceHolder_Body_LabelStep1" class="text-danger">
-                            Specify parameters below:
+                            Veuillez préciser les paramètres <br> ci-dessous :
                         </span>
                     </h3>
                     <div class="form-group-sm">
-                        <label for="nutrientDropdown">Nutrient</label>
+                        <label for="nutrientDropdown">Nutriment :</label>
                         <div id="nutrientDropdown" class="chart-selector"></div>
-                        <label for="sexDropdown">Sex</label>
+                        <label for="sexDropdown">Sexe :</label>
                         <div id="sexDropdown" class="chart-selector"></div>
-                        <label for="ageDropdown">Age Group</label>
+                        <label for="ageDropdown">Groupe d’âge :</label>
                         <div id="ageDropdown" class="chart-selector"></div>
                     </div>
                 </fieldset>
                 <div style="margin-top: 10px;">
                     <form>
                         <label for="limit">
-                            <input type="checkbox" id="checkboxLimit"> Display Dietary Reference Intakes
+                            <input type="checkbox" id="checkboxLimit"> Afficher les apports
+                            nutritionnels de références
                         </label>
 
                     </form>
@@ -213,7 +215,7 @@
                 <br>
 
                 <button class="btn btn-sm btn-success" id="saveChart" onclick="downloadSVG()"><span
-                        class="glyphicon glyphicon-cloud-download"></span> Save graph (.png)
+                        class="glyphicon glyphicon-cloud-download"></span> Télécharger le graphique (.png)
                 </button>
 
             </div>
@@ -224,9 +226,10 @@
                     <div id="distribution-chart" style="overflow:visible"></div>
 
                     <figcaption id ="distribution-caption" style="font-size: 16px" align="center">
-                        See the <a href="#notes-section">Notes & Legend</a> section below for
-                        definitions of acronyms.
-                        See the <a href="#table-section">table</a> below for the data used to make this graph.
+                        Consultez la section <a href="#notes-section">Notes et Légende</a>
+                        ci-dessous pour les définitions des acronymes. Consultez le <a
+                            href="#table-section">tableau</a> ci-dessous pour les données
+                        utilisées pour réaliser ce graphique.
                     </figcaption>
 
                 </figure>
@@ -375,10 +378,10 @@
 
             {# Note: the caption HTML tag appears to break the WET DataTables implementation, so using this element as an alternative #}
             <p style="margin-top: 15px">
-                Data Source: <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/2015-canadian-community-health-survey-nutrition-food-nutrition-surveillance.html"
+                Source des données : <a href="https://www.canada.ca/fr/sante-canada/services/aliments-nutrition/surveillance-aliments-nutrition/sondages-sante-nutrition/enquete-sante-collectivites-canadiennes-escc/enquete-sante-collectivites-canadiennes-nutrition-2015-surveillance-aliments-nutrition.html"
                    target="_blank"
-               class="text-center"><i>Statistics Canada, 2015 Canadian Community Health Survey -
-                Nutrition, 2015, Share File.</i></a>
+               class="text-center"><i>Statistique Canada, Enquête sur la santé dans les
+                collectivités canadiennes (ESCC) - Nutrition, 2015 - Fichier partagé.</i></a>
             </p>
 
             <caption class="wb-inv">
@@ -396,84 +399,90 @@
 
         <div class="row" id="notes-section">
             <section class="alert alert-info barchart-legend">
-                <h3>Notes & Legend</h3>
+                <h3>Notes et Légende</h3>
                 <table class="table table-condensed table-responsive">
                     <tbody>
                     <tr >
-                        <td style=" padding-top: 15px; padding-bottom:10px "><strong>Data
-                            Source</strong></td>
-                        <td style=" padding-top: 15px; padding-bottom:10px ">Statistics Canada, Canadian Community Health Survey (CCHS) -
-                            Nutrition, 2015, Share
-                            Files.
+                        <td style=" padding-top: 15px; padding-bottom:10px "><strong>Source des données</strong></td>
+                        <td style=" padding-top: 15px; padding-bottom:10px ">Statistique Canada,
+                            Enquête sur la santé dans les collectivités canadiennes (ESCC) -
+                            Nutrition, 2015 - Fichier partagé.
                         </td>
                     </tr>
                     <tr >
                         <td style="min-width: 180px; padding-top: 15px; padding-bottom:10px">
-                            <strong>About the graph and table</strong></td>
+                            <strong>À propos du graphique et du tableau</strong></td>
                         <td style=" padding-top: 15px; padding-bottom:10px ">
                             <p>
-                            Along the x-axis, we see the usual intake level for the selected
-                            nutrient. If a vertical line is drawn from a certain level of intake,
-                            the area under the curve to the left of this line represents the
-                            proportion of the population with usual intakes less than or equal to
-                            that amount. The area under the curve to the right of the line
-                            represents the proportion of the population with usual intakes above
-                            that amount.
+                                Le long de l'axe des abscisses, nous observons le niveau d’apport
+                                usuel pour le nutriment sélectionné. Si une ligne verticale est
+                                tracée à partir d’un certain niveau d’apport, la surface sous la
+                                courbe à gauche de cette ligne représente la proportion de la
+                                population ayant un apport usuel inférieur ou égal à cette
+                                quantité. La surface sous la courbe à droite de cette ligne
+                                représente la proportion de la population dont les apports usuels
+                                sont supérieurs cette quantité.
                             </p>
                             <p>
-                               For several nutrients, Dietary Reference Intake (DRI) values have
-                                been established and can be used to assess healthy populations for
-                                inadequate or excessive intakes. When available, DRIs are
-                                displayed on the graph. Hover over the limit label to display
-                                information on the proportion of the population with intakes above
-                                and below that limit.
+                                Pour plusieurs nutriments, des Apports nutritionnels de référence
+                                (ANREF) ont été établis et peuvent être utilisés pour évaluer les
+                                populations en bonne santé en cas d’apports insuffisants ou
+                                excessifs. Lorsqu'ils sont disponibles, les ANREF sont affichés
+                                sur le graphique.
                             </p>
                             <p>
-                                Please refer to the <a href="technical_notes">Technical Notes</a> tab for detailed notes that
-                                apply to all of the tables and graphs in the Usual Intake Data Tool.
+                                Veuillez référer à l'onglet <a href="notes_techniques">« Notes
+                                techniques » </a> pour des notes détaillées qui s'appliquent à
+                                tous les tableaux et graphiques de l'outil de données sur les
+                                apports usuels.
                             </p>
                             <p>
-                                Relative probability density estimates were generated from the
-                                percentiles of usual intake data set using a Gaussian Kernel
-                                density estimation method.
+                                Les estimations de densité de probabilité relative ont été
+                                générées à partir des percentiles de l'apport usuel en utilisant
+                                une méthode d'estimation de densité à noyau gaussien.
                             </p>
                             <ul style="list-style-type: none">
                                 <li style="margin-bottom: 10px">
-                                    <strong>E:</strong> Data with a coefficient of variation (CV)
-                                    from 16.6% to 33.3%; interpret with caution.
+                                    <strong>E :</strong> Données dont le coefficient de variation
+                                    (CV) se situe entre 16,6% et 33,3%; utiliser avec prudence.
                                 </li>
                                 <li style="margin-bottom: 10px">
-                                    <strong><3:</strong> Data with a CV greater than 33.3%
-                                    with a 95% confidence interval entirely between 0 and 3%;
-                                    interpret with caution.
+                                    <strong><3 :</strong> Données dont le CV est supérieur à 33,
+                                    3%, avec un intervalle de confiance de 95% entièrement
+                                    compris entre 0 et 3%; utiliser avec prudence.
                                 </li>
                                 <li style="margin-bottom: 10px">
-                                    <strong>F:</strong> Data with a CV greater than 33.3%
-                                    with a 95% confidence interval not entirely between 0 and 3%;
-                                    suppressed due to extreme sampling variability.
+                                    <strong>F :</strong> Données dont le CV est supérieur à 33,
+                                    3%, avec un intervalle de confiance de 95% pas entièrement
+                                    compris entre 0 et 3%; supprimées en raison de l'extrême
+                                    variabilité d'échantillonnage.
                                 </li>
-                                <li style="margin-bottom: 10px"><strong>AI:</strong> Adequate Intake</li>
-                                <li style="margin-bottom: 10px"><strong>AMDR:</strong> Acceptable Macronutrient Distribution
-                                    Range</li>
-                                <li style="margin-bottom: 10px"><strong>CDRR :</strong> Chronic
-                                    Disease
-                                    Risk Reduction Intake Level</li>
-                                <li style="margin-bottom: 10px"><strong>d:</strong> Day</li>
-                                <li style="margin-bottom: 10px"><strong>DFE:</strong> Dietary folate equivalent</li>
-                                <li style="margin-bottom: 10px"><strong>DRI:</strong> Dietary Reference Intake</li>
-                                <li style="margin-bottom: 10px"><strong>EAR:</strong> Estimated Average Requirement</li>
-                                <li style="margin-bottom: 10px"><strong>g:</strong> Gram</li>
-                                <li style="margin-bottom: 10px"><strong>kcal:</strong> Kilocalorie</li>
-                                <li style="margin-bottom: 10px"><strong>mcg:</strong> Microgram</li>
-                                <li style="margin-bottom: 10px"><strong>mg:</strong> Milligram</li>
-                                <li style="margin-bottom: 10px"><strong>n:</strong> Sample size</li>
-                                <li style="margin-bottom: 10px"><strong>NE:</strong> Niacin equivalent</li>
-                                <li style="margin-bottom: 10px"><strong>P:</strong> Percentile, e.g. 'P95' describes the 95th
-                                    percentile.</li>
-                                <li style="margin-bottom: 10px"><strong>RAE:</strong> Retinol activity equivalent</li>
-                                <li style="margin-bottom: 10px"><strong>SE:</strong> Standard Error</li>
-                                <li><strong>UL:</strong> Tolerable
-                                    Upper Intake Level</li>
+                                <li style="margin-bottom: 10px">
+                                    <strong>AMT :</strong> Apport maximal tolérable
+                                </li>
+                                <li style="margin-bottom: 10px">
+                                    <strong>ANREF :</strong> Apports nutritionnels de référence
+                                </li>
+                                <li style="margin-bottom: 10px"><strong>AS :</strong> Apport suffisant</li>
+                                <li style="margin-bottom: 10px"><strong>BME :</strong> Besoin moyen estimatif</li>
+                                <li style="margin-bottom: 10px"><strong>EAR :</strong> Équivalent d’activité du rétinol</li>
+                                <li style="margin-bottom: 10px"><strong>EFA :</strong> Équivalent de folate alimentaire</li>
+                                <li style="margin-bottom: 10px"><strong>EN :</strong> Équivalent de niacine</li>
+                                <li style="margin-bottom: 10px"><strong>ET :</strong> Erreur type</li>
+                                <li style="margin-bottom: 10px"><strong>EVAM :</strong> Étendue des valeurs acceptables pour les macronutriments</li>
+                                <li style="margin-bottom: 10px"><strong>g :</strong> Gramme</li>
+                                <li style="margin-bottom: 10px"><strong>j :</strong> Jour</li>
+                                <li style="margin-bottom: 10px"><strong>kcal :</strong>
+                                    Kilocalorie</li>
+                                <li style="margin-bottom: 10px"><strong>mcg :</strong>
+                                    Microgramme</li>
+                                <li style="margin-bottom: 10px"><strong>mg :</strong> Milligramme</li>
+                                <li style="margin-bottom: 10px"><strong>n :</strong> Taille de
+                                    l'échantillon</li>
+                                <li style="margin-bottom: 10px"><strong>P :</strong> Percentile,
+                                    p. ex. “P95” decrit le 95e percentile.</li>
+                                <li><strong>RRMC :</strong> Apport lié à un risque réduit de maladie
+                                    chronique.</li>
                             </ul>
 
                         </td>
@@ -484,12 +493,13 @@
             </section>
             <section class="alert alert-info">
                 <p>
-                    For more information on CCHS - Nutrition, please consult the
-                    <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/reference-guide-understanding-using-data-2015.html" target="_blank">Reference
-                        Guide to Understanding and Using the Data</a> and the <a
-                        href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html"
-                        target="_blank">Statistical
-                    Methodology Document</a>.
+                    Pour plus d’information sur l’Enquête sur la santé dans les collectivités
+                    canadiennes (ESCC) – Nutrition, 2015, veuillez consulter
+                    <a href="https://www.canada.ca/fr/sante-canada/services/aliments-nutrition/surveillance-aliments-nutrition/sondages-sante-nutrition/enquete-sante-collectivites-canadiennes-escc/guide-reference-comprendre-utiliser-donnees-2015.html"
+                       target="_blank">le guide de référence pour comprendre et utiliser les
+                        données</a> et le <a
+                        href="https://www.canada.ca/fr/sante-canada/services/aliments-nutrition/surveillance-aliments-nutrition/sondages-sante-nutrition/enquete-sante-collectivites-canadiennes-escc/compendium-tableaux-donnees-apports-energie-nutriments-autres-aliments.html"
+                        target="_blank">document méthodologique</a>.
                 </p>
             </section>
         </div>
