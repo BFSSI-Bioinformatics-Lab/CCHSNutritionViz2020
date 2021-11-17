@@ -176,13 +176,13 @@ $(document).on("wb-ready.wb", function (event) {
         // Nest data by age, nutrient, sex
         data = d3.nest()
             .key(function (d) {
-                return d['Age (years)'];
+                return d['Âge (en années)'];
             })
             .key(function (d) {
-                return d['Nutrient/Item (unit)'];
+                return d['Nutriment/Item (unité)'];
             })
             .key(function (d) {
-                return d['Sex'];
+                return d['Sexe'];
             })
             .object(data);
 
@@ -192,39 +192,39 @@ $(document).on("wb-ready.wb", function (event) {
         // Labels for charts
         const yearCategories = [2015];
         const nutrientList = [
-            'Calcium (mg/d)',
-            'Vitamin D (mcg/d)',
-            'Iron (mg/d)',
-            'Sodium (mg/d)',
-            'Potassium (mg/d)',
-            'Percentage of total energy intake from saturated fats',
-            'Percentage of total energy intake from sugars',
-            'Total energy intake (kcal/d)',
-            'Total dietary fibre (g/d)',
-            'Folate (DFE/d)',
-            'Vitamin B12 (mcg/d)',
-            'Total carbohydrates (g/d)',
-            'Total sugars (g/d)',
-            'Vitamin C (mg/d)',
-            'Zinc (mg/d)',
-            'Magnesium (mg/d)',
-            'Vitamin A (RAE/d)',
-            'Percentage of total energy intake from carbohydrates',
-            'Percentage of total energy intake from fat',
-            'Percentage of total energy intake from protein',
-            'Cholesterol (mg/d)',
-            'Phosphorus (mg/d)',
-            'Vitamin B6 (mg/d)',
-            'Niacin (NE/d)',
-            'Riboflavin (mg/d)',
-            'Thiamin (mg/d)',
-            'Percentage of total energy intake from linoleic acid',
-            'Percentage of total energy intake from linolenic acid'
+            'Calcium (mg/j)',
+            'Vitamine D (mcg/j)',
+            'Fer (mg/j)',
+            'Sodium (mg/j)',
+            'Potassium (mg/j)',
+            "Pourcentage de l'apport énergétique total provenant des acides gras saturés",
+            "Pourcentage de l'apport énergétique total provenant des sucres",
+            'Apport énergétique total (kcal/j)',
+            'Fibres alimentaires totales (g/j)',
+            'Folate (ÉFA/j)',
+            'Vitamine B12 (mcg/j)',
+            'Glucides totaux (g/j)',
+            'Sucres totaux (g/j)',
+            'Vitamine C (mg/j)',
+            'Zinc (mg/j)',
+            'Magnésium (mg/j)',
+            'Vitamine A (ÉAR/j)',
+            "Pourcentage de l'apport énergétique total provenant des glucides",
+            "Pourcentage de l'apport énergétique total provenant des lipides",
+            "Pourcentage de l'apport énergétique total provenant des protéines",
+            'Cholestérol (mg/j)',
+            'Phosphore (mg/j)',
+            'Vitamine B6 (mg/j)',
+            'Niacine (ÉN/j)',
+            'Riboflavine (mg/j)',
+            'Thiamine (mg/j)',
+            "Pourcentage de l'apport énergétique total provenant de l'acide linoléique",
+            "Pourcentage de l'apport énergétique total provenant de l'acide linolénique"
         ].sort();
         const sexCategories = [
-            'Male',
-            'Female',
-            'Both'  // Only supports age categories ['1 to 3', '4 to 8']
+            'Hommes',
+            'Femmes',
+            'Les deux sexes'  // Only supports age categories ['1 to 3', '4 to 8']
         ];
 
         // Filter the data according to dropdown menu selections
@@ -232,7 +232,7 @@ $(document).on("wb-ready.wb", function (event) {
         const nutrientDropdown = d3.select("#nutrientDropdown");
         const ageDropdown = d3.select("#ageDropdown");
 
-        initializeDropdowns('Male', '19 and over', 'Total energy intake (kcal/d)',)
+        initializeDropdowns('Hommes', '19 ans et plus', 'Apport énergétique total (kcal/j)',)
 
         //
         // // Setup dropdown menus
