@@ -143,10 +143,10 @@ $(document).on("wb-ready.wb", function (event) {
     const chartFontSize = '14px';
 
     Promise.all([
-        d3.csv("../static/data/distributions-en-20th.csv"),
-        d3.csv("../static/data/corrected2021_data_table_age-corrected-en.csv"),
+        d3.csv("../static/data/distributions-fr-20th.csv"),
+        d3.csv("../static/data/2021_data_table-fr.csv"),
         // Values were generated with ./data_processing/reformat_distribution_data.ipynb script
-        d3.json("../static/data/corrected2021_distribution_coding_object.json")
+        d3.json("../static/data/corrected2021_distribution_coding_object-fr.json")
     ]).then(function (files) {
 
         // Unpack csv files into distribution data, reference table data, and reference coding object
@@ -585,15 +585,15 @@ $(document).on("wb-ready.wb", function (event) {
             // let keysToKeep = ['Nutrient/Item (unit)', 'Reg_Prov', 'Sex', 'Age (years)', 'n',
             //     'Mean', 'SE_Mean','P5', 'P10','P25', 'P50', 'P75', 'P90', 'P95']
 
-            let keysToKeep = ['Nutrient/Item (unit)', 'Reg_Prov', 'Sex', 'Age (years)', 'n',
-                'Mean', 'SE_Mean','P5', "P5_SE", 'P10', "P10_SE",'P25', "P25_SE", 'P50', "P50_SE",
-                'P75', "P75_SE", 'P90', "P90_SE", 'P95', "P95_SE", "EAR", "% <EAR", "%<EAR_SE",
-                "AI", "% >AI", "%>AI_SE", "UL", "% >UL", "%>UL_SE", "CDRR", "% >CDRR", "%>CDRR_SE"]
+            let keysToKeep = ['Nutriment/Item (unité)', 'Reg_Prov', 'Sexe', 'Âge (en années)', 'n',
+                'Moyenne', 'ET_Moyenne','P5', "P5_ET", 'P10', "P10_ET",'P25', "P25_ET", 'P50', "P50_ET",
+                'P75', "P75_ET", 'P90', "P90_ET", 'P95', "P95_ET", "BME", "% <BME", "%<BME_ET",
+                "AS", "% >AS", "%>AS_ET", "AMT", "% >AMT", "% >AMT_ET", "RRMC", "% >RRMC", "% >RRMC_ET"]
 
 
             let tableDataCanada = tableData.filter( function (e) {
-                return e.Reg_Prov === "Canada excluding territories"
-            }); //console.log(tableDataCanada)
+                return e.Reg_Prov === "Canada excluant les territoires"
+            }); console.log(tableDataCanada)
 
             // If all provinces wanted then "tableData.map(e => { "
             const tableDataReduced = tableDataCanada.map(e => {
@@ -603,7 +603,7 @@ $(document).on("wb-ready.wb", function (event) {
                     // get it
                 })
                 return obj;
-            });//console.log(tableDataReduced.map(e=> Object.values(e)))
+            });console.log(tableDataReduced.map(e=> Object.values(e)))
 
             // Get rid of NaN values from % and EAR...
             const reduced = tableDataReduced.map(e => {
@@ -617,8 +617,8 @@ $(document).on("wb-ready.wb", function (event) {
             //console.log(reduced)
             // Filter data to only values contained in user selection
             let filteredData = reduced.filter(function (d) {
-                return d['Sex'] === sex && d['Nutrient/Item (unit)'] === nutrient && d['Age (years)'] === age
-            })
+                return d['Sexe'] === sex && d['Nutriment/Item (unité)'] === nutrient && d['Âge (en années)'] === age
+            }); console.log(filteredData)
 
             // Update table
             let datatable = $('.wb-tables').DataTable()
@@ -673,24 +673,24 @@ $(document).on("wb-ready.wb", function (event) {
             let agesToDisplay
 
             // CASE: User selected 'Both' sex but age is not 1-3 or 4-8
-            if (selectedSex === 'Both' && (selectedAge !== '1 to 3' && selectedAge !== '4 to 8')) {
-                selectedAge = '1 to 3'
-                agesToDisplay = ['1 to 3', '4 to 8']
+            if (selectedSex === 'Les deux sexes' && (selectedAge !== '1 à 3 ans' && selectedAge !== '4 à 8 ans')) {
+                selectedAge = '1 à 3 ans'
+                agesToDisplay = ['1 à 3 ans', '4 à 8 ans']
             }
                 // CASE: Currently selected sex is Both and user flips to Male or Female
             // this means the currently selected age is not valid and needs to be defaulted to a new value
-            else if (selectedSex !== 'Both' && (selectedAge === '1 to 3' || selectedAge === '4 to 8')) {
-                selectedAge = '19 and over'  // default to 19 and over
+            else if (selectedSex !== 'Les deux sexes' && (selectedAge === '1 à 3 ans' || selectedAge === '4 à 8 ans')) {
+                selectedAge = '19 ans et plus'  // default to 19 and over
                 agesToDisplay = [
-                    '9 to 13', '14 to 18', '19 to 30', '31 to 50', '51 to 70',
-                    '19 and over', '71 and over'
+                    '9 à 13 ans', '14 à 18 ans', '19 à 30 ans', '31 à 50 ans', '51 à 70 ans',
+                    '19 ans et plus', '71 ans et plus'
                 ]
-            } else if (selectedSex === 'Both' && (selectedAge === '1 to 3' || selectedAge === '4 to 8')) {
-                agesToDisplay = ['1 to 3', '4 to 8']
+            } else if (selectedSex === 'Both' && (selectedAge === '1 à 3 ans' || selectedAge === '4 à 8 ans')) {
+                agesToDisplay = ['1 à 3 ans', '4 à 8 ans']
             } else {
                 agesToDisplay = [
-                    '9 to 13', '14 to 18', '19 to 30', '31 to 50', '51 to 70',
-                    '19 and over', '71 and over'
+                    '9 à 13 ans', '14 à 18 ans', '19 à 30 ans', '31 à 50 ans', '51 à 70 ans',
+                    '19 ans et plus', '71 ans et plus'
                 ]
             }
 
@@ -765,12 +765,24 @@ $(document).on("wb-ready.wb", function (event) {
             activeReferenceObject = retrieveReferenceValues(referenceCode);
             updateRenderTrackerAdequacy(activeReferenceObject);
 
-            // Update title of chart
+            // Update title of chart base on nutrient to add articles
             let chartTitleText
-            if (sex === 'Both') {
-                chartTitleText = `${nutrient} usual intake distribution, ${sex} sexes, age ${age}, Canada, 2015`;
+            if (nutrient === 'Apport énergétique total (kcal/j)') {
+                chartTitleText = `Courbe de distribution de l’apport en l' ${nutrient} usuel,
+                 ${sex}, ${age}, Canada, 2015`;
+            } else if (nutrient === 'Sodium (mg/j)'|| nutrient ==='Fer (mg/j)'||
+                nutrient === "Folate (ÉFA/j)" || nutrient === "Pourcentage del'apport énergétique total provenant des acides gras saturés") {
+                chartTitleText = `Courbe de distribution de l’apport en le ${nutrient} usuel,
+                 ${sex}, ${age}, Canada, 2015`;
+            } else if (nutrient === 'Fibres alimentairestotales (g/j)'){
+                chartTitleText = `Courbe de distribution de l’apport en les ${nutrient} usuel,
+                 ${sex}, ${age}, Canada, 2015`;
+            } else if (nutrient === 'Vitamine A (ÉAR/j)' || nutrient === 'Vitamine D (mcg/j)'){
+                chartTitleText = `Courbe de distribution de l’apport en la ${nutrient} usuel,
+                 ${sex}, ${age}, Canada, 2015`;
             } else {
-                chartTitleText = `${nutrient} usual intake distribution, ${sex}, age ${age}, Canada, 2015`;
+                chartTitleText = `Courbe de distribution de l’apport en ${nutrient} usuel,
+                 ${sex}, ${age}, Canada, 2015`;
             }
 
 

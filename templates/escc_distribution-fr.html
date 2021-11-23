@@ -258,13 +258,13 @@
                    "processing": true,
                    "lengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All"]],
                    "columns":[
-                        {"data":"Nutrient/Item (unit)"},
+                        {"data":"Nutriment/Item (unité)"},
                         {"data":"Reg_Prov"},
-                        {"data":"Sex"},
-                        {"data":"Age (years)"},
+                        {"data":"Sexe"},
+                        {"data":"Âge (en années)"},
                         {"data":"n"},
-                        {"data":"Mean"},
-                        {"data":"SE_Mean"},
+                        {"data":"Moyenne"},
+                        {"data":"ET_Moyenne"},
 {#                        {"data": "P5"},#}
 {#                        {"data": "P10"},#}
 {#                        {"data": "P25"},#}
@@ -273,89 +273,89 @@
 {#                        {"data": "P90"},#}
 {#                        {"data": "P95"}#}
                         {"data":"P5"},
-                        {"data":"P5_SE"},
+                        {"data":"P5_ET"},
                         {"data":"P10"},
-                        {"data":"P10_SE"},
+                        {"data":"P10_ET"},
                         {"data":"P25"},
-                        {"data":"P25_SE"},
+                        {"data":"P25_ET"},
                         {"data":"P50"},
-                        {"data":"P50_SE"},
+                        {"data":"P50_ET"},
                         {"data":"P75"},
-                        {"data":"P75_SE"},
+                        {"data":"P75_ET"},
                         {"data":"P90"},
-                        {"data":"P90_SE"},
+                        {"data":"P90_ET"},
                         {"data":"P95"},
-                        {"data":"P95_SE"},
-                        {"data":"EAR"},
-                        {"data":"% <EAR"},
-                        {"data":"%<EAR_SE"},
-                        {"data":"AI"},
-                        {"data":"% >AI"},
-                        {"data":"%>AI_SE"},
-                        {"data":"UL"},
-                        {"data":"% >UL"},
-                        {"data":"%>UL_SE"},
-                        {"data":"CDRR"},
-                        {"data":"% >CDRR"},
-                        {"data":"%>CDRR_SE"}
+                        {"data":"P95_ET"},
+                        {"data":"BME"},
+                        {"data":"% <BME"},
+                        {"data":"%<BME_ET"},
+                        {"data":"AS"},
+                        {"data":"% >AS"},
+                        {"data":"%>AS_ET"},
+                        {"data":"AMT"},
+                        {"data":"% >AMT"},
+                        {"data":"% >AMT_ET"},
+                        {"data":"RRMC"},
+                        {"data":"% >RRMC"},
+                        {"data":"% >RRMC_ET"}
                     ]
                    }'>
                 <thead>
                 <tr>
-                    <th>Nutrient/Item (unit)</th>
-                    <th>Region/ Province</th>
-                    <th>Sex</th>
-                    <th>Age (years)</th>
+                    <th>Nutriment/Item (unité)</th>
+                    <th>Région/Province</th>
+                    <th>Sexe</th>
+                    <th>Âge (en années)</th>
                     <th abbr="Sample size" style="min-width: 60px" class="text-center">n</th>
-                    <th style="min-width: 60px" class="text-center">Mean</th>
+                    <th style="min-width: 60px" class="text-center">Moyenne</th>
                     <th abbr="Standard Error mean"
-                        style="min-width: 60px" class="text-center">SE Mean</th>
+                        style="min-width: 60px" class="text-center">ET_Moyenne</th>
                     <th abbr="5th percentile"
                         style="min-width: 60px" class="text-center">P5</th>
                     <th abbr="5th percentile standard error"
-                        style="min-width: 60px" class="text-center">P5 SE</th>
+                        style="min-width: 60px" class="text-center">P5 ET</th>
                     <th abbr="10th percentile"
                         style="min-width: 60px" class="text-center">P10</th>
                     <th abbr="10th percentile"
-                        style="min-width: 70px" class="text-center">P10 SE</th>
+                        style="min-width: 70px" class="text-center">P10 ET</th>
                     <th abbr="25th percentile"
                         style="min-width: 60px" class="text-center">P25</th>
                     <th abbr="25th percentile standard error"
-                        style="min-width: 70px" class="text-center">P25 SE</th>
+                        style="min-width: 70px" class="text-center">P25 ET</th>
                     <th abbr="50th percentile"
                         style="min-width: 60px" class="text-center">P50</th>
                     <th abbr="50th percentile standard error"
-                        style="min-width: 70px" class="text-center">P50 SE</th>
+                        style="min-width: 70px" class="text-center">P50 ET</th>
                     <th abbr="75th percentile"
                         style="min-width: 60px" class="text-center">P75</th>
                     <th abbr="75th percentile standard error"
-                        style="min-width: 70px" class="text-center">P75 SE</th>
+                        style="min-width: 70px" class="text-center">P75 ET</th>
                     <th abbr="90th percentile"
                         style="min-width: 60px" class="text-center">P90</th>
                     <th abbr="90th percentile standard error"
-                        style="min-width: 70px" class="text-center">P90 SE</th>
+                        style="min-width: 70px" class="text-center">P90 ET</th>
                     <th abbr="95th percentile"
                         style="min-width: 60px" class="text-center">P95</th>
                     <th abbr="95th percentile standard error"
-                        style="min-width: 70px" class="text-center">P95 SE</th>
+                        style="min-width: 70px" class="text-center">P95 ET</th>
                     <th abbr="Estimated Average Requirement"
-                        style="min-width: 60px" class="text-center">EAR</th>
+                        style="min-width: 60px" class="text-center">BME</th>
                     <th abbr="Percent Estimated Average Requirement"
-                        style="min-width: 60px" class="text-center">% &lt;EAR</th>
+                        style="min-width: 60px" class="text-center">% &lt;BME</th>
                     <th abbr="Percent Estimated Average Requirement standard error"
-                        style="min-width: 70px" class="text-center">% &lt;EAR SE</th>
+                        style="min-width: 70px" class="text-center">% &lt;BME ET</th>
                     <th abbr="Adequate Intake"
-                        style="min-width: 60px" class="text-center">AI</th>
+                        style="min-width: 60px" class="text-center">AS</th>
                     <th abbr="Percent Adequate Intake"
-                        style="min-width: 70px" class="text-center">% &gt;AI</th>
+                        style="min-width: 70px" class="text-center">% &gt;AS</th>
                     <th abbr="Percent Adequate Intake standard error"
-                        style="min-width: 70px" class="text-center">% &gt;AI SE</th>
+                        style="min-width: 70px" class="text-center">% &gt;AS ET</th>
                     <th abbr="Tolerable Upper Intake Level"
-                        style="min-width: 60px" class="text-center">UL</th>
+                        style="min-width: 60px" class="text-center">AMT</th>
                     <th abbr="Percent Tolerable Upper Intake Level"
-                        style="min-width: 70px" class="text-center">% &gt;UL</th>
+                        style="min-width: 70px" class="text-center">% &gt;AMT</th>
                     <th abbr="Percent Tolerable Upper Intake Level standard error"
-                        style="min-width: 70px" class="text-center">% &gt;UL SE</th>
+                        style="min-width: 70px" class="text-center">% &gt;AMT ET</th>
                     {#                    <th>AMDR</th>#}
                     {#                    <th>% below AMDR</th>#}
                     {#                    <th>% below AMDR_SE</th>#}
@@ -364,11 +364,11 @@
                     {#                    <th>% above AMDR</th>#}
                     {#                    <th>% above AMDR_SE</th>#}
                     <th abbr="Chronic Disease Risk Reduction Intake Level"
-                        style="min-width: 70px" class="text-center">CDRR</th>
+                        style="min-width: 70px" class="text-center">RRMC</th>
                     <th abbr="Percent Chronic Disease Risk Reduction Intake Level"
-                        style="min-width: 70px" class="text-center">% &gt;CDRR</th>
+                        style="min-width: 70px" class="text-center">% &gt;RRMC</th>
                     <th abbr="Percent Chronic Disease Risk Reduction Intake Level standard error"
-                        style="min-width: 70px" class="text-center">% &gt;CDRR_SE</th>
+                        style="min-width: 70px" class="text-center">% &gt;RRMC ET</th>
                     {#                    <th>% Inadequacy</th>#}
                     {#                    <th>% Inadequacy_SE</th>#}
                 </tr>
