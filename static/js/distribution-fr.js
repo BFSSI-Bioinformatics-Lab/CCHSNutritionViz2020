@@ -593,7 +593,7 @@ $(document).on("wb-ready.wb", function (event) {
 
             let tableDataCanada = tableData.filter( function (e) {
                 return e.Reg_Prov === "Canada excluant les territoires"
-            }); console.log(tableDataCanada)
+            }); //console.log(tableDataCanada)
 
             // If all provinces wanted then "tableData.map(e => { "
             const tableDataReduced = tableDataCanada.map(e => {
@@ -603,7 +603,7 @@ $(document).on("wb-ready.wb", function (event) {
                     // get it
                 })
                 return obj;
-            });console.log(tableDataReduced.map(e=> Object.values(e)))
+            });//console.log(tableDataReduced.map(e=> Object.values(e)))
 
             // Get rid of NaN values from % and EAR...
             const reduced = tableDataReduced.map(e => {
@@ -618,7 +618,7 @@ $(document).on("wb-ready.wb", function (event) {
             // Filter data to only values contained in user selection
             let filteredData = reduced.filter(function (d) {
                 return d['Sexe'] === sex && d['Nutriment/Item (unité)'] === nutrient && d['Âge (en années)'] === age
-            }); console.log(filteredData)
+            }); //console.log(filteredData)
 
             // Update table
             let datatable = $('.wb-tables').DataTable()
@@ -768,13 +768,16 @@ $(document).on("wb-ready.wb", function (event) {
             // Update title of chart base on nutrient to add articles
             let chartTitleText
             if (nutrient === 'Apport énergétique total (kcal/j)') {
-                chartTitleText = `Courbe de distribution de l’apport en l' ${nutrient} usuel,
+                chartTitleText = `Courbe de distribution de l’apport en l' ${nutrient.toLowerCase()} usuel,
                  ${sex}, ${age}, Canada, 2015`;
             } else if (nutrient === 'Sodium (mg/j)'|| nutrient ==='Fer (mg/j)'||
-                nutrient === "Folate (ÉFA/j)" || nutrient === "Pourcentage del'apport énergétique total provenant des acides gras saturés") {
+                nutrient === "Folate (ÉFA/j)") {
                 chartTitleText = `Courbe de distribution de l’apport en le ${nutrient} usuel,
                  ${sex}, ${age}, Canada, 2015`;
-            } else if (nutrient === 'Fibres alimentairestotales (g/j)'){
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des acides gras saturés"){
+                chartTitleText = `Courbe de distribution de l’apport en le ${nutrient.toLowerCase()} usuel,
+                 ${sex}, ${age}, Canada, 2015`;
+            } else if (nutrient === 'Fibres alimentaires totales (g/j)'){
                 chartTitleText = `Courbe de distribution de l’apport en les ${nutrient} usuel,
                  ${sex}, ${age}, Canada, 2015`;
             } else if (nutrient === 'Vitamine A (ÉAR/j)' || nutrient === 'Vitamine D (mcg/j)'){
@@ -796,7 +799,7 @@ $(document).on("wb-ready.wb", function (event) {
                     return w / 2;
                 })
                 .attr("y", function (d) {
-                    return -60;
+                    return -90;
                 })
                 .text(chartTitleText)
                 .call(wrap, w); // wrap the text in <= 30 pixels
