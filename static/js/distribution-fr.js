@@ -769,23 +769,23 @@ $(document).on("wb-ready.wb", function (event) {
             let chartTitleText
             if (nutrient === 'Apport énergétique total (kcal/j)') {
                 chartTitleText = `Courbe de distribution de l’apport en l' ${nutrient.toLowerCase()} usuel,
-                 ${sex}, ${age}, Canada, 2015`;
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
             } else if (nutrient === 'Sodium (mg/j)'|| nutrient ==='Fer (mg/j)'||
                 nutrient === "Folate (ÉFA/j)") {
                 chartTitleText = `Courbe de distribution de l’apport en le ${nutrient} usuel,
-                 ${sex}, ${age}, Canada, 2015`;
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
             } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des acides gras saturés"){
                 chartTitleText = `Courbe de distribution de l’apport en le ${nutrient.toLowerCase()} usuel,
-                 ${sex}, ${age}, Canada, 2015`;
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
             } else if (nutrient === 'Fibres alimentaires totales (g/j)'){
                 chartTitleText = `Courbe de distribution de l’apport en les ${nutrient} usuel,
-                 ${sex}, ${age}, Canada, 2015`;
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
             } else if (nutrient === 'Vitamine A (ÉAR/j)' || nutrient === 'Vitamine D (mcg/j)'){
                 chartTitleText = `Courbe de distribution de l’apport en la ${nutrient} usuel,
-                 ${sex}, ${age}, Canada, 2015`;
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
             } else {
                 chartTitleText = `Courbe de distribution de l’apport en ${nutrient} usuel,
-                 ${sex}, ${age}, Canada, 2015`;
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
             }
 
 
@@ -903,9 +903,35 @@ $(document).on("wb-ready.wb", function (event) {
             let stripNutrient = nutrient.replace(/ *\([^)]*\) */g, "");
 
             if (stripNutrient in nutrientFacts) {
-                d3.select('#nutrient-notes-header').html(
-                    `<h3>Additional notes for ${stripNutrient}</h3>`
-                )
+                // d3.select('#nutrient-notes-header').html(
+                //     `<h3>Additional notes for ${stripNutrient}</h3>`
+                // )
+                if (stripNutrient === 'Apport énergétique total') {
+                    d3.select('#nutrient-notes-header').html(
+                    `<h3>Notes supplémentaires sur l' ${stripNutrient.toLowerCase()}</h3>`
+                    )
+                } else if (stripNutrient === 'Sodium'|| stripNutrient ==='Fer'||
+                    stripNutrient === "Folate") {
+                    d3.select('#nutrient-notes-header').html(
+                    `<h3>Notes supplémentaires sur le ${stripNutrient}</h3>`
+                    )
+                } else if (stripNutrient === "Pourcentage de l'apport énergétique total provenant des acides gras saturés"){
+                    d3.select('#nutrient-notes-header').html(
+                    `<h3>Notes supplémentaires sur le ${stripNutrient.toLowerCase()}</h3>`
+                    )
+                } else if (stripNutrient === 'Fibres alimentaires totales'){
+                    d3.select('#nutrient-notes-header').html(
+                    `<h3>Notes supplémentaires sur les ${stripNutrient}</h3>`
+                    )
+                } else if (stripNutrient === 'Vitamine A' || stripNutrient === 'Vitamine D'){
+                    d3.select('#nutrient-notes-header').html(
+                    `<h3>Notes supplémentaires sur la ${stripNutrient}</h3>`
+                    )
+                } else {
+                    d3.select('#nutrient-notes-header').html(
+                    `<h3>Notes supplémentaires sur ${stripNutrient}</h3>`
+                    )
+                }
                 d3.select('#nutrient-notes').html(`
                     <p>${nutrientFacts[stripNutrient]}</p>
                 `);
@@ -928,19 +954,35 @@ $(document).on("wb-ready.wb", function (event) {
                     .attr("y", function (d) {
                         return h + margin.top + margin.bottom + 30;
                     })
-                .text('Data Source: Statistics Canada, 2015 Canadian Community Health Survey ' +
-                    '- Nutrition, 2015.')
+                .text('Source des données: Statistique Canada, Enquête sur la santé dans les ' +
+                    'collectivités canadiennes (ESCC) - Nutrition, 2015 - Fichier partagé.')
                 .call(wrap, w);
 
 
             //Update table title
             //let tableTitle = document.getElementById('table-title').innerHTML
-            if (sex === 'Both') {
-                document.getElementById('table-title').innerHTML = `Percentiles of ${nutrient} usual intake, ${sex.toLowerCase()} sexes, age ${age}, Canada, 2015`;
-            } else {
-                document.getElementById('table-title').innerHTML = `Percentiles of ${nutrient} usual intake, ${sex.toLowerCase()}, age ${age}, Canada, 2015`;
-            }
 
+
+            if (nutrient === 'Apport énergétique total (kcal/j)') {
+                document.getElementById('table-title').innerHTML = `Percentiles de 
+                l’apport usuel en l' ${nutrient.toLowerCase()}, ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === 'Sodium (mg/j)'|| nutrient ==='Fer (mg/j)'||
+                nutrient === "Folate (ÉFA/j)") {
+                document.getElementById('table-title').innerHTML = `Percentiles de 
+                l’apport usuel en le ${nutrient}, ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des acides gras saturés"){
+                document.getElementById('table-title').innerHTML = `Percentiles de 
+                l’apport usuel en le ${nutrient.toLowerCase()}, ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === 'Fibres alimentaires totales (g/j)'){
+                document.getElementById('table-title').innerHTML = `Percentiles de 
+                l’apport usuel en les ${nutrient}, ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === 'Vitamine A (ÉAR/j)' || nutrient === 'Vitamine D (mcg/j)'){
+                document.getElementById('table-title').innerHTML = `Percentiles de 
+                l’apport usuel en la ${nutrient}, ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else {
+                document.getElementById('table-title').innerHTML = `Percentiles de 
+                l’apport usuel en ${nutrient}, ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            }
             // Update description of chart
             if (sex === 'Both') {
                 document.getElementById('curve-description-readers').ariaLabel = `A graph 
