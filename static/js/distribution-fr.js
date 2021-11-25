@@ -346,7 +346,7 @@ $(document).on("wb-ready.wb", function (event) {
             .attr("font-family", "Helvetica,Arial,sans-serif")
             .style("font-weight", "bold")
             .style("font-size", chartFontSize)
-            .text("Relative probability density");
+            .text("Densité de probabilité");
 
         // Chart title
         const chartTitle = svg.append("g").attr("class", "chart-title");
@@ -983,22 +983,57 @@ $(document).on("wb-ready.wb", function (event) {
                 document.getElementById('table-title').innerHTML = `Percentiles de 
                 l’apport usuel en ${nutrient}, ${sex.toLowerCase()}, ${age}, Canada, 2015`;
             }
-            // Update description of chart
-            if (sex === 'Both') {
-                document.getElementById('curve-description-readers').ariaLabel = `A graph 
-                displaying the usual intake distribution curve for ${nutrient} 
-                in ${sex.toLowerCase()}, age ${age}, with the limit value(s) if applicable. 
-                Percentiles of usual intake were statistically transformed so that the data 
-                could be presented as a probability distribution curve. The non-transformed, 
-                percentiles of usual intakes and limit values, if applicable, are displayed in 
-                the table below the graph.`;
+
+            // Update description of chart (readers ONLY)
+            if (nutrient === 'Apport énergétique total (kcal/j)') {
+                document.getElementById('curve-description-readers').ariaLabel = `Un 
+                graphique montrant la courbe de distribution de l’apport usuel en l' ${nutrient.toLowerCase()} 
+                chez les ${sex.toLowerCase()} de ${age}, avec la ou les valeurs limites, s'il y a 
+                lieu. Les percentiles des apports usuels ont été transformés statistiquement afin 
+                que les données puissent être présentées sous forme de courbe de distribution de 
+                probabilité. Les percentiles non transformés des apports usuels et les valeurs 
+                limites, s'il y a lieu, sont présentés dans le tableau sous le graphique.`;
+            } else if (nutrient === 'Sodium (mg/j)'|| nutrient ==='Fer (mg/j)'||
+                nutrient === "Folate (ÉFA/j)") {
+                document.getElementById('curve-description-readers').ariaLabel = `Un 
+                graphique montrant la courbe de distribution de l’apport usuel en le ${nutrient} 
+                chez les ${sex.toLowerCase()} de ${age}, avec la ou les valeurs limites, s'il y a 
+                lieu. Les percentiles des apports usuels ont été transformés statistiquement afin 
+                que les données puissent être présentées sous forme de courbe de distribution de 
+                probabilité. Les percentiles non transformés des apports usuels et les valeurs 
+                limites, s'il y a lieu, sont présentés dans le tableau sous le graphique.`;
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des acides gras saturés"){
+                document.getElementById('curve-description-readers').ariaLabel = `Un 
+                graphique montrant la courbe de distribution de l’apport usuel en le ${nutrient.toLowerCase()} 
+                chez les ${sex.toLowerCase()} de ${age}, avec la ou les valeurs limites, s'il y a 
+                lieu. Les percentiles des apports usuels ont été transformés statistiquement afin 
+                que les données puissent être présentées sous forme de courbe de distribution de 
+                probabilité. Les percentiles non transformés des apports usuels et les valeurs 
+                limites, s'il y a lieu, sont présentés dans le tableau sous le graphique.`;
+            } else if (nutrient === 'Fibres alimentaires totales (g/j)'){
+                document.getElementById('curve-description-readers').ariaLabel = `Un 
+                graphique montrant la courbe de distribution de l’apport usuel en les ${nutrient} 
+                chez les ${sex.toLowerCase()} de ${age}, avec la ou les valeurs limites, s'il y a 
+                lieu. Les percentiles des apports usuels ont été transformés statistiquement afin 
+                que les données puissent être présentées sous forme de courbe de distribution de 
+                probabilité. Les percentiles non transformés des apports usuels et les valeurs 
+                limites, s'il y a lieu, sont présentés dans le tableau sous le graphique.`;
+            } else if (nutrient === 'Vitamine A (ÉAR/j)' || nutrient === 'Vitamine D (mcg/j)'){
+                document.getElementById('curve-description-readers').ariaLabel = `Un 
+                graphique montrant la courbe de distribution de l’apport usuel en la ${nutrient} 
+                chez les ${sex.toLowerCase()} de ${age}, avec la ou les valeurs limites, s'il y a 
+                lieu. Les percentiles des apports usuels ont été transformés statistiquement afin 
+                que les données puissent être présentées sous forme de courbe de distribution de 
+                probabilité. Les percentiles non transformés des apports usuels et les valeurs 
+                limites, s'il y a lieu, sont présentés dans le tableau sous le graphique.`;
             } else {
-                document.getElementById('curve-description-readers').ariaLabel = `A graph 
-                displaying the usual intake distribution curve for ${nutrient} 
-                in ${sex.toLowerCase()}s, age ${age}, with the limit value(s) if applicable. Percentiles of usual intake were statistically transformed so that the data 
-                could be presented as a probability distribution curve. The non-transformed, 
-                percentiles of usual intakes and limit values, if applicable, are displayed in 
-                the table below the graph.`;
+                document.getElementById('curve-description-readers').ariaLabel = `Un 
+                graphique montrant la courbe de distribution de l’apport usuel en ${nutrient} 
+                chez les ${sex.toLowerCase()} de ${age}, avec la ou les valeurs limites, s'il y a 
+                lieu. Les percentiles des apports usuels ont été transformés statistiquement afin 
+                que les données puissent être présentées sous forme de courbe de distribution de 
+                probabilité. Les percentiles non transformés des apports usuels et les valeurs 
+                limites, s'il y a lieu, sont présentés dans le tableau sous le graphique.`;
             }
         }
 
