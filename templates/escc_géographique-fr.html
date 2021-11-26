@@ -39,114 +39,136 @@
 <nav>
     <ul id="wb-tphp">
         <li class="wb-slc">
-            <a class="wb-sl" href="#wb-cont">Skip to main content</a>
+            <a class="wb-sl" href="#wb-cont">Passer au contenu principal</a>
         </li>
         <li class="wb-slc">
-            <a class="wb-sl" href="#wb-info">Skip to "About government"</a>
+            <a class="wb-sl" href="#wb-info">Passer à «&nbsp;Au sujet du gouvernement&nbsp;»</a>
         </li>
     </ul>
 </nav>
 <header>
     <div id="wb-bnr" class="container">
         <section id="wb-lng" class="text-right">
-            <h2 class="wb-inv">Language selection</h2>
+            <h2 class="wb-inv">Sélection de la langue</h2>
             <ul class="list-inline margin-bottom-none">
-                <li><a lang="fr" hreflang="fr" href="geographique">Français</a></li>
+                <li><a lang="en" hreflang="en" href="geographic">English</a></li>
             </ul>
         </section>
         <div class="row">
             <div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
-                <a href="https://www.canada.ca/en.html" property="url"><img src="../static/GCWeb/assets/sig-blk-en.svg"
-                                                                            alt=""
-                                                                            property="logo"><span class="wb-inv"
-                                                                                                  property="name"> Government of Canada / <span
-                        lang="fr">Gouvernement du Canada</span></span></a>
+                <a href="https://www.canada.ca/fr.html" property="url">
+                    <img src="../static/GCWeb/assets/sig-blk-fr.svg"
+                         alt="" property="logo">
+                    <span class="wb-inv" property="name">  Gouvernement du Canada /
+                        <span lang="en">Government of Canada</span></span>
+                </a>
                 <meta property="areaServed" typeof="Country" content="Canada">
                 <link property="logo" href="../static/GCWeb/assets/wmms-blk.svg">
             </div>
             <section id="wb-srch" class="col-lg-8 text-right">
-                <h2>Search</h2>
-                <form action="#" method="post" name="cse-search-box" role="search" class="form-inline">
+                <h2>Recherche</h2>
+                <form action="https://canada.ca/fr/sr/srb.html" method="get" name="cse-search-box"
+                      role="search" class="form-inline">
                     <div class="form-group">
-                        <label for="wb-srch-q" class="wb-inv">Search Canada.ca</label>
+                        <label for="wb-srch-q" class="wb-inv">Rechercher dans Canada.ca</label>
                         <input id="wb-srch-q" list="wb-srch-q-ac" class="wb-srch-q form-control" name="q" type="search"
-                               value="" size="34" maxlength="170" placeholder="Search Canada.ca">
+                               value="" size="34" maxlength="170"
+                               placeholder="Rechercher dans Canada.ca">
                         <datalist id="wb-srch-q-ac">
                         </datalist>
                     </div>
                     <div class="form-group submit">
                         <button type="submit" id="wb-srch-sub" class="btn btn-primary btn-small" name="wb-srch-sub">
-                            <span class="glyphicon-search glyphicon"></span><span class="wb-inv">Search</span></button>
+                            <span class="glyphicon-search glyphicon"></span>
+                            <span class="wb-inv">Recherche</span></button>
                     </div>
                 </form>
             </section>
         </div>
     </div>
-    <nav class="gcweb-menu" typeof="SiteNavigationElement">
+    <nav class="gcweb-menu wb-init gcweb-menu-inited"
+         typeof="SiteNavigationElement">
         <div class="container">
             <h2 class="wb-inv">Menu</h2>
-            <button type="button" aria-haspopup="true" aria-expanded="false"><span class="wb-inv">Main </span>Menu <span
-                    class="expicon glyphicon glyphicon-chevron-down"></span></button>
-            <ul role="menu" aria-orientation="vertical" data-ajax-replace="../static/ajax/sitemenu-v5-en.html">
-                <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/jobs.html">Jobs and
-                    the workplace</a></li>
-                <li role="presentation"><a role="menuitem"
-                                           href="https://www.canada.ca/en/services/immigration-citizenship.html">Immigration
-                    and citizenship</a></li>
-                <li role="presentation"><a role="menuitem" href="https://travel.gc.ca/">Travel and tourism</a></li>
-                <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/business.html">Business
-                    and industry</a></li>
-                <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/benefits.html">Benefits</a>
-                </li>
-                <li role="presentation"><a role="menuitem"
-                                           href="https://www.canada.ca/en/services/health.html">Health</a></li>
-                <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/taxes.html">Taxes</a>
-                </li>
-                <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/environment.html">Environment
-                    and natural resources</a></li>
-                <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/defence.html">National
-                    security and defence</a></li>
-                <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/culture.html">Culture,
-                    history and sport</a></li>
-                <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/policing.html">Policing,
-                    justice and emergencies</a></li>
-                <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/transport.html">Transport
-                    and infrastructure</a></li>
-                <li role="presentation"><a role="menuitem"
-                                           href="https://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and
-                    the world</a></li>
-                <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Money
-                    and finances</a></li>
-                <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/science.html">Science
-                    and innovation</a></li>
+            <button type="button" aria-haspopup="true" aria-expanded="false">
+                <span class="wb-inv"> principal </span>
+                Menu
+                <span class="expicon glyphicon glyphicon-chevron-down"></span>
+            </button>
+            <ul role="menu"
+                aria-orientation="vertical"
+                data-ajax-replace="../static/ajax/sitemenu-v5-fr.html">
+{#                <li role="presentation">#}
+{#                    <a role="menuitem"#}
+{#                       href="https://www.canada.ca/fr/services/emplois.html">Emplois et milieu de travail#}
+{#                    </a>#}
+{#                </li>#}
+{#                <li role="presentation">#}
+{#                    <a role="menuitem"#}
+{#                       href="https://www.canada.ca/fr/services/immigration-citoyennete.html">#}
+{#                        Immigration et citoyenneté#}
+{#                    </a>#}
+{#                </li>#}
+{#                <li role="presentation"><a role="menuitem" href="https://voyage.gc.ca/">Voyage et tourisme</a></li>#}
+{#                <li role="presentation">#}
+{#                    <a role="menuitem" href="https://www.canada.ca/fr/services/entreprises.html">#}
+{#                        Entreprises et industrie#}
+{#                    </a>#}
+{#                </li>#}
+{#                <li role="presentation">#}
+{#                    <a role="menuitem"#}
+{#                       href="https://www.canada.ca/fr/services/prestations.html">Prestations</a>#}
+{#                </li>#}
+{#                <li role="presentation"><a role="menuitem"#}
+{#                                           href="https://www.canada.ca/fr/services/sante.html">Santé</a></li>#}
+{#                <li role="presentation">#}
+{#                    <a role="menuitem" href="https://www.canada.ca/fr/services/impots.html">Impôts</a>#}
+{#                </li>#}
+{#                <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/environment.html">Environment#}
+{#                    and natural resources</a></li>#}
+{#                <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/defence.html">National#}
+{#                    security and defence</a></li>#}
+{#                <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/culture.html">Culture,#}
+{#                    history and sport</a></li>#}
+{#                <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/policing.html">Policing,#}
+{#                    justice and emergencies</a></li>#}
+{#                <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/transport.html">Transport#}
+{#                    and infrastructure</a></li>#}
+{#                <li role="presentation"><a role="menuitem"#}
+{#                                           href="https://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and#}
+{#                    the world</a></li>#}
+{#                <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Money#}
+{#                    and finances</a></li>#}
+{#                <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/science.html">Science#}
+{#                    and innovation</a></li>#}
             </ul>
         </div>
     </nav>
     <nav id="wb-bc" property="breadcrumb">
-        <h2>You are here:</h2>
+        <h2>Vous êtes ici :</h2>
         <div class="container">
             <ol class="breadcrumb">
-                <li><a href="https://www.canada.ca/en.html">Home</a></li>
+                <li><a href="https://www.canada.ca/fr.html">Canada.ca</a></li>
             </ol>
         </div>
     </nav>
 </header>
 <main property="mainContentOfPage" class="container" typeof="WebPageElement">
-    <h1 property="name" id="wb-cont">Usual intakes from food, 2015</h1>
-    <p><strong>From <a href="https://www.canada.ca/en/services/health.html" target="_blank">Health
-        Canada</a></strong></p>
-
+    <h1 property="name" id="wb-cont">Apports usuels provenant des aliments, 2015</h1>
+    <p><strong>De <a href="https://www.canada.ca/fr/services/sante.html"
+                       target="_blank">Santé Canada</a></strong></p>
 
     <section>
         <div class="row">
             <div class="btn-group btn-group-lg btn-group-justified" style="padding:20px 0px;">
-                <a class="btn btn-default toolTab" role="button" href="/">About the data</a>
-                <a class="btn btn-default toolTab" role="button" href="distribution">Distribution curves</a>
-                <a class="active btn btn-default btn-primary toolTab" role="button" href="geographic">Geographic
-                    comparison</a>
-                <a class="btn btn-default toolTab" role="button" href="data_table">Data table</a>
+                <a class="btn btn-default toolTab" role="button" href="a_propos">À propos de l'outil de données</a>
                 <a class="btn btn-default toolTab" role="button"
-                   href="technical_notes">Technical Notes</a>
+                   href="distribution_fr">Courbes de distribution</a>
+                <a class="active btn btn-default btn-primary toolTab" role="button" href="#">Comparaison
+                    géographique</a>
+                <a class="btn btn-default toolTab" role="button" href="tableau">Tableau de données</a>
+                <a class="btn btn-default toolTab" role="button"
+                   href="notes_techniques">Notes techniques</a>
             </div>
         </div>
     </section>
@@ -164,22 +186,22 @@
                         <fieldset>
                             <h3 class="h6 mrgn-tp-0 mrgn-rght-0 mrgn-bttm-sm">
                         <span id="ContentPlaceHolder_Body_LabelStep1" class="text-danger">
-                            Select item(s) from each list below:
+                            Veuillez préciser les paramètres ci-dessous :
                         </span>
                             </h3>
                             <div class="form-group-sm">
-                                <label for="sexDropdown">Sex</label>
+                                <label for="sexDropdown">Sexe</label>
                                 <div id="sexDropdown" class="chart-selector"></div>
-                                <label for="ageDropdown">Age (years)</label>
+                                <label for="ageDropdown">Groupe d’âge</label>
                                 <div id="ageDropdown" class="chart-selector"></div>
-                                <label for="nutrientDropdown">Nutrient</label>
+                                <label for="nutrientDropdown">Nutriment</label>
                                 <div id="nutrientDropdown" class="chart-selector"></div>
                             </div>
                         </fieldset>
                         <br>
                         <button class="btn btn-sm btn-success" id="saveChart"
                         onclick="downloadSVG()"><span
-                            class="glyphicon glyphicon-cloud-download"></span> Save graph (.png)
+                            class="glyphicon glyphicon-cloud-download"></span> Télécharger le graphique (.png)
                         </button>
                     </div>
 
@@ -190,8 +212,8 @@
                     <section class="lnkbx well" style="display: block; height: 20em">
                         <div class="row" style="height: 20%">
                             <div id="region-detail-text" class="container-fluid"><i>
-                                Hover your cursor over a region on the map for
-                                additional detail.</i></div>
+                                Passez votre curseur sur une région de la carte pour obtenir des
+                                détails supplémentaires.</i></div>
                         </div>
                         <div class="row" style="margin-top: 30px">
 
@@ -285,23 +307,22 @@
         <br>
         <div class="row">
             <section class="alert alert-info">
-                <h3>Notes & Legend</h3>
+                <h3>Notes et Légende</h3>
                 <table class="table table-condensed table-responsive">
                     <tbody>
                     <tr>
                         <td style=" padding-top: 15px; padding-bottom:10px ">
-                            <strong>Data Source</strong></td>
+                            <strong>Source des données</strong></td>
                         <td style=" padding-top: 15px; padding-bottom:10px ">
-                            <a href="https://open.canada.ca/data/en/dataset/31599960-2c1e-4d90-a9d9-979ad0e1abb4"
-                               target="_blank">Statistics Canada, Canadian Community Health Survey
-                                (CCHS) - Nutrition, 2015, Share
-                            Files.</a>
+                            Statistique Canada,
+                            Enquête sur la santé dans les collectivités canadiennes (ESCC) -
+                            Nutrition, 2015 - Fichier partagé.
                         </td>
                     </tr>
                     <tr >
                         <td style="min-width: 180px; padding-top: 15px;
                         padding-bottom:10px">
-                            <strong>About the graph and table</strong></td>
+                            <strong>À propos du graphique et du tableau</strong></td>
                         <td style=" padding-top: 15px; padding-bottom:10px ">
                             <p>
                                 Please refer to the <a href="technical_notes">Technical Notes</a> tab for detailed notes that
