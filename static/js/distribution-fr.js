@@ -768,25 +768,56 @@ $(document).on("wb-ready.wb", function (event) {
             // Update title of chart base on nutrient to add articles
             let chartTitleText
             if (nutrient === 'Apport énergétique total (kcal/j)') {
-                chartTitleText = `Courbe de distribution de l’apport en l' ${nutrient.toLowerCase()} usuel,
+                chartTitleText = `Courbe de distribution de l'${nutrient.toLowerCase()} usuel,
                  ${sex.toLowerCase()}, ${age}, Canada, 2015`;
-            } else if (nutrient === 'Sodium (mg/j)'|| nutrient ==='Fer (mg/j)'||
-                nutrient === "Folate (ÉFA/j)") {
-                chartTitleText = `Courbe de distribution de l’apport en le ${nutrient} usuel,
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des glucides") {
+                chartTitleText = `Courbe de distribution du ${nutrient.toLowerCase()},
                  ${sex.toLowerCase()}, ${age}, Canada, 2015`;
-            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des acides gras saturés"){
-                chartTitleText = `Courbe de distribution de l’apport en le ${nutrient.toLowerCase()} usuel,
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des lipides") {
+                chartTitleText = `Courbe de distribution du ${nutrient.toLowerCase()},
                  ${sex.toLowerCase()}, ${age}, Canada, 2015`;
-            } else if (nutrient === 'Fibres alimentaires totales (g/j)'){
-                chartTitleText = `Courbe de distribution de l’apport en les ${nutrient} usuel,
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant de l'acide linoléique") {
+                chartTitleText = `Courbe de distribution du ${nutrient.toLowerCase()},
                  ${sex.toLowerCase()}, ${age}, Canada, 2015`;
-            } else if (nutrient === 'Vitamine A (ÉAR/j)' || nutrient === 'Vitamine D (mcg/j)'){
-                chartTitleText = `Courbe de distribution de l’apport en la ${nutrient} usuel,
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant de l'acide linolénique") {
+                chartTitleText = `Courbe de distribution du ${nutrient.toLowerCase()},
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des acides gras monoinsaturés") {
+                chartTitleText = `Courbe de distribution du ${nutrient.toLowerCase()},
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des acides gras polyinsaturés") {
+                chartTitleText = `Courbe de distribution du ${nutrient.toLowerCase()},
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des protéines") {
+                chartTitleText = `Courbe de distribution du ${nutrient.toLowerCase()},
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des acides gras saturés") {
+                chartTitleText = `Courbe de distribution du ${nutrient.toLowerCase()},
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des sucres") {
+                chartTitleText = `Courbe de distribution du ${nutrient.toLowerCase()},
                  ${sex.toLowerCase()}, ${age}, Canada, 2015`;
             } else {
-                chartTitleText = `Courbe de distribution de l’apport en ${nutrient} usuel,
+                chartTitleText = `Courbe de distribution de l’apport en ${nutrient.toLowerCase()} usuel,
                  ${sex.toLowerCase()}, ${age}, Canada, 2015`;
             }
+            // } else if (nutrient === 'Sodium (mg/j)'|| nutrient ==='Fer (mg/j)'||
+            //     nutrient === "Folate (ÉFA/j)") {
+            //     chartTitleText = `Courbe de distribution de l’apport en le ${nutrient} usuel,
+            //      ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            // } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des acides gras saturés"){
+            //     chartTitleText = `Courbe de distribution de l’apport en le ${nutrient.toLowerCase()} usuel,
+            //      ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            // } else if (nutrient === 'Fibres alimentaires totales (g/j)'){
+            //     chartTitleText = `Courbe de distribution de l’apport en les ${nutrient} usuel,
+            //      ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            // } else if (nutrient === 'Vitamine A (ÉAR/j)' || nutrient === 'Vitamine D (mcg/j)'){
+            //     chartTitleText = `Courbe de distribution de l’apport en la ${nutrient} usuel,
+            //      ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            // } else {
+            //     chartTitleText = `Courbe de distribution de l’apport en ${nutrient} usuel,
+            //      ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            // }
 
 
             // Chart title
