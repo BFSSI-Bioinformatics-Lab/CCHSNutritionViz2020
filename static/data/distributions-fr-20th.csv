@@ -1,4 +1,4 @@
-x,y,Nutrient/Item (unit),Year,Reg_Prov,Sex,Age (years),code,ref_code
+x,y,Nutriment/Item (unité),Year,Région/Province,Sexe,Âge (en années),code,ref_code
 37.0887587060173,1.53812230327841e-06,Magnésium (mg/j),2004,Canada excluant les territoires,Hommes,19 à 30 ans,8,246
 68.8624487095608,1.3543027362309698e-05,Magnésium (mg/j),2004,Canada excluant les territoires,Hommes,19 à 30 ans,8,246
 100.636138713104,7.29411087419756e-05,Magnésium (mg/j),2004,Canada excluant les territoires,Hommes,19 à 30 ans,8,246
