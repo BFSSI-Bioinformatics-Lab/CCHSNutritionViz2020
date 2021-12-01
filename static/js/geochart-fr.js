@@ -223,7 +223,7 @@ intakes of vitamin D from dietary sources, available clinical measures do not su
    </ol>`
 };
 
-d3.csv("../static/data/geographic-oct2020-en.csv", function (d) {
+d3.csv("../static/data/corrected-geographic-oct2020-fr.csv", function (d) {
     return {
         nutrient: d['Nutrient/Item'],
         region: d['Reg_Prov'],
