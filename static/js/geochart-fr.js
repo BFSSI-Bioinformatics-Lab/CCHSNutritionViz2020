@@ -40,16 +40,16 @@ let hoveredRegion = null;
 
 // Note that regionList is used for keyboard controls of map; that's why territories are not included (no data)
 const regionList = [
-    'British Columbia',
+    'Colombie-Britannique',
     'Alberta',
     'Saskatchewan',
     'Manitoba',
     'Ontario',
-    'Quebec',
-    'Newfoundland and Labrador',
-    'New Brunswick',
-    'Prince Edward Island',
-    'Nova Scotia',
+    'Québec',
+    'Terre-Neuve-et-Labrador',
+    'Nouveau-Brunswick',
+    'Île-du-Prince-Édouard',
+    'Nouvelle-Écosse',
 ];
 
 // Tracks index within the regionList to allow for keyboard/button cycling of map
@@ -58,55 +58,56 @@ let currentRegionIndex = null;
 const nutrientList = [
     'Calcium',
     'Folate',
-    'Iron',
-    'Magnesium',
-    'Percentage of total energy intake from carbohydrates',
-    'Percentage of total energy intake from fat',
-    'Percentage of total energy intake from protein',
+    'Fer',
+    'Magnésium',
+    "Pourcentage de l'apport énergétique total provenant des glucides",
+    "Pourcentage de l'apport énergétique total provenant des lipides",
+    "Pourcentage de l'apport énergétique total provenant des protéines",
     'Potassium',
     'Sodium',
-    'Vitamin A',
-    'Vitamin B6',
-    'Vitamin C',
-    'Vitamin D',
+    'Vitamine A',
+    'Vitamine B6',
+    'Vitamine C',
+    'Vitamine D',
     'Zinc',
 ].sort();
 
 const ageList = [
-    '1 to 8 years',
-    '9 to 18 years',
-    '19 years and over',
+    '1 à 8 ans',
+    '9 à 18 ans',
+    '19 ans et plus',
 ];
 
 const sexList = [
-    'Female',
-    'Male',
-    'Males and females combined'
+    'Femmes',
+    'Hommes',
+    'Les deux sexes'
 ].sort();
 
 // Generates appropriate chart title for each nutrient
 const generateTitle = (sex, age, nutrient) => {
     let cdrrNutrients = ['Sodium']
-    let earNutrients = ['Calcium', 'Folate', 'Vitamin A', 'Vitamin B6', 'Vitamin C', 'Vitamin D', 'Zinc', 'Magnesium']
+    let earNutrients = ['Calcium', 'Folate', 'Vitamine A', 'Vitamine B6', 'Vitamine C', 'Vitamine' +
+    ' D', 'Zinc', 'Magnésium']
     let aiNutrients = ['Potassium']
-    let inadequateNutrients = ['Iron']
+    let inadequateNutrients = ['Fer']
     let amdrNutrients = [
-        'Percentage of total energy intake from carbohydrates',
-        'Percentage of total energy intake from fat',
-        'Percentage of total energy intake from protein'
+        "Pourcentage de l'apport énergétique total provenant des glucides",
+        "Pourcentage de l'apport énergétique total provenant des lipides",
+        "Pourcentage de l'apport énergétique total provenant des protéines"
     ]
 
     // Age statement
     let ageString = ''
     switch (age) {
-        case '1 to 8 years':
-            ageString += 'children age 1 to 8 years'
+        case '1 à 8 ans':
+            ageString += 'enfants âge 1 à 8 ans' //âge
             break
-        case '9 to 18 years':
-            ageString += 'adolescents age 9 to 18 years'
+        case '9 à 18 ans':
+            ageString += 'adolescents âge 9 à 18 ans'
             break
-        case '19 years and over':
-            ageString += 'adults age 19 and over'
+        case '19 ans et plus':
+            ageString += 'adultes âge 19 ans et plus'
             break
         default:
             console.log(`Error parsing age string "${age}"`)
@@ -115,13 +116,13 @@ const generateTitle = (sex, age, nutrient) => {
     // Sex statement
     let sexString = ''
     switch (sex) {
-        case 'Male':
-            sexString += ', male,'
+        case 'Hommes':
+            sexString += ', hommes,'
             break
-        case 'Female':
-            sexString += ', female,'
+        case 'Femmes':
+            sexString += ', femmes,'
             break
-        case 'Males and females combined':
+        case 'Les deux sexes':
             sexString += ''
             break
         default:
@@ -147,7 +148,7 @@ const generateTitle = (sex, age, nutrient) => {
     }
 
     if (ironBool) {
-        return `Percentage of ${ageString}${sexString} with ${adequacyString}, Canada, 2015`
+        return `Pourcentage d’${ageString} dont l’apport en ${sexString} with ${adequacyString}, Canada, 2015`
     } else {
         return `Percentage of ${ageString}${sexString} with a usual intake of ${nutrient} ${adequacyString}, Canada, 2015`
     }
@@ -157,16 +158,32 @@ const generateTitle = (sex, age, nutrient) => {
 const nutrientFacts = {
 
     'Folate': `
-    <p>Folate is a generic term that includes the naturally occurring form found in food and folic acid found in supplements and fortified foods. The requirements for folate are based on the amount of dietary folate equivalents (DFEs) needed to maintain red blood cell folate concentrations. DFEs adjust for differences in absorption between naturally-occurring food folate and synthetic folic acid. While there appears to be a relatively high prevalence of inadequate intakes of folate, red blood cell folate measures, an indicator of folate status, suggest a very low prevalence of folate deficiency in the Canadian population.<super>1, 2</super></p>
-    <p>Women capable of becoming pregnant require special consideration when it comes to folate intake. To reduce the risk of neural tube defects, women who could become pregnant should take a multivitamin containing 400 µg of folic acid per day in addition to the amount of folate in a healthy diet. Red blood cell folate measures suggest that some Canadian women of childbearing age have levels below that considered optimal for greatest reduction of risk of neural tube defects.<super>1,2</super></p>
-    <p><strong>References:</strong></p> 
+    <p>Folate est un terme générique qui inclut la forme présente
+                naturellement dans les aliments et l'acide folique présent dans les suppléments
+                et les aliments enrichis. Les besoins en folate sont basés sur la quantité
+                d'équivalents de folate alimentaire (EFA) nécessaire pour maintenir les
+                concentrations de folate dans les globules rouges. Les EFA tiennent compte des
+                différences d'absorption entre le folate alimentaire naturel et l'acide folique
+                synthétique. Bien qu'il semble y avoir une prévalence relativement élevée
+                d'apports insuffisants inadéquats en folate, la mesure de la
+                concentration de folate dans les globules rouges, un indicateur du statut en
+                folate, suggèrent une très faible prévalence de carence en folate dans la
+                population canadienne.<sup>1,2</sup></p>
+    <p>Les femmes en âge de procréer nécessitent une attention particulière en ce qui
+                concerne l'apport en folate. Pour réduire le risque d'anomalies du tube neural,
+                <a href="https://www.canada.ca/fr/sante-publique/services/grossesse/acide-folique.html"
+                   target="_blank">il est recommandé à toutes les femmes qui pourraient devenir
+                    enceintes de prendre chaque jour un supplément multivitaminique contenant 400
+                    µg d'acide folique</a>, en plus de la quantité de folate contenue dans un
+                régime alimentaire sain. Les mesures de la concentration de folate dans les
+                globules rouges suggèrent que certaines femmes canadiennes en âge de procréer ont
+                des niveaux inférieurs à ceux considérés comme optimaux pour la plus grande
+                réduction du risque d'anomalies du tube neural.
+            .<sup>1,2</sup></p>
+    <p><strong>Références :</strong></p> 
     <ol>
-        <li>
-        Statistics Canada. Table  13-10-0336-01   Nutritional status of the household population. DOI:   https://doi.org/10.25318/1310033601-eng
-        </li>
-        <li>Colapinto, Cynthia K., Deborah L. O’Connor and Mark S. Tremblay. 2011. "Folate status of the population in the Canadian Health Measures Survey." Canadian Medical Association Journal. Vol. 183, no. 2. February. pp. E100 to E106.
-        http://www.cmaj.ca/content/183/2/E100.full.pdf+html
-        </li>
+        <li>Statistique Canada.  Tableau  13-10-0336-01   État nutritionnel de la population à domicile. DOI:  https://doi.org/10.25318/1310033601-fra</li>
+        <li>Colapinto, Cynthia K., Deborah L. O’Connor and Mark S. Tremblay. 2011. "Folate status of the population in the Canadian Health Measures Survey." Canadian Medical Association Journal. Vol. 183, no. 2. February. pp. E100 to E106. http://www.cmaj.ca/content/183/2/E100.full.pdf+html</li>
     </ol>`,
 
     //'Total dietary fibre': `
@@ -181,10 +198,16 @@ const nutrientFacts = {
     //</ol>`,
 
 
-    'Iron': `Iron inadequacy was estimated using the full probability method as described in section 2.3.4 of the <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html" target="_blank">Methodology Document.</a>`,
+    'Fer': `L'insuffisance en fer a été estimer à l'aide de la méthode
+                fondée sur les probabilités totales, comme décrit à la section 2.3.4 du
+                <a href="https://www.canada.ca/fr/sante-canada/services/aliments-nutrition/surveillance-aliments-nutrition/sondages-sante-nutrition/enquete-sante-collectivites-canadiennes-escc/compendium-tableaux-donnees-apports-energie-nutriments-autres-aliments.html"
+                   target="_blank">document méthodologique</a>`,
 
-    'Percentage of total energy intake from saturated fats': `
-        <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html" target="_blank">Canada’s Dietary Guidelines</a> recommend that Canadians consume less than 10% of total energy intake from saturated fat. 
+    "Pourcentage de l'apport énergétique total provenant des acides gras saturés": `
+        Les <a href="https://guide-alimentaire.canada.ca/fr/directrices/"
+                   target="_blank">Lignes directrices canadiennes en matière d’alimentation</a>
+                recommandent que les canadiens consomment moins de 10 % de l’apport énergétique
+                total provenant des gras saturé.  
     `,
     // 'Percentage of total energy intake from carbohydrates': `
     // <p>The interpretation of self-reported energy intake should be done with caution as energy intake tends to be underestimated by survey respondents. The Institute of Medicine (IOM) suggests using indicators of relative body weight, such as the Body Mass Index (BMI), as markers of energy intake adequacy within groups. Statistics Canada has released 2015 CCHS – Nutrition results for measured BMI in adults<super>1</super> and children<super>2</super>. </p>
@@ -201,42 +224,52 @@ const nutrientFacts = {
     //     <li>Statistics Canada.  Table  13-10-0795-01   Measured children and youth body mass index (BMI) (World Health Organization classification), by age group and sex, Canada and provinces, Canadian Community Health Survey – Nutrition. DOI:   <a href="https://doi.org/10.25318/1310079501-eng">https://doi.org/10.25318/1310079501-eng</a></li>
     // </ol>`,
 
-    'Sodium': `For more information on sodium intakes, please consult<a
-                    href="https://www.canada.ca/en/health-canada/services/publications/food-nutrition/sodium-intake-canadians-2017.html"
-                    target="_blank">Health Canada's Sodium intake of Canadians in 2017</a> report.`,
-    'Vitamin A': `No prevalence of intakes above the UL are shown for vitamin A. The UL for vitamin A applies to preformed vitamin A only, and those estimates had not yet been conducted at the time these tables were produced.`,
-    'Vitamin D': `
-<p><strong>Estimates of the prevalence of inadequate intakes of vitamin D from food must be interpreted with caution.</strong> </p>
-<p>Vitamin D is unique as it can also be synthesized by the body from sunlight (UV radiation). In addition, vitamin D intake 
-from supplements has not been considered in this assessment. While there appears to be a high prevalence of inadequate 
-intakes of vitamin D from dietary sources, available clinical measures do not suggest wide-spread vitamin D deficiency
- in the Canadian population (<a href="https://www150.statcan.gc.ca/n1/pub/82-003-x/2010001/article/11131-eng.pdf" target="_blank">Langlois et al., Health Reports, 2010</a>;
-  <a href="https://pubmed.ncbi.nlm.nih.gov/21593503-the-vitamin-d-status-of-canadians-relative-to-the-2011-dietary-reference-intakes-an-examination-in-children-and-adults-with-and-without-supplement-use/" target="_blank">Whiting et al., Am J Clin Nutr. 2011)</a>.
-   Vitamin D status in some sub-populations, however, may warrant further consideration.
-   </p>
-   <p><strong>References:</strong></p>
-   <ol>
-        <li>Langlois K, Greene-Finestone L, Little J, Hidiroglou N, Whiting S. Vitamin D status of Canadians as measured in the 2007 to 2009 Canadian Health Measures Survey. Health Rep. 2010;21(1):47–55.</li>
-        <li>Whiting SJ, Langlois KA, Vatanparast H, Greene-Finestone LS. The vitamin D status of Canadians relative to the 2011 Dietary Reference Intakes: an examination in children and adults with and without supplement use. Am J Clin Nutr. 2011;94(1):128–135. doi:10.3945/ajcn.111.013268</li>
-        <li>Statistics Canada. <a href="https://www150.statcan.gc.ca/n1/daily-quotidien/190206/dq190206c-eng.htm" 
-        target="_blank">Canadian Health Measures Survey: Non-environmental laboratory and medication data, 2016 and 2017</a>. The Daily. 2019.</li>
-   </ol>`
+    'Sodium': `Pour plus d'information sur les apports en sodium, veuillez
+                consulter le rapport de Santé Canada intitulé
+                <a href="https://www.canada.ca/fr/sante-canada/services/publications/aliments-et-nutrition/sodium-chez-canadiens-2017.html"
+                   target="_blank">L'apport en sodium des Canadiens en 2017</a>.`,
+    'Vitamine A': `Aucune prévalence pour les apports en dessus du AMT n’est
+                calculée pour la vitamine A. Le AMT pour la vitamine A est fixé pour la vitamine
+                A préformée seulement, et ces estimations n’avaient pas encore été faites lorsque
+                cet outil a été produit.`,
+    'Vitamine D': `
+    <p><strong>Les estimations de la prévalence d’un apport alimentaire insuffisant en
+                        vitamine D doivent être interprétées avec prudence.</strong> </p>
+    <p>La vitamine D est unique car elle peut être obtenue par
+        l’alimentation et les suppléments et peut également être synthétisée dans
+        l'organisme à partir de la lumière du soleil (rayonnement UVB). L'apport de
+        vitamine D provenant des suppléments n'a pas été considéré dans cette analyse.
+        Bien que la prévalence d'un apport insuffisant de vitamine D semble élevée, les
+        mesures de biomarqueurs sanguins ne suggèrent pas que la carence en vitamine D
+        soit généralisée dans la population canadienne.<sup>1,2,3</sup>
+        Bien qu'il semble y avoir une faible prévalence de carence en vitamine D,
+        certaines sous-populations pourraient mériter un examen plus approfondi.
+       </p>
+       <p><strong>Références :</strong></p>
+       <ol>
+            <li>Langlois K, Greene-Finestone L, Little J, Hidiroglou N, Whiting S. Vitamin D status of Canadians as measured in the 2007 to 2009 Canadian Health Measures Survey. Health Rep. 2010;21(1):47–55.</li>
+            <li>Whiting SJ, Langlois KA, Vatanparast H, Greene-Finestone LS. The vitamin D status of Canadians relative to the 2011 Dietary Reference Intakes: an examination in children and adults with and without supplement use. Am J Clin Nutr. 2011;94(1):128–135. doi:10.3945/ajcn.111.013268</li>
+            <li>Statistique Canada. <a href="https://www150.statcan.gc.ca/n1/daily-quotidien/190206/dq190206c-fra.htm"
+            target="_blank">Enquête canadienne sur les mesures de la santé : Données des mesures non
+                            environnementales de laboratoire et de médicaments, 2016 et 2017</a>.
+                            Le Quotidien. 2019.</li>
+       </ol>`
 };
 
-d3.csv("../static/data/corrected-geographic-oct2020-fr.csv", function (d) {
+d3.csv("../static/data/geographic-oct2020-fr.csv", function (d) {
     return {
-        nutrient: d['Nutrient/Item'],
-        region: d['Reg_Prov'],
-        sex: d['Sex'],
-        age: d["Age (years)"],
+        nutrient: d['Nutriment/Item'],
+        region: d['Rég_Prov'],
+        sex: d['Sexe'],
+        age: d["Âge (en années)"],
         n: +d['n'],
-        dri_type: d['DRI type'],
-        prefix: d['Prefix-EN'],
+        dri_type: d['Type de ANREF'],
+        prefix: d['Prefix-FR'],
         percentage: d['Percentage'],
-        percentage_se: +d['SE'],
+        percentage_se: d['SE'],
         flag: d['E flag'],
         ref_value: d['Ref value'],
-        ref_value_unit: d['Ref value unit_EN'],
+        ref_value_unit: d['Ref value unit_FR'],
     };
 }).then(function (data) {
     let masterData = d3.nest()
@@ -264,7 +297,7 @@ d3.csv("../static/data/corrected-geographic-oct2020-fr.csv", function (d) {
     */
     d3.json("../static/data/gpr_000b11a_e.json").then(function (json) {
             // Setup dropdown menus and set default values
-            initializeDropdowns("Males and females combined", "19 years and over", "Sodium")
+            initializeDropdowns("Les deux sexes", "19 ans et plus", "Sodium")
 
             // Filter the data according to dropdown menu selections
             let sex = $("#sexDropdownSelector option:selected").text();
@@ -282,11 +315,11 @@ d3.csv("../static/data/corrected-geographic-oct2020-fr.csv", function (d) {
                 let dataRegion = data[i].region;
 
                 // Grab mean data value
-                let dataValue = data[i].percentage;
+                let dataValue = data[i].percentage;console.log(dataValue)
 
                 // Find corresponding region in geoJSON
                 for (let j = 0; j < json.features.length; j++) {
-                    let jsonRegion = json.features[j].properties.PRENAME;
+                    let jsonRegion = json.features[j].properties.PRFNAME;
                     if (dataRegion === jsonRegion) {
                         json.features[j].properties.percentage = dataValue;
                         break; // Found it, exit geoJSON loop
@@ -347,45 +380,45 @@ d3.csv("../static/data/corrected-geographic-oct2020-fr.csv", function (d) {
 
                 let validNutrientsForChildren = [
                     'Calcium',
-                    'Percentage of total energy intake from carbohydrates',
-                    'Percentage of total energy intake from fat',
-                    'Percentage of total energy intake from protein',
+                    "Pourcentage de l'apport énergétique total provenant des glucides",
+                    "Pourcentage de l'apport énergétique total provenant des lipides",
+                    "Pourcentage de l'apport énergétique total provenant des protéines",
                     'Potassium',
                     'Sodium',
-                    'Vitamin D'
+                    'Vitamine D'
                 ].sort()
 
                 let validNutrientsForAdolescents = [
                     'Calcium',
                     'Folate',
-                    'Magnesium',
-                    'Percentage of total energy intake from carbohydrates',
-                    'Percentage of total energy intake from fat',
-                    'Percentage of total energy intake from protein',
+                    'Fer',
+                    'Magnésium',
+                    "Pourcentage de l'apport énergétique total provenant des glucides",
+                    "Pourcentage de l'apport énergétique total provenant des lipides",
+                    "Pourcentage de l'apport énergétique total provenant des protéines",
                     'Potassium',
                     'Sodium',
-                    'Vitamin A',
-                    'Vitamin C',
-                    'Vitamin D',
+                    'Vitamine A',
+                    'Vitamine C',
+                    'Vitamine D',
                     'Zinc',
-                    'Iron',
                 ].sort()
 
                 let validNutrientsForAdults = [
                     'Calcium',
                     'Folate',
-                    'Iron',
-                    'Magnesium',
-                    'Percentage of total energy intake from carbohydrates',
-                    'Percentage of total energy intake from fat',
-                    'Percentage of total energy intake from protein',
+                    'Fer',
+                    'Magnésium',
+                    "Pourcentage de l'apport énergétique total provenant des glucides",
+                    "Pourcentage de l'apport énergétique total provenant des lipides",
+                    "Pourcentage de l'apport énergétique total provenant des protéines",
                     'Potassium',
                     'Sodium',
-                    'Vitamin A',
-                    'Vitamin C',
-                    'Vitamin D',
+                    'Vitamine A',
+                    'Vitamine B6',
+                    'Vitamine C',
+                    'Vitamine D',
                     'Zinc',
-                    'Vitamin B6'
                 ].sort()
 
                 // Initialize
@@ -394,22 +427,22 @@ d3.csv("../static/data/corrected-geographic-oct2020-fr.csv", function (d) {
                 let sexToDisplay
 
                 // Set ages to display by selected sex
-                if (selectedSex === 'Male' || selectedSex === 'Female') {
-                    ageToDisplay = ['19 years and over']
+                if (selectedSex === 'Hommes' || selectedSex === 'Femmes') {
+                    ageToDisplay = ['19 ans et plus']
                 } else {
-                    ageToDisplay = ['1 to 8 years', '9 to 18 years', '19 years and over']
+                    ageToDisplay = ['1 à 8 ans', '9 à 18 ans', '19 ans et plus']
                 }
 
                 // Set nutrients/sex to display by selected age
-                if (selectedAge === '1 to 8 years') {
+                if (selectedAge === '1 à 8 ans') {
                     nutrientsToDisplay = validNutrientsForChildren
-                    sexToDisplay = ['Males and females combined']
-                } else if (selectedAge === '9 to 18 years') {
+                    sexToDisplay = ['Les deux sexes']
+                } else if (selectedAge === '9 à 18 ans') {
                     nutrientsToDisplay = validNutrientsForAdolescents
-                    sexToDisplay = ['Males and females combined']
+                    sexToDisplay = ['Les deux sexes']
                 } else {
                     nutrientsToDisplay = validNutrientsForAdults
-                    sexToDisplay = ['Male', 'Female', 'Males and females combined'].sort()
+                    sexToDisplay = ['Hommes', 'Femmes', 'Les deux sexes'].sort()
                 }
 
                 /*
@@ -566,7 +599,7 @@ d3.csv("../static/data/corrected-geographic-oct2020-fr.csv", function (d) {
 
                     // Find corresponding region in geoJSON
                     for (let j = 0; j < json.features.length; j++) {
-                        let jsonRegion = json.features[j].properties.PRENAME;
+                        let jsonRegion = json.features[j].properties.PRFNAME;
                         if (dataRegion === jsonRegion) {
                             json.features[j].properties.percentage = geoPercentage;
                             json.features[j].properties.percentage_se = geoPercentageSE;
@@ -635,7 +668,7 @@ d3.csv("../static/data/corrected-geographic-oct2020-fr.csv", function (d) {
                     })
                     .on("mouseout", function (d) {
                         svgRegion.select(".region-tooltip").remove(); // remove hovered region tooltip
-                        d3.select("#region-detail-text").html(`<div class="container-fluid"><i>Hover your cursor over a region on the map for additional detail.</div></i>`); // remove hovered region tooltip
+                        d3.select("#region-detail-text").html(`<div class="container-fluid"><i>Passez votre curseur sur une région de la carte pour obtenir des détails supplémentaires.</div></i>`); // remove hovered region tooltip
                         d3.select("#legend-tick").remove();  // Remove legend tick
 
                         // Set territories by default to original grey
@@ -666,8 +699,8 @@ d3.csv("../static/data/corrected-geographic-oct2020-fr.csv", function (d) {
                             <td>${d.sex}</td>
                             <td>${d.age}</td>
                             <td>${d.n}</td>
-                            <td>${d.percentage}</td>
-                            <td>${d.percentage_se}</td>
+                            <td>${d.percentage.replace('.',',')}</td>
+                            <td>${d.percentage_se.replace('.',',')}</td>
                             <td>${d.flag}</td>
                             <td>${d.dri_type}</td>
                             <td>${d.ref_value}</td>
@@ -701,7 +734,7 @@ d3.csv("../static/data/corrected-geographic-oct2020-fr.csv", function (d) {
             function tooltipHover(d, driObject) {
                 // Zoom
                 let zoom = d3.zoom().on("zoom", zoomed);
-                let activeRegion = d.properties.PRENAME;
+                let activeRegion = d.properties.PRFNAME;
 
                 // Set text
                 d3.select("#region-detail-text").html(`
@@ -709,7 +742,7 @@ d3.csv("../static/data/corrected-geographic-oct2020-fr.csv", function (d) {
 <!--                        <div class="row"><strong>Canada excluding territories: </strong> ${activeRegion}</div>-->
                         <div class="row"><strong>Region: </strong> ${activeRegion}</div>
                         <div class="row"><strong>% ${driObject['prefix']} ${driObject['dri_type']}:
-                         </strong> ${d.properties.percentage} (±${d.properties.percentage_se})</div>
+                         </strong> ${d.properties.percentage.replace('.',',')} <br> (± ${d.properties.percentage_se.replace('.',',')})</div>
                     </div>
                 `);
 
@@ -732,9 +765,9 @@ d3.csv("../static/data/corrected-geographic-oct2020-fr.csv", function (d) {
                     .attr("class", "region-borders")
                     .style('pointer-events', 'all')  // required to enable mouseover and mouseout on svg
                     .style("fill", function (d) {
-                        if (d.properties.percentage && d.properties.PRENAME === activeRegion) {
+                        if (d.properties.percentage && d.properties.PRFNAME === activeRegion) {
                             return colorScale(d.properties.percentage);
-                        } else if (d.properties.PRENAME === activeRegion) {
+                        } else if (d.properties.PRFNAME === activeRegion) {
                             return 'grey';
                         } else {
                             return "transparent";
@@ -792,7 +825,7 @@ d3.csv("../static/data/corrected-geographic-oct2020-fr.csv", function (d) {
                 //Update legend (Derived from https://bl.ocks.org/duspviz-mit/9b6dce37101c30ab80d0bf378fe5e583)
                 key.selectAll("rect").remove();
                 key.select("#legend-label").remove();
-
+                console.log(minValueY, maxValueY, selectedNutrient, hoveredPercentage, driObject)
                 legend.append("stop")
                     .attr("offset", "0%")
                     .attr("stop-color", colorScale(minValueY))

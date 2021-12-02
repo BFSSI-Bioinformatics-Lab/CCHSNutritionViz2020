@@ -59,7 +59,7 @@ const nutrientFacts = {
             Santé Canada. 2010.</li>
     </ol>`,
 
-    'Fer': `Iron inadequacy was estimated using the full probability method as described in section 2.3.4 of the <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html" target="_blank">Methodology Document.</a>L'insuffisance en fer a été estimer à l'aide de la méthode
+    'Fer': `L'insuffisance en fer a été estimer à l'aide de la méthode
                 fondée sur les probabilités totales, comme décrit à la section 2.3.4 du
                 <a href="https://www.canada.ca/fr/sante-canada/services/aliments-nutrition/surveillance-aliments-nutrition/sondages-sante-nutrition/enquete-sante-collectivites-canadiennes-escc/compendium-tableaux-donnees-apports-energie-nutriments-autres-aliments.html"
                    target="_blank">document méthodologique</a>.`,
