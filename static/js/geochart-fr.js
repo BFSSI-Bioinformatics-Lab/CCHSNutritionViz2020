@@ -101,13 +101,13 @@ const generateTitle = (sex, age, nutrient) => {
     let ageString = ''
     switch (age) {
         case '1 à 8 ans':
-            ageString += 'enfants âge 1 à 8 ans' //âge
+            ageString += 'enfants de 1 à 8 ans' //âge
             break
         case '9 à 18 ans':
-            ageString += 'adolescents âge 9 à 18 ans'
+            ageString += 'adolescents de 9 à 18 ans'
             break
         case '19 ans et plus':
-            ageString += 'adultes âge 19 ans et plus'
+            ageString += 'adultes de 19 ans et plus'
             break
         default:
             console.log(`Error parsing age string "${age}"`)
@@ -143,7 +143,7 @@ const generateTitle = (sex, age, nutrient) => {
     } else if (aiNutrients.includes(nutrient)) {
         adequacyString += "excédant l'apport suffisant"
     } else if (inadequateNutrients.includes(nutrient)) {
-        adequacyString += "un apport insuffisant en fer"
+        adequacyString += "fer est insuffisant"
         ironBool = true
     }
 
