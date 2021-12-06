@@ -123,7 +123,7 @@ const generateTitle = (sex, age, nutrient) => {
             sexString += ', femmes,'
             break
         case 'Les deux sexes':
-            sexString += ''
+            sexString += ', '
             break
         default:
             console.log(`Error parsing sex string "${sex}"`)
@@ -133,24 +133,24 @@ const generateTitle = (sex, age, nutrient) => {
     let adequacyString = ''
     let ironBool = false
     if (cdrrNutrients.includes(nutrient)) {
-        adequacyString += 'above the Chronic Disease Risk Reduction intake'
+        adequacyString += "excédant l'apport lié à un risque réduit de maladie chronique"
     } else if (amdrNutrients.includes(nutrient)) {
         // clean up text for improved readability
-        nutrient = nutrient.replace('Percentage of total energy intake from', '')
-        adequacyString += 'within the Acceptable Macronutrient Distribution Range'
+        nutrient = nutrient.replace("Pourcentage de l'apport énergétique total provenant des", '')
+        adequacyString += "inclus dans l'étendue des valeurs acceptables pour les macronutriments"
     } else if (earNutrients.includes(nutrient)) {
-        adequacyString += 'below the Estimated Average Requirement'
+        adequacyString += "au-dessous du Besoin moyen estimatif"
     } else if (aiNutrients.includes(nutrient)) {
-        adequacyString += 'above the Adequate Intake'
+        adequacyString += "excédant l'apport suffisant"
     } else if (inadequateNutrients.includes(nutrient)) {
-        adequacyString += 'inadequate iron intake'
+        adequacyString += "un apport insuffisant en fer"
         ironBool = true
     }
 
     if (ironBool) {
-        return `Pourcentage d’${ageString} dont l’apport en ${sexString} with ${adequacyString}, Canada, 2015`
+        return `Pourcentage d’${ageString} dont l’apport en ${adequacyString}${sexString} Canada, 2015`
     } else {
-        return `Percentage of ${ageString}${sexString} with a usual intake of ${nutrient} ${adequacyString}, Canada, 2015`
+        return `Pourcentage d’${ageString} dont l’apport en ${nutrient} est ${adequacyString}${sexString} Canada, 2015`
     }
 }
 
@@ -368,8 +368,8 @@ d3.csv("../static/data/geographic-oct2020-fr.csv", function (d) {
                     .attr("y", function (d) {
                         return h+65;
                     })
-                .text('Data Source: Statistics Canada, 2015 Canadian Community Health Survey ' +
-                    '- Nutrition, 2015.')
+                .text('Source des données: Statistique Canada, Enquête sur la santé dans les ' +
+                    'collectivités canadiennes (ESCC) - Nutrition, 2015 - Fichier partagé.')
                 .call(wrap, w);
 
             updateData();
@@ -526,9 +526,26 @@ d3.csv("../static/data/geographic-oct2020-fr.csv", function (d) {
 
                 // Update nutrient facts disclaimer
                 if (nutrient in nutrientFacts) {
-                    d3.select('#nutrient-notes-header').html(
-                        `<h3>Additional notes for ${nutrient}</h3>`
-                    )
+                     if (nutrient === 'Sodium'|| nutrient ==='Fer'||
+                        nutrient === "Folate") {
+                        d3.select('#nutrient-notes-header').html(
+                        `<h3>Notes supplémentaires sur le ${nutrient}</h3>`
+                        )
+                    } else if (nutrient === "Pourcentage de l'apport énergétique total provenant" +
+                         " des glucides" || nutrient === "Pourcentage de l'apport énergétique" +
+                         " total provenant des lipides" || nutrient === "Pourcentage de l'apport énergétique total provenant des protéines"){
+                        d3.select('#nutrient-notes-header').html(
+                        `<h3>Notes supplémentaires sur le ${nutrient.toLowerCase()}</h3>`
+                        )
+                    } else if (nutrient === 'Vitamine A' || nutrient === 'Vitamine D' || nutrient === 'Vitamine C' || nutrient === 'Vitamine B6'){
+                        d3.select('#nutrient-notes-header').html(
+                        `<h3>Notes supplémentaires sur la ${nutrient}</h3>`
+                        )
+                    } else {
+                        d3.select('#nutrient-notes-header').html(
+                        `<h3>Notes supplémentaires sur ${nutrient}</h3>`
+                        )
+                    }
                     d3.select('#nutrient-notes').html(`
                         <p>${nutrientFacts[nutrient]}</p>
                     `);
