@@ -59,7 +59,7 @@ const nutrientFacts = {
             Santé Canada. 2010.</li>
     </ol>`,
 
-    'Fer': `Iron inadequacy was estimated using the full probability method as described in section 2.3.4 of the <a href="https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/health-nutrition-surveys/canadian-community-health-survey-cchs/compendium-data-tables-intakes-energy-nutrients-other-food.html" target="_blank">Methodology Document.</a>L'insuffisance en fer a été estimer à l'aide de la méthode
+    'Fer': `L'insuffisance en fer a été estimer à l'aide de la méthode
                 fondée sur les probabilités totales, comme décrit à la section 2.3.4 du
                 <a href="https://www.canada.ca/fr/sante-canada/services/aliments-nutrition/surveillance-aliments-nutrition/sondages-sante-nutrition/enquete-sante-collectivites-canadiennes-escc/compendium-tableaux-donnees-apports-energie-nutriments-autres-aliments.html"
                    target="_blank">document méthodologique</a>.`,
@@ -201,21 +201,21 @@ $(document).on("wb-ready.wb", function (event) {
             "Pourcentage de l'apport énergétique total provenant des sucres",
             'Apport énergétique total (kcal/j)',
             'Fibres alimentaires totales (g/j)',
-            'Folate (ÉFA/j)',
+            'Folate (EFA/j)',
             'Vitamine B12 (mcg/j)',
             'Glucides totaux (g/j)',
             'Sucres totaux (g/j)',
             'Vitamine C (mg/j)',
             'Zinc (mg/j)',
             'Magnésium (mg/j)',
-            'Vitamine A (ÉAR/j)',
+            'Vitamine A (EAR/j)',
             "Pourcentage de l'apport énergétique total provenant des glucides",
             "Pourcentage de l'apport énergétique total provenant des lipides",
             "Pourcentage de l'apport énergétique total provenant des protéines",
             'Cholestérol (mg/j)',
             'Phosphore (mg/j)',
             'Vitamine B6 (mg/j)',
-            'Niacine (ÉN/j)',
+            'Niacine (EN/j)',
             'Riboflavine (mg/j)',
             'Thiamine (mg/j)',
             "Pourcentage de l'apport énergétique total provenant de l'acide linoléique",
@@ -768,25 +768,56 @@ $(document).on("wb-ready.wb", function (event) {
             // Update title of chart base on nutrient to add articles
             let chartTitleText
             if (nutrient === 'Apport énergétique total (kcal/j)') {
-                chartTitleText = `Courbe de distribution de l’apport en l' ${nutrient.toLowerCase()} usuel,
+                chartTitleText = `Courbe de distribution de l'${nutrient.toLowerCase()} usuel,
                  ${sex.toLowerCase()}, ${age}, Canada, 2015`;
-            } else if (nutrient === 'Sodium (mg/j)'|| nutrient ==='Fer (mg/j)'||
-                nutrient === "Folate (ÉFA/j)") {
-                chartTitleText = `Courbe de distribution de l’apport en le ${nutrient} usuel,
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des glucides") {
+                chartTitleText = `Courbe de distribution du ${nutrient.toLowerCase()},
                  ${sex.toLowerCase()}, ${age}, Canada, 2015`;
-            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des acides gras saturés"){
-                chartTitleText = `Courbe de distribution de l’apport en le ${nutrient.toLowerCase()} usuel,
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des lipides") {
+                chartTitleText = `Courbe de distribution du ${nutrient.toLowerCase()},
                  ${sex.toLowerCase()}, ${age}, Canada, 2015`;
-            } else if (nutrient === 'Fibres alimentaires totales (g/j)'){
-                chartTitleText = `Courbe de distribution de l’apport en les ${nutrient} usuel,
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant de l'acide linoléique") {
+                chartTitleText = `Courbe de distribution du ${nutrient.toLowerCase()},
                  ${sex.toLowerCase()}, ${age}, Canada, 2015`;
-            } else if (nutrient === 'Vitamine A (ÉAR/j)' || nutrient === 'Vitamine D (mcg/j)'){
-                chartTitleText = `Courbe de distribution de l’apport en la ${nutrient} usuel,
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant de l'acide linolénique") {
+                chartTitleText = `Courbe de distribution du ${nutrient.toLowerCase()},
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des acides gras monoinsaturés") {
+                chartTitleText = `Courbe de distribution du ${nutrient.toLowerCase()},
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des acides gras polyinsaturés") {
+                chartTitleText = `Courbe de distribution du ${nutrient.toLowerCase()},
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des protéines") {
+                chartTitleText = `Courbe de distribution du ${nutrient.toLowerCase()},
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des acides gras saturés") {
+                chartTitleText = `Courbe de distribution du ${nutrient.toLowerCase()},
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des sucres") {
+                chartTitleText = `Courbe de distribution du ${nutrient.toLowerCase()},
                  ${sex.toLowerCase()}, ${age}, Canada, 2015`;
             } else {
-                chartTitleText = `Courbe de distribution de l’apport en ${nutrient} usuel,
+                chartTitleText = `Courbe de distribution de l’apport en ${nutrient.toLowerCase()} usuel,
                  ${sex.toLowerCase()}, ${age}, Canada, 2015`;
             }
+            // } else if (nutrient === 'Sodium (mg/j)'|| nutrient ==='Fer (mg/j)'||
+            //     nutrient === "Folate (ÉFA/j)") {
+            //     chartTitleText = `Courbe de distribution de l’apport en le ${nutrient} usuel,
+            //      ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            // } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des acides gras saturés"){
+            //     chartTitleText = `Courbe de distribution de l’apport en le ${nutrient.toLowerCase()} usuel,
+            //      ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            // } else if (nutrient === 'Fibres alimentaires totales (g/j)'){
+            //     chartTitleText = `Courbe de distribution de l’apport en les ${nutrient} usuel,
+            //      ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            // } else if (nutrient === 'Vitamine A (ÉAR/j)' || nutrient === 'Vitamine D (mcg/j)'){
+            //     chartTitleText = `Courbe de distribution de l’apport en la ${nutrient} usuel,
+            //      ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            // } else {
+            //     chartTitleText = `Courbe de distribution de l’apport en ${nutrient} usuel,
+            //      ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            // }
 
 
             // Chart title
@@ -961,28 +992,62 @@ $(document).on("wb-ready.wb", function (event) {
 
             //Update table title
             //let tableTitle = document.getElementById('table-title').innerHTML
-
-
             if (nutrient === 'Apport énergétique total (kcal/j)') {
-                document.getElementById('table-title').innerHTML = `Percentiles de 
-                l’apport usuel en l' ${nutrient.toLowerCase()}, ${sex.toLowerCase()}, ${age}, Canada, 2015`;
-            } else if (nutrient === 'Sodium (mg/j)'|| nutrient ==='Fer (mg/j)'||
-                nutrient === "Folate (ÉFA/j)") {
-                document.getElementById('table-title').innerHTML = `Percentiles de 
-                l’apport usuel en le ${nutrient}, ${sex.toLowerCase()}, ${age}, Canada, 2015`;
-            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des acides gras saturés"){
-                document.getElementById('table-title').innerHTML = `Percentiles de 
-                l’apport usuel en le ${nutrient.toLowerCase()}, ${sex.toLowerCase()}, ${age}, Canada, 2015`;
-            } else if (nutrient === 'Fibres alimentaires totales (g/j)'){
-                document.getElementById('table-title').innerHTML = `Percentiles de 
-                l’apport usuel en les ${nutrient}, ${sex.toLowerCase()}, ${age}, Canada, 2015`;
-            } else if (nutrient === 'Vitamine A (ÉAR/j)' || nutrient === 'Vitamine D (mcg/j)'){
-                document.getElementById('table-title').innerHTML = `Percentiles de 
-                l’apport usuel en la ${nutrient}, ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+                document.getElementById('table-title').innerHTML = `Percentiles 
+                de l'${nutrient.toLowerCase()}, ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des glucides") {
+                document.getElementById('table-title').innerHTML = `Percentiles du ${nutrient.toLowerCase()},
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des lipides") {
+                document.getElementById('table-title').innerHTML =`Percentiles du ${nutrient.toLowerCase()},
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant de l'acide linoléique") {
+                document.getElementById('table-title').innerHTML = `Percentiles du ${nutrient.toLowerCase()},
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant de l'acide linolénique") {
+                document.getElementById('table-title').innerHTML = `Percentiles du ${nutrient.toLowerCase()},
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des acides gras monoinsaturés") {
+                document.getElementById('table-title').innerHTML = `Percentiles du ${nutrient.toLowerCase()},
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des acides gras polyinsaturés") {
+                document.getElementById('table-title').innerHTML = `Percentiles du ${nutrient.toLowerCase()},
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des protéines") {
+                document.getElementById('table-title').innerHTML = `Percentiles du ${nutrient.toLowerCase()},
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des acides gras saturés") {
+                document.getElementById('table-title').innerHTML = `Percentiles du ${nutrient.toLowerCase()},
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des sucres") {
+                document.getElementById('table-title').innerHTML = `Percentiles du ${nutrient.toLowerCase()},
+                 ${sex.toLowerCase()}, ${age}, Canada, 2015`;
             } else {
-                document.getElementById('table-title').innerHTML = `Percentiles de 
-                l’apport usuel en ${nutrient}, ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+                document.getElementById('table-title').innerHTML = `Percentiles de
+            //     l’apport usuel en ${nutrient.toLowerCase()}, ${sex.toLowerCase()}, ${age}, Canada, 2015`;
             }
+
+            // Used if certain nutrients need articles
+            // if (nutrient === 'Apport énergétique total (kcal/j)') {
+            //     document.getElementById('table-title').innerHTML = `Percentiles de
+            //     l’apport usuel en l' ${nutrient.toLowerCase()}, ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            // } else if (nutrient === 'Sodium (mg/j)'|| nutrient ==='Fer (mg/j)'||
+            //     nutrient === "Folate (ÉFA/j)") {
+            //     document.getElementById('table-title').innerHTML = `Percentiles de
+            //     l’apport usuel en le ${nutrient}, ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            // } else if (nutrient === "Pourcentage de l'apport énergétique total provenant des acides gras saturés"){
+            //     document.getElementById('table-title').innerHTML = `Percentiles de
+            //     l’apport usuel en le ${nutrient.toLowerCase()}, ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            // } else if (nutrient === 'Fibres alimentaires totales (g/j)'){
+            //     document.getElementById('table-title').innerHTML = `Percentiles de
+            //     l’apport usuel en les ${nutrient}, ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            // } else if (nutrient === 'Vitamine A (ÉAR/j)' || nutrient === 'Vitamine D (mcg/j)'){
+            //     document.getElementById('table-title').innerHTML = `Percentiles de
+            //     l’apport usuel en la ${nutrient}, ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            // } else {
+            //     document.getElementById('table-title').innerHTML = `Percentiles de
+            //     l’apport usuel en ${nutrient}, ${sex.toLowerCase()}, ${age}, Canada, 2015`;
+            // }
 
             // Update description of chart (readers ONLY)
             if (nutrient === 'Apport énergétique total (kcal/j)') {
