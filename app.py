@@ -56,7 +56,7 @@ def distribution_fr():
 
 @app.route('/geographique')
 def geographique():
-    return render_template('escc_géographique-fr.html',
+    return render_template('escc_geographique-fr.html',
                            title='Comparaison géographique - ESCC – Nutrition 2015')
 
 @app.route('/tableau')
