@@ -133,7 +133,7 @@ const generateTitle = (sex, age, nutrient) => {
     let adequacyString = ''
     let ironBool = false
     if (cdrrNutrients.includes(nutrient)) {
-        adequacyString += "excédant l'apport lié à un risque réduit de maladie chronique"
+        adequacyString += "supérieur à l'apport lié à un risque réduit de maladie chronique"
     } else if (amdrNutrients.includes(nutrient)) {
         // clean up text for improved readability
         nutrient = nutrient.replace("Pourcentage de l'apport énergétique total provenant des", '')
@@ -141,7 +141,7 @@ const generateTitle = (sex, age, nutrient) => {
     } else if (earNutrients.includes(nutrient)) {
         adequacyString += "au-dessous du Besoin moyen estimatif"
     } else if (aiNutrients.includes(nutrient)) {
-        adequacyString += "excédant l'apport suffisant"
+        adequacyString += "supérieur à l’apport suffisant"
     } else if (inadequateNutrients.includes(nutrient)) {
         adequacyString += "fer est insuffisant"
         ironBool = true

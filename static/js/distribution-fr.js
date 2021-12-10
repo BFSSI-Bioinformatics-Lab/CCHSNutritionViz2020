@@ -685,7 +685,7 @@ $(document).on("wb-ready.wb", function (event) {
                     '9 à 13 ans', '14 à 18 ans', '19 à 30 ans', '31 à 50 ans', '51 à 70 ans',
                     '19 ans et plus', '71 ans et plus'
                 ]
-            } else if (selectedSex === 'Both' && (selectedAge === '1 à 3 ans' || selectedAge === '4 à 8 ans')) {
+            } else if (selectedSex === 'Les deux sexes' && (selectedAge === '1 à 3 ans' || selectedAge === '4 à 8 ans')) {
                 agesToDisplay = ['1 à 3 ans', '4 à 8 ans']
             } else {
                 agesToDisplay = [
