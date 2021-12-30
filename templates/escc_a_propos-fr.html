@@ -12,24 +12,24 @@
     <meta name="description"
           content="Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities">
     <!--[if gte IE 9 | !IE ]><!-->
-    <link href="../static/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="/src/GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/GCWeb/css/theme.min.css">
+    <link rel="stylesheet" href="/src/GCWeb/css/theme.min.css">
     <!--<![endif]-->
     <!--[if lt IE 9]>
-		<link href="../static/GCWeb/assets/favicon.ico" rel="shortcut icon" />
+		<link href="/src/GCWeb/assets/favicon.ico" rel="shortcut icon" />
 
-		<link rel="stylesheet" href="../static/GCWeb/css/ie8-theme.min.css" />
+		<link rel="stylesheet" href="/src/GCWeb/css/ie8-theme.min.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
-		<script src="../static/wet-boew/js/ie8-wet-boew.min.js"></script>
+		<script src="/src/wet-boew/js/ie8-wet-boew.min.js"></script>
 		<![endif]-->
     <!--[if lte IE 9]>
 
 
     <![endif]-->
     <noscript>
-        <link rel="stylesheet" href="../static/wet-boew/css/noscript.min.css"/>
+        <link rel="stylesheet" href="/src/wet-boew/css/noscript.min.css"/>
     </noscript>
 </head>
 <body vocab="http://schema.org/" typeof="WebPage">
@@ -48,19 +48,19 @@
         <section id="wb-lng" class="text-right">
             <h2 class="wb-inv">Sélection de la langue</h2>
             <ul class="list-inline margin-bottom-none">
-                <li><a lang="en" hreflang="en" href="/">English</a></li>
+                <li><a lang="en" hreflang="en" href="/en/nutrition/usual-intakes">English</a></li>
             </ul>
         </section>
         <div class="row">
             <div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
                 <a href="https://www.canada.ca/fr.html" property="url">
-                    <img src="../static/GCWeb/assets/sig-blk-fr.svg"
+                    <img src="/src/GCWeb/assets/sig-blk-fr.svg"
                          alt="" property="logo">
                     <span class="wb-inv" property="name">  Gouvernement du Canada /
                         <span lang="en">Government of Canada</span></span>
                 </a>
                 <meta property="areaServed" typeof="Country" content="Canada">
-                <link property="logo" href="../static/GCWeb/assets/wmms-blk.svg">
+                <link property="logo" href="/src/GCWeb/assets/wmms-blk.svg">
             </div>
             <section id="wb-srch" class="col-lg-8 text-right">
                 <h2>Recherche</h2>
@@ -160,13 +160,16 @@
     <section>
         <div class="row">
             <div class="btn-group btn-group-lg btn-group-justified" style="padding:20px 0px;">
-                <a class="active btn btn-default btn-primary toolTab" role="button" href="#">À propos de l'outil de données</a>
-                <a class="btn btn-default toolTab" role="button" href="distribution_fr">Courbes de
-                    distribution</a>
-                <a class="btn btn-default toolTab" role="button" href="geographique">Comparaison géographique</a>
-                <a class="btn btn-default toolTab" role="button" href="tableau">Tableau de données</a>
+                <a class="active btn btn-default btn-primary toolTab" role="button"
+                   href="#">À propos de l'outil de données</a>
                 <a class="btn btn-default toolTab" role="button"
-                   href="notes_techniques">Notes techniques</a>
+                   href="/fr/nutrition/apports-usuels/distribution">Courbes de distribution</a>
+                <a class="btn btn-default toolTab" role="button"
+                   href="/fr/nutrition/apports-usuels/geographique">Comparaison géographique</a>
+                <a class="btn btn-default toolTab" role="button"
+                   href="/fr/nutrition/apports-usuels/tableau">Tableau de données</a>
+                <a class="btn btn-default toolTab" role="button"
+                   href="/fr/nutrition/apports-usuels/notes-techniques">Notes techniques</a>
             </div>
         </div>
     </section>
@@ -425,21 +428,22 @@
                     <a href="#wb-cont">Haut de la page <span class="glyphicon glyphicon-chevron-up"></span></a>
                 </div>
                 <div class="col-xs-6 col-md-3 col-lg-2 text-right">
-                    <img src="../static/GCWeb/assets/wmms-blk.svg" alt="Symbole du gouvernement du Canada">
+                    <img src="/src/GCWeb/assets/wmms-blk.svg" alt="Symbole du gouvernement du
+                    Canada">
                 </div>
             </div>
         </div>
     </div>
 </footer>
 <!--[if gte IE 9 | !IE ]><!-->
-<script src="../static/wet-boew/js/jquery/2.2.4/jquery.js"></script>
-<script src="../static/wet-boew/js/wet-boew.min.js"></script>
-<script src="../static/wet-boew/js/i18n/fr.min.js"></script>
+<script src="/src/wet-boew/js/jquery/2.2.4/jquery.js"></script>
+<script src="/src/wet-boew/js/wet-boew.min.js"></script>
+<script src="/src/wet-boew/js/i18n/fr.min.js"></script>
 <!--<![endif]-->
 <!--[if lt IE 9]>
-		<script src="../static/wet-boew/js/ie8-wet-boew2.min.js"></script>
+		<script src="/src/wet-boew/js/ie8-wet-boew2.min.js"></script>
 
 		<![endif]-->
-<script src="../static/GCWeb/js/theme.min.js"></script>
+<script src="/src/GCWeb/js/theme.min.js"></script>
 </body>
 </html>
